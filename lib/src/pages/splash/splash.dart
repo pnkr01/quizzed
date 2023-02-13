@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/size_configuration.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../theme/app_color.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -22,21 +22,21 @@ class SplashScreen extends StatelessWidget {
             Hero(
               tag: 2,
               child: Image.asset(
-            kLogoPath,
-            height: 150,
+                kLogoPath,
+                height: getProportionateScreenHeight(120.h),
               ),
             ),
-            const SizedBox(
-              height: 8.0,
+            SizedBox(
+              height: getProportionateScreenHeight(6.0.sp),
             ),
             Text(
               'Quizzed',
-              style: kTextStyle().copyWith(
-                fontSize: 18.0,
+              style: kTitleTextStyle().copyWith(
+                fontSize: getProportionateScreenHeight(16.0.sp),
               ),
             ),
-            const SizedBox(
-              height: 35.0,
+            SizedBox(
+              height: getProportionateScreenHeight(30.0.sp),
             ),
             const CircularProgressIndicator(
               color: Colors.blue,

@@ -1,3 +1,27 @@
-const String port = '8001';
-const String kEndPoint = '/auth';
-const String kLocal = 'http:localhost:$port/$kEndPoint';
+import 'dart:io';
+
+bool isProd = false;
+
+class ApiConfig {
+  String kAuthPort = '8001';
+  String kQuizPort = '8000';
+  //auth req routes starts
+  String klogin = 'auth/login';
+  String kUserReg = 'auth/users';
+  String kTeacherReg = 'auth/teachers';
+  String kVerifyTeachers = 'auth/teachers/verify';
+  String kReqRegdNo = 'auth/request-regd-no';
+  String kLogOut = 'auth/logout';
+  //auth req routes ends
+
+  //host selection
+
+  //quiz req route starts here
+  String createNewQuiz = 'quiz/create';
+  String createNewQuestion = 'quiz/questions';
+  String addQuestionToQuiz = 'quiz/add-question/';
+
+  static getEndPointsUrl(String endPoint) {
+    return !isProd ? "http://10.0.2.2:8001/$endPoint" : "";
+  }
+}

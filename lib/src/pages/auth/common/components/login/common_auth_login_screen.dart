@@ -5,6 +5,7 @@ import 'package:quiz/src/pages/auth/common/controller/common_auth_login_controll
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:quiz/widget/custom_elevated_bottom.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz/widget/custom_text_for_file.dart';
 
 class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
@@ -12,24 +13,24 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   static const String routeName = '/commonAuthLogInRoute';
   @override
   Widget build(BuildContext context) {
-   // Get.put(() => CommonAuthLogInController());
+    // Get.put(() => CommonAuthLogInController());
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(getProportionateScreenHeight(12.sp)),
             child: Column(
               children: [
                 SizedBox(
-                  height: getProportionateScreenHeight(80),
+                  height: getProportionateScreenHeight(35.sp),
                 ),
                 Image.asset(
                   kLogoPath,
-                  height: 200,
+                  height: getProportionateScreenHeight(150.sp),
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21),
+                  height: getProportionateScreenHeight(21.sp),
                 ),
                 Obx(
                   () => CustomTextFormField(
@@ -42,7 +43,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   ),
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21),
+                  height: getProportionateScreenHeight(21.sp),
                 ),
                 Obx(
                   () => CustomTextFormField(
@@ -55,7 +56,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   ),
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21),
+                  height: getProportionateScreenHeight(21.sp),
                 ),
                 MYElevatedButton(
                   label: "Continue",
@@ -63,7 +64,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   function: () {},
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21),
+                  height: getProportionateScreenHeight(21.sp),
                 ),
                 MYElevatedButton(
                   label: "Sign Up",

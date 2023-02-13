@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz/utils/size_configuration.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const Color first = Color(0xff2FA4D4);
 //const Color second = Color(0xff345DDB);
@@ -15,9 +17,16 @@ class GradientClass {
   }
 }
 
-TextStyle kTextStyle() {
-  return GoogleFonts.inder(
+TextStyle kTitleTextStyle() {
+  return GoogleFonts.montserrat(
     color: Colors.white,
-    fontSize: 14.0,
+    fontSize: getProportionateScreenHeight(12.0.sp)
+  );
+}
+
+TextStyle kSubTitleTextStyle() {
+  return GoogleFonts.nunito(
+    color: Colors.white,
+    fontSize: getProportionateScreenHeight(12.0.sp)
   );
 }

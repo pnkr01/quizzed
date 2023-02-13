@@ -1,3 +1,11 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-late SharedPreferences sharedPreferences;
+showSnackBar(String message, Color color, Color textColor) {
+  return Get.snackbar(
+    "Quizzed",
+    message,
+    backgroundColor: color,
+    colorText: textColor,
+  );
+}

@@ -5,7 +5,7 @@ import 'package:quiz/src/pages/auth/common/controller/common_auth_register_contr
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:toggle_switch/toggle_switch.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../theme/gradient_theme.dart';
 import '../../../../../../widget/custom_elevated_bottom.dart';
 import '../../../../../../widget/custom_text_for_file.dart';
@@ -29,9 +29,10 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
           child: Column(
             children: [
               SizedBox(
-                height: getProportionateScreenHeight(18),
+                height: getProportionateScreenHeight(18.spMin),
               ),
               ToggleSwitch(
+                minHeight: getProportionateScreenHeight(45.sp),
                 animate: true,
                 minWidth: double.infinity,
                 initialLabelIndex: 0,
@@ -55,21 +56,22 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                 },
               ),
               Padding(
-                padding: const EdgeInsets.only(
-                  left: 15.0,
-                  right: 10,
-                  top: 10,
+                padding: EdgeInsets.only(
+                  left: getProportionateScreenHeight(12.w),
+                  right: getProportionateScreenHeight(12.w),
+                  top: getProportionateScreenHeight(12.h),
                 ),
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.info_outline_rounded,
                           color: Colors.yellow,
+                          size: getProportionateScreenHeight(24.sp),
                         ),
-                        const SizedBox(
-                          width: 8,
+                        SizedBox(
+                          width: getProportionateScreenHeight(4.sp),
                         ),
                         Flexible(
                           child: Obx(
@@ -77,7 +79,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                               controller.getIndexValue() == 0
                                   ? GLobal.studentInfo
                                   : GLobal.teacherInfo,
-                              style: kTextStyle().copyWith(
+                              style: kTitleTextStyle().copyWith(
                                 color: Colors.white,
                               ),
                             ),
@@ -86,7 +88,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                       ],
                     ),
                     SizedBox(
-                      height: getProportionateScreenHeight(35),
+                      height: getProportionateScreenHeight(24.sp),
                     ),
                     Obx(() => controller.getIndexValue() == 0
                         ? Column(
@@ -102,7 +104,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                                 ),
                               ),
                               SizedBox(
-                                height: getProportionateScreenHeight(24),
+                                height: getProportionateScreenHeight(18.sp),
                               ),
                               Obx(
                                 () => CustomTextFormField(
@@ -129,7 +131,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                                 ),
                               ),
                               SizedBox(
-                                height: getProportionateScreenHeight(24),
+                                height: getProportionateScreenHeight(18.sp),
                               ),
                               Obx(
                                 () => CustomTextFormField(
@@ -142,7 +144,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                                 ),
                               ),
                               SizedBox(
-                                height: getProportionateScreenHeight(24),
+                                height: getProportionateScreenHeight(18.sp),
                               ),
                               Obx(
                                 () => CustomTextFormField(
@@ -155,7 +157,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                                 ),
                               ),
                               SizedBox(
-                                height: getProportionateScreenHeight(24),
+                                height: getProportionateScreenHeight(18.sp),
                               ),
                               Obx(
                                 () => CustomTextFormField(
@@ -163,14 +165,27 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                                   borderColor: kTextFormFieldBorderColor,
                                   cursorColor: kTextFormFieldCursorColor,
                                   labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: false,
+                                  isObscureText: true,
                                   controller: controller.tPassword.value,
+                                ),
+                              ),
+                              SizedBox(
+                                height: getProportionateScreenHeight(18.sp),
+                              ),
+                              Obx(
+                                () => CustomTextFormField(
+                                  labelText: 'Confirm Password',
+                                  borderColor: kTextFormFieldBorderColor,
+                                  cursorColor: kTextFormFieldCursorColor,
+                                  labelColor: kTextFormFieldBorderColor,
+                                  isObscureText: true,
+                                  controller: controller.tConfirmPassword.value,
                                 ),
                               ),
                             ],
                           )),
                     SizedBox(
-                      height: getProportionateScreenHeight(24),
+                      height: getProportionateScreenHeight(24.sp),
                     ),
                     MYElevatedButton(
                       label: "Register",

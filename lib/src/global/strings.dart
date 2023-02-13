@@ -1,4 +1,5 @@
 const kLogoPath = 'assets/images/logo.png';
+const kOtpPath = 'assets/images/otpp.jpg';
 
 class GLobal {
   static String studentInfo =

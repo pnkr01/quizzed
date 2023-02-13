@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:quiz/utils/size_configuration.dart';
 import '../theme/gradient_theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatefulWidget {
   final String labelText;
@@ -16,7 +17,7 @@ class CustomTextFormField extends StatefulWidget {
     required this.borderColor,
     required this.cursorColor,
     required this.labelColor,
-     this.contentColor,
+    this.contentColor,
     required this.isObscureText,
     required this.controller,
   }) : super(key: key);
@@ -29,7 +30,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: kTextStyle().copyWith(
+      style: kTitleTextStyle().copyWith(
         color: widget.contentColor ?? Colors.white,
       ),
       obscureText: widget.isObscureText,
@@ -42,14 +43,14 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           color: widget.labelColor,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: const BorderRadius.all(
-            Radius.circular(8),
+          borderRadius: BorderRadius.all(
+            Radius.circular(getProportionateScreenHeight(14.r)),
           ),
           borderSide: BorderSide(color: widget.borderColor),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: const BorderRadius.all(
-            Radius.circular(8),
+          borderRadius: BorderRadius.all(
+            Radius.circular(getProportionateScreenHeight(14.sp)),
           ),
           borderSide: BorderSide(
             color: widget.borderColor,

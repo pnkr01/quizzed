@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/theme/app_color.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/gradient_theme.dart';
 import '../utils/size_configuration.dart';
 
@@ -19,7 +20,7 @@ class MYElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: getProportionateScreenHeight(50),
+      height: getProportionateScreenHeight(45.sp),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
@@ -28,10 +29,10 @@ class MYElevatedButton extends StatelessWidget {
         onPressed: function,
         child: Text(
           label,
-          style: kTextStyle().copyWith(
+          style: kTitleTextStyle().copyWith(
             color: kOnElevatedButtonTextColor,
-            fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontSize: getProportionateScreenHeight(14.sp),
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),

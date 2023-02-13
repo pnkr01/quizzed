@@ -1,0 +1,4 @@
+enum Choice {
+  student,
+  teacher,
+}
