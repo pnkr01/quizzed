@@ -1,9 +1,9 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:quiz/src/pages/auth/common/components/login/common_auth_login_screen.dart';
-import 'package:quiz/src/pages/auth/common/components/signup/common_auth_sign_up_screen.dart';
-import 'package:quiz/src/pages/auth/common/otp/otp_screen.dart';
-import 'package:quiz/src/pages/auth/student/home/student_home.dart';
-import 'package:quiz/src/pages/auth/teacher/teacher_home.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
+import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
+import 'package:quiz/src/pages/home/student/home/student_home.dart';
+import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/src/pages/splash/splash.dart';
 
 class AppRoute {

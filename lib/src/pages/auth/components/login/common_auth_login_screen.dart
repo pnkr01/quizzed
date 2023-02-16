@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/src/pages/auth/common/controller/common_auth_login_controller.dart';
+import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:quiz/widget/custom_elevated_bottom.dart';

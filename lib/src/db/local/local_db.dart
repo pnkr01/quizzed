@@ -1,10 +1,9 @@
 import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/model/student_model.dart';
 
 class LocalDB {
-  saveStudentModel(Student student) {
-    sharedPreferences.setString('name', student.name!);
-    sharedPreferences.setString('regdNo', student.regdNo!);
+  static saveStudentModel(String name, String regdNo) {
+    sharedPreferences.setString('name', name);
+    sharedPreferences.setString('regdNo', regdNo);
   }
 
   static saveTeacherData(Map<String, dynamic> data) {

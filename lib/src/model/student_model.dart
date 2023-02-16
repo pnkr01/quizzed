@@ -1,4 +1,4 @@
-import 'package:quiz/src/global/shared.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 
 class Student {
   String? sId;
@@ -54,8 +54,10 @@ class Student {
     updatedAt = json['updated_at'] ?? "Unknown";
     type = json['type'] ?? "Unknown";
 
-    sharedPreferences.setString('name', name ?? "");
-    sharedPreferences.setString('regdNo', regdNo ?? "");
+    LocalDB.saveStudentModel(name ?? "Unknown", regdNo ?? "Unknown");
+
+    // sharedPreferences.setString('name', name ?? "");
+    // sharedPreferences.setString('regdNo', regdNo ?? "");
   }
 
   Map<String, dynamic> toJson() {

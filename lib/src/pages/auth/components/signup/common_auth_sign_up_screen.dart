@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/src/pages/auth/common/controller/common_auth_register_controller.dart';
+import 'package:quiz/src/pages/auth/controller/common_auth_register_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../theme/gradient_theme.dart';
-import '../../../../../../widget/custom_elevated_bottom.dart';
-import '../../../../../../widget/custom_text_for_file.dart';
+import '../../../../../theme/gradient_theme.dart';
+import '../../../../../widget/custom_elevated_bottom.dart';
+import '../../../../../widget/custom_text_for_file.dart';
 
 class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
   const CommonAuthSignUpScreen({super.key});

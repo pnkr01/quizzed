@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/auth/common/components/signup/common_auth_sign_up_screen.dart';
+import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
 import 'package:quiz/utils/errordialog.dart';
 
 class CommonAuthLogInController extends GetxController {

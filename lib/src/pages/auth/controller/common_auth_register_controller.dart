@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/model/student_model.dart';
-import 'package:quiz/src/pages/auth/common/otp/otp_screen.dart';
+import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
 import 'package:quiz/utils/errordialog.dart';
 import 'package:quiz/utils/loading_dialog.dart';
 
@@ -69,36 +67,56 @@ class CommonAuthSignUpController extends GetxController {
         "regdNo": studentRegdNo.value.text,
         "password": studentPassword.value.text,
       });
-      log(response.body);
       log(response.statusCode.toString());
-      if (response.statusCode == 201) {
-        //new user
-        var res = jsonDecode(response.body);
-        Student.fromJson(res);
-      } else if (response.statusCode == 422) {
-        log('student already exist');
-        var res = jsonDecode(response.body);
-        //showSnackBar and send user to LogIn page.
+      log(response.body);
+      var res = jsonDecode(response.body);
+      // log(res);
+
+      if (response.statusCode == 422) {
         Get.back();
-        Get.offNamed(CommmonAuthLogInRoute.routeName);
+        log('this student already registered in backend => Sending to login page');
         clearStudentField();
+        Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar(
-          "Quizzed",
-          res["message"] + "Please logIn",
-          Colors.blue,
+          "Student already exist, Please logIn",
+          Colors.green,
+          Colors.white,
+        );
+      } else if (response.statusCode == 201) {
+        log('New User found => Sended data to backend => save data locally => send to home page');
+        clearStudentField();
+        Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+        showSnackBar(
+          "Registered sucessfully, please logIn",
+          Colors.green,
+          Colors.white,
         );
       } else {
-        throw Exception(response.body);
+        Get.back();
+        showSnackBar(res["message"], Colors.red, Colors.white);
       }
+      // if (response.statusCode == 201) {
+      //   //new user
+      //   Student.fromJson(res);
+      // } else if (response.statusCode == 422) {
+      //   log('student already exist');
+      //   var res = jsonDecode(response.body);
+      //   //showSnackBar and send user to LogIn page.
+      //   Get.back();
+      //   Get.offNamed(CommmonAuthLogInRoute.routeName);
+      //   clearStudentField();
+      //   showSnackBar(
+      //     "Quizzed",
+      //     res["message"] + "Please logIn",
+      //     Colors.blue,
+      //   );
+      // } else {
+      //   throw Exception(response.body);
+      // }
     } catch (e) {
+      log('inside catch block error in student body');
       Get.back();
       showSnackBar(e.toString(), Colors.red, Colors.white);
-    }
-  }
-
-  setAndHandleNewStudent(value) {
-    if (kDebugMode) {
-      print(value.body);
     }
   }
 
@@ -115,12 +133,6 @@ class CommonAuthSignUpController extends GetxController {
     tPhone.value.clear();
   }
 
-  setAndHandleOldStudent(value) {
-    if (kDebugMode) {
-      print(value.body);
-    }
-  }
-
   checkForErrorAndRegisterForStudent() async {
     showDialog(
         context: Get.context!,
@@ -131,8 +143,9 @@ class CommonAuthSignUpController extends GetxController {
         studentRegdNo.value.text.isNotEmpty) {
       await getResponseFromStudentApi();
       //hit api
-      log('hit student route');
+      log('all ok hitting student route');
     } else {
+      log('some field missing error');
       Get.back();
       showDialog(
           context: Get.context!,
@@ -160,29 +173,27 @@ class CommonAuthSignUpController extends GetxController {
         "primaryPhone": tPhone.value.text,
         "password": tPassword.value.text,
       });
+      log(response.statusCode.toString());
+      var jsonBody = jsonDecode(response.body);
       if (response.statusCode == 201) {
-        //created Teacher
-        //decode regdNo for teacher send to otpscreen
-        //send to OTP Screen
-        var jsonBody = jsonDecode(response.body);
+        log('new Teacher detected => sending to OTP screen');
         Get.back();
         navigateToOTPScreen(
           jsonBody["regdNo"],
           jsonBody["message"],
         );
-
-        log(response.body);
       } else if (response.statusCode == 422) {
         log('Teacher already exist');
-        var res = jsonDecode(response.body);
         //showSnackBar and send teacher to LogIn page.
         Get.back();
-        Get.offNamed(CommmonAuthLogInRoute.routeName);
+        Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         clearTeacherField();
         showSnackBar(
-            res["message"] + "Please logIn", Colors.blue, Colors.white);
+            jsonBody["message"] + "Please logIn", Colors.green, Colors.white);
       } else {
-        throw Exception(response.body);
+        log('else part of teacher register page');
+        Get.back();
+        showSnackBar(jsonBody["message"], Colors.red, Colors.white);
       }
     } catch (e) {
       Get.back();

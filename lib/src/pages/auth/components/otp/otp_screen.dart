@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/auth/common/controller/otp_controller.dart';
+import 'package:quiz/src/pages/auth/controller/otp_controller.dart';
+import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:quiz/widget/custom_elevated_bottom.dart';
 import 'package:quiz/widget/custom_text_for_file.dart';
@@ -26,7 +27,34 @@ class OTPScreen extends GetView<OTPController> {
         child: Padding(
           padding: EdgeInsets.all(getProportionateScreenHeight(15.sp)),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                children: [
+                  const Icon(
+                    Icons.info_outline,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    width: 5.w,
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.all(Radius.circular(4.r))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Text(
+                          // ignore: prefer_interpolation_to_compose_strings
+                          "${"Your registration number is " + controller.getRegdNo()} for using Quizzed App. Please remmember this.",
+                          style: kSubTitleTextStyle(),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(
                 height: getProportionateScreenHeight(50.spMin),
               ),

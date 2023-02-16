@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/auth/common/components/login/common_auth_login_screen.dart';
-import 'package:quiz/src/pages/auth/student/home/student_home.dart';
-import 'package:quiz/src/pages/auth/teacher/teacher_home.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quiz/src/pages/home/student/home/student_home.dart';
+import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 
 import '../../global/shared.dart';
 
