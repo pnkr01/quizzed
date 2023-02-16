@@ -15,6 +15,7 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
   static const String routeName = '/commonAuthSignUpRoute';
   @override
   Widget build(BuildContext context) {
+    Get.put(CommonAuthSignUpController());
     controller.setIndexValue(0);
     return Scaffold(
       appBar: AppBar(

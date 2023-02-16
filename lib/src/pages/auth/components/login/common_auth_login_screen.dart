@@ -13,7 +13,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   static const String routeName = '/commonAuthLogInRoute';
   @override
   Widget build(BuildContext context) {
-    // Get.put(() => CommonAuthLogInController());
+    Get.put(CommonAuthLogInController());
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(
@@ -61,7 +61,9 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                 MYElevatedButton(
                   label: "Continue",
                   backgroundColor: Colors.white,
-                  function: () {},
+                  function: () {
+                    controller.checkForErrorAndStartLoggingInUser();
+                  },
                 ),
                 SizedBox(
                   height: getProportionateScreenHeight(21.sp),

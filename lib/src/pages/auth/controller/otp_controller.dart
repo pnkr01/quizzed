@@ -45,6 +45,8 @@ class OTPController extends GetxController {
   }
 
   getResponseFromOTPApi() async {
+    log(getRegdNo());
+    log(otp.value.text);
     try {
       Map<String, String> headers = {
         'Content-Type': 'application/json',

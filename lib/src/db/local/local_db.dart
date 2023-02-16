@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:quiz/src/global/shared.dart';
 
 class LocalDB {
@@ -6,7 +8,7 @@ class LocalDB {
     sharedPreferences.setString('regdNo', regdNo);
   }
 
-  static saveTeacherData(Map<String, dynamic> data) {
+  static Future<void> saveTeacherData(Map<String, dynamic> data) async {
     sharedPreferences.setString('tId', data['_id']);
     sharedPreferences.setString('tregdNo', data['regdNo']);
     sharedPreferences.setString('temail', data['email']);

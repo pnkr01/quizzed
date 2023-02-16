@@ -9,8 +9,8 @@ class InitialBindings extends Bindings {
   @override
   void dependencies() {
     Get.put(StartingPointController(), permanent: true);
-    Get.put(CommonAuthLogInController());
-    Get.put(CommonAuthSignUpController());
+    Get.lazyPut(() => CommonAuthLogInController());
+    Get.lazyPut(() => CommonAuthSignUpController());
     Get.lazyPut(() => OTPController());
   }
 }

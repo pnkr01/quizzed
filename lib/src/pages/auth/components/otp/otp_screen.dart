@@ -47,7 +47,7 @@ class OTPScreen extends GetView<OTPController> {
                         padding: const EdgeInsets.all(4),
                         child: Text(
                           // ignore: prefer_interpolation_to_compose_strings
-                          "${"Your registration number is " + controller.getRegdNo()} for using Quizzed App. Please remmember this.",
+                          "${"Your registration number is " + controller.getRegdNo()} for using Quizzed App. Please remmember this for login.",
                           style: kSubTitleTextStyle(),
                         ),
                       ),
