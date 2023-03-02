@@ -1,3 +1,5 @@
 {
-  "cmake.sourceDirectory": "${workspaceFolder}/windows/runner"
+	"dart.flutterRunLogFile": "logs/flutter_run.txt",
+	"dart.vmServiceLogFile": "logs/observatory.txt",
+	"dart.extensionLogFile": "logs/extension.txt",
 }
