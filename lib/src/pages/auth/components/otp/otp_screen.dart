@@ -61,9 +61,9 @@ class OTPScreen extends GetView<OTPController> {
               Obx(
                 () => CustomTextFormField(
                   labelText: 'Enter OTP',
-                  borderColor: kTextFormFieldBorderColor,
-                  cursorColor: kTextFormFieldCursorColor,
-                  labelColor: kTextFormFieldBorderColor,
+                  borderColor: kTextFormFieldContentColor,
+                  cursorColor: kTextFormFieldContentColor,
+                  labelColor: kTextFormFieldContentColor,
                   isObscureText: true,
                   controller: controller.otp.value,
                 ),

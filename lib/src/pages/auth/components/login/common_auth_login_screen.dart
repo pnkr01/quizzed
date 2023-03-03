@@ -35,9 +35,9 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                 Obx(
                   () => CustomTextFormField(
                     labelText: 'Regd No',
-                    borderColor: kTextFormFieldBorderColor,
-                    cursorColor: kTextFormFieldCursorColor,
-                    labelColor: kTextFormFieldBorderColor,
+                    borderColor: kTextFormFieldContentColor,
+                    cursorColor: kTextFormFieldContentColor,
+                    labelColor: kTextFormFieldContentColor,
                     isObscureText: false,
                     controller: controller.regdNo.value,
                   ),
@@ -48,9 +48,9 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                 Obx(
                   () => CustomTextFormField(
                     labelText: 'Password',
-                    borderColor: kTextFormFieldBorderColor,
-                    cursorColor: kTextFormFieldCursorColor,
-                    labelColor: kTextFormFieldBorderColor,
+                    borderColor: kTextFormFieldContentColor,
+                    cursorColor: kTextFormFieldContentColor,
+                    labelColor: kTextFormFieldContentColor,
                     isObscureText: true,
                     controller: controller.password.value,
                   ),

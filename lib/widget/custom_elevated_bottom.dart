@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:quiz/theme/app_color.dart';
 
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theme/gradient_theme.dart';
 import '../utils/size_configuration.dart';
 
 class MYElevatedButton extends StatelessWidget {
   final String label;
   final Color backgroundColor;
+  final Color? textColor;
   final Function()? function;
   const MYElevatedButton({
     Key? key,
     required this.label,
     required this.backgroundColor,
+    this.textColor,
     required this.function,
   }) : super(key: key);
 
@@ -23,14 +26,16 @@ class MYElevatedButton extends StatelessWidget {
       height: getProportionateScreenHeight(45.sp),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
           backgroundColor: backgroundColor,
         ),
         onPressed: function,
         child: Text(
           label,
           style: kElevatedButtonTextStyle().copyWith(
-            color: kOnElevatedButtonTextColor,
+            color: textColor ?? kOnElevatedButtonTextColor,
           ),
 
           //  kTitleTextStyle().copyWith(

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quiz/src/global/strings.dart';
+import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/theme/app_color.dart';
-
+import 'package:quiz/theme/gradient_theme.dart';
 import '../../../../../utils/size_configuration.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
   const NavigationDrawerWidget({
@@ -25,42 +29,34 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    SizedBox(height: getProportionateScreenHeight(50)),
-                    GestureDetector(
-                      onTap: () {
-                        // log('tap');
-                        // sharedPreferences.remove('1');
-                        // requestImg();
-                      },
-                      child: CircleAvatar(
-                          backgroundColor: kPrimaryColor,
-                          radius: 60,
-                          child: Container()),
+                    Image.asset(
+                      kLogoPath,
+                      width: 100,
                     ),
-
+                    SizedBox(height: 10.h),
+                    Column(
+                      children: [
+                        Text('Hello!', style: kBodyText5Style()),
+                        SizedBox(height: 4.h),
+                        Text(
+                          Get.find<StudentHomeController>().getStudentName(),
+                          style: kBodyText4Style(),
+                          maxLines: 1,
+                        ),
+                      ],
+                    ),
                     SizedBox(height: getProportionateScreenHeight(20)),
-                    // SingleChildScrollView(
-                    //   scrollDirection: Axis.horizontal,
-                    //   child: Text(
-                    //     sharedPreferences.getString('studentName')!,
-                    //     style: kTextStyle().copyWith(
-                    //       fontSize: 18.0,
-                    //       color: Colors.white,
-                    //     ),
-                    //   ),
-                    // ),
-                    SizedBox(height: getProportionateScreenHeight(20)),
-                    const Divider(color: Colors.white70),
+                    const Divider(color: whiteColor),
                     SizedBox(height: getProportionateScreenHeight(20)),
                     buildMenuItem(
-                      text: 'College Result',
-                      icon: Icons.person,
+                      text: 'Profile',
+                      icon: Icons.person_outline,
                       onClicked: () => selectedItem(context, 0),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
                     buildMenuItem(
-                      text: 'Semester Attendence',
-                      icon: Icons.add,
+                      text: 'Result',
+                      icon: Icons.file_download,
                       onClicked: () => selectedItem(context, 1),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
@@ -70,7 +66,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                       onClicked: () => selectedItem(context, 2),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
-                    const Divider(color: Colors.white70),
+                    const Divider(color: whiteColor),
                     SizedBox(height: getProportionateScreenHeight(16)),
                     buildMenuItem(
                       text: 'Privacy & Help',
@@ -83,7 +79,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                     //   icon: Icons.verified_user_outlined,
                     //   onClicked: null,
                     // ),
-                    const Divider(color: Colors.white70),
+                    const Divider(color: whiteColor),
                   ],
                 ),
               ),
@@ -103,12 +99,19 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    const color = Colors.white;
-    const hoverColor = Colors.white70;
+    const color = whiteColor;
+    const hoverColor = whiteColor;
 
     return ListTile(
-      leading: Icon(icon, color: color),
-      title: Text(text, style: const TextStyle(color: color)),
+      leading: Icon(
+        icon,
+        color: color,
+        size: 28,
+      ),
+      title: Text(
+        text,
+        style: kBodyText3Style().copyWith(color: color),
+      ),
       hoverColor: hoverColor,
       onTap: onClicked,
     );
@@ -119,19 +122,8 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
 
     switch (index) {
       case 0:
-        //   Get.to(() => const Result());
-
-        //   // Get.to(
-        //   //   () => sharedPreferences.getBool('isServerLive')!
-        //   //       ? const Result()
-        //   //       : () => Get.snackbar(
-        //   //             'Attendence App',
-        //   //             "College Server is Down",
-        //   //             colorText: Colors.white,
-        //   //             backgroundColor: Colors.red,
-        //   //           ),
-        //   //);
-        //   break;
+        // Get.to(() => const Result());
+        // break;
         // case 1:
         //   Get.to(() => const CollegeAttendence());
         //   break;
@@ -147,7 +139,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
         //   Get.snackbar(
         //     'Attendence',
         //     'Unable to logout',
-        //     colorText: Colors.white,
+        //     colorText: whiteColor,
         //     backgroundColor: Colors.red,
         //   );
         // }

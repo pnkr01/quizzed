@@ -27,7 +27,21 @@ TextStyle kTitleTextStyle() {
 TextStyle kBodyText1Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
-    fontSize: getProportionateScreenHeight(14.0.sp),
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700,
+  );
+}
+TextStyle kBodyText5Style() {
+  return GoogleFonts.montserrat(
+    color: Colors.white,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+  );
+}
+TextStyle kBodyText4Style() {
+  return GoogleFonts.montserrat(
+    color: Colors.white,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w700,
   );
 }

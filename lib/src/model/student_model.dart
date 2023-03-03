@@ -1,5 +1,3 @@
-import 'package:quiz/src/db/local/local_db.dart';
-
 class Student {
   String? sId;
   String? regdNo;

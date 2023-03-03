@@ -1,5 +1,3 @@
-import 'dart:io';
-
 bool isProd = false;
 
 class ApiConfig {

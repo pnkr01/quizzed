@@ -103,9 +103,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Regd No',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: false,
                                 controller: controller.studentRegdNo.value,
                               ),
@@ -114,9 +114,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Password',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: true,
                                 controller: controller.studentPassword.value,
                               ),
@@ -128,9 +128,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Name',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: false,
                                 controller: controller.tName.value,
                               ),
@@ -139,9 +139,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Email',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: false,
                                 controller: controller.tEmail.value,
                               ),
@@ -150,9 +150,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Phone',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: false,
                                 controller: controller.tPhone.value,
                               ),
@@ -161,9 +161,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Set Password',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: true,
                                 controller: controller.tPassword.value,
                               ),
@@ -172,9 +172,9 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                             Obx(
                               () => CustomTextFormField(
                                 labelText: 'Confirm Password',
-                                borderColor: kTextFormFieldBorderColor,
-                                cursorColor: kTextFormFieldCursorColor,
-                                labelColor: kTextFormFieldBorderColor,
+                                borderColor: kTextFormFieldContentColor,
+                                cursorColor: kTextFormFieldContentColor,
+                                labelColor: kTextFormFieldContentColor,
                                 isObscureText: true,
                                 controller: controller.tConfirmPassword.value,
                               ),

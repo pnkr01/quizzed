@@ -211,8 +211,6 @@ class CommonAuthSignUpController extends GetxController {
         tPhone.value.text.isNotEmpty &&
         tPassword.value.text.isNotEmpty &&
         tConfirmPassword.value.text.isNotEmpty) {
-      print(tPassword.value.text);
-      print(tConfirmPassword.value.text);
       if (tPassword.value.text != tConfirmPassword.value.text) {
         Get.back();
         showDialog(

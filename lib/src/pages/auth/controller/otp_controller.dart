@@ -15,8 +15,6 @@ class OTPController extends GetxController {
   late Rx<TextEditingController> otp;
   @override
   void onInit() {
-    print(argumentData);
-
     otp = TextEditingController().obs;
     super.onInit();
   }

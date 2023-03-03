@@ -7,6 +7,7 @@ class QuizElevatedButton extends StatelessWidget {
   final Widget label;
   final Color backgroundColor;
   final Function()? function;
+
   const QuizElevatedButton({
     Key? key,
     required this.label,
@@ -21,7 +22,9 @@ class QuizElevatedButton extends StatelessWidget {
       height: getProportionateScreenHeight(45.sp),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12), // <-- Radius
+          ),
           backgroundColor: backgroundColor,
         ),
         onPressed: function,
