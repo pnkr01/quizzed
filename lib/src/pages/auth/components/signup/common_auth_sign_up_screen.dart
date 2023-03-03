@@ -19,189 +19,183 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
     controller.setIndexValue(0);
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+            onPressed: () => Get.back(),
+            icon: const Icon(Icons.arrow_back_ios)),
         elevation: 0,
         centerTitle: true,
         backgroundColor: kPrimaryColor,
-        title: const Text('Quizzed'),
+        title: Text(
+          'Quizzed',
+          style: kAppBarTextStyle(),
+        ),
       ),
       backgroundColor: kPrimaryColor,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                height: getProportionateScreenHeight(18.spMin),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 10.h,
+            ),
+            ToggleSwitch(
+              minHeight: getProportionateScreenHeight(30.h),
+              animate: true,
+              minWidth: double.infinity,
+              initialLabelIndex: 0,
+              cornerRadius: 20.0,
+              activeFgColor: Colors.white,
+              inactiveBgColor: Colors.white,
+              inactiveFgColor: Colors.grey,
+              totalSwitches: 2,
+              labels: const ['Student', 'Teacher'],
+              icons: const [
+                Icons.person,
+                Icons.school,
+              ],
+              activeBgColors: const [
+                [Colors.blue],
+                [Colors.green]
+              ],
+              onToggle: (index) {
+                controller.setIndexValue(index ?? 0);
+                // print(controller.getIndexValue());
+              },
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: getProportionateScreenHeight(12.w),
+                right: getProportionateScreenHeight(12.w),
+                top: getProportionateScreenHeight(12.h),
               ),
-              ToggleSwitch(
-                minHeight: getProportionateScreenHeight(45.sp),
-                animate: true,
-                minWidth: double.infinity,
-                initialLabelIndex: 0,
-                cornerRadius: 20.0,
-                activeFgColor: Colors.white,
-                inactiveBgColor: Colors.white,
-                inactiveFgColor: Colors.grey,
-                totalSwitches: 2,
-                labels: const ['Student', 'Teacher'],
-                icons: const [
-                  Icons.person,
-                  Icons.school,
-                ],
-                activeBgColors: const [
-                  [Colors.blue],
-                  [Colors.green]
-                ],
-                onToggle: (index) {
-                  controller.setIndexValue(index ?? 0);
-                  // print(controller.getIndexValue());
-                },
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: getProportionateScreenHeight(12.w),
-                  right: getProportionateScreenHeight(12.w),
-                  top: getProportionateScreenHeight(12.h),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.info_outline_rounded,
-                          color: Colors.yellow,
-                          size: getProportionateScreenHeight(24.sp),
-                        ),
-                        SizedBox(
-                          width: getProportionateScreenHeight(4.sp),
-                        ),
-                        Flexible(
-                          child: Obx(
-                            () => Text(
-                              controller.getIndexValue() == 0
-                                  ? GLobal.studentInfo
-                                  : GLobal.teacherInfo,
-                              style: kTitleTextStyle().copyWith(
-                                color: Colors.white,
-                              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.info_outline_rounded,
+                        color: greyColor,
+                        size: getProportionateScreenHeight(24.sp),
+                      ),
+                      SizedBox(
+                        width: getProportionateScreenHeight(4.w),
+                      ),
+                      Flexible(
+                        child: Obx(
+                          () => Text(
+                            controller.getIndexValue() == 0
+                                ? GLobal.studentInfo
+                                : GLobal.teacherInfo,
+                            style: kTitleTextStyle().copyWith(
+                              color: Colors.white,
                             ),
                           ),
                         ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: getProportionateScreenHeight(24.sp),
-                    ),
-                    Obx(() => controller.getIndexValue() == 0
-                        ? Column(
-                            children: [
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Regd No',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: false,
-                                  controller: controller.studentRegdNo.value,
-                                ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 18.h,
+                  ),
+                  Obx(() => controller.getIndexValue() == 0
+                      ? Column(
+                          children: [
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Regd No',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: false,
+                                controller: controller.studentRegdNo.value,
                               ),
-                              SizedBox(
-                                height: getProportionateScreenHeight(18.sp),
+                            ),
+                            SizedBox(height: 14.h),
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Password',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: true,
+                                controller: controller.studentPassword.value,
                               ),
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Password',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: true,
-                                  controller: controller.studentPassword.value,
-                                ),
+                            ),
+                          ],
+                        )
+                      : Column(
+                          children: [
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Name',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: false,
+                                controller: controller.tName.value,
                               ),
-                            ],
-                          )
-                        : Column(
-                            children: [
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Name',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: false,
-                                  controller: controller.tName.value,
-                                ),
+                            ),
+                            SizedBox(height: 14.h),
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Email',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: false,
+                                controller: controller.tEmail.value,
                               ),
-                              SizedBox(
-                                height: getProportionateScreenHeight(18.sp),
+                            ),
+                            SizedBox(height: 14.h),
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Phone',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: false,
+                                controller: controller.tPhone.value,
                               ),
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Email',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: false,
-                                  controller: controller.tEmail.value,
-                                ),
+                            ),
+                            SizedBox(height: 14.h),
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Set Password',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: true,
+                                controller: controller.tPassword.value,
                               ),
-                              SizedBox(
-                                height: getProportionateScreenHeight(18.sp),
+                            ),
+                            SizedBox(height: 14.h),
+                            Obx(
+                              () => CustomTextFormField(
+                                labelText: 'Confirm Password',
+                                borderColor: kTextFormFieldBorderColor,
+                                cursorColor: kTextFormFieldCursorColor,
+                                labelColor: kTextFormFieldBorderColor,
+                                isObscureText: true,
+                                controller: controller.tConfirmPassword.value,
                               ),
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Phone',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: false,
-                                  controller: controller.tPhone.value,
-                                ),
-                              ),
-                              SizedBox(
-                                height: getProportionateScreenHeight(18.sp),
-                              ),
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Set Password',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: true,
-                                  controller: controller.tPassword.value,
-                                ),
-                              ),
-                              SizedBox(
-                                height: getProportionateScreenHeight(18.sp),
-                              ),
-                              Obx(
-                                () => CustomTextFormField(
-                                  labelText: 'Confirm Password',
-                                  borderColor: kTextFormFieldBorderColor,
-                                  cursorColor: kTextFormFieldCursorColor,
-                                  labelColor: kTextFormFieldBorderColor,
-                                  isObscureText: true,
-                                  controller: controller.tConfirmPassword.value,
-                                ),
-                              ),
-                            ],
-                          )),
-                    SizedBox(
-                      height: getProportionateScreenHeight(24.sp),
-                    ),
-                    MYElevatedButton(
-                      label: "Register",
-                      backgroundColor: Colors.white,
-                      function: () {
-                        controller.getIndexValue() == 0
-                            ? controller.checkForErrorAndRegisterForStudent()
-                            : controller.checkForErrorAndRegisterForTeacher();
-                      },
-                    ),
-                  ],
-                ),
+                            ),
+                          ],
+                        )),
+                  SizedBox(height: 28.h),
+                  MYElevatedButton(
+                    label: "Register",
+                    backgroundColor: Colors.white,
+                    function: () {
+                      controller.getIndexValue() == 0
+                          ? controller.checkForErrorAndRegisterForStudent()
+                          : controller.checkForErrorAndRegisterForTeacher();
+                      FocusScope.of(context).unfocus();
+                    },
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

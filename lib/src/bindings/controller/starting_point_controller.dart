@@ -21,7 +21,7 @@ class StartingPointController extends GetxController {
   }
 
   takeDecision() {
-    if (sharedPreferences.getBool('studentLogged') == null) {
+    if (sharedPreferences.getBool('studentLogged') != null) {
       //send to student home
       navigateToStudentHome();
     } else if (sharedPreferences.getBool('teacherLoggedIN') != null) {

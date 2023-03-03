@@ -7,3 +7,8 @@ const Color kWhiteColor = Colors.white;
 const Color kTextFormFieldContentColor = Color(0xFFEEEEFC);
 const Color kTextFormFieldBorderColor = Color(0xFFEEEEFC);
 const Color kTextFormFieldCursorColor = Color(0xFFEEEEFC);
+
+const Color redColor = Colors.red;
+const Color transparentColor = Colors.red;
+const Color greenColor = Colors.green;
+const Color greyColor = Color(0xffC4C4C4);

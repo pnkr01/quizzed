@@ -29,18 +29,13 @@ class SplashScreen extends StatelessWidget {
             SizedBox(
               height: getProportionateScreenHeight(6.0.sp),
             ),
-            Text(
-              'Quizzed',
-              style: kTitleTextStyle().copyWith(
-                fontSize: getProportionateScreenHeight(16.0.sp),
-              ),
-            ),
+            Text('Quizzed', style: kBodyText3Style().copyWith(fontSize: 15.sp)),
             SizedBox(
-              height: getProportionateScreenHeight(30.0.sp),
+              height: getProportionateScreenHeight(28.h),
             ),
             const CircularProgressIndicator(
-              color: Colors.blue,
-              backgroundColor: Colors.white,
+              color: whiteColor,
+              // backgroundColor: whiteColor,
             ),
           ],
         ),

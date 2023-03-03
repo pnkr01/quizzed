@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/theme/app_color.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../theme/gradient_theme.dart';
-import '../utils/size_configuration.dart';
+import '../../../../../../utils/size_configuration.dart';
 
-class MYElevatedButton extends StatelessWidget {
-  final String label;
+class QuizElevatedButton extends StatelessWidget {
+  final Widget label;
   final Color backgroundColor;
   final Function()? function;
-  const MYElevatedButton({
+  const QuizElevatedButton({
     Key? key,
     required this.label,
     required this.backgroundColor,
@@ -27,18 +25,7 @@ class MYElevatedButton extends StatelessWidget {
           backgroundColor: backgroundColor,
         ),
         onPressed: function,
-        child: Text(
-          label,
-          style: kElevatedButtonTextStyle().copyWith(
-            color: kOnElevatedButtonTextColor,
-          ),
-
-          //  kTitleTextStyle().copyWith(
-          //   color: kOnElevatedButtonTextColor,
-          //   fontSize: getProportionateScreenHeight(14.sp),
-          //   fontWeight: FontWeight.w700,
-          // ),
-        ),
+        child: label,
       ),
     );
   }

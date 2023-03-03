@@ -37,18 +37,19 @@ class CommonAuthLogInController extends GetxController {
     Get.toNamed(CommonAuthSignUpScreen.routeName);
   }
 
-  setLocalIndex() {
+  setLocalIndex(var res) async {
+    await LocalDB.saveStudentModel(res);
     sharedPreferences.setBool('studentLogged', true);
   }
 
   saveTeacherIndex(var res) async {
     await LocalDB.saveTeacherData(res);
+    sharedPreferences.setBool('teacherLoggedIN', true);
   }
 
   navigateToteacherHomePage() {
     Get.offAllNamed(TeacherHome.routeName);
     showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
-    sharedPreferences.setBool('teacherLoggedIN', true);
   }
 
   hitLoginApi() async {
@@ -66,10 +67,9 @@ class CommonAuthLogInController extends GetxController {
       if (res["name"] != null && res["type"] == "student") {
         log('pass and regd no verified => sending to student home page');
         Get.offAllNamed(StudentHome.routeName);
-        await setLocalIndex();
+        await setLocalIndex(res);
         showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
-      }
-      if (res["type"] == "teacher" && res["status"] == "active") {
+      } else if (res["type"] == "teacher" && res["status"] == "active") {
         log('tecaher data available=> save this and log in');
         await saveTeacherIndex(res);
         navigateToteacherHomePage();
@@ -106,7 +106,11 @@ class CommonAuthLogInController extends GetxController {
         builder: ((context) => const LoadingDialog(message: 'Please Wait...')));
     if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
       log('hitting login Api');
-      hitLoginApi();
+      try {
+        hitLoginApi();
+      } catch (e) {
+        showSnackBar(e.toString(), Colors.red, Colors.white);
+      }
     } else {
       showDialog(
           context: Get.context!,

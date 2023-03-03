@@ -54,7 +54,7 @@ class Student {
     updatedAt = json['updated_at'] ?? "Unknown";
     type = json['type'] ?? "Unknown";
 
-    LocalDB.saveStudentModel(name ?? "Unknown", regdNo ?? "Unknown");
+  //  LocalDB.saveStudentModel(name ?? "Unknown", regdNo ?? "Unknown");
 
     // sharedPreferences.setString('name', name ?? "");
     // sharedPreferences.setString('regdNo', regdNo ?? "");

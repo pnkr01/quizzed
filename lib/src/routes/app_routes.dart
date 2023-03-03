@@ -6,6 +6,9 @@ import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/src/pages/splash/splash.dart';
 
+import '../pages/home/student/home/components/joinQuiz/join_quiz_view.dart';
+import '../pages/home/student/home/components/result/quiz_result_view.dart';
+
 class AppRoute {
   static List<GetPage> pages() => [
         GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
@@ -18,5 +21,7 @@ class AppRoute {
         GetPage(name: OTPScreen.routeName, page: () => const OTPScreen()),
         GetPage(name: TeacherHome.routeName, page: () => const TeacherHome()),
         GetPage(name: StudentHome.routeName, page: () => const StudentHome()),
+        GetPage(name: JoinQuizView.routeName, page: () => const JoinQuizView()),
+        GetPage(name: QuizResultView.routeName, page: () => const QuizResultView()),
       ];
 }

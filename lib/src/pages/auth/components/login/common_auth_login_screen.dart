@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart';
 import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/utils/size_configuration.dart';
 import 'package:quiz/widget/custom_elevated_bottom.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz/widget/custom_text_for_file.dart';
@@ -15,22 +14,23 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   Widget build(BuildContext context) {
     Get.put(CommonAuthLogInController());
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPrimaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(getProportionateScreenHeight(12.sp)),
+            padding: EdgeInsets.all(25.w),
             child: Column(
               children: [
                 SizedBox(
-                  height: getProportionateScreenHeight(35.sp),
+                  height: 50.h,
                 ),
                 Image.asset(
                   kLogoPath,
-                  height: getProportionateScreenHeight(150.sp),
+                  width: 150.w,
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21.sp),
+                  height: 20.h,
                 ),
                 Obx(
                   () => CustomTextFormField(
@@ -43,7 +43,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   ),
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21.sp),
+                  height: 15.h,
                 ),
                 Obx(
                   () => CustomTextFormField(
@@ -56,23 +56,25 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   ),
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21.sp),
+                  height: 20.h,
                 ),
                 MYElevatedButton(
                   label: "Continue",
                   backgroundColor: Colors.white,
                   function: () {
                     controller.checkForErrorAndStartLoggingInUser();
+                    FocusScope.of(context).unfocus();
                   },
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(21.sp),
+                  height: 15.h,
                 ),
                 MYElevatedButton(
                   label: "Sign Up",
                   backgroundColor: Colors.white,
                   function: () {
                     controller.navigateToSignUpScreen();
+                    FocusScope.of(context).unfocus();
                   },
                 ),
               ],

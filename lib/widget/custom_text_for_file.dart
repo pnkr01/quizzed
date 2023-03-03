@@ -30,21 +30,16 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: kTitleTextStyle().copyWith(
-        color: widget.contentColor ?? Colors.white,
-      ),
+      style: kBodyText3Style(),
       obscureText: widget.isObscureText,
       controller: widget.controller,
       cursorColor: widget.cursorColor,
       decoration: InputDecoration(
         labelText: widget.labelText,
-        labelStyle: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: widget.labelColor,
-        ),
+        labelStyle: kBodyText3Style(),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(getProportionateScreenHeight(14.r)),
+            Radius.circular(getProportionateScreenHeight(14.sp)),
           ),
           borderSide: BorderSide(color: widget.borderColor),
         ),
