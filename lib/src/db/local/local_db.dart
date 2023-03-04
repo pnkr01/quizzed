@@ -15,4 +15,8 @@ class LocalDB {
     sharedPreferences.setString('tPhone', data['primaryPhone']);
     //return data;
   }
+
+  static Future<void> removeLoacalDb() async {
+    sharedPreferences.clear();
+  }
 }

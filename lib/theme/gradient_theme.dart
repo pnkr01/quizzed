@@ -79,5 +79,5 @@ TextStyle kElevatedButtonTextStyle() {
 
 TextStyle kSubTitleTextStyle() {
   return GoogleFonts.nunito(
-      color: Colors.white, fontSize: getProportionateScreenHeight(12.0.sp));
+      color: Colors.black, fontSize: 12.h, fontWeight: FontWeight.w500);
 }

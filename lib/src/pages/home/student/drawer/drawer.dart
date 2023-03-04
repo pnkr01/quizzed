@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/profile/profile_view.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/result/result_view.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import '../../../../../utils/size_configuration.dart';
@@ -50,7 +53,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                     SizedBox(height: getProportionateScreenHeight(20)),
                     buildMenuItem(
                       text: 'Profile',
-                      icon: Icons.person_outline,
+                      icon: Icons.person,
                       onClicked: () => selectedItem(context, 0),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
@@ -60,25 +63,19 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                       onClicked: () => selectedItem(context, 1),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
-                    buildMenuItem(
-                      text: 'PPT History',
-                      icon: Icons.update,
-                      onClicked: () => selectedItem(context, 2),
-                    ),
-                    SizedBox(height: getProportionateScreenHeight(16)),
-                    const Divider(color: whiteColor),
+                    const Divider(color: whiteColor, thickness: 0.6),
                     SizedBox(height: getProportionateScreenHeight(16)),
                     buildMenuItem(
                       text: 'Privacy & Help',
                       icon: Icons.help,
-                      onClicked: () => selectedItem(context, 3),
+                      onClicked: () => selectedItem(context, 2),
                     ),
                     SizedBox(height: getProportionateScreenHeight(16)),
-                    // buildMenuItem(
-                    //   text: "Version : $version",
-                    //   icon: Icons.verified_user_outlined,
-                    //   onClicked: null,
-                    // ),
+                    buildMenuItem(
+                      text: "Version : 1.0.0",
+                      icon: Icons.verified_user_outlined,
+                      onClicked: null,
+                    ),
                     const Divider(color: whiteColor),
                   ],
                 ),
@@ -106,7 +103,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
       leading: Icon(
         icon,
         color: color,
-        size: 28,
+        // size: 28,
       ),
       title: Text(
         text,
@@ -122,29 +119,29 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
 
     switch (index) {
       case 0:
-        // Get.to(() => const Result());
-        // break;
-        // case 1:
-        //   Get.to(() => const CollegeAttendence());
-        //   break;
-        // case 2:
-        //   Get.to(() => const PPTHistory());
-        //   break;
-        // case 3:
-        //   Get.to(() => const PrivacyAndHelpScreen());
-        // if (await sharedPreferences.clear()) {
-        //   await FirebaseAuth.instance.signOut();
-        //   Get.offAll(const HandleOnBoarding());
-        // } else {
-        //   Get.snackbar(
-        //     'Attendence',
-        //     'Unable to logout',
-        //     colorText: whiteColor,
-        //     backgroundColor: Colors.red,
-        //   );
-        // }
-
+        Get.to(() => const ProfileScreenView());
         break;
+      case 1:
+        Get.to(() => const ResultScreenView());
+        break;
+      case 2:
+        Get.toNamed(PrivacyAndHelp.routeName);
+        break;
+      // case 3:
+      //   Get.to(() => const PrivacyAndHelpScreen());
+      // if (await sharedPreferences.clear()) {
+      //   await FirebaseAuth.instance.signOut();
+      //   Get.offAll(const HandleOnBoarding());
+      // } else {
+      //   Get.snackbar(
+      //     'Attendence',
+      //     'Unable to logout',
+      //     colorText: whiteColor,
+      //     backgroundColor: Colors.red,
+      //   );
+      // }
+
+      // break;
     }
   }
 }

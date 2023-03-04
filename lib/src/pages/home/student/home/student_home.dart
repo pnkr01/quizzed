@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/db/firebase/firebase_helper.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/notification/notification_view.dart';
 import 'package:quiz/src/pages/home/student/home/components/quizElevatedButon.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -60,7 +61,9 @@ class _StudentHomeState extends State<StudentHome> {
                 ))),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(NotificationView.routeName);
+              },
               icon: const Icon(Icons.notifications_active_outlined))
         ],
       ),
@@ -232,10 +235,10 @@ class _StudentHomeState extends State<StudentHome> {
                           initialPage: 0,
                           enableInfiniteScroll: true,
                           reverse: false,
-                          autoPlay: false,
+                          autoPlay: true,
                           autoPlayInterval: const Duration(seconds: 3),
                           autoPlayAnimationDuration:
-                              const Duration(milliseconds: 500),
+                              const Duration(milliseconds: 1000),
                           autoPlayCurve: Curves.fastOutSlowIn,
                           enlargeCenterPage: true,
                           scrollDirection: Axis.horizontal,
@@ -263,8 +266,11 @@ class _StudentHomeState extends State<StudentHome> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Icon(
-                            Icons.keyboard_double_arrow_right_outlined,
+                            Icons.north_east,
                             color: Color.fromARGB(255, 6, 112, 9),
+                          ),
+                          const SizedBox(
+                            width: 4,
                           ),
                           Text('Join Quiz',
                               style: kElevatedButtonTextStyle().copyWith(
@@ -311,22 +317,21 @@ class _StudentHomeState extends State<StudentHome> {
         activeIndex: activeIndex!,
         count: slideList!.length,
         effect: CustomizableEffect(
-          dotDecoration: DotDecoration(
-            width: 24,
-            height: 12,
-            color: Colors.green,
-            borderRadius: BorderRadius.circular(16),
-            verticalOffset: 0,
-          ),
-          activeDotDecoration: DotDecoration(
-            width: 32,
-            height: 12,
-            color: Colors.indigo,
-            rotationAngle: 180,
-            verticalOffset: -10,
-            borderRadius: BorderRadius.circular(24),
-          ),
-          inActiveColorOverride: (i) => Colors.white,
-        ),
+            dotDecoration: DotDecoration(
+              width: 24,
+              height: 12,
+              color: Colors.green,
+              borderRadius: BorderRadius.circular(16),
+              verticalOffset: 0,
+            ),
+            activeDotDecoration: DotDecoration(
+              width: 32,
+              height: 12,
+              color: Colors.indigo,
+              rotationAngle: 180,
+              verticalOffset: -10,
+              borderRadius: BorderRadius.circular(24),
+            ),
+            inActiveColorOverride: (i) => Colors.white),
       );
 }

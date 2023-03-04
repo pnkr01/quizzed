@@ -2,6 +2,8 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
 import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/notification/notification_view.dart';
+import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/src/pages/splash/splash.dart';
@@ -22,6 +24,12 @@ class AppRoute {
         GetPage(name: TeacherHome.routeName, page: () => const TeacherHome()),
         GetPage(name: StudentHome.routeName, page: () => const StudentHome()),
         GetPage(name: JoinQuizView.routeName, page: () => const JoinQuizView()),
-        GetPage(name: QuizResultView.routeName, page: () => const QuizResultView()),
+        GetPage(
+            name: QuizResultView.routeName, page: () => const QuizResultView()),
+        GetPage(
+            name: PrivacyAndHelp.routeName, page: () => const PrivacyAndHelp()),
+        GetPage(
+            name: NotificationView.routeName,
+            page: () => const NotificationView()),
       ];
 }

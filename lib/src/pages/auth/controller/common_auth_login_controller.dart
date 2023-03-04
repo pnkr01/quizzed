@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -31,6 +32,20 @@ class CommonAuthLogInController extends GetxController {
     regdNo.close();
     password.close();
     super.onClose();
+  }
+
+  setCookie(response) async {
+    String rawCookie = response.headers['set-cookie']!;
+    int index = rawCookie.indexOf(';');
+    String refreshToken =
+        (index == -1) ? rawCookie : rawCookie.substring(0, index);
+    int idx = refreshToken.indexOf("=");
+    if (kDebugMode) {
+      print(refreshToken.substring(idx + 1).trim());
+    }
+    String cookieID = refreshToken.substring(idx + 1).trim();
+    sharedPreferences.setString('Scookie', cookieID);
+    log("Cookieeeeee  $cookieID");
   }
 
   navigateToSignUpScreen() {
@@ -66,6 +81,8 @@ class CommonAuthLogInController extends GetxController {
       log("connection created");
       if (res["name"] != null && res["type"] == "student") {
         log('pass and regd no verified => sending to student home page');
+        log('saving user cookie');
+        await setCookie(response);
         Get.offAllNamed(StudentHome.routeName);
         await setLocalIndex(res);
         showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
