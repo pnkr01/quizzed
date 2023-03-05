@@ -74,88 +74,6 @@ class _StudentHomeState extends State<StudentHome> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.3), BlendMode.dstATop),
-                    image: const AssetImage('assets/images/fade.png'),
-                    fit: BoxFit.cover,
-                  ),
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(cornerRadius),
-                ),
-                //height: 120.h,
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 6, top: 5),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text('Name : ',
-                              style: kBodyText1Style()
-                                  .copyWith(color: kPrimaryColor)),
-                          Flexible(
-                            child: Text(
-                                overflow: TextOverflow.ellipsis,
-                                softWrap: true,
-                                maxLines: 1,
-                                controller.getStudentName(),
-                                style: kBodyText1Style()
-                                    .copyWith(color: kPrimaryColor)),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 4.h,
-                      ),
-                      Row(
-                        children: [
-                          Text('Regd  : ',
-                              style: kBodyText1Style()
-                                  .copyWith(color: kPrimaryColor)),
-                          Flexible(
-                            child: Text(
-                                overflow: TextOverflow.ellipsis,
-                                softWrap: true,
-                                maxLines: 1,
-                                controller.getStudentregdNo(),
-                                style: kBodyText1Style()
-                                    .copyWith(color: kPrimaryColor)),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 4.h,
-                      ),
-                      Row(
-                        children: [
-                          Text('Phone : ',
-                              style: kBodyText1Style()
-                                  .copyWith(color: kPrimaryColor)),
-                          Flexible(
-                            child: Text(
-                                overflow: TextOverflow.ellipsis,
-                                softWrap: true,
-                                maxLines: 1,
-                                controller.getStudentPhone(),
-                                style: kBodyText1Style()
-                                    .copyWith(color: kPrimaryColor)),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5.h,
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
               StreamBuilder(
                 stream: slides,
                 builder: (context, AsyncSnapshot snap) {
@@ -198,7 +116,7 @@ class _StudentHomeState extends State<StudentHome> {
                                     color: whiteColor,
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
                                       child: CachedNetworkImage(
@@ -254,30 +172,34 @@ class _StudentHomeState extends State<StudentHome> {
                   );
                 },
               ),
+              SizedBox(
+                height: 8.h,
+              ),
+              userInfoCard(controller),
+              SizedBox(
+                height: 200.h,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 0.h),
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: 50.h,
-                    ),
                     QuizElevatedButton(
                       label: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Icon(
                             Icons.north_east,
-                            color: Color.fromARGB(255, 6, 112, 9),
+                            color: whiteColor,
                           ),
                           const SizedBox(
                             width: 4,
                           ),
                           Text('Join Quiz',
-                              style: kElevatedButtonTextStyle().copyWith(
-                                  color: const Color.fromARGB(255, 6, 112, 9)))
+                              style: kElevatedButtonTextStyle()
+                                  .copyWith(color: whiteColor))
                         ],
                       ),
-                      backgroundColor: const Color.fromARGB(255, 200, 249, 199),
+                      backgroundColor: darkJoinColor,
                       function: () {
                         controller.navigateToJoinQuiz();
                       },
@@ -291,14 +213,14 @@ class _StudentHomeState extends State<StudentHome> {
                         children: [
                           const Icon(
                             Icons.bolt,
-                            color: redColor,
+                            color: whiteColor,
                           ),
                           Text('Result',
                               style: kElevatedButtonTextStyle()
-                                  .copyWith(color: redColor))
+                                  .copyWith(color: whiteColor))
                         ],
                       ),
-                      backgroundColor: const Color(0xFFF9D8D6),
+                      backgroundColor: darkJoinColor,
                       function: () {
                         controller.navigateToResultQuiz();
                       },
@@ -308,6 +230,83 @@ class _StudentHomeState extends State<StudentHome> {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Container userInfoCard(StudentHomeController controller) {
+    return Container(
+      margin: const EdgeInsets.only(left: 2),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+          image: const AssetImage('assets/images/fade.png'),
+          fit: BoxFit.cover,
+        ),
+        color: whiteColor,
+        borderRadius: BorderRadius.circular(cornerRadius),
+      ),
+      //height: 120.h,
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 6, top: 5),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text('Name : ',
+                    style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                Flexible(
+                  child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                      maxLines: 1,
+                      controller.getStudentName(),
+                      style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            Row(
+              children: [
+                Text('Regd  : ',
+                    style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                Flexible(
+                  child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                      maxLines: 1,
+                      controller.getStudentregdNo(),
+                      style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 4.h,
+            ),
+            Row(
+              children: [
+                Text('Phone : ',
+                    style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                Flexible(
+                  child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                      maxLines: 1,
+                      controller.getStudentPhone(),
+                      style: kBodyText1Style().copyWith(color: darkJoinColor)),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5.h,
+            )
+          ],
         ),
       ),
     );
@@ -327,11 +326,11 @@ class _StudentHomeState extends State<StudentHome> {
             activeDotDecoration: DotDecoration(
               width: 32,
               height: 12,
-              color: Colors.indigo,
+              color: darkJoinColor,
               rotationAngle: 180,
               verticalOffset: -10,
               borderRadius: BorderRadius.circular(24),
             ),
-            inActiveColorOverride: (i) => Colors.white),
+            inActiveColorOverride: (i) => whiteColor),
       );
 }

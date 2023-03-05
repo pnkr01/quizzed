@@ -20,7 +20,7 @@ class QuizResultView extends StatelessWidget {
           child: Container(
             color: kPrimaryColor,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor),
+              style: ElevatedButton.styleFrom(backgroundColor: darkJoinColor),
               onPressed: () {
                 //  controller.isTapStartJoining.value = true;
                 Focus.of(context).unfocus();
@@ -52,8 +52,11 @@ class QuizResultView extends StatelessWidget {
             SizedBox(
               height: 20.h,
             ),
-            const Center(
-              child: Text('No Result found'),
+            Center(
+              child: Text(
+                'No Result found',
+                style: kBodyText3Style().copyWith(color: blackColor),
+              ),
             ),
           ],
         ));

@@ -89,6 +89,7 @@ class CommonAuthLogInController extends GetxController {
       } else if (res["type"] == "teacher" && res["status"] == "active") {
         log('tecaher data available=> save this and log in');
         await saveTeacherIndex(res);
+        await setTeacherCookie(response);
         navigateToteacherHomePage();
       } else {
         log('else part of login screen');

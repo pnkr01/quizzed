@@ -21,7 +21,7 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
         child: Container(
             color: kPrimaryColor,
             child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: kPrimaryColor),
+                style: ElevatedButton.styleFrom(backgroundColor: darkJoinColor),
                 onPressed: () {
                   controller.isTapStartJoining.value = true;
                   Focus.of(context).unfocus();
@@ -35,7 +35,7 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                       )
                     : const Center(
                         child: CircularProgressIndicator(
-                          color: whiteColor,
+                          color: darkJoinColor,
                           strokeWidth: 1,
                         ),
                       )))),

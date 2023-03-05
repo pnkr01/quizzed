@@ -81,3 +81,8 @@ TextStyle kSubTitleTextStyle() {
   return GoogleFonts.nunito(
       color: Colors.black, fontSize: 12.h, fontWeight: FontWeight.w500);
 }
+
+
+//----------------------------------Teacher Theme--------------------------------------//
+
+

@@ -69,11 +69,18 @@ class ProfileScreenView extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 10.h,
+          ),
           Expanded(
             child: Container(
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: kPrimaryColor,
+                color: whiteColor,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
               ),
               child: Obx(
                 () => myProfileController.isLoading.value
@@ -85,401 +92,353 @@ class ProfileScreenView extends StatelessWidget {
                             children: [
                               Column(
                                 children: [
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: const Padding(
-                                                padding: EdgeInsets.all(4.0),
-                                                child: Icon(
-                                                  Icons.person,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          child: const Icon(
+                                            Icons.person,
+                                            color: whiteColor,
+                                            size: 20,
                                           ),
-                                          Flexible(
-                                            child: Text(
-                                              myProfileController
-                                                      .profile[0].name ??
-                                                  "Unknown",
-                                              style: kBodyText3Style().copyWith(
-                                                  color: kPrimaryColor),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: const Padding(
-                                                padding: EdgeInsets.all(4.0),
-                                                child: Icon(
-                                                  Icons.email_outlined,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Flexible(
-                                            child: Text(
-                                              myProfileController
-                                                      .profile[0].email ??
-                                                  "Unknown",
-                                              style: kBodyText3Style().copyWith(
-                                                  color: kPrimaryColor),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons.app_registration,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Text(
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Flexible(
+                                          child: Text(
                                             myProfileController
-                                                    .profile[0].regdNo ??
+                                                    .profile[0].name ??
                                                 "Unknown",
                                             style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
+                                                .copyWith(color: darkJoinColor),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 15,
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
                                   ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: Icon(
-                                                  myProfileController.profile[0]
-                                                              .gender ==
-                                                          'M'
-                                                      ? Icons.male
-                                                      : Icons.female,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
+                                  // const SizedBox(
+                                  //   height: 15,
+                                  // ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          child: const Icon(
+                                            Icons.email_outlined,
+                                            color: whiteColor,
+                                            size: 20,
                                           ),
-                                          Text(
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Flexible(
+                                          child: Text(
+                                            myProfileController
+                                                    .profile[0].email ??
+                                                "Unknown",
+                                            style: kBodyText3Style()
+                                                .copyWith(color: darkJoinColor),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Icon(
+                                            Icons.app_registration,
+                                            color: whiteColor,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          myProfileController
+                                                  .profile[0].regdNo ??
+                                              "Unknown",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Icon(
                                             myProfileController
                                                         .profile[0].gender ==
                                                     'M'
-                                                ? "Male"
-                                                : "Female",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
+                                                ? Icons.male
+                                                : Icons.female,
+                                            color: whiteColor,
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          myProfileController
+                                                      .profile[0].gender ==
+                                                  'M'
+                                              ? "Male"
+                                              : "Female",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 15,
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
                                   ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons.blur_on_sharp,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
                                           ),
-                                          const SizedBox(
-                                            width: 8,
+                                          child: const Icon(
+                                            Icons.blur_on_sharp,
+                                            color: whiteColor,
                                           ),
-                                          Text(
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          myProfileController
+                                                  .profile[0].section ??
+                                              "Unknown",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Icon(
+                                            Icons.phone,
+                                            color: whiteColor,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          myProfileController
+                                                  .profile[0].primaryPhone ??
+                                              "Unknown",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Icon(
+                                            Icons.date_range_outlined,
+                                            color: whiteColor,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          myProfileController
+                                                  .profile[0].dateOfBirth ??
+                                              "Unknown",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Icon(
+                                            Icons.sentiment_satisfied_rounded,
+                                            color: whiteColor,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Text(
+                                          "${myProfileController.profile[0].semester}th Semester",
+                                          style: kBodyText3Style()
+                                              .copyWith(color: darkJoinColor),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    height: 8,
+                                    color: dividerColor,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          height: 28.h,
+                                          width: 28.h,
+                                          decoration: const BoxDecoration(
+                                            color: darkJoinColor,
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: const Icon(
+                                            Icons.subject_outlined,
+                                            color: whiteColor,
+                                            size: 20,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 8,
+                                        ),
+                                        Flexible(
+                                          child: Text(
                                             myProfileController
-                                                    .profile[0].section ??
+                                                    .profile[0].branch ??
                                                 "Unknown",
                                             style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
+                                                .copyWith(color: darkJoinColor),
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons.phone,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Text(
-                                            myProfileController
-                                                    .profile[0].primaryPhone ??
-                                                "Unknown",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(4),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons.date_range_outlined,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Text(
-                                            myProfileController
-                                                    .profile[0].dateOfBirth ??
-                                                "Unknown",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons
-                                                      .sentiment_satisfied_rounded,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Text(
-                                            "${myProfileController.profile[0].semester}th Semester",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: kPrimaryColor),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Container(
-                                    decoration: const BoxDecoration(
-                                        color: whiteColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(12))),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Color(0xffFAD246),
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Container(
-                                              margin: const EdgeInsets.all(2),
-                                              child: Container(
-                                                margin: const EdgeInsets.all(2),
-                                                child: const Icon(
-                                                  Icons.subject_outlined,
-                                                  color: whiteColor,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            width: 8,
-                                          ),
-                                          Flexible(
-                                            child: Text(
-                                              myProfileController
-                                                      .profile[0].branch ??
-                                                  "Unknown",
-                                              style: kBodyText3Style().copyWith(
-                                                  color: kPrimaryColor),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],
                               ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 8, right: 8),
+                                child: SizedBox(
+                                  height: 45,
+                                  width: double.infinity,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        backgroundColor: darkJoinColor,
+                                        shape: const RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12)))),
+                                    onPressed: () {
+                                      Get.back();
+                                    },
+                                    child: Text(
+                                      'Okay',
+                                      style: kBodyText2Style(),
+                                    ),
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                         ),
                       )
                     : const Center(
                         child: CircularProgressIndicator(
-                          backgroundColor: whiteColor,
+                          backgroundColor: darkJoinColor,
                         ),
                       ),
               ),
