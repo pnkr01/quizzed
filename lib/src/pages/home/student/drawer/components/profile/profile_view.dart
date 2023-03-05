@@ -5,7 +5,6 @@ import 'package:quiz/src/pages/home/student/controller/student_home_controller.d
 import 'package:quiz/src/pages/home/student/drawer/components/profile/controller/student_profile_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileScreenView extends StatelessWidget {
@@ -18,68 +17,64 @@ class ProfileScreenView extends StatelessWidget {
     var controller = Get.find<StudentHomeController>();
     var myProfileController = Get.find<StudentProfileController>();
     return Scaffold(
-      appBar: const QuizAppbar(
-        appBarColor: blueColor,
-        titleText: 'Profile',
-        preferredSize: Size.fromHeight(55),
+      backgroundColor: kPrimaryColor,
+      appBar: AppBar(
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: kPrimaryColor,
+        title: const Text('Profile'),
       ),
       body: Column(
         children: [
-          SizedBox(
-            height: 12.h,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 10.w,
-              ),
-              CircleAvatar(
-                radius: 42.h,
-                backgroundColor: greyColor,
-                child: CircleAvatar(
-                  radius: 40.h, backgroundColor: kPrimaryColor,
-                  backgroundImage: const CachedNetworkImageProvider(
-                      'https://img.freepik.com/free-vector/flat-design-bear-family-illustration_23-2149539189.jpg?w=740&t=st=1677930244~exp=1677930844~hmac=1ed6d9791d4c66b0f0ef74d0511b9a1ddf29643bff146eb88524829865455775'),
-                  //backgroundColor: whiteColor,
+          Container(
+            color: kPrimaryColor,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 10.w,
                 ),
-              ),
-              SizedBox(
-                width: 10.w,
-              ),
-              Flexible(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                      controller.getStudentName(),
-                      style: kBodyText1Style().copyWith(
-                        color: kPrimaryColor,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 42.h,
+                    backgroundColor: whiteColor,
+                    child: CircleAvatar(
+                      radius: 40.h, backgroundColor: kPrimaryColor,
+                      backgroundImage: const CachedNetworkImageProvider(
+                          'https://img.freepik.com/free-vector/flat-design-bear-family-illustration_23-2149539189.jpg?w=740&t=st=1677930244~exp=1677930844~hmac=1ed6d9791d4c66b0f0ef74d0511b9a1ddf29643bff146eb88524829865455775'),
+                      //backgroundColor: whiteColor,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10.w,
+                ),
+                Flexible(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          controller.getStudentName(),
+                          style: kBodyText1Style()),
+                      Text(
+                        "Student",
+                        style: kSubTitleTextStyle().copyWith(color: whiteColor),
                       ),
-                    ),
-                    Text(
-                      "Student",
-                      style: kSubTitleTextStyle()
-                          .copyWith(color: const Color(0xFF797979)),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 12.h,
+              ],
+            ),
           ),
           Expanded(
             child: Container(
               width: double.infinity,
               decoration: const BoxDecoration(
-                  color: blueColor,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24),
-                      topRight: Radius.circular(24))),
+                color: kPrimaryColor,
+              ),
               child: Obx(
                 () => myProfileController.isLoading.value
                     ? Padding(

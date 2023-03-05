@@ -54,8 +54,8 @@ class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
                 Icons.school,
               ],
               activeBgColors: const [
-                [Colors.blue],
-                [Colors.green]
+                [kPrimaryLightColor],
+                [kPrimaryLightColor]
               ],
               onToggle: (index) {
                 controller.setIndexValue(index ?? 0);

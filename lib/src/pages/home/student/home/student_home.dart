@@ -41,7 +41,7 @@ class _StudentHomeState extends State<StudentHome> {
 
   @override
   Widget build(BuildContext context) {
-    //Get.put(() => StudentHomeController());
+    Get.put(() => StudentHomeController());
     var controller = Get.find<StudentHomeController>();
     return Scaffold(
       drawer: const NavigationDrawerWidget(),
