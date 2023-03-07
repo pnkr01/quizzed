@@ -6,12 +6,13 @@ import 'package:quiz/src/pages/home/student/drawer/components/notification/notif
 import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/create/create_quiz.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_addition_screen.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_confirm_view_screen.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/src/pages/splash/splash.dart';
 
 import '../pages/home/student/home/components/joinQuiz/join_quiz_view.dart';
 import '../pages/home/student/home/components/result/quiz_result_view.dart';
+import '../pages/home/teacher/home/components/quiz_add/quiz_additon_view_screen.dart';
 
 class AppRoute {
   static List<GetPage> pages() => [
@@ -37,5 +38,8 @@ class AppRoute {
         GetPage(
             name: QuizAdditionScreen.routeName,
             page: () => const QuizAdditionScreen()),
+        GetPage(
+            name: QuizAdditionView.routeName,
+            page: () => const QuizAdditionView()),
       ];
 }

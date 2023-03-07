@@ -37,12 +37,6 @@ class MYElevatedButton extends StatelessWidget {
           style: kElevatedButtonTextStyle().copyWith(
             color: textColor ?? kOnElevatedButtonTextColor,
           ),
-
-          //  kTitleTextStyle().copyWith(
-          //   color: kOnElevatedButtonTextColor,
-          //   fontSize: getProportionateScreenHeight(14.sp),
-          //   fontWeight: FontWeight.w700,
-          // ),
         ),
       ),
     );

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/loading_dialog.dart';
 import 'package:quiz/utils/quizAppBar.dart';
+import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:textfield_search/textfield_search.dart';
 import '../../../../../../../theme/app_color.dart';
 import '../../../../../../../utils/helper_widget.dart';
+import '../../../../../../../utils/loading_dialog.dart';
 import '../../../../../../../utils/quizTextField.dart';
 import '../../../../../../../utils/size_configuration.dart';
 import 'controller/create_quiz_controller.dart';
@@ -214,22 +215,22 @@ class CreateQuiz extends GetView<CreateQuizController> {
                           controller: controller.duration.value,
                         ),
                       ),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
+                      const SizedBox(
+                        height: 12,
+                      ),
+                      QuizElevatedButton(
+                          label: const Text('Create'),
+                          backgroundColor: kTeacherPrimaryColor,
+                          function: () {
                             showDialog(
                                 context: context,
                                 builder: ((context) => const LoadingDialog(
                                     message: 'Please wait')));
                             controller.checkThisCreateQuizTap();
-                            // log(controller.search.value.text);
-                            // controller.getEquivalentCode(
-                            //     controller.search.value.text.trim());
-                          },
-                          child: const Text('Create'),
-                        ),
-                      )
+                          }),
+                      const SizedBox(
+                        height: 24,
+                      ),
                     ],
                   ),
                 ),

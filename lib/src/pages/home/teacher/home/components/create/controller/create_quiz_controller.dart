@@ -7,7 +7,7 @@ import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_addition_screen.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_confirm_view_screen.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
@@ -80,7 +80,7 @@ class CreateQuizController extends GetxController {
             title.value.text.trimRight(),
             description.value.text.trimRight(),
             getEquivalentCode(search.value.text.trimRight()),
-            section.value.text.trimRight(),
+            section.value.text.toUpperCase().trimRight(),
             semester.value.text.trimRight(),
             totalQs.value.text.trimRight(),
             marksPerQs.value.text.trimRight(),
@@ -89,7 +89,10 @@ class CreateQuizController extends GetxController {
         } else {
           Get.back();
           showSnackBar(
-              'Enter correct section format. e.g CSE-K', redColor, whiteColor);
+            'Enter correct section format. e.g CSE-K',
+            redColor,
+            whiteColor,
+          );
         }
       } catch (e) {
         Get.back();
@@ -97,6 +100,7 @@ class CreateQuizController extends GetxController {
         showSnackBar(e.toString(), redColor, whiteColor);
       }
     } else {
+      Get.back();
       showDialog(
           context: Get.context!,
           builder: ((context) =>
@@ -143,6 +147,7 @@ class CreateQuizController extends GetxController {
       log('clearning local DB========================>');
       sharedPreferences.clear();
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      showSnackBar('Your session expired :)', greenColor, whiteColor);
     } else if (myjson["quiz_id"] != null) {
       Get.back();
       log(myjson.toString());
@@ -150,7 +155,7 @@ class CreateQuizController extends GetxController {
       Get.offNamed(
         QuizAdditionScreen.routeName,
         arguments: [
-          {"subject": myjson["subject"]},
+          {"subject": search.value.text.trimRight()},
           {"quiz_id": myjson["quiz_id"]},
           {"conducted_by": myjson["conducted_by"]},
           {"title": myjson["title"]},
@@ -160,6 +165,10 @@ class CreateQuizController extends GetxController {
           {"created_at": myjson["created_at"]},
           {"updated_at": myjson["updated_at"]},
           {"status": myjson["status"]},
+          {"description": myjson["description"]},
+          {"total_questions": myjson["total_questions"]},
+          {"per_question_marks": myjson["per_question_marks"]},
+          {"subjectCode": myjson["subject"]},
         ],
       );
     } else {

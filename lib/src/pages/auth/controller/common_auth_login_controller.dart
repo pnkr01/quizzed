@@ -105,6 +105,7 @@ class CommonAuthLogInController extends GetxController {
             .contains('Your account is not verified yet')) {
       log('inactive teacher.');
       log('sending => to otp screen');
+      Get.back();
       Get.toNamed(
         OTPScreen.routeName,
         arguments: [

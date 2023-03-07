@@ -31,32 +31,38 @@ class OTPScreen extends GetView<OTPController> {
             children: [
               Row(
                 children: [
-                  const Icon(
-                    Icons.info_outline,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 5.w,
-                  ),
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.all(Radius.circular(4.r))),
+                          color: const Color.fromARGB(255, 158, 249, 162),
+                          borderRadius: BorderRadius.all(Radius.circular(8.r))),
                       child: Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: Text(
-                          // ignore: prefer_interpolation_to_compose_strings
-                          "${"Your registration number is " + controller.getRegdNo()} for using Quizzed App. Please remmember this for login.",
-                          style: kSubTitleTextStyle(),
+                        padding: const EdgeInsets.all(8),
+                        child: Row(
+                          children: [
+                            const Icon(
+                              Icons.info_outline,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Expanded(
+                              child: Text(
+                                // ignore: prefer_interpolation_to_compose_strings
+                                "${"Your registration number is " + controller.getRegdNo()} for using Quizzed App. Please remmember this for login.",
+                                style: kBodyText3Style(),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: getProportionateScreenHeight(50.spMin),
+              const SizedBox(
+                height: 10,
               ),
               Obx(
                 () => CustomTextFormField(
