@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:quiz/src/db/firebase/firebase_helper.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/notification/notification_view.dart';
-import 'package:quiz/src/pages/home/student/home/components/quizElevatedButon.dart';
+import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

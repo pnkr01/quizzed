@@ -22,4 +22,7 @@ class ApiConfig {
   static getEndPointsUrl(String endPoint) {
     return !isProd ? "http://10.0.2.2:8001/$endPoint" : "";
   }
+  static getEndPointsNextUrl(String endPoint) {
+    return !isProd ? "http://10.0.2.2:8000/$endPoint" : "";
+  }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../../utils/size_configuration.dart';
+import 'size_configuration.dart';
 
 class QuizElevatedButton extends StatelessWidget {
   final Widget label;

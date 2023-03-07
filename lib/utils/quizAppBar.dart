@@ -22,10 +22,7 @@ class QuizAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      actions: [
-        if(tariling !=null)
-        tariling!
-      ],
+      actions: [if (tariling != null) tariling!],
       elevation: 0,
       backgroundColor: appBarColor ?? whiteColor,
       title: Text(
@@ -35,7 +32,9 @@ class QuizAppbar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: true,
       leading: leading ??
           IconButton(
-            onPressed: () => Get.back(),
+            onPressed: () {
+              Get.back();
+            },
             icon: const Icon(Icons.arrow_back_ios),
             color: whiteColor,
           ),

@@ -6,6 +6,8 @@ import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 
 import '../pages/auth/controller/otp_controller.dart';
+import '../pages/home/teacher/home/components/create/controller/create_quiz_controller.dart';
+import '../pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
 import 'controller/starting_point_controller.dart';
 
 class InitialBindings extends Bindings {
@@ -18,5 +20,7 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => StudentHomeController());
     Get.lazyPut(() => JoinQuizCOntroller());
     Get.lazyPut(() => TeacherHomeController());
+    Get.lazyPut(() => CreateQuizController());
+    Get.lazyPut(() => QuizAdditionController());
   }
 }
