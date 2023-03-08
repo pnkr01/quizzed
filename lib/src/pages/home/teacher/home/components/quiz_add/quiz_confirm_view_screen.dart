@@ -366,7 +366,7 @@ class QuizAdditionScreen extends GetView<QuizAdditionController> {
                                   horizontal: 2, vertical: 4),
                               width: double.infinity,
                               child: Text(
-                                DateFormat('dd-MM-yyyy, hh:mm:ss').format(
+                                DateFormat('dd-MM-yyyy').format(
                                     DateTime.parse(controller.getCreatedAt())),
                                 style: kBodyText3Style()
                                     .copyWith(color: kTeacherPrimaryColor),

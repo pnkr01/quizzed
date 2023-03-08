@@ -96,7 +96,7 @@ class CreateQuizController extends GetxController {
         }
       } catch (e) {
         Get.back();
-        log('created QUiz=>>>>>>>>>>>>>>>> Hurray!');
+        log('ERROR');
         showSnackBar(e.toString(), redColor, whiteColor);
       }
     } else {

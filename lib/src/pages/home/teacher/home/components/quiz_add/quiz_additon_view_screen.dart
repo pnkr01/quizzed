@@ -123,7 +123,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                       ),
                       Obx(
                         () => Text(
-                          'This is ${controller.currentQs + 1} question out of ${controller.getTotalQs()}',
+                          'This is ${controller.page.value + 1} question out of ${controller.getTotalQs()}',
                           style: kBodyText3Style()
                               .copyWith(color: kTeacherPrimaryColor),
                         ),
@@ -139,6 +139,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                         height: 400,
                         width: double.infinity,
                         child: PageView.builder(
+                          controller: controller.pageController,
                           itemCount: controller.getTotalQs(),
                           itemBuilder: ((context, index) => Padding(
                                 padding:
@@ -167,7 +168,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                                 CrossAxisAlignment.stretch,
                                             children: [
                                               Text(
-                                                '${controller.currentQs + 1}.  Question ${controller.currentQs + 1}',
+                                                '${controller.page.value + 1}.  Question ${controller.page.value + 1}',
                                                 style: kBodyText3Style(),
                                               ),
                                               const SizedBox(
@@ -235,7 +236,11 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                 ),
                               )),
                           physics: const BouncingScrollPhysics(),
-                          onPageChanged: (value) => print(value),
+                          onPageChanged: (value) {
+                            print(value);
+                            //controller.pageController.
+                            //controller.page.value = controller.page.value + 1;
+                          },
                         ),
                       ),
                     ],
@@ -255,24 +260,45 @@ class QuizAdditionView extends GetView<AddQuizController> {
         children: [
           Row(
             children: [
-              const CircleAvatar(
-                child: Text('A'),
+              Obx(
+                () => CircleAvatar(
+                  backgroundColor: controller.onTapColor1.value,
+                  child: Text(
+                    'A',
+                    style: kBodyText1Style(),
+                  ),
+                ),
               ),
               const SizedBox(
                 width: 8,
               ),
-              SizedBox(
-                width: 200,
-                child: OptionTextFormField(
-                  borderColor: whiteColor,
-                  controller: controller.option1,
-                  cursorColor: whiteColor,
-                  isObscureText: false,
-                  labelColor: whiteColor,
-                  labelText: 'Option 1',
-                  contentColor: whiteColor,
+              Expanded(
+                child: SizedBox(
+                  child: OptionTextFormField(
+                    borderColor: whiteColor,
+                    controller: controller.option1,
+                    cursorColor: whiteColor,
+                    isObscureText: false,
+                    labelColor: whiteColor,
+                    labelText: 'Option 1',
+                    contentColor: whiteColor,
+                  ),
                 ),
               ),
+              Obx(() => Radio(
+                    fillColor: MaterialStateProperty.resolveWith<Color>(
+                        (Set<MaterialState> states) {
+                      return whiteColor;
+                    }),
+                    toggleable: true,
+                    activeColor: whiteColor,
+                    value: 0,
+                    groupValue: controller.correctOptionValue.value,
+                    onChanged: (val) {
+                      print(val);
+                      controller.correctOptionValue.value = val!;
+                    },
+                  ))
             ],
           ),
           const SizedBox(
@@ -280,24 +306,45 @@ class QuizAdditionView extends GetView<AddQuizController> {
           ),
           Row(
             children: [
-              const CircleAvatar(
-                child: Text('B'),
+              Obx(
+                () => CircleAvatar(
+                  backgroundColor: controller.onTapColor1.value,
+                  child: Text(
+                    'B',
+                    style: kBodyText1Style(),
+                  ),
+                ),
               ),
               const SizedBox(
                 width: 8,
               ),
-              SizedBox(
-                width: 200,
-                child: OptionTextFormField(
-                  borderColor: whiteColor,
-                  controller: controller.option2,
-                  cursorColor: whiteColor,
-                  isObscureText: false,
-                  labelColor: whiteColor,
-                  labelText: 'Option 2',
-                  contentColor: whiteColor,
+              Expanded(
+                child: SizedBox(
+                  child: OptionTextFormField(
+                    borderColor: whiteColor,
+                    controller: controller.option2,
+                    cursorColor: whiteColor,
+                    isObscureText: false,
+                    labelColor: whiteColor,
+                    labelText: 'Option 2',
+                    contentColor: whiteColor,
+                  ),
                 ),
               ),
+              Obx(() => Radio(
+                    fillColor: MaterialStateProperty.resolveWith<Color>(
+                        (Set<MaterialState> states) {
+                      return whiteColor;
+                    }),
+                    toggleable: true,
+                    activeColor: whiteColor,
+                    value: 1,
+                    groupValue: controller.correctOptionValue.value,
+                    onChanged: (val) {
+                      print(val);
+                      controller.correctOptionValue.value = val!;
+                    },
+                  ))
             ],
           ),
           const SizedBox(
@@ -305,24 +352,45 @@ class QuizAdditionView extends GetView<AddQuizController> {
           ),
           Row(
             children: [
-              const CircleAvatar(
-                child: Text('C'),
+              Obx(
+                () => CircleAvatar(
+                  backgroundColor: controller.onTapColor1.value,
+                  child: Text(
+                    'C',
+                    style: kBodyText1Style(),
+                  ),
+                ),
               ),
               const SizedBox(
                 width: 8,
               ),
-              SizedBox(
-                width: 200,
-                child: OptionTextFormField(
-                  borderColor: whiteColor,
-                  controller: controller.option3,
-                  cursorColor: whiteColor,
-                  isObscureText: false,
-                  labelColor: whiteColor,
-                  labelText: 'Option 3',
-                  contentColor: whiteColor,
+              Expanded(
+                child: SizedBox(
+                  child: OptionTextFormField(
+                    borderColor: whiteColor,
+                    controller: controller.option3,
+                    cursorColor: whiteColor,
+                    isObscureText: false,
+                    labelColor: whiteColor,
+                    labelText: 'Option 3',
+                    contentColor: whiteColor,
+                  ),
                 ),
               ),
+              Obx(() => Radio(
+                    fillColor: MaterialStateProperty.resolveWith<Color>(
+                        (Set<MaterialState> states) {
+                      return whiteColor;
+                    }),
+                    toggleable: true,
+                    activeColor: whiteColor,
+                    value: 2,
+                    groupValue: controller.correctOptionValue.value,
+                    onChanged: (val) {
+                      print(val);
+                      controller.correctOptionValue.value = val!;
+                    },
+                  ))
             ],
           ),
           const SizedBox(
@@ -330,24 +398,46 @@ class QuizAdditionView extends GetView<AddQuizController> {
           ),
           Row(
             children: [
-              const CircleAvatar(
-                child: Text('D'),
+              Obx(
+                () => CircleAvatar(
+                  backgroundColor: controller.onTapColor1.value,
+                  child: Text(
+                    'D',
+                    style: kBodyText1Style(),
+                  ),
+                ),
               ),
               const SizedBox(
                 width: 8,
               ),
-              SizedBox(
-                width: 200,
-                child: OptionTextFormField(
-                  borderColor: whiteColor,
-                  controller: controller.option4,
-                  cursorColor: whiteColor,
-                  isObscureText: false,
-                  labelColor: whiteColor,
-                  labelText: 'Option 4',
-                  contentColor: whiteColor,
+              Expanded(
+                child: SizedBox(
+                  width: 200,
+                  child: OptionTextFormField(
+                    borderColor: whiteColor,
+                    controller: controller.option4,
+                    cursorColor: whiteColor,
+                    isObscureText: false,
+                    labelColor: whiteColor,
+                    labelText: 'Option 4',
+                    contentColor: whiteColor,
+                  ),
                 ),
               ),
+              Obx(() => Radio(
+                    fillColor: MaterialStateProperty.resolveWith<Color>(
+                        (Set<MaterialState> states) {
+                      return whiteColor;
+                    }),
+                    toggleable: true,
+                    activeColor: whiteColor,
+                    value: 3,
+                    groupValue: controller.correctOptionValue.value,
+                    onChanged: (val) {
+                      print(val);
+                      controller.correctOptionValue.value = val!;
+                    },
+                  ))
             ],
           ),
           const SizedBox(

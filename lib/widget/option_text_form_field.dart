@@ -36,19 +36,18 @@ class _OptionTextFormFieldState extends State<OptionTextFormField> {
         focusColor: whiteColor,
         labelText: widget.labelText,
         labelStyle: kBodyText3Style(),
-        // enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
+          // borderRadius: BorderRadius.all(
+          //   Radius.circular(14.r),
+          // ),
+          borderSide: BorderSide(color: whiteColor, style: BorderStyle.none),
+        ),
+        // focusedBorder: const OutlineInputBorder(
         //   // borderRadius: BorderRadius.all(
         //   //   Radius.circular(14.r),
         //   // ),
-        //   borderSide: BorderSide(color: widget.borderColor),
-        // ),
-        // focusedBorder: OutlineInputBorder(
-        //   borderRadius: BorderRadius.all(
-        //     Radius.circular(14.r),
-        //   ),
-        //   borderSide: BorderSide(
-        //     color: widget.borderColor,
-        //   ),
+        //   borderSide:
+        //       BorderSide(color: whiteColor, style: BorderStyle.none, width: 10),
         // ),
       ),
     );

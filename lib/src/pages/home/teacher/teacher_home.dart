@@ -123,7 +123,7 @@ class TeacherHome extends StatelessWidget {
                       child: Container(
                         margin: const EdgeInsets.only(left: 8),
                         child: Text(
-                          'Past Quizes',
+                          'Your Quizes',
                           style: kBodyText3Style()
                               .copyWith(color: kTeacherPrimaryColor),
                         ),
