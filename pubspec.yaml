@@ -51,6 +51,7 @@ dependencies:
   dropdown_search: ^5.0.6
   textfield_search: ^0.10.0
   intl: ^0.18.0
+  flutter_countdown_timer: ^4.1.0
 
 dev_dependencies:
   flutter_test:

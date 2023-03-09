@@ -101,12 +101,13 @@ class AddQuizController extends GetxController {
         .contains('Question added to quiz')) {
       page.value += 1;
       log('page value is ->>>>>>>>>>${page.value}');
-      showSnackBar('Quiz Added sucessfully', greenColor, whiteColor);
+      showSnackBar('Question Added sucessfully', greenColor, whiteColor);
       if (page.value == getTotalQs()) {
         //pause adding qs here and send data to backend
         //send user to home page.
+        showSnackBar('Your quiz is ready go to all quiz for actions',
+            greenColor, whiteColor);
         Get.offAllNamed(TeacherHome.routeName);
-        showSnackBar('All Quiz Added Sucessfully', greenColor, whiteColor);
       } else {
         await clearThisController();
         correctOptionValue.value = 0;

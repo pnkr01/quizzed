@@ -7,8 +7,12 @@ import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 
 import '../pages/auth/controller/otp_controller.dart';
+import '../pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
+import '../pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
+import '../pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
 import '../pages/home/teacher/home/components/create/controller/create_quiz_controller.dart';
 import '../pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
+import '../pages/home/teacher/profile/controller/teacher_profile_controller.dart';
 import 'controller/starting_point_controller.dart';
 
 class InitialBindings extends Bindings {
@@ -24,5 +28,9 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => CreateQuizController());
     Get.lazyPut(() => QuizAdditionController());
     Get.lazyPut(() => AddQuizController());
+    Get.lazyPut(() => DraftQuizController(), fenix: true);
+    Get.lazyPut(() => LiveQuizController(), fenix: true);
+    Get.lazyPut(() => CompletedQuizController(), fenix: true);
+    Get.lazyPut(() => TeacherProfileController(), fenix: true);
   }
 }

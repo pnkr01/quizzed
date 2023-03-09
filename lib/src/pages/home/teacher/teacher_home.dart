@@ -3,6 +3,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
+import 'package:quiz/src/pages/home/teacher/profile/teacher_profile.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 import 'package:quiz/theme/app_color.dart';
@@ -40,15 +42,16 @@ class TeacherHome extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 50.h,
+            height: 20.h,
           ),
           Expanded(
             child: Container(
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: whiteColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
                 ),
               ),
               child: SingleChildScrollView(
@@ -183,7 +186,9 @@ class TeacherHome extends StatelessWidget {
                               ],
                             ),
                             backgroundColor: kTeacherPrimaryColor,
-                            function: () {},
+                            function: () {
+                              Get.to(() => const TeacherProfileScreen());
+                            },
                           ),
                           const SizedBox(
                             height: 8,
@@ -215,13 +220,15 @@ class TeacherHome extends StatelessWidget {
                                 const Icon(Icons.history),
                                 const SizedBox(width: 5),
                                 Text(
-                                  'Past Quiz',
+                                  'All Quiz',
                                   style: kBodyText3Style(),
                                 ),
                               ],
                             ),
                             backgroundColor: kTeacherPrimaryColor,
-                            function: () {},
+                            function: () {
+                              Get.to(() => const ShowAllCreatedQuiz());
+                            },
                           ),
                         ],
                       ),

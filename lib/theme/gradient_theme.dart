@@ -31,6 +31,7 @@ TextStyle kBodyText1Style() {
     fontWeight: FontWeight.w700,
   );
 }
+
 TextStyle kBodyText5Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
@@ -38,10 +39,18 @@ TextStyle kBodyText5Style() {
     fontWeight: FontWeight.w500,
   );
 }
+
 TextStyle kBodyText4Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
     fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+  );
+}
+TextStyle kBodyText6Style() {
+  return GoogleFonts.montserrat(
+    color: Colors.white,
+    fontSize: 14,
     fontWeight: FontWeight.w700,
   );
 }
@@ -51,6 +60,22 @@ TextStyle kAppBarTextStyle() {
     color: Colors.white,
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
+  );
+}
+
+TextStyle kDesignlargeTextStyle() {
+  return GoogleFonts.montserrat(
+    color: Colors.black,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+  );
+}
+
+TextStyle kDesignSmallTextStyle() {
+  return GoogleFonts.montserrat(
+    color: Colors.black,
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
   );
 }
 
@@ -69,6 +94,7 @@ TextStyle kBodyText3Style() {
     fontSize: getProportionateScreenHeight(12.0.sp),
   );
 }
+
 TextStyle kElevatedButtonTextStyle() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,

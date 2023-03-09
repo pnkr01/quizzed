@@ -5,6 +5,7 @@ import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/notification/notification_view.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/create/create_quiz.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_confirm_view_screen.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
@@ -41,5 +42,8 @@ class AppRoute {
         GetPage(
             name: QuizAdditionView.routeName,
             page: () => const QuizAdditionView()),
+        GetPage(
+            name: ShowAllCreatedQuiz.routeName,
+            page: () => const ShowAllCreatedQuiz()),
       ];
 }

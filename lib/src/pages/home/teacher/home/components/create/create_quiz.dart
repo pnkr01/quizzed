@@ -190,7 +190,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                           focusNode: controller.focusNodemarksPerQs,
                           hintText: 'Enter each question marks',
                           contentColor: kTeacherPrimaryColor,
-                          labelText: 'Marks',
+                          labelText: 'Per Qs Marks',
                           borderColor: kTeacherPrimaryColor,
                           cursorColor: kTeacherPrimaryColor,
                           hintColor: kTeacherPrimaryColor,
