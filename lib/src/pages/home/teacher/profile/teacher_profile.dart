@@ -1,11 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:quiz/src/pages/home/teacher/profile/controller/teacher_profile_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quiz/utils/quizElevatedButon.dart';
 
 class TeacherProfileScreen extends GetView<TeacherProfileController> {
   const TeacherProfileScreen({super.key});
@@ -52,10 +54,10 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     Obx(
-                      () => controller.isFetching == false
+                      () => controller.isFetching == true
                           ? const Center(
                               child: CircularProgressIndicator(
                                 color: kTeacherPrimaryColor,
@@ -64,34 +66,285 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
                           : Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 10),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'Pawan Kumar',
-                                    style: kBodyText4Style().copyWith(
-                                        color: kTeacherPrimaryLightColor),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Container(
-                                    height: 100,
-                                    decoration: const BoxDecoration(
-                                        color: kTeacherPrimaryColor,
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(14))),
-                                    child: Row(
-                                      children: [
-                                        Column(
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      'Pawan Kumar',
+                                      style: kBodyText4Style().copyWith(
+                                          color: kTeacherPrimaryLightColor),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Container(
+                                      height: 100,
+                                      decoration: const BoxDecoration(
+                                          color: kTeacherPrimaryColor,
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(14))),
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 15),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            
+                                            Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.star,
+                                                  color: whiteColor,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text(
+                                                  '5 Star',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ],
+                                            ),
+                                            Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.north_east_outlined,
+                                                  color: whiteColor,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text(
+                                                  '25+ Subject',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ],
+                                            ),
+                                            Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.thumb_up,
+                                                  color: whiteColor,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text(
+                                                  '2nd CR',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ],
+                                            ),
                                           ],
-                                        )
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    GridView.count(
+                                      mainAxisSpacing: 8,
+                                      crossAxisSpacing: 8,
+                                      shrinkWrap: true,
+                                      physics: const BouncingScrollPhysics(),
+                                      crossAxisCount: 2,
+                                      childAspectRatio:
+                                          (MediaQuery.of(context).size.width /
+                                              (2 * 100)),
+                                      children: [
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                              color: kTeacherPrimaryColor,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                controller.title[0],
+                                                style: kBodyText3Style(),
+                                              ),
+                                              const SizedBox(
+                                                height: 8,
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  '${controller.profileList[0].RegdNo}',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                              color: kTeacherPrimaryColor,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                controller.title[1],
+                                                style: kBodyText3Style(),
+                                              ),
+                                              const SizedBox(
+                                                height: 8,
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  '${controller.profileList[0].Email}',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                              color: kTeacherPrimaryColor,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                controller.title[3],
+                                                style: kBodyText3Style(),
+                                              ),
+                                              const SizedBox(
+                                                height: 8,
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  '+91 ${controller.profileList[0].Phone}',
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          decoration: const BoxDecoration(
+                                              color: kTeacherPrimaryColor,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                controller.title[2],
+                                                style: kBodyText3Style(),
+                                              ),
+                                              const SizedBox(
+                                                height: 8,
+                                              ),
+                                              Flexible(
+                                                child: Text(
+                                                  DateFormat(
+                                                          'dd-mm-yyyy  hh : mm a')
+                                                      .format(DateTime.tryParse(
+                                                          '${controller.profileList[0].createdAt}')!),
+                                                  style: kBodyText3Style(),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                       ],
                                     ),
-                                  ),
-                                  Container(),
-                                ],
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.topLeft,
+                                      child: Text(
+                                        'Your Subjects',
+                                        style: kBodyText7Style().copyWith(
+                                            color: kTeacherPrimaryColor),
+                                      ),
+                                    ),
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: List.generate(
+                                          7,
+                                          (index) => Container(
+                                            margin:
+                                                const EdgeInsets.only(right: 8),
+                                            child: Chip(
+                                              onDeleted: () {},
+                                              deleteIconColor: whiteColor,
+                                              backgroundColor:
+                                                  controller.color[index],
+                                              label: Text(
+                                                controller.subject[index],
+                                                style: kBodyText3Style(),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Align(
+                                      alignment: Alignment.topLeft,
+                                      child: Text(
+                                        'Your Section',
+                                        style: kBodyText7Style().copyWith(
+                                            color: kTeacherPrimaryColor),
+                                      ),
+                                    ),
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: List.generate(
+                                          7,
+                                          (index) => Container(
+                                            margin:
+                                                const EdgeInsets.only(right: 8),
+                                            child: Chip(
+                                              onDeleted: () {
+                                                print('deleted');
+                                              },
+                                              deleteIconColor: whiteColor,
+                                              backgroundColor:
+                                                  controller.color[6 - index],
+                                              label: Text(
+                                                controller.sec[index],
+                                                style: kBodyText3Style(),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    QuizElevatedButton(
+                                      label: Text(
+                                        'Back',
+                                        style: kBodyText3Style(),
+                                      ),
+                                      backgroundColor:
+                                          kTeacherPrimaryLightColor,
+                                      function: () => Get.back(),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                     ),

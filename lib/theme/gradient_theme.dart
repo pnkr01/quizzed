@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/size_configuration.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -50,6 +51,13 @@ TextStyle kBodyText4Style() {
 TextStyle kBodyText6Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+  );
+}
+TextStyle kBodyText7Style() {
+  return GoogleFonts.montserrat(
+    color: kTeacherPrimaryColor,
     fontSize: 14,
     fontWeight: FontWeight.w700,
   );
