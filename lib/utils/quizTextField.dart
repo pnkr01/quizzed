@@ -39,7 +39,7 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
     return TextField(
       focusNode: widget.focusNode,
       // scrollPhysics: const NeverScrollableScrollPhysics(),
-      // scrollPadding: const EdgeInsets.only(bottom: ),
+
       style:
           kBodyText3Style().copyWith(color: widget.contentColor ?? whiteColor),
       obscureText: widget.isObscureText,

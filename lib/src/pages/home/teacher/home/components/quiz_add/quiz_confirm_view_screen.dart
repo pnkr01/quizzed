@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -36,15 +37,15 @@ class QuizAdditionScreen extends GetView<QuizAdditionController> {
               QuizElevatedButton(
                   label: const Text('Erase'),
                   backgroundColor: kTeacherPrimaryColor,
-                  function: () {
-                    Get.back();
-                    Get.back();
+                  function: () async {
+                    controller.handleEraseButton();
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(
                   label: const Text('Cancel'),
                   backgroundColor: kTeacherPrimaryColor,
                   function: () {
+                    log('Cancel');
                     Get.back();
                   })
             ],

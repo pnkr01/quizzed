@@ -4,16 +4,20 @@ import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/api/points.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/quiz_confirm_view_screen.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
 import '../../../../../../../../utils/errordialog.dart';
+import '../../quiz_add/quiz_confirm_view_screen.dart';
 
 class CreateQuizController extends GetxController {
+  RxString selectedDuration = 'Select Duration'.obs;
+  RxBool isSelectedDuration = false.obs;
+  RxInt selectedMin = 0.obs;
   late final Rx<TextEditingController> title = TextEditingController().obs;
   late final Rx<TextEditingController> description =
       TextEditingController().obs;
@@ -33,6 +37,7 @@ class CreateQuizController extends GetxController {
   final FocusNode focusNodeduration = FocusNode();
 
   RxBool isFetching = true.obs;
+  RxBool isCreating = true.obs;
 
   Map<String, String> subject = {
     "Discrete Mathematics": "CSE1002",
@@ -236,24 +241,32 @@ class CreateQuizController extends GetxController {
         semester.value.text.isNotEmpty &&
         totalQs.value.text.isNotEmpty &&
         marksPerQs.value.text.isNotEmpty &&
-        duration.value.text.isNotEmpty &&
         search.value.text.isNotEmpty) {
       log('create quiz is in process =>>>>>>>>>>>>>>');
 
       try {
         if (section.value.text.contains('-')) {
-          startProcessingCreateQuiz(
-            title.value.text.trimRight(),
-            description.value.text.trimRight(),
-            getEquivalentCode(search.value.text.trimRight()),
-            section.value.text.toUpperCase().trimRight(),
-            semester.value.text.trimRight(),
-            totalQs.value.text.trimRight(),
-            marksPerQs.value.text.trimRight(),
-            duration.value.text.trimRight(),
-          );
+          if (selectedMin.value != 0) {
+            startProcessingCreateQuiz(
+              title.value.text.trimRight(),
+              description.value.text.trimRight(),
+              getEquivalentCode(search.value.text.trimRight()),
+              section.value.text.toUpperCase().trimRight(),
+              semester.value.text.trimRight(),
+              totalQs.value.text.trimRight(),
+              marksPerQs.value.text.trimRight(),
+              duration.value.text.trimRight(),
+            );
+          } else {
+            isCreating.value = true;
+            showSnackBar(
+              'Please choose Quiz duration to continue',
+              redColor,
+              whiteColor,
+            );
+          }
         } else {
-          Get.back();
+          isCreating.value = true;
           showSnackBar(
             'Enter correct section format. e.g CSE-K',
             redColor,
@@ -261,16 +274,17 @@ class CreateQuizController extends GetxController {
           );
         }
       } catch (e) {
+        isCreating.value = true;
         Get.back();
         log('ERROR');
         showSnackBar(e.toString(), redColor, whiteColor);
       }
     } else {
-      Get.back();
+      isCreating.value = true;
       showDialog(
           context: Get.context!,
-          builder: ((context) =>
-              const ErrorDialog(message: 'fill all blanks')));
+          builder: ((context) => const ErrorDialog(
+              color: kTeacherPrimaryColor, message: 'fill all blanks')));
     }
   }
 
@@ -301,45 +315,55 @@ class CreateQuizController extends GetxController {
       "duration": int.parse(duration)
     });
     log('start hitting create api ==============================>');
-    var response = await https.post(
-      Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/create')),
-      headers: headers,
-      body: msg,
-    );
-    var myjson = await jsonDecode(response.body);
-    print(myjson);
-    if (myjson["message"] == "Unauthorized") {
-      log('Teacher JWT Expired ====> Sending to login screen to login again');
-      log('clearning local DB========================>');
-      sharedPreferences.clear();
-      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
-      showSnackBar('Your session expired :)', greenColor, whiteColor);
-    } else if (myjson["quiz_id"] != null) {
-      Get.back();
-      log(myjson.toString());
-      log('sending to add question page---------------------------------------->');
-      Get.offNamed(
-        QuizAdditionScreen.routeName,
-        arguments: [
-          {"subject": search.value.text.trimRight()},
-          {"quiz_id": myjson["quiz_id"]},
-          {"conducted_by": myjson["conducted_by"]},
-          {"title": myjson["title"]},
-          {"section": myjson["section"]},
-          {"semester": myjson["semester"]},
-          {"duration": myjson["duration"]},
-          {"created_at": myjson["created_at"]},
-          {"updated_at": myjson["updated_at"]},
-          {"status": myjson["status"]},
-          {"description": myjson["description"]},
-          {"total_questions": myjson["total_questions"]},
-          {"per_question_marks": myjson["per_question_marks"]},
-          {"subjectCode": myjson["subject"]},
-        ],
+
+    try {
+      var response = await https.post(
+        Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/create')),
+        headers: headers,
+        body: msg,
       );
-    } else {
-      Get.back();
-      showSnackBar(myjson["message"], redColor, whiteColor);
+      var myjson = await jsonDecode(response.body);
+      print(myjson);
+      if (myjson["message"] == "Unauthorized") {
+        log('Teacher JWT Expired ====> Sending to login screen to login again');
+        log('clearning local DB========================>');
+        LocalDB.removeLoacalDb();
+        Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+        showSnackBar('Your session expired :)', greenColor, whiteColor);
+      } else if (myjson["quiz_id"] != null) {
+        log(myjson.toString());
+        log('sending to add question page---------------------------------------->');
+        isCreating.value = true;
+        Get.offNamed(
+          QuizAdditionScreen.routeName,
+          arguments: [
+            {"subject": search.value.text.trimRight()},
+            {"quiz_id": myjson["quiz_id"]},
+            {"conducted_by": myjson["conducted_by"]},
+            {"title": myjson["title"]},
+            {"section": myjson["section"]},
+            {"semester": myjson["semester"]},
+            {"duration": myjson["duration"]},
+            {"created_at": myjson["created_at"]},
+            {"updated_at": myjson["updated_at"]},
+            {"status": myjson["status"]},
+            {"description": myjson["description"]},
+            {"total_questions": myjson["total_questions"]},
+            {"per_question_marks": myjson["per_question_marks"]},
+            {"subjectCode": myjson["subject"]},
+          ],
+        );
+      } else {
+        isCreating.value = true;
+        showSnackBar(myjson["message"], redColor, whiteColor);
+      }
+    } on FormatException {
+      log('inside format exception');
+      throw Exception("Enter integer value to Semester");
+    } catch (e) {
+      isCreating.value = true;
+      log('inside catch');
+      showSnackBar(e.toString(), redColor, whiteColor);
     }
   }
 

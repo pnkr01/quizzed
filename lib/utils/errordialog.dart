@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/gradient_theme.dart';
+
 class ErrorDialog extends StatelessWidget {
   final String message;
   final Color? color;
@@ -12,7 +14,10 @@ class ErrorDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       key: key,
-      content: Text(message),
+      content: Text(
+        message,
+        style: kBodyText3Style().copyWith(color: blackColor),
+      ),
       actions: [
         ElevatedButton(
           onPressed: () {
@@ -21,7 +26,11 @@ class ErrorDialog extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: color ?? const Color(0xff6655D6),
           ),
-          child: const Center(child: Text("OK")),
+          child: Center(
+              child: Text(
+            "OK",
+            style: kBodyText3Style(),
+          )),
         ),
       ],
     );

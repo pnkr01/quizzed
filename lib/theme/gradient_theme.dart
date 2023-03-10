@@ -55,6 +55,13 @@ TextStyle kBodyText6Style() {
     fontWeight: FontWeight.w700,
   );
 }
+TextStyle kBodyText8Style() {
+  return GoogleFonts.montserrat(
+    color: Colors.white,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  );
+}
 TextStyle kBodyText7Style() {
   return GoogleFonts.montserrat(
     color: kTeacherPrimaryColor,

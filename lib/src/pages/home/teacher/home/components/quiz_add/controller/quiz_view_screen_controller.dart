@@ -1,5 +1,13 @@
-import 'package:get/get.dart';
+import 'dart:convert';
 
+import 'package:get/get.dart';
+import 'package:http/http.dart' as https;
+import '../../../../../../../../theme/app_color.dart';
+import '../../../../../../../../theme/gradient_theme.dart';
+import '../../../../../../../api/points.dart';
+import '../../../../../../../global/global.dart';
+import '../../../../../../../global/shared.dart';
+import '../../../../teacher_home.dart';
 import '../quiz_additon_view_screen.dart';
 
 class QuizAdditionController extends GetxController {
@@ -29,5 +37,38 @@ class QuizAdditionController extends GetxController {
       {"totalQs": getTotalQs()},
       {"subjectCode": getSubjectCode()},
     ]);
+  }
+
+  handleEraseButton() async {
+    try {
+      //log('er');
+      Map<String, String> headers = {
+        'Content-Type': 'application/json',
+        'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}',
+        // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
+      };
+      var response = await https.delete(
+        Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${getQuizId()}')),
+        headers: headers,
+      );
+      print(response.body);
+      var decode = jsonDecode(response.body);
+      if (decode["message"].toString().contains('Draft deleted succesfully')) {
+        Get.offAllNamed(TeacherHome.routeName);
+        Future.delayed(const Duration(seconds: 1), () {
+          showSnackBar('Deleted Sucesfully :)', greenColor, whiteColor);
+        });
+      } else {
+        Get.offAllNamed(TeacherHome.routeName);
+        Future.delayed(const Duration(seconds: 1), () {
+          showSnackBar('Network Error :)', redColor, whiteColor);
+        });
+      }
+    } catch (e) {
+      Get.offAllNamed(TeacherHome.routeName);
+      Future.delayed(const Duration(seconds: 1), () {
+        showSnackBar('Network Error :)', redColor, whiteColor);
+      });
+    }
   }
 }

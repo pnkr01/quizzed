@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
 import 'package:quiz/src/pages/home/teacher/profile/teacher_profile.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -56,6 +55,7 @@ class TeacherHome extends StatelessWidget {
               ),
               child: SingleChildScrollView(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
                       height: 8.h,
@@ -126,58 +126,112 @@ class TeacherHome extends StatelessWidget {
                       child: Container(
                         margin: const EdgeInsets.only(left: 8),
                         child: Text(
-                          'Your Quizes',
+                          'Notice',
                           style: kBodyText3Style()
                               .copyWith(color: kTeacherPrimaryColor),
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 4,
+                      height: 8,
                     ),
                     Card(
                       margin: const EdgeInsets.only(top: 0, left: 8, right: 8),
                       child: Container(
+                        width: double.infinity,
+                        height: 150,
                         decoration: const BoxDecoration(
                             color: kTeacherPrimaryColor,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
-                        height: 180,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              Icons.circle,
-                              color: whiteColor,
-                              size: 15,
+                        child: Stack(
+                          children: [
+                            Column(
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Container(
+                                      height: 140,
+                                      width: MediaQuery.of(context).size.width -
+                                          20,
+                                      decoration: const BoxDecoration(
+                                          color: whiteColor,
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12))),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                            Icon(
-                              Icons.circle,
-                              color: whiteColor,
-                              size: 15,
-                            ),
-                            Icon(
-                              Icons.circle,
-                              color: whiteColor,
-                              size: 15,
-                            ),
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 8),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Icon(
+                                      Icons.circle,
+                                      size: 14,
+                                      color: kTeacherPrimaryColor,
+                                    ),
+                                    Icon(
+                                      Icons.circle,
+                                      size: 14,
+                                      color: kTeacherPrimaryColor,
+                                    ),
+                                    Icon(
+                                      Icons.circle,
+                                      size: 14,
+                                      color: kTeacherPrimaryColor,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 30,
+                      height: 14,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 8, right: 8),
-                      child: Column(
-                        children: [
-                          QuizElevatedButton(
-                            label: Row(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Text(
+                        'Actions',
+                        style: kBodyText3Style()
+                            .copyWith(color: kTeacherPrimaryColor),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    GridView.count(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
+                      crossAxisCount: 2,
+                      childAspectRatio:
+                          (MediaQuery.of(context).size.width / (2 * 100)),
+                      // crossAxisCount: 2,
+                      children: [
+                        GestureDetector(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: kTeacherPrimaryColor,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Icon(Icons.person),
+                                const Icon(
+                                  Icons.person,
+                                  color: whiteColor,
+                                ),
                                 const SizedBox(width: 5),
                                 Text(
                                   'Profile',
@@ -185,19 +239,23 @@ class TeacherHome extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            backgroundColor: kTeacherPrimaryColor,
-                            function: () {
-                              Get.to(() => const TeacherProfileScreen());
-                            },
                           ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          QuizElevatedButton(
-                            label: Row(
+                          onTap: () =>
+                              Get.to(() => const TeacherProfileScreen()),
+                        ),
+                        InkWell(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: kTeacherPrimaryColor,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Icon(Icons.create),
+                                const Icon(
+                                  Icons.create,
+                                  color: whiteColor,
+                                ),
                                 const SizedBox(width: 5),
                                 Text(
                                   'Create Quiz',
@@ -205,19 +263,22 @@ class TeacherHome extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            backgroundColor: kTeacherPrimaryColor,
-                            function: () {
-                              controller.navigateToCreateQuizScreen();
-                            },
                           ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          QuizElevatedButton(
-                            label: Row(
+                          onTap: () => controller.navigateToCreateQuizScreen(),
+                        ),
+                        InkWell(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: kTeacherPrimaryColor,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                const Icon(Icons.history),
+                                const Icon(
+                                  Icons.history,
+                                  color: whiteColor,
+                                ),
                                 const SizedBox(width: 5),
                                 Text(
                                   'All Quiz',
@@ -225,12 +286,49 @@ class TeacherHome extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            backgroundColor: kTeacherPrimaryColor,
-                            function: () {
-                              Get.to(() => const ShowAllCreatedQuiz());
-                            },
                           ),
-                        ],
+                          onTap: () => Get.to(() => const ShowAllCreatedQuiz()),
+                        ),
+                        InkWell(
+                          child: Container(
+                            decoration: const BoxDecoration(
+                                color: kTeacherPrimaryColor,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  Icons.support_agent_outlined,
+                                  color: whiteColor,
+                                ),
+                                const SizedBox(width: 5),
+                                Text(
+                                  'Support',
+                                  style: kBodyText3Style(),
+                                ),
+                              ],
+                            ),
+                          ),
+                          //   onTap: () => Get.to(() => const ShowAllCreatedQuiz()),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 8),
+                      height: 100,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                          color: kTeacherPrimaryColor,
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Center(
+                        child: Text(
+                          'Welcome to ITER QUIZ PORTAL',
+                          style: kBodyText3Style(),
+                        ),
                       ),
                     )
                   ],
