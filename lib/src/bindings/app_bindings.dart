@@ -18,16 +18,16 @@ import 'controller/starting_point_controller.dart';
 class InitialBindings extends Bindings {
   @override
   void dependencies() {
-    Get.put(StartingPointController(), permanent: true);
-    Get.lazyPut(() => CommonAuthLogInController());
-    Get.lazyPut(() => CommonAuthSignUpController());
-    Get.lazyPut(() => OTPController());
-    Get.lazyPut(() => StudentHomeController());
-    Get.lazyPut(() => JoinQuizCOntroller());
-    Get.lazyPut(() => TeacherHomeController());
-    Get.lazyPut(() => CreateQuizController());
-    Get.lazyPut(() => QuizAdditionController());
-    Get.lazyPut(() => AddQuizController());
+    Get.put(StartingPointController());
+    Get.lazyPut(() => CommonAuthLogInController(), fenix: true);
+    Get.lazyPut(() => CommonAuthSignUpController(), fenix: true);
+    Get.lazyPut(() => OTPController(), fenix: true);
+    Get.lazyPut(() => StudentHomeController(), fenix: true);
+    Get.lazyPut(() => JoinQuizCOntroller(), fenix: true);
+    Get.lazyPut(() => TeacherHomeController(), fenix: true);
+    Get.lazyPut(() => CreateQuizController(), fenix: true);
+    Get.lazyPut(() => QuizAdditionController(), fenix: true);
+    Get.lazyPut(() => AddQuizController(), fenix: true);
     Get.lazyPut(() => DraftQuizController(), fenix: true);
     Get.lazyPut(() => LiveQuizController(), fenix: true);
     Get.lazyPut(() => CompletedQuizController(), fenix: true);

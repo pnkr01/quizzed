@@ -255,7 +255,7 @@ class CreateQuizController extends GetxController {
               semester.value.text.trimRight(),
               totalQs.value.text.trimRight(),
               marksPerQs.value.text.trimRight(),
-              duration.value.text.trimRight(),
+              selectedMin.value.toString(),
             );
           } else {
             isCreating.value = true;

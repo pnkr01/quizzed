@@ -12,6 +12,7 @@ class QuizTextFormField extends StatefulWidget {
   final Color borderColor;
   final Color cursorColor;
   final Color hintColor;
+  final Color? labelColor;
   final Color? contentColor;
   final bool isObscureText;
   final FocusNode focusNode;
@@ -23,6 +24,7 @@ class QuizTextFormField extends StatefulWidget {
     required this.borderColor,
     required this.cursorColor,
     required this.hintColor,
+    this.labelColor,
     this.contentColor,
     required this.isObscureText,
     required this.focusNode,
@@ -49,11 +51,11 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
         hintText: widget.hintText,
         hintStyle: kBodyText3Style().copyWith(color: greyColor, fontSize: 12),
         labelText: widget.labelText,
-        labelStyle: kBodyText3Style()
-            .copyWith(color: widget.hintColor, fontSize: 14.sp),
+        labelStyle: kElevatedButtonTextStyle()
+            .copyWith(color: widget.labelColor ?? kTeacherPrimaryColor),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(getProportionateScreenHeight(14.sp)),
+            Radius.circular(14.r),
           ),
           borderSide: BorderSide(color: widget.borderColor),
         ),

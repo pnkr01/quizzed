@@ -1,201 +1,149 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/src/pages/auth/controller/common_auth_register_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/utils/size_configuration.dart';
-import 'package:toggle_switch/toggle_switch.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../theme/gradient_theme.dart';
-import '../../../../../widget/custom_elevated_bottom.dart';
-import '../../../../../widget/custom_text_for_file.dart';
+import 'package:quiz/src/pages/auth/components/signup/components/student_components.dart';
+//import 'package:quiz/src/global/my_global.dart' as globals;
+import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quiz/utils/quizAppBar.dart';
 
-class CommonAuthSignUpScreen extends GetView<CommonAuthSignUpController> {
-  const CommonAuthSignUpScreen({super.key});
-  static const String routeName = '/commonAuthSignUpRoute';
+import '../../../../../../../theme/app_color.dart';
+import '../../controller/common_auth_register_controller.dart';
+import 'components/teacher_components.dart';
+
+class CommomAuthSignUpScreen extends StatefulWidget {
+  const CommomAuthSignUpScreen({Key? key}) : super(key: key);
+  static const String routeName = '/CommonAuthSignUpScreen';
+
+  @override
+  State<CommomAuthSignUpScreen> createState() => _CommomAuthSignUpScreenState();
+}
+
+class _CommomAuthSignUpScreenState extends State<CommomAuthSignUpScreen>
+    with SingleTickerProviderStateMixin, RestorationMixin {
+  late TabController tabController;
+
+  final RestorableInt tabIndex = RestorableInt(0);
+
+  @override
+  String get restorationId => 'tab_non_scrollable_demo';
+
+  @override
+  void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
+    registerForRestoration(tabIndex, 'tab_index');
+    tabController.index = tabIndex.value;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    tabController = TabController(
+      initialIndex: 0,
+      length: 2,
+      vsync: this,
+    );
+    //globals.tabController = tabController;
+    tabController.addListener(() {
+      setState(() {
+        tabIndex.value = tabController.index;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    tabController.dispose();
+    tabIndex.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+    //  Get.put(ShowAllQuizCOntroller());
     Get.put(CommonAuthSignUpController());
-    controller.setIndexValue(0);
+    var myController = Get.find<CommonAuthSignUpController>();
+
+    final tabs = [
+      "Student",
+      "Teacher",
+    ];
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-            onPressed: () => Get.back(),
-            icon: const Icon(Icons.arrow_back_ios)),
-        elevation: 0,
-        centerTitle: true,
-        backgroundColor: kPrimaryColor,
-        title: Text(
-          'Quizzed',
-          style: kAppBarTextStyle(),
-        ),
+      bottomSheet: SizedBox(
+        width: double.infinity,
+        height: 60,
+        child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: const RoundedRectangleBorder(
+                  //  borderRadius: BorderRadius.circular(12), // <-- Radius
+                  ),
+              backgroundColor: kTeacherPrimaryColor,
+            ),
+            onPressed: () {
+              myController.isRegistering.value = false;
+              tabIndex.value == 0
+                  ? myController.checkForErrorAndRegisterForStudent()
+                  : myController.checkForErrorAndRegisterForTeacher();
+
+              FocusScope.of(context).unfocus();
+            },
+            child: Obx(() => myController.isRegistering == true
+                ? Text(
+                    'Register',
+                    style: kBodyText3Style(),
+                  )
+                : const Center(
+                    child: CircularProgressIndicator(
+                      strokeWidth: 1,
+                      color: whiteColor,
+                    ),
+                  ))),
       ),
-      backgroundColor: kPrimaryColor,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 10.h,
-            ),
-            ToggleSwitch(
-              minHeight: getProportionateScreenHeight(30.h),
-              animate: true,
-              minWidth: double.infinity,
-              initialLabelIndex: 0,
-              cornerRadius: 20.0,
-              activeFgColor: Colors.white,
-              inactiveBgColor: Colors.white,
-              inactiveFgColor: Colors.grey,
-              totalSwitches: 2,
-              labels: const ['Student', 'Teacher'],
-              icons: const [
-                Icons.person,
-                Icons.school,
-              ],
-              activeBgColors: const [
-                [kPrimaryColor],
-                [kPrimaryColor]
-              ],
-              onToggle: (index) {
-                controller.setIndexValue(index ?? 0);
-                // print(controller.getIndexValue());
-              },
-            ),
-            Padding(
-              padding: EdgeInsets.only(
-                left: getProportionateScreenHeight(12.w),
-                right: getProportionateScreenHeight(12.w),
-                top: getProportionateScreenHeight(12.h),
+      appBar: const QuizAppbar(
+          appBarColor: kTeacherPrimaryColor,
+          titleText: 'Quizzed',
+          preferredSize: Size.fromHeight(57)),
+      //key: _scaffoldKey,
+      body: SafeArea(
+        child: Container(
+          color: Colors.white,
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 50,
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: TabBar(
+                  controller: tabController,
+                  isScrollable: false,
+                  // give the indicator a decoration (color and border radius)
+                  indicator: const BoxDecoration(
+                    color: kTeacherPrimaryColor,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(99.0),
+                    ),
+                  ),
+                  labelColor: Colors.white,
+                  labelStyle: kBodyText1Style().copyWith(
+                    fontSize: 14.0,
+                  ),
+                  unselectedLabelColor: kTeacherPrimaryLightColor,
+                  tabs: [
+                    for (final tab in tabs)
+                      Tab(
+                        text: tab,
+                      ),
+                  ],
+                ),
               ),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.info_outline_rounded,
-                        color: greyColor,
-                        size: getProportionateScreenHeight(24.sp),
-                      ),
-                      SizedBox(
-                        width: getProportionateScreenHeight(4.w),
-                      ),
-                      Flexible(
-                        child: Obx(
-                          () => Text(
-                            controller.getIndexValue() == 0
-                                ? GLobal.studentInfo
-                                : GLobal.teacherInfo,
-                            style: kTitleTextStyle().copyWith(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 18.h,
-                  ),
-                  Obx(() => controller.getIndexValue() == 0
-                      ? Column(
-                          children: [
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Regd No',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: false,
-                                controller: controller.studentRegdNo.value,
-                              ),
-                            ),
-                            SizedBox(height: 14.h),
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Password',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: true,
-                                controller: controller.studentPassword.value,
-                              ),
-                            ),
-                          ],
-                        )
-                      : Column(
-                          children: [
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Name',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: false,
-                                controller: controller.tName.value,
-                              ),
-                            ),
-                            SizedBox(height: 14.h),
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Email',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: false,
-                                controller: controller.tEmail.value,
-                              ),
-                            ),
-                            SizedBox(height: 14.h),
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Phone',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: false,
-                                controller: controller.tPhone.value,
-                              ),
-                            ),
-                            SizedBox(height: 14.h),
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Set Password',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: true,
-                                controller: controller.tPassword.value,
-                              ),
-                            ),
-                            SizedBox(height: 14.h),
-                            Obx(
-                              () => CustomTextFormField(
-                                labelText: 'Confirm Password',
-                                borderColor: kTextFormFieldContentColor,
-                                cursorColor: kTextFormFieldContentColor,
-                                labelColor: kTextFormFieldContentColor,
-                                isObscureText: true,
-                                controller: controller.tConfirmPassword.value,
-                              ),
-                            ),
-                          ],
-                        )),
-                  SizedBox(height: 28.h),
-                  MYElevatedButton(
-                    label: "Register",
-                    backgroundColor: Colors.white,
-                    function: () {
-                      controller.getIndexValue() == 0
-                          ? controller.checkForErrorAndRegisterForStudent()
-                          : controller.checkForErrorAndRegisterForTeacher();
-                      FocusScope.of(context).unfocus();
-                    },
-                  ),
-                ],
+              Expanded(
+                child: TabBarView(
+                  controller: tabController,
+                  children: const [
+                    StudentSignUpScreen(),
+                    TeacherSignUpScreen(),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

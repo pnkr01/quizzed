@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: kTeacherPrimaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,12 +29,13 @@ class SplashScreen extends StatelessWidget {
             SizedBox(
               height: getProportionateScreenHeight(6.0.sp),
             ),
-            Text('Quizzed', style: kBodyText3Style().copyWith(fontSize: 15.sp)),
+            Text('Quizzed', style: kBodyText8Style()),
             SizedBox(
-              height: getProportionateScreenHeight(28.h),
+              height: 28.h,
             ),
             const CircularProgressIndicator(
               color: whiteColor,
+              strokeWidth: 2,
               // backgroundColor: whiteColor,
             ),
           ],

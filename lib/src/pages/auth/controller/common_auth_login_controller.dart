@@ -12,13 +12,15 @@ import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/utils/errordialog.dart';
-import 'package:quiz/utils/loading_dialog.dart';
 
 import '../components/otp/otp_screen.dart';
 
 class CommonAuthLogInController extends GetxController {
   late Rx<TextEditingController> regdNo;
   late Rx<TextEditingController> password;
+  RxBool isStartedLogginIn = false.obs;
+  final FocusNode focusNodeRegdNo = FocusNode();
+  final FocusNode focusNodePassword = FocusNode();
 
   @override
   void onInit() {
@@ -27,11 +29,9 @@ class CommonAuthLogInController extends GetxController {
     super.onInit();
   }
 
-  @override
-  void onClose() {
-    regdNo.close();
-    password.close();
-    super.onClose();
+  clearThisField() {
+    regdNo.value.clear();
+    password.value.clear();
   }
 
   setCookie(response) async {
@@ -49,7 +49,7 @@ class CommonAuthLogInController extends GetxController {
   }
 
   navigateToSignUpScreen() {
-    Get.toNamed(CommonAuthSignUpScreen.routeName);
+    Get.toNamed(CommomAuthSignUpScreen.routeName);
   }
 
   setLocalIndex(var res) async {
@@ -83,6 +83,7 @@ class CommonAuthLogInController extends GetxController {
         log('pass and regd no verified => sending to student home page');
         log('saving user cookie');
         await setCookie(response);
+        isStartedLogginIn.value = false;
         Get.offAllNamed(StudentHome.routeName);
         await setLocalIndex(res);
         showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
@@ -90,14 +91,15 @@ class CommonAuthLogInController extends GetxController {
         log('tecaher data available=> save this and log in');
         await saveTeacherIndex(res);
         await setTeacherCookie(response);
+        isStartedLogginIn.value = false;
         navigateToteacherHomePage();
       } else {
+        isStartedLogginIn.value = false;
         log('else part of login screen');
-        Get.back();
         showSnackBar(res["message"], Colors.red, Colors.white);
       }
     } else if (response.statusCode == 404) {
-      Get.back();
+      isStartedLogginIn.value = false;
       showSnackBar("Please signup then login", Colors.red, Colors.white);
     } else if (res["error"] == "Unauthorized" &&
         res["message"]
@@ -105,7 +107,7 @@ class CommonAuthLogInController extends GetxController {
             .contains('Your account is not verified yet')) {
       log('inactive teacher.');
       log('sending => to otp screen');
-      Get.back();
+      isStartedLogginIn.value = false;
       Get.toNamed(
         OTPScreen.routeName,
         arguments: [
@@ -114,23 +116,22 @@ class CommonAuthLogInController extends GetxController {
         ],
       );
     } else {
-      Get.back();
+      isStartedLogginIn.value = false;
       showSnackBar(res["message"], Colors.red, Colors.white);
     }
   }
 
   checkForErrorAndStartLoggingInUser() {
-    showDialog(
-        context: Get.context!,
-        builder: ((context) => const LoadingDialog(message: 'Please Wait...')));
     if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
       log('hitting login Api');
       try {
         hitLoginApi();
       } catch (e) {
+        isStartedLogginIn.value = false;
         showSnackBar(e.toString(), Colors.red, Colors.white);
       }
     } else {
+      isStartedLogginIn.value = false;
       showDialog(
           context: Get.context!,
           builder: ((context) =>

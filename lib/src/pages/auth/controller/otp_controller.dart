@@ -5,13 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/theme/app_color.dart';
 
 import '../../../../utils/errordialog.dart';
-import '../../../../utils/loading_dialog.dart';
 import '../components/login/common_auth_login_screen.dart';
 
 class OTPController extends GetxController {
   dynamic argumentData = Get.arguments;
+  RxBool isStartingOtpVeryfication = false.obs;
   late Rx<TextEditingController> otp;
   @override
   void onInit() {
@@ -32,6 +33,7 @@ class OTPController extends GetxController {
     showDialog(
         context: Get.context!,
         builder: ((context) => ErrorDialog(
+              color: kTeacherPrimaryColor,
               message: '${argumentData[1]['message']}',
             )));
   }
@@ -70,38 +72,36 @@ class OTPController extends GetxController {
           log('user sucessfully entered right otp');
           showSnackBar("Account validated Sucessfully, Please log In",
               Colors.green, Colors.white);
+          isStartingOtpVeryfication.value = false;
           Get.offAllNamed(CommmonAuthLogInRoute.routeName);
           //LocalDB.saveTeacherData(res);654247 894750
-          log('after'); //
+          //
           showSnackBar("Account validated Sucessfully, Please log In",
               Colors.green, Colors.white);
           log('went to login screen');
-          Get.back();
         } else {
-          Get.back();
+          isStartingOtpVeryfication.value = false;
           log('handle various issues using snackbar ');
           showSnackBar(res['message'], Colors.green, Colors.white);
           // Teacher.fromJson(res);
 
         }
       } else {
-        Get.back();
+        isStartingOtpVeryfication.value = false;
         log('handle various issues using snackbar ');
         showSnackBar(res['message'], Colors.red, Colors.white);
         // Teacher.fromJson(res);
 
       }
     } catch (e) {
-      Get.back();
+      isStartingOtpVeryfication.value = false;
       showSnackBar(e.toString(), Colors.red, Colors.white);
     }
   }
 
   startCheckingOtp() async {
     //send post req to verify route.
-    showDialog(
-        context: Get.context!,
-        builder: ((context) => const LoadingDialog(message: 'Please Wait')));
+
     log("User entered otp now checking otp => otp_controller.dart");
     //await getResponseFromStudentApi();
     if (otp.value.text.isNotEmpty) {
@@ -109,7 +109,7 @@ class OTPController extends GetxController {
       //hit api
       log('hitting otp verify route');
     } else {
-      Get.back();
+      isStartingOtpVeryfication.value = false;
       showDialog(
           context: Get.context!,
           builder: ((context) => const ErrorDialog(message: 'OTP is Empty')));

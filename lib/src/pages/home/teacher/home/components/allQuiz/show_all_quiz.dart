@@ -81,12 +81,12 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
             Get.find<DraftQuizController>().fetchDraftQuiz();
           } else if (tabIndex.value == 1) {
             //liver controller.
-            Get.find<DraftQuizController>().isFetching.value = true;
+            Get.find<LiveQuizController>().isFetching.value = true;
             Get.find<LiveQuizController>().fetchLiveQuiz();
             log('inside live refresh');
           } else {
             //completed controller.
-            Get.find<DraftQuizController>().isFetching.value = true;
+            Get.find<CompletedQuizController>().isFetching.value = true;
             log('inside completed refresh');
             Get.find<CompletedQuizController>().completedQuizFetch();
           }

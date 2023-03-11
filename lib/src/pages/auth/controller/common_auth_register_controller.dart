@@ -12,6 +12,7 @@ import 'package:quiz/utils/loading_dialog.dart';
 import '../components/login/common_auth_login_screen.dart';
 
 class CommonAuthSignUpController extends GetxController {
+  RxBool isRegistering = true.obs;
   late Rx<TextEditingController> studentRegdNo;
   late Rx<TextEditingController> studentPassword;
   late Rx<TextEditingController> tName;
@@ -32,16 +33,14 @@ class CommonAuthSignUpController extends GetxController {
     super.onInit();
   }
 
-  @override
-  void onClose() {
-    studentRegdNo.close();
-    studentPassword.close();
-    tName.close();
-    tEmail.close();
-    tPhone.close();
-    tPassword.close();
-    tConfirmPassword.close();
-    super.onClose();
+  clearTextField() {
+    studentRegdNo.value.clear();
+    studentPassword.value.clear();
+    tName.value.clear();
+    tEmail.value.clear();
+    tPhone.value.clear();
+    tPassword.value.clear();
+    tConfirmPassword.value.clear();
   }
 
   RxInt index = 0.obs;
@@ -70,10 +69,13 @@ class CommonAuthSignUpController extends GetxController {
       log(response.statusCode.toString());
       log(response.body);
       var res = jsonDecode(response.body);
-      // log(res);
+      log(res.toString());
 
-      if (response.statusCode == 422) {
-        Get.back();
+      if (res["statusCode"] == 422 &&
+          res["message"]
+              .toString()
+              .contains('User with similar details already')) {
+        isRegistering.value = true;
         log('this student already registered in backend => Sending to login page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
@@ -82,7 +84,7 @@ class CommonAuthSignUpController extends GetxController {
           Colors.green,
           Colors.white,
         );
-      } else if (response.statusCode == 201) {
+      } else if (res["name"] != null) {
         log('New User found => Sended data to backend => save data locally => send to home page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
@@ -92,7 +94,7 @@ class CommonAuthSignUpController extends GetxController {
           Colors.white,
         );
       } else {
-        Get.back();
+        isRegistering.value = true;
         showSnackBar(res["message"], Colors.red, Colors.white);
       }
       // if (response.statusCode == 201) {
@@ -115,7 +117,7 @@ class CommonAuthSignUpController extends GetxController {
       // }
     } catch (e) {
       log('inside catch block error in student body');
-      Get.back();
+      isRegistering.value = true;
       showSnackBar(e.toString(), Colors.red, Colors.white);
     }
   }
@@ -134,9 +136,6 @@ class CommonAuthSignUpController extends GetxController {
   }
 
   checkForErrorAndRegisterForStudent() async {
-    showDialog(
-        context: Get.context!,
-        builder: ((context) => const LoadingDialog(message: 'Please Wait')));
     log("Student signup");
     //await getResponseFromStudentApi();
     if (studentPassword.value.text.isNotEmpty &&
@@ -146,7 +145,7 @@ class CommonAuthSignUpController extends GetxController {
       log('all ok hitting student route');
     } else {
       log('some field missing error');
-      Get.back();
+      isRegistering.value = true;
       showDialog(
           context: Get.context!,
           builder: ((context) =>

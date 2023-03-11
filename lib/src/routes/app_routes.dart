@@ -22,8 +22,8 @@ class AppRoute {
             name: CommmonAuthLogInRoute.routeName,
             page: () => const CommmonAuthLogInRoute()),
         GetPage(
-            name: CommonAuthSignUpScreen.routeName,
-            page: () => const CommonAuthSignUpScreen()),
+            name: CommomAuthSignUpScreen.routeName,
+            page: () => const CommomAuthSignUpScreen()),
         GetPage(name: OTPScreen.routeName, page: () => const OTPScreen()),
         GetPage(name: TeacherHome.routeName, page: () => const TeacherHome()),
         GetPage(name: StudentHome.routeName, page: () => const StudentHome()),
