@@ -240,6 +240,10 @@ class CreateQuiz extends GetView<CreateQuizController> {
                                         BorderRadius.all(Radius.circular(12)))),
                             onPressed: () async {
                               var resultingDuration = await showDurationPicker(
+                                decoration: const BoxDecoration(
+                                    color: whiteColor,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(12))),
                                 context: context,
                                 initialTime: const Duration(minutes: 30),
                               );

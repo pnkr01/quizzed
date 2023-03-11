@@ -216,7 +216,7 @@ class TeacherHome extends StatelessWidget {
                       physics: const BouncingScrollPhysics(),
                       crossAxisCount: 2,
                       childAspectRatio:
-                          (MediaQuery.of(context).size.width / (2 * 100)),
+                          (MediaQuery.of(context).size.width / (1.5 * 100)),
                       // crossAxisCount: 2,
                       children: [
                         GestureDetector(
