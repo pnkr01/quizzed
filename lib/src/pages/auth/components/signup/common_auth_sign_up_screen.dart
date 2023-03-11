@@ -81,10 +81,13 @@ class _CommomAuthSignUpScreenState extends State<CommomAuthSignUpScreen>
               tabIndex.value == 0
                   ? myController.checkForErrorAndRegisterForStudent()
                   : myController.checkForErrorAndRegisterForTeacher();
+              tabIndex.value == 0
+                  ? myController.clearStudentField()
+                  : myController.clearTeacherField();
 
               FocusScope.of(context).unfocus();
             },
-            child: Obx(() => myController.isRegistering == true
+            child: Obx(() => myController.isRegistering.value == true
                 ? Text(
                     'Register',
                     style: kBodyText3Style(),

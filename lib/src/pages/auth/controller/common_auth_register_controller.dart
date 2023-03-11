@@ -7,7 +7,6 @@ import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
 import 'package:quiz/utils/errordialog.dart';
-import 'package:quiz/utils/loading_dialog.dart';
 
 import '../components/login/common_auth_login_screen.dart';
 
@@ -176,7 +175,7 @@ class CommonAuthSignUpController extends GetxController {
       var jsonBody = jsonDecode(response.body);
       if (response.statusCode == 201) {
         log('new Teacher detected => sending to OTP screen');
-        Get.back();
+        isRegistering.value = true;
         navigateToOTPScreen(
           jsonBody["regdNo"],
           jsonBody["message"],
@@ -184,26 +183,23 @@ class CommonAuthSignUpController extends GetxController {
       } else if (response.statusCode == 422) {
         log('Teacher already exist');
         //showSnackBar and send teacher to LogIn page.
-        Get.back();
+        isRegistering.value = true;
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         clearTeacherField();
         showSnackBar(
             jsonBody["message"] + "Please logIn", Colors.green, Colors.white);
       } else {
         log('else part of teacher register page');
-        Get.back();
+        isRegistering.value = true;
         showSnackBar(jsonBody["message"], Colors.red, Colors.white);
       }
     } catch (e) {
-      Get.back();
+      isRegistering.value = true;
       showSnackBar(e.toString(), Colors.red, Colors.white);
     }
   }
 
   checkForErrorAndRegisterForTeacher() {
-    showDialog(
-        context: Get.context!,
-        builder: ((context) => const LoadingDialog(message: 'Please Wait')));
     log("Teacher signup");
     if (tName.value.text.isNotEmpty &&
         tEmail.value.text.isNotEmpty &&
@@ -211,7 +207,7 @@ class CommonAuthSignUpController extends GetxController {
         tPassword.value.text.isNotEmpty &&
         tConfirmPassword.value.text.isNotEmpty) {
       if (tPassword.value.text != tConfirmPassword.value.text) {
-        Get.back();
+        isRegistering.value = true;
         showDialog(
             context: Get.context!,
             builder: ((context) => const ErrorDialog(
@@ -223,7 +219,7 @@ class CommonAuthSignUpController extends GetxController {
         log('hit teacher route');
       }
     } else {
-      Get.back();
+      isRegistering.value = true;
       showDialog(
           context: Get.context!,
           builder: ((context) =>

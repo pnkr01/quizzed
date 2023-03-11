@@ -67,6 +67,8 @@ class OTPController extends GetxController {
       log(response.statusCode.toString());
       var res = jsonDecode(response.body);
 
+      log(res.toString());
+
       if (response.statusCode == 201) {
         if (res['name'] != null) {
           log('user sucessfully entered right otp');

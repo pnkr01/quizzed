@@ -19,9 +19,10 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
         height: 70,
         width: double.infinity,
         child: Container(
-            color: kPrimaryColor,
+            color: kTeacherPrimaryColor,
             child: ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: darkJoinColor),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: kTeacherPrimaryColor),
                 onPressed: () {
                   controller.isTapStartJoining.value = true;
                   Focus.of(context).unfocus();
@@ -41,7 +42,7 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                       )))),
       ),
       appBar: const QuizAppbar(
-        appBarColor: kPrimaryColor,
+        appBarColor: kTeacherPrimaryColor,
         titleText: 'Join Quiz',
         preferredSize: Size.fromHeight(54),
       ),
@@ -55,25 +56,28 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                 height: 12.h,
               ),
               TextField(
-                style: kBodyText3Style().copyWith(color: kPrimaryColor),
+                style: kBodyText3Style().copyWith(color: kTeacherPrimaryColor),
                 obscureText: false,
                 controller: controller.quizID.value,
-                cursorColor: kPrimaryColor,
+                cursorColor: kTeacherPrimaryColor,
                 decoration: InputDecoration(
+                  hintText: 'Enter Quiz ID',
+                  hintStyle: kBodyText3Style().copyWith(color: greyColor),
                   labelText: 'Enter Quiz ID',
-                  labelStyle: kBodyText3Style().copyWith(color: kPrimaryColor),
+                  labelStyle:
+                      kBodyText3Style().copyWith(color: kTeacherPrimaryColor),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(14.sp),
                     ),
-                    borderSide: const BorderSide(color: kPrimaryColor),
+                    borderSide: const BorderSide(color: kTeacherPrimaryColor),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(14.sp),
                     ),
                     borderSide: const BorderSide(
-                      color: kPrimaryColor,
+                      color: kTeacherPrimaryColor,
                     ),
                   ),
                 ),

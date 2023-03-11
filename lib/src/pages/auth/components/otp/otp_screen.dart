@@ -134,6 +134,9 @@ class OTPScreen extends GetView<OTPController> {
                 // SizedBox(
                 //   height: getProportionateScreenHeight(18.sp),
                 // ),
+                const SizedBox(
+                  height: 10,
+                ),
                 SizedBox(
                   width: 500,
                   child: CachedNetworkImage(

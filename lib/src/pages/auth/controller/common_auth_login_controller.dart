@@ -30,7 +30,7 @@ class CommonAuthLogInController extends GetxController {
   }
 
   clearThisField() {
-    regdNo.value.clear();
+    //regdNo.value.clear();
     password.value.clear();
   }
 

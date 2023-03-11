@@ -202,6 +202,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                       Column(
                                         children: [
                                           QuizTextFormField(
+                                            labelColor: whiteColor,
                                             labelText: 'Question',
                                             hintText: 'Type question',
                                             borderColor: whiteColor,

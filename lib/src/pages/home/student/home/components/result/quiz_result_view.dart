@@ -18,9 +18,10 @@ class QuizResultView extends StatelessWidget {
           height: 70,
           width: double.infinity,
           child: Container(
-            color: kPrimaryColor,
+            color: kTeacherPrimaryColor,
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: darkJoinColor),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: kTeacherPrimaryColor),
               onPressed: () {
                 //  controller.isTapStartJoining.value = true;
                 Focus.of(context).unfocus();
@@ -28,16 +29,14 @@ class QuizResultView extends StatelessWidget {
               },
               child: Text(
                 'Okay',
-                style: kElevatedButtonTextStyle().copyWith(
-                  color: whiteColor,
-                ),
+                style: kAppBarTextStyle(),
               ),
             ),
           ),
         ),
         backgroundColor: whiteColor,
         appBar: const QuizAppbar(
-          appBarColor: kPrimaryColor,
+          appBarColor: kTeacherPrimaryColor,
           titleText: 'Result',
           preferredSize: Size.fromHeight(54),
         ),
@@ -55,7 +54,7 @@ class QuizResultView extends StatelessWidget {
             Center(
               child: Text(
                 'No Result found',
-                style: kBodyText3Style().copyWith(color: blackColor),
+                style: kBodyText3Style().copyWith(color: kTeacherPrimaryColor),
               ),
             ),
           ],

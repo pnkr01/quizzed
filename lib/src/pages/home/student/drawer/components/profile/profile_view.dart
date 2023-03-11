@@ -17,17 +17,20 @@ class ProfileScreenView extends StatelessWidget {
     var controller = Get.find<StudentHomeController>();
     var myProfileController = Get.find<StudentProfileController>();
     return Scaffold(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: kTeacherPrimaryColor,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        backgroundColor: kPrimaryColor,
-        title: const Text('Profile'),
+        backgroundColor: kTeacherPrimaryColor,
+        title: Text(
+          'Profile',
+          style: kBodyText1Style(),
+        ),
       ),
       body: Column(
         children: [
           Container(
-            color: kPrimaryColor,
+            color: kTeacherPrimaryColor,
             child: Row(
               children: [
                 SizedBox(
@@ -39,7 +42,7 @@ class ProfileScreenView extends StatelessWidget {
                     radius: 42.h,
                     backgroundColor: whiteColor,
                     child: CircleAvatar(
-                      radius: 40.h, backgroundColor: kPrimaryColor,
+                      radius: 40.h, backgroundColor: kTeacherPrimaryColor,
                       backgroundImage: const CachedNetworkImageProvider(
                           'https://img.freepik.com/free-vector/flat-design-bear-family-illustration_23-2149539189.jpg?w=740&t=st=1677930244~exp=1677930844~hmac=1ed6d9791d4c66b0f0ef74d0511b9a1ddf29643bff146eb88524829865455775'),
                       //backgroundColor: whiteColor,
@@ -61,7 +64,7 @@ class ProfileScreenView extends StatelessWidget {
                           style: kBodyText1Style()),
                       Text(
                         "Student",
-                        style: kSubTitleTextStyle().copyWith(color: whiteColor),
+                        style: kBodyText3Style().copyWith(color: greyColor),
                       ),
                     ],
                   ),
@@ -100,7 +103,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -114,12 +117,10 @@ class ProfileScreenView extends StatelessWidget {
                                         ),
                                         Flexible(
                                           child: Text(
-                                            myProfileController
-                                                    .profile[0].name ??
-                                                "Unknown",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: darkJoinColor),
-                                          ),
+                                              myProfileController
+                                                      .profile[0].name ??
+                                                  "Unknown",
+                                              style: kBodyText9Style()),
                                         ),
                                       ],
                                     ),
@@ -139,7 +140,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -156,8 +157,7 @@ class ProfileScreenView extends StatelessWidget {
                                             myProfileController
                                                     .profile[0].email ??
                                                 "Unknown",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: darkJoinColor),
+                                            style: kBodyText9Style(),
                                           ),
                                         ),
                                       ],
@@ -175,7 +175,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -191,8 +191,7 @@ class ProfileScreenView extends StatelessWidget {
                                           myProfileController
                                                   .profile[0].regdNo ??
                                               "Unknown",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
+                                          style: kBodyText9Style(),
                                         ),
                                       ],
                                     ),
@@ -209,7 +208,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: Icon(
@@ -230,8 +229,7 @@ class ProfileScreenView extends StatelessWidget {
                                                   'M'
                                               ? "Male"
                                               : "Female",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
+                                          style: kBodyText9Style(),
                                         ),
                                       ],
                                     ),
@@ -248,7 +246,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -260,12 +258,10 @@ class ProfileScreenView extends StatelessWidget {
                                           width: 8,
                                         ),
                                         Text(
-                                          myProfileController
-                                                  .profile[0].section ??
-                                              "Unknown",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
-                                        ),
+                                            myProfileController
+                                                    .profile[0].section ??
+                                                "Unknown",
+                                            style: kBodyText9Style()),
                                       ],
                                     ),
                                   ),
@@ -281,7 +277,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -297,8 +293,7 @@ class ProfileScreenView extends StatelessWidget {
                                           myProfileController
                                                   .profile[0].primaryPhone ??
                                               "Unknown",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
+                                          style: kBodyText9Style(),
                                         ),
                                       ],
                                     ),
@@ -315,7 +310,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -331,8 +326,7 @@ class ProfileScreenView extends StatelessWidget {
                                           myProfileController
                                                   .profile[0].dateOfBirth ??
                                               "Unknown",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
+                                          style: kBodyText9Style(),
                                         ),
                                       ],
                                     ),
@@ -349,7 +343,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -363,8 +357,7 @@ class ProfileScreenView extends StatelessWidget {
                                         ),
                                         Text(
                                           "${myProfileController.profile[0].semester}th Semester",
-                                          style: kBodyText3Style()
-                                              .copyWith(color: darkJoinColor),
+                                          style: kBodyText9Style(),
                                         ),
                                       ],
                                     ),
@@ -381,7 +374,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: darkJoinColor,
+                                            color: kTeacherPrimaryLightColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -398,8 +391,8 @@ class ProfileScreenView extends StatelessWidget {
                                             myProfileController
                                                     .profile[0].branch ??
                                                 "Unknown",
-                                            style: kBodyText3Style()
-                                                .copyWith(color: darkJoinColor),
+                                            style: kBodyText3Style().copyWith(
+                                                color: kTeacherPrimaryColor),
                                           ),
                                         ),
                                       ],
@@ -418,7 +411,7 @@ class ProfileScreenView extends StatelessWidget {
                                   width: double.infinity,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: darkJoinColor,
+                                        backgroundColor: kTeacherPrimaryColor,
                                         shape: const RoundedRectangleBorder(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(12)))),
@@ -438,7 +431,7 @@ class ProfileScreenView extends StatelessWidget {
                       )
                     : const Center(
                         child: CircularProgressIndicator(
-                          backgroundColor: darkJoinColor,
+                          backgroundColor: kTeacherPrimaryColor,
                         ),
                       ),
               ),

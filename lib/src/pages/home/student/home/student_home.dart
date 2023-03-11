@@ -45,10 +45,10 @@ class _StudentHomeState extends State<StudentHome> {
     var controller = Get.find<StudentHomeController>();
     return Scaffold(
       drawer: const NavigationDrawerWidget(),
-      backgroundColor: kPrimaryColor,
+      backgroundColor: kTeacherPrimaryColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: kPrimaryColor,
+        backgroundColor: kTeacherPrimaryColor,
         centerTitle: true,
         title: Text(
           'Quizzed',
@@ -173,11 +173,30 @@ class _StudentHomeState extends State<StudentHome> {
                 },
               ),
               SizedBox(
-                height: 8.h,
+                height: 10.h,
               ),
               userInfoCard(controller),
               SizedBox(
-                height: 200.h,
+                height: 8.h,
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 2),
+                child: Text(
+                  'Your past Quiz',
+                  style: kBodyText3Style(),
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 2, top: 8.h),
+                decoration: BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.circular(cornerRadius),
+                ),
+                height: 180,
+                width: double.infinity,
+              ),
+              SizedBox(
+                height: 20.h,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 0.h),
@@ -188,18 +207,16 @@ class _StudentHomeState extends State<StudentHome> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Icon(
-                            Icons.north_east,
+                            Icons.games,
                             color: whiteColor,
                           ),
                           const SizedBox(
                             width: 4,
                           ),
-                          Text('Join Quiz',
-                              style: kElevatedButtonTextStyle()
-                                  .copyWith(color: whiteColor))
+                          Text('Join Quiz', style: kBodyText1Style())
                         ],
                       ),
-                      backgroundColor: darkJoinColor,
+                      backgroundColor: kTeacherPrimaryLightColor,
                       function: () {
                         controller.navigateToJoinQuiz();
                       },
@@ -215,12 +232,10 @@ class _StudentHomeState extends State<StudentHome> {
                             Icons.bolt,
                             color: whiteColor,
                           ),
-                          Text('Result',
-                              style: kElevatedButtonTextStyle()
-                                  .copyWith(color: whiteColor))
+                          Text('Result', style: kBodyText1Style())
                         ],
                       ),
-                      backgroundColor: darkJoinColor,
+                      backgroundColor: kTeacherPrimaryLightColor,
                       function: () {
                         controller.navigateToResultQuiz();
                       },
@@ -241,7 +256,7 @@ class _StudentHomeState extends State<StudentHome> {
       decoration: BoxDecoration(
         image: DecorationImage(
           colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+              Colors.black.withOpacity(0.0), BlendMode.dstATop),
           image: const AssetImage('assets/images/fade.png'),
           fit: BoxFit.cover,
         ),
@@ -326,7 +341,7 @@ class _StudentHomeState extends State<StudentHome> {
             activeDotDecoration: DotDecoration(
               width: 32,
               height: 12,
-              color: darkJoinColor,
+              color: kTeacherPrimaryColor,
               rotationAngle: 180,
               verticalOffset: -10,
               borderRadius: BorderRadius.circular(24),

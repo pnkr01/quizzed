@@ -78,6 +78,7 @@ TextStyle kAppBarTextStyle() {
   );
 }
 
+
 TextStyle kDesignlargeTextStyle() {
   return GoogleFonts.montserrat(
     color: Colors.black,
@@ -106,6 +107,13 @@ TextStyle kBodyText3Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
     color: Colors.white,
+    fontSize: getProportionateScreenHeight(12.0.sp),
+  );
+}
+TextStyle kBodyText9Style() {
+  return GoogleFonts.montserrat(
+    fontWeight: FontWeight.w600,
+    color: kTeacherPrimaryLightColor,
     fontSize: getProportionateScreenHeight(12.0.sp),
   );
 }
