@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
 
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
 import 'package:quiz/theme/app_color.dart';
@@ -30,21 +29,36 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
           children: [
             Row(
               children: [
-                Text(
-                  'Title : ',
-                  style: kDesignSmallTextStyle(),
-                ),
                 Expanded(
-                  child: Text(
-                    "${controller.draftList[index].title.toString().capitalizeFirst}",
-                    maxLines: 1,
-                    style: kDesignlargeTextStyle(),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Title : ',
+                        style: kDesignSmallTextStyle(),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "${controller.draftList[index].title.toString().capitalizeFirst}",
+                          maxLines: 1,
+                          style: kDesignlargeTextStyle(),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+                Row(
+                  children: [
+                    const Text('QuizID : '),
+                    Text(
+                      controller.draftList[index].quizId.toString(),
+                      style: kDesignlargeTextStyle(),
+                    ),
+                  ],
+                )
               ],
             ),
             const SizedBox(
-              height: 4,
+              height: 8,
             ),
             Row(
               children: [
@@ -62,7 +76,7 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
               ],
             ),
             const SizedBox(
-              height: 7,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

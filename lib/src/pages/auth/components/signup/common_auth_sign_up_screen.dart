@@ -66,6 +66,7 @@ class _CommomAuthSignUpScreenState extends State<CommomAuthSignUpScreen>
       "Teacher",
     ];
     return Scaffold(
+      
       bottomSheet: SizedBox(
         width: double.infinity,
         height: 60,

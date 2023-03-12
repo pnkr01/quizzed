@@ -145,6 +145,8 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 10),
                                 child: SingleChildScrollView(
+                                  keyboardDismissBehavior:
+                                      ScrollViewKeyboardDismissBehavior.onDrag,
                                   child: Column(
                                     children: [
                                       const SizedBox(
@@ -217,7 +219,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                           ),
                                           _createOption(),
                                           const SizedBox(
-                                            height: 20,
+                                            height: 8,
                                           ),
                                           MYElevatedButton(
                                             label: 'Create',
@@ -257,6 +259,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
 
   SingleChildScrollView _createOption() {
     return SingleChildScrollView(
+      keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
       child: Column(
         children: [
           Row(
@@ -441,9 +444,9 @@ class QuizAdditionView extends GetView<AddQuizController> {
                   ))
             ],
           ),
-          const SizedBox(
-            height: 8,
-          ),
+          // const SizedBox(
+          //   height: 4,
+          // ),
         ],
       ),
     );

@@ -1,758 +1,113 @@
-[9:59:34 pm]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9101/","--target","lib\\main.dart","--web-hostname","any"]
-[9:59:34 pm]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:59:34 pm]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
-[9:59:35 pm]: PID: 1344
-[9:59:37 pm]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":18248}}]
-[9:59:37 pm]: <== [{"event":"app.start","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
-[9:59:38 pm]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
-[9:59:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
-[9:59:56 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"0","progressId":null,"finished":true}}]
-[9:59:57 pm]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
-[9:59:57 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app.apk...","finished":false}}]
-[9:59:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"1","progressId":null,"finished":true}}]
-[10:00:03 pm]: <== [{"event":"app.debugPort","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","port":62621,"wsUri":"ws://127.0.0.1:62621/hB8ulPtk5NQ=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizZNLRHO/quiz/"}}]
-[10:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"2","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"2","progressId":null,"finished":true}}]
-[10:00:03 pm]: <== [{"event":"app.started","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d"}}]
-[10:00:16 pm]: <== I/AssistStructure( 6640): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
-[10:00:22 pm]: <== I/AssistStructure( 6640): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
-[10:03:53 pm]: ==> [{"id":"1","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:03:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"3","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:03:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"4","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:03:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"4","progressId":null,"finished":true}}]
-[10:03:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"3","progressId":"hot.reload","finished":true}}]
-[10:03:54 pm]: <== Reloaded 1 of 1561 libraries in 573ms (compile: 65 ms, reload: 167 ms, reassemble: 199 ms).
-[10:03:54 pm]: <== [{"id":"1","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:04:01 pm]: ==> [{"id":"2","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:04:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"5","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:04:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"6","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:04:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"6","progressId":null,"finished":true}}]
-[10:04:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"5","progressId":"hot.reload","finished":true}}]
-[10:04:02 pm]: <== Reloaded 1 of 1561 libraries in 521ms (compile: 40 ms, reload: 185 ms, reassemble: 199 ms).
-[10:04:02 pm]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:04:20 pm]: <== I/flutter ( 6640): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDBjNzVlMzZjOGYyYzc5YTdlNTU5N2EiLCJyZWdkTm8iOiIyMDQxMDExMDgxIiwiaWF0IjoxNjc4NTUyNDYwLCJleHAiOjE2Nzk1NTI0NjB9.8nl-T_H51QY-45HgDo5pcotNz8jitrgyNOEup1Hpwuw
-[10:04:21 pm]: <== W/DynamiteModule( 6640): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[10:04:21 pm]: <== I/DynamiteModule( 6640): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[10:04:21 pm]: <== W/ProviderInstaller( 6640): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[10:04:21 pm]: <== I/com.cdh.quiz( 6640): The ClassLoaderContext is a special shared library.
-[10:04:21 pm]: <== I/com.cdh.quiz( 6640): The ClassLoaderContext is a special shared library.
-[10:04:21 pm]: <== I/TetheringManager( 6640): registerTetheringEventCallback:com.cdh.quiz
-[10:04:21 pm]: <== I/com.cdh.quiz( 6640): The ClassLoaderContext is a special shared library.
-[10:04:21 pm]: <== D/nativeloader( 6640): classloader namespace configured for unbundled product apk. library_path=/product/priv-app/PrebuiltGmsCore/lib/x86:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86:/product/lib:/system/product/lib
-[10:04:21 pm]: <== W/ProviderInstaller( 6640): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ldalvik/system/BaseDexClassLoader;->pathList:Ldalvik/system/DexPathList; (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ldalvik/system/DexPathList;->systemNativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryPathElements:[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/DexPathList;->makePathElements(Ljava/util/List;)[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
-[10:04:21 pm]: <== V/NativeCrypto( 6640): Registering com/google/android/gms/org/conscrypt/NativeCrypto's 286 native methods...
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (greylist, reflection, allowed)
-[10:04:21 pm]: <== I/ProviderInstaller( 6640): Installed default security provider GmsCore_OpenSSL
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ljava/net/Socket;->impl:Ljava/net/SocketImpl; (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard; (greylist,core-platform-api, linking, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V (greylist,core-platform-api, linking, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden field Ljava/io/FileDescriptor;->descriptor:I (greylist, JNI, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ljava/security/spec/ECParameterSpec;->setCurveName(Ljava/lang/String;)V (greylist, reflection, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/BlockGuard;->getThreadPolicy()Ldalvik/system/BlockGuard$Policy; (greylist,core-platform-api, linking, allowed)
-[10:04:21 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/BlockGuard$Policy;->onNetwork()V (greylist, linking, allowed)
-[10:25:26 pm]: ==> [{"id":"3","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:25:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"7","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:25:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"8","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:25:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"8","progressId":null,"finished":true}}]
-[10:25:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"7","progressId":"hot.reload","finished":true}}]
-[10:25:27 pm]: <== Reloaded 1 of 1561 libraries in 640ms (compile: 75 ms, reload: 229 ms, reassemble: 242 ms).
-[10:25:27 pm]: <== [{"id":"3","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:25:38 pm]: ==> [{"id":"4","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:25:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"9","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:25:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"10","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:25:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"10","progressId":null,"finished":true}}]
-[10:25:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"9","progressId":"hot.reload","finished":true}}]
-[10:25:38 pm]: <== Reloaded 1 of 1561 libraries in 549ms (compile: 52 ms, reload: 214 ms, reassemble: 199 ms).
-[10:25:38 pm]: <== [{"id":"4","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:46:04 pm]: ==> [{"id":"5","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:46:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"11","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:46:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"12","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:46:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"12","progressId":null,"finished":true}}]
-[10:46:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"11","progressId":"hot.reload","finished":true}}]
-[10:46:04 pm]: <== Reloaded 1 of 1561 libraries in 543ms (compile: 54 ms, reload: 209 ms, reassemble: 193 ms).
-[10:46:04 pm]: <== [{"id":"5","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:46:49 pm]: ==> [{"id":"6","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:46:49 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"13","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:46:49 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"14","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:46:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"14","progressId":null,"finished":true}}]
-[10:46:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"13","progressId":"hot.reload","finished":true}}]
-[10:46:50 pm]: <== Reloaded 1 of 1561 libraries in 587ms (compile: 66 ms, reload: 224 ms, reassemble: 194 ms).
-[10:46:50 pm]: <== [{"id":"6","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:46:58 pm]: ==> [{"id":"7","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:46:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"15","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:46:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"16","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:46:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"16","progressId":null,"finished":true}}]
-[10:46:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"15","progressId":"hot.reload","finished":true}}]
-[10:46:58 pm]: <== Reloaded 1 of 1561 libraries in 484ms (compile: 42 ms, reload: 178 ms, reassemble: 194 ms).
-[10:46:58 pm]: <== [{"id":"7","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:09 pm]: ==> [{"id":"8","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"17","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"18","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"18","progressId":null,"finished":true}}]
-[10:47:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"17","progressId":"hot.reload","finished":true}}]
-[10:47:09 pm]: <== Reloaded 1 of 1561 libraries in 470ms (compile: 37 ms, reload: 170 ms, reassemble: 198 ms).
-[10:47:09 pm]: <== [{"id":"8","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:19 pm]: ==> [{"id":"9","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:19 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"19","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:19 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"20","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:19 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"20","progressId":null,"finished":true}}]
-[10:47:20 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"19","progressId":"hot.reload","finished":true}}]
-[10:47:20 pm]: <== Reloaded 1 of 1561 libraries in 527ms (compile: 53 ms, reload: 205 ms, reassemble: 194 ms).
-[10:47:20 pm]: <== [{"id":"9","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:28 pm]: ==> [{"id":"10","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"21","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"22","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"22","progressId":null,"finished":true}}]
-[10:47:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"21","progressId":"hot.reload","finished":true}}]
-[10:47:28 pm]: <== Reloaded 1 of 1561 libraries in 464ms (compile: 41 ms, reload: 173 ms, reassemble: 187 ms).
-[10:47:28 pm]: <== [{"id":"10","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:32 pm]: ==> [{"id":"11","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"23","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"24","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"24","progressId":null,"finished":true}}]
-[10:47:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"23","progressId":"hot.reload","finished":true}}]
-[10:47:33 pm]: <== Reloaded 1 of 1561 libraries in 462ms (compile: 36 ms, reload: 179 ms, reassemble: 185 ms).
-[10:47:33 pm]: <== [{"id":"11","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:39 pm]: ==> [{"id":"12","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"25","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"26","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"26","progressId":null,"finished":true}}]
-[10:47:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"25","progressId":"hot.reload","finished":true}}]
-[10:47:40 pm]: <== Reloaded 1 of 1561 libraries in 494ms (compile: 47 ms, reload: 184 ms, reassemble: 187 ms).
-[10:47:40 pm]: <== [{"id":"12","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:47:50 pm]: ==> [{"id":"13","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:47:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"27","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:47:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"28","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:47:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"28","progressId":null,"finished":true}}]
-[10:47:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"27","progressId":"hot.reload","finished":true}}]
-[10:47:51 pm]: <== Reloaded 1 of 1561 libraries in 525ms (compile: 46 ms, reload: 191 ms, reassemble: 188 ms).
-[10:47:51 pm]: <== [{"id":"13","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:48:13 pm]: ==> [{"id":"14","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:48:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"29","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:48:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"30","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:48:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"30","progressId":null,"finished":true}}]
-[10:48:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"29","progressId":"hot.reload","finished":true}}]
-[10:48:14 pm]: <== Reloaded 1 of 1561 libraries in 488ms (compile: 39 ms, reload: 181 ms, reassemble: 199 ms).
-[10:48:14 pm]: <== [{"id":"14","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:48:32 pm]: ==> [{"id":"15","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:48:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"31","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:48:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"32","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:48:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"32","progressId":null,"finished":true}}]
-[10:48:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"31","progressId":"hot.reload","finished":true}}]
-[10:48:33 pm]: <== Reloaded 1 of 1561 libraries in 507ms (compile: 41 ms, reload: 195 ms, reassemble: 195 ms).
-[10:48:33 pm]: <== [{"id":"15","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:49:10 pm]: ==> [{"id":"16","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:49:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"33","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:49:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"34","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:49:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"34","progressId":null,"finished":true}}]
-[10:49:11 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"33","progressId":"hot.reload","finished":true}}]
-[10:49:11 pm]: <== Reloaded 1 of 1561 libraries in 520ms (compile: 58 ms, reload: 203 ms, reassemble: 183 ms).
-[10:49:11 pm]: <== [{"id":"16","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:49:19 pm]: ==> [{"id":"17","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:49:19 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"35","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:49:20 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"36","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:49:20 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"36","progressId":null,"finished":true}}]
-[10:49:20 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"35","progressId":"hot.reload","finished":true}}]
-[10:49:20 pm]: <== Reloaded 1 of 1561 libraries in 532ms (compile: 50 ms, reload: 194 ms, reassemble: 191 ms).
-[10:49:20 pm]: <== [{"id":"17","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:10 pm]: ==> [{"id":"18","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"37","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"38","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"38","progressId":null,"finished":true}}]
-[10:50:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"37","progressId":"hot.reload","finished":true}}]
-[10:50:10 pm]: <== Reloaded 1 of 1561 libraries in 676ms (compile: 51 ms, reload: 197 ms, reassemble: 335 ms).
-[10:50:10 pm]: <== [{"id":"18","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:13 pm]: ==> [{"id":"19","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"39","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"40","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"40","progressId":null,"finished":true}}]
-[10:50:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"39","progressId":"hot.reload","finished":true}}]
-[10:50:14 pm]: <== Reloaded 1 of 1561 libraries in 608ms (compile: 41 ms, reload: 205 ms, reassemble: 296 ms).
-[10:50:14 pm]: <== [{"id":"19","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:14 pm]: ==> [{"id":"20","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"41","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"42","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"42","progressId":null,"finished":true}}]
-[10:50:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"41","progressId":"hot.reload","finished":true}}]
-[10:50:14 pm]: <== Reloaded 0 libraries in 239ms (compile: 29 ms, reload: 0 ms, reassemble: 117 ms).
-[10:50:14 pm]: <== [{"id":"20","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[10:50:16 pm]: ==> [{"id":"21","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"43","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:17 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"44","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:17 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"44","progressId":null,"finished":true}}]
-[10:50:17 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"43","progressId":"hot.reload","finished":true}}]
-[10:50:17 pm]: <== Reloaded 1 of 1561 libraries in 604ms (compile: 45 ms, reload: 194 ms, reassemble: 274 ms).
-[10:50:17 pm]: <== [{"id":"21","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:27 pm]: ==> [{"id":"22","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"45","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"46","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"46","progressId":null,"finished":true}}]
-[10:50:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"45","progressId":"hot.reload","finished":true}}]
-[10:50:27 pm]: <== Reloaded 1 of 1561 libraries in 567ms (compile: 51 ms, reload: 237 ms, reassemble: 194 ms).
-[10:50:27 pm]: <== [{"id":"22","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:30 pm]: ==> [{"id":"23","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"47","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"48","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"48","progressId":null,"finished":true}}]
-[10:50:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"47","progressId":"hot.reload","finished":true}}]
-[10:50:31 pm]: <== Reloaded 1 of 1561 libraries in 525ms (compile: 37 ms, reload: 218 ms, reassemble: 197 ms).
-[10:50:31 pm]: <== [{"id":"23","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:33 pm]: ==> [{"id":"24","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"49","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"50","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"50","progressId":null,"finished":true}}]
-[10:50:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"49","progressId":"hot.reload","finished":true}}]
-[10:50:34 pm]: <== Reloaded 1 of 1561 libraries in 512ms (compile: 41 ms, reload: 185 ms, reassemble: 206 ms).
-[10:50:34 pm]: <== [{"id":"24","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:35 pm]: ==> [{"id":"25","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:35 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"51","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:35 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"52","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:35 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"52","progressId":null,"finished":true}}]
-[10:50:36 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"51","progressId":"hot.reload","finished":true}}]
-[10:50:36 pm]: <== Reloaded 1 of 1561 libraries in 459ms (compile: 37 ms, reload: 174 ms, reassemble: 185 ms).
-[10:50:36 pm]: <== [{"id":"25","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:40 pm]: ==> [{"id":"26","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"53","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"54","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:40 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"54","progressId":null,"finished":true}}]
-[10:50:41 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"53","progressId":"hot.reload","finished":true}}]
-[10:50:41 pm]: <== Reloaded 1 of 1561 libraries in 655ms (compile: 60 ms, reload: 271 ms, reassemble: 231 ms).
-[10:50:41 pm]: <== [{"id":"26","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:50 pm]: ==> [{"id":"27","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"55","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"56","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"56","progressId":null,"finished":true}}]
-[10:50:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"55","progressId":"hot.reload","finished":true}}]
-[10:50:50 pm]: <== Reloaded 1 of 1561 libraries in 565ms (compile: 74 ms, reload: 222 ms, reassemble: 184 ms).
-[10:50:50 pm]: <== [{"id":"27","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:50:59 pm]: ==> [{"id":"28","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:50:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"57","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:50:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"58","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:50:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"58","progressId":null,"finished":true}}]
-[10:50:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"57","progressId":"hot.reload","finished":true}}]
-[10:50:59 pm]: <== Reloaded 1 of 1561 libraries in 565ms (compile: 52 ms, reload: 214 ms, reassemble: 220 ms).
-[10:50:59 pm]: <== [{"id":"28","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:51:21 pm]: ==> [{"id":"29","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:51:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"59","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:51:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"60","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:51:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"60","progressId":null,"finished":true}}]
-[10:51:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"59","progressId":"hot.reload","finished":true}}]
-[10:51:22 pm]: <== Reloaded 1 of 1561 libraries in 582ms (compile: 52 ms, reload: 228 ms, reassemble: 225 ms).
-[10:51:22 pm]: <== [{"id":"29","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:51:38 pm]: ==> [{"id":"30","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:51:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"61","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:51:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"62","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:51:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"62","progressId":null,"finished":true}}]
-[10:51:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"61","progressId":"hot.reload","finished":true}}]
-[10:51:39 pm]: <== Reloaded 1 of 1561 libraries in 505ms (compile: 38 ms, reload: 189 ms, reassemble: 207 ms).
-[10:51:39 pm]: <== [{"id":"30","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:51:44 pm]: ==> [{"id":"31","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:51:44 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"63","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:51:44 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"64","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:51:44 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"64","progressId":null,"finished":true}}]
-[10:51:45 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"63","progressId":"hot.reload","finished":true}}]
-[10:51:45 pm]: <== Reloaded 1 of 1561 libraries in 509ms (compile: 44 ms, reload: 198 ms, reassemble: 185 ms).
-[10:51:45 pm]: <== [{"id":"31","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:07 pm]: ==> [{"id":"32","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:07 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"65","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:07 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"66","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:07 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"66","progressId":null,"finished":true}}]
-[10:52:08 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"65","progressId":"hot.reload","finished":true}}]
-[10:52:08 pm]: <== Reloaded 1 of 1561 libraries in 582ms (compile: 62 ms, reload: 229 ms, reassemble: 186 ms).
-[10:52:08 pm]: <== [{"id":"32","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:15 pm]: ==> [{"id":"33","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:15 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"67","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:15 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"68","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:15 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"68","progressId":null,"finished":true}}]
-[10:52:15 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"67","progressId":"hot.reload","finished":true}}]
-[10:52:15 pm]: <== Reloaded 1 of 1561 libraries in 495ms (compile: 42 ms, reload: 179 ms, reassemble: 192 ms).
-[10:52:15 pm]: <== [{"id":"33","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:24 pm]: ==> [{"id":"34","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:24 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"69","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:24 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"70","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:24 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"70","progressId":null,"finished":true}}]
-[10:52:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"69","progressId":"hot.reload","finished":true}}]
-[10:52:25 pm]: <== Reloaded 1 of 1561 libraries in 473ms (compile: 38 ms, reload: 185 ms, reassemble: 187 ms).
-[10:52:25 pm]: <== [{"id":"34","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:28 pm]: ==> [{"id":"35","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"71","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"72","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"72","progressId":null,"finished":true}}]
-[10:52:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"71","progressId":"hot.reload","finished":true}}]
-[10:52:29 pm]: <== Reloaded 1 of 1561 libraries in 508ms (compile: 40 ms, reload: 207 ms, reassemble: 188 ms).
-[10:52:29 pm]: <== [{"id":"35","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:33 pm]: ==> [{"id":"36","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"73","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"74","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"74","progressId":null,"finished":true}}]
-[10:52:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"73","progressId":"hot.reload","finished":true}}]
-[10:52:34 pm]: <== Reloaded 1 of 1561 libraries in 520ms (compile: 39 ms, reload: 214 ms, reassemble: 185 ms).
-[10:52:34 pm]: <== [{"id":"36","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:38 pm]: ==> [{"id":"37","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"75","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"76","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"76","progressId":null,"finished":true}}]
-[10:52:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"75","progressId":"hot.reload","finished":true}}]
-[10:52:39 pm]: <== Reloaded 1 of 1561 libraries in 506ms (compile: 47 ms, reload: 196 ms, reassemble: 188 ms).
-[10:52:39 pm]: <== [{"id":"37","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:43 pm]: ==> [{"id":"38","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:43 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"77","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:43 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"78","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:43 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"78","progressId":null,"finished":true}}]
-[10:52:44 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"77","progressId":"hot.reload","finished":true}}]
-[10:52:44 pm]: <== Reloaded 1 of 1561 libraries in 670ms (compile: 64 ms, reload: 314 ms, reassemble: 177 ms).
-[10:52:44 pm]: <== [{"id":"38","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:52:50 pm]: ==> [{"id":"39","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:52:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"79","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:52:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"80","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:52:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"80","progressId":null,"finished":true}}]
-[10:52:50 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"79","progressId":"hot.reload","finished":true}}]
-[10:52:50 pm]: <== Reloaded 1 of 1561 libraries in 501ms (compile: 38 ms, reload: 202 ms, reassemble: 198 ms).
-[10:52:50 pm]: <== [{"id":"39","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:01 pm]: ==> [{"id":"40","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"81","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"82","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"82","progressId":null,"finished":true}}]
-[10:53:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"81","progressId":"hot.reload","finished":true}}]
-[10:53:02 pm]: <== Reloaded 1 of 1561 libraries in 493ms (compile: 47 ms, reload: 200 ms, reassemble: 180 ms).
-[10:53:02 pm]: <== [{"id":"40","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:24 pm]: ==> [{"id":"41","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:24 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"83","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"84","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"84","progressId":null,"finished":true}}]
-[10:53:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"83","progressId":"hot.reload","finished":true}}]
-[10:53:25 pm]: <== Reloaded 1 of 1561 libraries in 492ms (compile: 40 ms, reload: 192 ms, reassemble: 194 ms).
-[10:53:25 pm]: <== [{"id":"41","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:31 pm]: ==> [{"id":"42","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"85","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"86","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"86","progressId":null,"finished":true}}]
-[10:53:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"85","progressId":"hot.reload","finished":true}}]
-[10:53:31 pm]: <== Reloaded 1 of 1561 libraries in 519ms (compile: 45 ms, reload: 187 ms, reassemble: 211 ms).
-[10:53:31 pm]: <== [{"id":"42","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:34 pm]: ==> [{"id":"43","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"87","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"88","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"88","progressId":null,"finished":true}}]
-[10:53:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"87","progressId":"hot.reload","finished":true}}]
-[10:53:34 pm]: <== Reloaded 1 of 1561 libraries in 463ms (compile: 34 ms, reload: 182 ms, reassemble: 183 ms).
-[10:53:34 pm]: <== [{"id":"43","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:48 pm]: ==> [{"id":"44","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"89","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"90","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"90","progressId":null,"finished":true}}]
-[10:53:49 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"89","progressId":"hot.reload","finished":true}}]
-[10:53:49 pm]: <== Reloaded 1 of 1561 libraries in 496ms (compile: 37 ms, reload: 198 ms, reassemble: 198 ms).
-[10:53:49 pm]: <== [{"id":"44","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:53 pm]: ==> [{"id":"45","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"91","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"92","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"92","progressId":null,"finished":true}}]
-[10:53:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"91","progressId":"hot.reload","finished":true}}]
-[10:53:54 pm]: <== Reloaded 1 of 1561 libraries in 479ms (compile: 36 ms, reload: 184 ms, reassemble: 190 ms).
-[10:53:54 pm]: <== [{"id":"45","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:53:58 pm]: ==> [{"id":"46","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:53:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"93","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:53:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"94","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:53:58 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"94","progressId":null,"finished":true}}]
-[10:53:59 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"93","progressId":"hot.reload","finished":true}}]
-[10:53:59 pm]: <== Reloaded 1 of 1561 libraries in 529ms (compile: 54 ms, reload: 210 ms, reassemble: 183 ms).
-[10:53:59 pm]: <== [{"id":"46","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:54:14 pm]: ==> [{"id":"47","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:54:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"95","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:54:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"96","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:54:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"96","progressId":null,"finished":true}}]
-[10:54:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"95","progressId":"hot.reload","finished":true}}]
-[10:54:14 pm]: <== Reloaded 1 of 1561 libraries in 499ms (compile: 48 ms, reload: 203 ms, reassemble: 175 ms).
-[10:54:14 pm]: <== [{"id":"47","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:54:22 pm]: ==> [{"id":"48","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:54:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"97","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:54:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"98","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:54:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"98","progressId":null,"finished":true}}]
-[10:54:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"97","progressId":"hot.reload","finished":true}}]
-[10:54:22 pm]: <== Reloaded 1 of 1561 libraries in 502ms (compile: 38 ms, reload: 199 ms, reassemble: 202 ms).
-[10:54:22 pm]: <== [{"id":"48","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:54:33 pm]: ==> [{"id":"49","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:54:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"99","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:54:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"100","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:54:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"100","progressId":null,"finished":true}}]
-[10:54:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"99","progressId":"hot.reload","finished":true}}]
-[10:54:34 pm]: <== Reloaded 1 of 1561 libraries in 490ms (compile: 37 ms, reload: 208 ms, reassemble: 184 ms).
-[10:54:34 pm]: <== [{"id":"49","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:54:50 pm]: ==> [{"id":"50","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:54:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"101","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:54:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"102","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:54:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"102","progressId":null,"finished":true}}]
-[10:54:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"101","progressId":"hot.reload","finished":true}}]
-[10:54:51 pm]: <== Reloaded 27 of 1561 libraries in 603ms (compile: 151 ms, reload: 188 ms, reassemble: 186 ms).
-[10:54:51 pm]: <== [{"id":"50","result":{"code":0,"message":"Reloaded 27 of 1561 libraries"}}]
-[10:55:05 pm]: <== I/AssistStructure( 6640): Flattened final assist data: 372 bytes, containing 1 windows, 3 views
-[10:55:05 pm]: <== W/com.cdh.quiz( 6640): Reducing the number of considered missed Gc histogram windows from 330 to 100
-[10:55:23 pm]: ==> [{"id":"51","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:55:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"103","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:55:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"104","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:55:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"104","progressId":null,"finished":true}}]
-[10:55:24 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"103","progressId":"hot.reload","finished":true}}]
-[10:55:24 pm]: <== Reloaded 1 of 1561 libraries in 560ms (compile: 38 ms, reload: 222 ms, reassemble: 222 ms).
-[10:55:24 pm]: <== [{"id":"51","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:55:33 pm]: ==> [{"id":"52","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:55:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"105","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:55:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"106","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:55:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"106","progressId":null,"finished":true}}]
-[10:55:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"105","progressId":"hot.reload","finished":true}}]
-[10:55:34 pm]: <== Reloaded 1 of 1561 libraries in 522ms (compile: 31 ms, reload: 201 ms, reassemble: 226 ms).
-[10:55:34 pm]: <== [{"id":"52","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:55:47 pm]: ==> [{"id":"53","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false}}]
-[10:55:47 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"107","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:55:47 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"108","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:55:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"108","progressId":null,"finished":true}}]
-[10:55:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"107","progressId":"hot.reload","finished":true}}]
-[10:55:48 pm]: <== Reloaded 0 libraries in 136ms (compile: 19 ms, reload: 0 ms, reassemble: 55 ms).
-[10:55:48 pm]: <== [{"id":"53","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[10:55:54 pm]: ==> [{"id":"54","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[10:55:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"109","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[10:55:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"110","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:55:56 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"110","progressId":null,"finished":true}}]
-[10:55:56 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"109","progressId":"hot.restart","finished":true}}]
-[10:55:56 pm]: <== Restarted application in 1,936ms.
-[10:55:56 pm]: <== [{"id":"54","result":{"code":0,"message":""}}]
-[10:55:56 pm]: <== W/com.cdh.quiz( 6640): Accessing hidden method Ldalvik/system/CloseGuard;->close()V (greylist,core-platform-api, linking, allowed)
-[10:55:59 pm]: <== W/DynamiteModule( 6640): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[10:55:59 pm]: <== I/DynamiteModule( 6640): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[10:55:59 pm]: <== W/ProviderInstaller( 6640): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[10:55:59 pm]: <== W/ProviderInstaller( 6640): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[10:56:10 pm]: ==> [{"id":"55","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"111","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"112","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"112","progressId":null,"finished":true}}]
-[10:56:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"111","progressId":"hot.reload","finished":true}}]
-[10:56:10 pm]: <== Reloaded 1 of 1561 libraries in 621ms (compile: 32 ms, reload: 180 ms, reassemble: 296 ms).
-[10:56:10 pm]: <== [{"id":"55","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:56:16 pm]: ==> [{"id":"56","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"113","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"114","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"114","progressId":null,"finished":true}}]
-[10:56:17 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"113","progressId":"hot.reload","finished":true}}]
-[10:56:17 pm]: <== Reloaded 1 of 1561 libraries in 1,003ms (compile: 26 ms, reload: 165 ms, reassemble: 698 ms).
-[10:56:17 pm]: <== [{"id":"56","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:56:21 pm]: ==> [{"id":"57","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"115","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"116","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:21 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"116","progressId":null,"finished":true}}]
-[10:56:22 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"115","progressId":"hot.reload","finished":true}}]
-[10:56:22 pm]: <== Reloaded 1 of 1561 libraries in 540ms (compile: 38 ms, reload: 188 ms, reassemble: 240 ms).
-[10:56:22 pm]: <== [{"id":"57","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:56:25 pm]: ==> [{"id":"58","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"117","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"118","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"118","progressId":null,"finished":true}}]
-[10:56:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"117","progressId":"hot.reload","finished":true}}]
-[10:56:26 pm]: <== Reloaded 1 of 1561 libraries in 505ms (compile: 27 ms, reload: 171 ms, reassemble: 242 ms).
-[10:56:26 pm]: <== [{"id":"58","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:56:31 pm]: ==> [{"id":"59","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"119","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"120","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"120","progressId":null,"finished":true}}]
-[10:56:31 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"119","progressId":"hot.reload","finished":true}}]
-[10:56:31 pm]: <== Reloaded 1 of 1561 libraries in 536ms (compile: 31 ms, reload: 175 ms, reassemble: 257 ms).
-[10:56:31 pm]: <== [{"id":"59","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:56:55 pm]: ==> [{"id":"60","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:56:55 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"121","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:56:55 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"122","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:56:55 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"122","progressId":null,"finished":true}}]
-[10:56:56 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"121","progressId":"hot.reload","finished":true}}]
-[10:56:56 pm]: <== Reloaded 1 of 1561 libraries in 485ms (compile: 31 ms, reload: 157 ms, reassemble: 226 ms).
-[10:56:56 pm]: <== [{"id":"60","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:01 pm]: ==> [{"id":"61","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"123","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"124","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"124","progressId":null,"finished":true}}]
-[10:57:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"123","progressId":"hot.reload","finished":true}}]
-[10:57:01 pm]: <== Reloaded 1 of 1561 libraries in 500ms (compile: 34 ms, reload: 155 ms, reassemble: 238 ms).
-[10:57:01 pm]: <== [{"id":"61","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:02 pm]: ==> [{"id":"62","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"125","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"126","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"126","progressId":null,"finished":true}}]
-[10:57:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"125","progressId":"hot.reload","finished":true}}]
-[10:57:02 pm]: <== Reloaded 0 libraries in 147ms (compile: 16 ms, reload: 0 ms, reassemble: 58 ms).
-[10:57:02 pm]: <== [{"id":"62","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[10:57:04 pm]: ==> [{"id":"63","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"127","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"128","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"128","progressId":null,"finished":true}}]
-[10:57:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"127","progressId":"hot.reload","finished":true}}]
-[10:57:04 pm]: <== Reloaded 1 of 1561 libraries in 520ms (compile: 49 ms, reload: 168 ms, reassemble: 227 ms).
-[10:57:04 pm]: <== [{"id":"63","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:05 pm]: ==> [{"id":"64","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"129","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"130","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"130","progressId":null,"finished":true}}]
-[10:57:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"129","progressId":"hot.reload","finished":true}}]
-[10:57:05 pm]: <== Reloaded 0 libraries in 140ms (compile: 17 ms, reload: 0 ms, reassemble: 60 ms).
-[10:57:05 pm]: <== [{"id":"64","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[10:57:05 pm]: <== I/AssistStructure( 6640): Flattened final assist data: 372 bytes, containing 1 windows, 3 views
-[10:57:13 pm]: ==> [{"id":"65","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"131","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"132","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"132","progressId":null,"finished":true}}]
-[10:57:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"131","progressId":"hot.reload","finished":true}}]
-[10:57:14 pm]: <== Reloaded 1 of 1561 libraries in 499ms (compile: 34 ms, reload: 164 ms, reassemble: 232 ms).
-[10:57:14 pm]: <== [{"id":"65","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:29 pm]: ==> [{"id":"66","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"133","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"134","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"134","progressId":null,"finished":true}}]
-[10:57:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"133","progressId":"hot.reload","finished":true}}]
-[10:57:29 pm]: <== Reloaded 1 of 1561 libraries in 533ms (compile: 33 ms, reload: 193 ms, reassemble: 241 ms).
-[10:57:29 pm]: <== [{"id":"66","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:39 pm]: ==> [{"id":"67","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"135","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"136","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"136","progressId":null,"finished":true}}]
-[10:57:39 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"135","progressId":"hot.reload","finished":true}}]
-[10:57:39 pm]: <== Reloaded 1 of 1561 libraries in 555ms (compile: 37 ms, reload: 185 ms, reassemble: 250 ms).
-[10:57:39 pm]: <== [{"id":"67","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:57:47 pm]: ==> [{"id":"68","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:57:47 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"137","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:57:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"138","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:57:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"138","progressId":null,"finished":true}}]
-[10:57:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"137","progressId":"hot.reload","finished":true}}]
-[10:57:48 pm]: <== Reloaded 1 of 1561 libraries in 514ms (compile: 42 ms, reload: 168 ms, reassemble: 225 ms).
-[10:57:48 pm]: <== [{"id":"68","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:58:45 pm]: ==> [{"id":"69","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:58:45 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"139","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:58:45 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"140","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:58:45 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"140","progressId":null,"finished":true}}]
-[10:58:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"139","progressId":"hot.reload","finished":true}}]
-[10:58:46 pm]: <== Reloaded 1 of 1561 libraries in 508ms (compile: 35 ms, reload: 202 ms, reassemble: 195 ms).
-[10:58:46 pm]: <== [{"id":"69","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:58:52 pm]: ==> [{"id":"70","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:58:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"141","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:58:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"142","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:58:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"142","progressId":null,"finished":true}}]
-[10:58:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"141","progressId":"hot.reload","finished":true}}]
-[10:58:52 pm]: <== Reloaded 1 of 1561 libraries in 483ms (compile: 29 ms, reload: 187 ms, reassemble: 196 ms).
-[10:58:52 pm]: <== [{"id":"70","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[10:58:53 pm]: ==> [{"id":"71","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:58:53 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"143","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:58:53 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"144","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:58:53 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"144","progressId":null,"finished":true}}]
-[10:58:53 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"143","progressId":"hot.reload","finished":true}}]
-[10:58:53 pm]: <== Reloaded 0 libraries in 149ms (compile: 17 ms, reload: 0 ms, reassemble: 54 ms).
-[10:58:53 pm]: <== [{"id":"71","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[10:59:03 pm]: ==> [{"id":"72","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[10:59:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"145","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[10:59:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"146","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[10:59:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"146","progressId":null,"finished":true}}]
-[10:59:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"145","progressId":"hot.reload","finished":true}}]
-[10:59:03 pm]: <== Reloaded 1 of 1561 libraries in 483ms (compile: 32 ms, reload: 181 ms, reassemble: 205 ms).
-[10:59:03 pm]: <== [{"id":"72","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:00:03 pm]: ==> [{"id":"73","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"147","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"148","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"148","progressId":null,"finished":true}}]
-[11:00:03 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"147","progressId":"hot.reload","finished":true}}]
-[11:00:03 pm]: <== Reloaded 1 of 1561 libraries in 549ms (compile: 39 ms, reload: 191 ms, reassemble: 252 ms).
-[11:00:03 pm]: <== [{"id":"73","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:00:23 pm]: ==> [{"id":"74","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:00:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"149","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:00:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"150","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:00:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"150","progressId":null,"finished":true}}]
-[11:00:23 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"149","progressId":"hot.reload","finished":true}}]
-[11:00:23 pm]: <== Reloaded 1 of 1561 libraries in 484ms (compile: 37 ms, reload: 177 ms, reassemble: 205 ms).
-[11:00:23 pm]: <== [{"id":"74","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:00:32 pm]: ==> [{"id":"75","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:00:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"151","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:00:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"152","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:00:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"152","progressId":null,"finished":true}}]
-[11:00:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"151","progressId":"hot.reload","finished":true}}]
-[11:00:33 pm]: <== Reloaded 1 of 1561 libraries in 592ms (compile: 50 ms, reload: 200 ms, reassemble: 257 ms).
-[11:00:33 pm]: <== [{"id":"75","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:05 pm]: ==> [{"id":"76","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"153","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"154","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"154","progressId":null,"finished":true}}]
-[11:01:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"153","progressId":"hot.reload","finished":true}}]
-[11:01:05 pm]: <== Reloaded 1 of 1561 libraries in 480ms (compile: 37 ms, reload: 166 ms, reassemble: 209 ms).
-[11:01:05 pm]: <== [{"id":"76","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:29 pm]: ==> [{"id":"77","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"155","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"156","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"156","progressId":null,"finished":true}}]
-[11:01:29 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"155","progressId":"hot.reload","finished":true}}]
-[11:01:29 pm]: <== Reloaded 1 of 1561 libraries in 482ms (compile: 37 ms, reload: 171 ms, reassemble: 205 ms).
-[11:01:29 pm]: <== [{"id":"77","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:38 pm]: ==> [{"id":"78","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"157","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"158","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"158","progressId":null,"finished":true}}]
-[11:01:38 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"157","progressId":"hot.reload","finished":true}}]
-[11:01:38 pm]: <== Reloaded 1 of 1561 libraries in 504ms (compile: 41 ms, reload: 177 ms, reassemble: 219 ms).
-[11:01:38 pm]: <== [{"id":"78","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:41 pm]: ==> [{"id":"79","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:42 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"159","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:42 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"160","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:42 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"160","progressId":null,"finished":true}}]
-[11:01:42 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"159","progressId":"hot.reload","finished":true}}]
-[11:01:42 pm]: <== Reloaded 1 of 1561 libraries in 542ms (compile: 35 ms, reload: 195 ms, reassemble: 242 ms).
-[11:01:42 pm]: <== [{"id":"79","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:48 pm]: ==> [{"id":"80","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"161","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"162","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"162","progressId":null,"finished":true}}]
-[11:01:48 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"161","progressId":"hot.reload","finished":true}}]
-[11:01:48 pm]: <== Reloaded 1 of 1561 libraries in 521ms (compile: 44 ms, reload: 169 ms, reassemble: 235 ms).
-[11:01:48 pm]: <== [{"id":"80","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:01:52 pm]: ==> [{"id":"81","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:01:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"163","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:01:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"164","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:01:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"164","progressId":null,"finished":true}}]
-[11:01:52 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"163","progressId":"hot.reload","finished":true}}]
-[11:01:52 pm]: <== Reloaded 1 of 1561 libraries in 520ms (compile: 36 ms, reload: 188 ms, reassemble: 230 ms).
-[11:01:52 pm]: <== [{"id":"81","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:01 pm]: ==> [{"id":"82","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"165","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"166","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"166","progressId":null,"finished":true}}]
-[11:02:02 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"165","progressId":"hot.reload","finished":true}}]
-[11:02:02 pm]: <== Reloaded 1 of 1561 libraries in 544ms (compile: 48 ms, reload: 194 ms, reassemble: 230 ms).
-[11:02:02 pm]: <== [{"id":"82","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:05 pm]: ==> [{"id":"83","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"167","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"168","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"168","progressId":null,"finished":true}}]
-[11:02:06 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"167","progressId":"hot.reload","finished":true}}]
-[11:02:06 pm]: <== Reloaded 1 of 1561 libraries in 502ms (compile: 35 ms, reload: 188 ms, reassemble: 216 ms).
-[11:02:06 pm]: <== [{"id":"83","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:10 pm]: ==> [{"id":"84","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"169","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"170","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"170","progressId":null,"finished":true}}]
-[11:02:10 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"169","progressId":"hot.reload","finished":true}}]
-[11:02:10 pm]: <== Reloaded 1 of 1561 libraries in 483ms (compile: 39 ms, reload: 172 ms, reassemble: 208 ms).
-[11:02:10 pm]: <== [{"id":"84","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:16 pm]: ==> [{"id":"85","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"171","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"172","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:16 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"172","progressId":null,"finished":true}}]
-[11:02:17 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"171","progressId":"hot.reload","finished":true}}]
-[11:02:17 pm]: <== Reloaded 1 of 1561 libraries in 496ms (compile: 35 ms, reload: 179 ms, reassemble: 217 ms).
-[11:02:17 pm]: <== [{"id":"85","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:34 pm]: ==> [{"id":"86","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"173","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"174","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"174","progressId":null,"finished":true}}]
-[11:02:35 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"173","progressId":"hot.reload","finished":true}}]
-[11:02:35 pm]: <== Reloaded 50 of 1561 libraries in 915ms (compile: 312 ms, reload: 229 ms, reassemble: 295 ms).
-[11:02:35 pm]: <== [{"id":"86","result":{"code":0,"message":"Reloaded 50 of 1561 libraries"}}]
-[11:02:46 pm]: ==> [{"id":"87","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"175","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"176","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"176","progressId":null,"finished":true}}]
-[11:02:47 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"175","progressId":"hot.reload","finished":true}}]
-[11:02:47 pm]: <== Reloaded 1 of 1561 libraries in 495ms (compile: 30 ms, reload: 177 ms, reassemble: 223 ms).
-[11:02:47 pm]: <== [{"id":"87","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:02:54 pm]: ==> [{"id":"88","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:02:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"177","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:02:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"178","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:02:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"178","progressId":null,"finished":true}}]
-[11:02:54 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"177","progressId":"hot.reload","finished":true}}]
-[11:02:54 pm]: <== Reloaded 1 of 1561 libraries in 538ms (compile: 43 ms, reload: 164 ms, reassemble: 257 ms).
-[11:02:54 pm]: <== [{"id":"88","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:03:01 pm]: ==> [{"id":"89","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"179","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"180","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"180","progressId":null,"finished":true}}]
-[11:03:01 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"179","progressId":"hot.reload","finished":true}}]
-[11:03:01 pm]: <== Reloaded 1 of 1561 libraries in 520ms (compile: 35 ms, reload: 189 ms, reassemble: 231 ms).
-[11:03:01 pm]: <== [{"id":"89","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:03:18 pm]: ==> [{"id":"90","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"181","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"182","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"182","progressId":null,"finished":true}}]
-[11:03:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"181","progressId":"hot.reload","finished":true}}]
-[11:03:18 pm]: <== Reloaded 1 of 1561 libraries in 605ms (compile: 44 ms, reload: 196 ms, reassemble: 265 ms).
-[11:03:18 pm]: <== [{"id":"90","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:03:27 pm]: ==> [{"id":"91","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"183","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"184","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:27 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"184","progressId":null,"finished":true}}]
-[11:03:28 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"183","progressId":"hot.reload","finished":true}}]
-[11:03:28 pm]: <== Reloaded 1 of 1561 libraries in 527ms (compile: 31 ms, reload: 204 ms, reassemble: 219 ms).
-[11:03:28 pm]: <== [{"id":"91","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:03:32 pm]: ==> [{"id":"92","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"185","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"186","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:32 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"186","progressId":null,"finished":true}}]
-[11:03:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"185","progressId":"hot.reload","finished":true}}]
-[11:03:33 pm]: <== Reloaded 1 of 1561 libraries in 579ms (compile: 60 ms, reload: 205 ms, reassemble: 210 ms).
-[11:03:33 pm]: <== [{"id":"92","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:03:33 pm]: ==> [{"id":"93","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:33 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"187","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"188","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"188","progressId":null,"finished":true}}]
-[11:03:34 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"187","progressId":"hot.reload","finished":true}}]
-[11:03:34 pm]: <== Reloaded 0 libraries in 163ms (compile: 21 ms, reload: 0 ms, reassemble: 63 ms).
-[11:03:34 pm]: <== [{"id":"93","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[11:03:50 pm]: ==> [{"id":"94","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:03:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"189","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:03:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"190","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:03:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"190","progressId":null,"finished":true}}]
-[11:03:51 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"189","progressId":"hot.reload","finished":true}}]
-[11:03:51 pm]: <== Reloaded 1 of 1561 libraries in 491ms (compile: 22 ms, reload: 184 ms, reassemble: 219 ms).
-[11:03:51 pm]: <== [{"id":"94","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:04 pm]: ==> [{"id":"95","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"191","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"192","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:04 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"192","progressId":null,"finished":true}}]
-[11:04:05 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"191","progressId":"hot.reload","finished":true}}]
-[11:04:05 pm]: <== Reloaded 1 of 1561 libraries in 545ms (compile: 50 ms, reload: 189 ms, reassemble: 222 ms).
-[11:04:05 pm]: <== [{"id":"95","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:09 pm]: ==> [{"id":"96","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"193","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"194","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"194","progressId":null,"finished":true}}]
-[11:04:09 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"193","progressId":"hot.reload","finished":true}}]
-[11:04:09 pm]: <== Reloaded 1 of 1561 libraries in 504ms (compile: 39 ms, reload: 181 ms, reassemble: 219 ms).
-[11:04:09 pm]: <== [{"id":"96","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:14 pm]: ==> [{"id":"97","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"195","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"196","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"196","progressId":null,"finished":true}}]
-[11:04:14 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"195","progressId":"hot.reload","finished":true}}]
-[11:04:14 pm]: <== Reloaded 1 of 1561 libraries in 503ms (compile: 49 ms, reload: 177 ms, reassemble: 208 ms).
-[11:04:14 pm]: <== [{"id":"97","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:18 pm]: ==> [{"id":"98","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"197","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"198","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"198","progressId":null,"finished":true}}]
-[11:04:18 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"197","progressId":"hot.reload","finished":true}}]
-[11:04:18 pm]: <== Reloaded 1 of 1561 libraries in 522ms (compile: 41 ms, reload: 188 ms, reassemble: 223 ms).
-[11:04:18 pm]: <== [{"id":"98","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:25 pm]: ==> [{"id":"99","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:25 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"199","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"200","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"200","progressId":null,"finished":true}}]
-[11:04:26 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"199","progressId":"hot.reload","finished":true}}]
-[11:04:26 pm]: <== Reloaded 1 of 1561 libraries in 496ms (compile: 40 ms, reload: 168 ms, reassemble: 209 ms).
-[11:04:26 pm]: <== [{"id":"99","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:04:46 pm]: ==> [{"id":"100","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:04:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"201","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:04:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"202","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:04:46 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"202","progressId":null,"finished":true}}]
-[11:04:47 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"201","progressId":"hot.reload","finished":true}}]
-[11:04:47 pm]: <== Reloaded 1 of 1561 libraries in 502ms (compile: 37 ms, reload: 172 ms, reassemble: 216 ms).
-[11:04:47 pm]: <== [{"id":"100","result":{"code":0,"message":"Reloaded 1 of 1561 libraries"}}]
-[11:09:13 pm]: ==> [{"id":"101","method":"app.restart","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[11:09:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"203","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[11:09:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"204","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[11:09:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"204","progressId":null,"finished":true}}]
-[11:09:13 pm]: <== [{"event":"app.progress","params":{"appId":"3cdb0583-a7ea-4685-bb86-70e9888d686d","id":"203","progressId":"hot.reload","finished":true}}]
-[11:09:13 pm]: <== Reloaded 2 of 1561 libraries in 565ms (compile: 45 ms, reload: 238 ms, reassemble: 211 ms).
-[11:09:13 pm]: <== [{"id":"101","result":{"code":0,"message":"Reloaded 2 of 1561 libraries"}}]
+[3:17:46 pm]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart","--web-hostname","any"]
+[3:17:46 pm]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[3:17:46 pm]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[3:17:46 pm]: PID: 11240
+[3:17:49 pm]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":1628}}]
+[3:17:49 pm]: <== [{"event":"app.start","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
+[3:17:49 pm]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
+[3:17:50 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
+[3:18:29 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"0","progressId":null,"finished":true}}]
+[3:18:30 pm]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
+[3:18:30 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app.apk...","finished":false}}]
+[3:18:31 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"1","progressId":null,"finished":true}}]
+[3:18:34 pm]: <== [{"event":"app.debugPort","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","port":50693,"wsUri":"ws://127.0.0.1:50693/GKQBdIk5-IQ=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizVYHVHM/quiz/"}}]
+[3:18:34 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"2","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[3:18:34 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"2","progressId":null,"finished":true}}]
+[3:18:34 pm]: <== [{"event":"app.started","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd"}}]
+[3:18:42 pm]: <== I/AssistStructure( 6539): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[3:18:47 pm]: <== I/AssistStructure( 6539): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[3:19:09 pm]: <== I/flutter ( 6539): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDBjNzVlMzZjOGYyYzc5YTdlNTU5N2EiLCJyZWdkTm8iOiIyMDQxMDExMDgxIiwiaWF0IjoxNjc4NjE0NTQ5LCJleHAiOjE2Nzk2MTQ1NDl9.Pd9sYaSaAogzWIKy7Bo8U066WRZD1IjIbnRehD8V5sI
+[3:19:10 pm]: <== W/DynamiteModule( 6539): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[3:19:10 pm]: <== I/DynamiteModule( 6539): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[3:19:10 pm]: <== W/ProviderInstaller( 6539): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[3:19:10 pm]: <== I/com.cdh.quiz( 6539): The ClassLoaderContext is a special shared library.
+[3:19:10 pm]: <== I/com.cdh.quiz( 6539): The ClassLoaderContext is a special shared library.
+[3:19:10 pm]: <== I/TetheringManager( 6539): registerTetheringEventCallback:com.cdh.quiz
+[3:19:10 pm]: <== I/com.cdh.quiz( 6539): The ClassLoaderContext is a special shared library.
+[3:19:10 pm]: <== D/nativeloader( 6539): classloader namespace configured for unbundled product apk. library_path=/product/priv-app/PrebuiltGmsCore/lib/x86:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86:/product/lib:/system/product/lib
+[3:19:10 pm]: <== W/ProviderInstaller( 6539): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ldalvik/system/BaseDexClassLoader;->pathList:Ldalvik/system/DexPathList; (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ldalvik/system/DexPathList;->systemNativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryPathElements:[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ldalvik/system/DexPathList;->makePathElements(Ljava/util/List;)[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[3:19:10 pm]: <== V/NativeCrypto( 6539): Registering com/google/android/gms/org/conscrypt/NativeCrypto's 286 native methods...
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (greylist, reflection, allowed)
+[3:19:10 pm]: <== I/ProviderInstaller( 6539): Installed default security provider GmsCore_OpenSSL
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ljava/net/Socket;->impl:Ljava/net/SocketImpl; (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard; (greylist,core-platform-api, linking, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V (greylist,core-platform-api, linking, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden field Ljava/io/FileDescriptor;->descriptor:I (greylist, JNI, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ljava/security/spec/ECParameterSpec;->setCurveName(Ljava/lang/String;)V (greylist, reflection, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ldalvik/system/BlockGuard;->getThreadPolicy()Ldalvik/system/BlockGuard$Policy; (greylist,core-platform-api, linking, allowed)
+[3:19:10 pm]: <== W/com.cdh.quiz( 6539): Accessing hidden method Ldalvik/system/BlockGuard$Policy;->onNetwork()V (greylist, linking, allowed)
+[3:19:23 pm]: <== I/AssistStructure( 6539): Flattened final assist data: 444 bytes, containing 1 windows, 3 views
+[3:19:33 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:33 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): clearMetaKeyStates on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:33 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:35 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:35 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:36 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:36 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:41 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:41 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:42 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:19:42 pm]: <== I/TextInputPlugin( 6539): Composing region changed by the framework. Restarting the input method.
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getSelectedText on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextAfterCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): beginBatchEdit on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): getTextBeforeCursor on inactive InputConnection
+[3:19:42 pm]: <== W/IInputConnectionWrapper( 6539): endBatchEdit on inactive InputConnection
+[3:20:00 pm]: ==> [{"id":"1","method":"app.restart","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[3:20:00 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"3","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[3:20:00 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"4","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[3:20:00 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"4","progressId":null,"finished":true}}]
+[3:20:01 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"3","progressId":"hot.reload","finished":true}}]
+[3:20:01 pm]: <== Reloaded 2 of 1562 libraries in 762ms (compile: 84 ms, reload: 200 ms, reassemble: 253 ms).
+[3:20:01 pm]: <== [{"id":"1","result":{"code":0,"message":"Reloaded 2 of 1562 libraries"}}]
+[3:20:02 pm]: ==> [{"id":"2","method":"app.restart","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[3:20:02 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"5","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[3:20:02 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"6","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[3:20:02 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"6","progressId":null,"finished":true}}]
+[3:20:02 pm]: <== [{"event":"app.progress","params":{"appId":"36738e35-b3ca-486b-b8fd-047d450175dd","id":"5","progressId":"hot.reload","finished":true}}]
+[3:20:02 pm]: <== Reloaded 1 of 1562 libraries in 785ms (compile: 274 ms, reload: 172 ms, reassemble: 235 ms).
+[3:20:02 pm]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 1 of 1562 libraries"}}]
+[3:20:22 pm]: <== I/flutter ( 6539): {"statusCode":404,"message":"Document not found.","error":"Not Found"}
+[3:20:22 pm]: <== I/flutter ( 6539): {statusCode: 404, message: Document not found., error: Not Found}

@@ -19,6 +19,7 @@ class TeacherSignUpScreen extends GetView<CommonAuthSignUpController> {
             duration: const Duration(milliseconds: 200), curve: Curves.easeIn));
 
     return SingleChildScrollView(
+      // keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

@@ -16,22 +16,22 @@ import 'package:quiz/utils/errordialog.dart';
 import '../components/otp/otp_screen.dart';
 
 class CommonAuthLogInController extends GetxController {
-  late Rx<TextEditingController> regdNo;
-  late Rx<TextEditingController> password;
+  late TextEditingController regdNo;
+  late TextEditingController password;
   RxBool isStartedLogginIn = false.obs;
   final FocusNode focusNodeRegdNo = FocusNode();
   final FocusNode focusNodePassword = FocusNode();
 
   @override
   void onInit() {
-    regdNo = TextEditingController().obs;
-    password = TextEditingController().obs;
+    regdNo = TextEditingController();
+    password = TextEditingController();
     super.onInit();
   }
 
   clearThisField() {
     //regdNo.value.clear();
-    password.value.clear();
+    password.clear();
   }
 
   setCookie(response) async {
@@ -71,8 +71,8 @@ class CommonAuthLogInController extends GetxController {
     var response = await https.post(
       Uri.parse(ApiConfig.getEndPointsUrl('auth/login')),
       body: {
-        "regdNo": regdNo.value.text,
-        "password": password.value.text,
+        "regdNo": regdNo.text,
+        "password": password.text,
       },
     );
     log(response.statusCode.toString());
@@ -111,7 +111,7 @@ class CommonAuthLogInController extends GetxController {
       Get.toNamed(
         OTPScreen.routeName,
         arguments: [
-          {"regdNo": regdNo.value.text},
+          {"regdNo": regdNo.text},
           {"message": res["message"]},
         ],
       );
@@ -122,7 +122,7 @@ class CommonAuthLogInController extends GetxController {
   }
 
   checkForErrorAndStartLoggingInUser() {
-    if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
+    if (regdNo.text.isNotEmpty && password.text.isNotEmpty) {
       log('hitting login Api');
       try {
         hitLoginApi();

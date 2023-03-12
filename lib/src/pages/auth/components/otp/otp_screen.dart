@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:quiz/src/pages/auth/controller/otp_controller.dart';
+import 'package:quiz/utils/shimmer.dart';
 
 import '../../../../../theme/app_color.dart';
 import '../../../../../theme/gradient_theme.dart';
@@ -24,14 +25,17 @@ class OTPScreen extends GetView<OTPController> {
           builder: (BuildContext context) {
             return Obx(
               () => controller.isStartingOtpVeryfication.value == false
-                  ? Container(
-                      width: double.infinity,
-                      height: 50,
-                      color: kTeacherPrimaryColor,
-                      child: Center(
-                        child: Text(
-                          'Continue',
-                          style: kBodyText3Style(),
+                  ? GestureDetector(
+                      onTap: () => controller.startCheckingOtp(),
+                      child: Container(
+                        width: double.infinity,
+                        height: 50,
+                        color: kTeacherPrimaryColor,
+                        child: Center(
+                          child: Text(
+                            'Continue',
+                            style: kBodyText3Style(),
+                          ),
                         ),
                       ),
                     )
@@ -140,6 +144,7 @@ class OTPScreen extends GetView<OTPController> {
                 SizedBox(
                   width: 500,
                   child: CachedNetworkImage(
+                      placeholder: (context, url) => const NewsCardSkelton(),
                       imageUrl:
                           'https://img.freepik.com/premium-vector/sign-concept-illustration_86047-297.jpg?w=826'),
                 ),

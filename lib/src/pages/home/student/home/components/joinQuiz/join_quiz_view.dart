@@ -25,7 +25,7 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                     backgroundColor: kTeacherPrimaryColor),
                 onPressed: () {
                   controller.isTapStartJoining.value = true;
-                  Focus.of(context).unfocus();
+                  controller.checkThisQuizID();
                 },
                 child: Obx(() => !controller.showLoading
                     ? Text(
@@ -36,7 +36,7 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                       )
                     : const Center(
                         child: CircularProgressIndicator(
-                          color: darkJoinColor,
+                          color: whiteColor,
                           strokeWidth: 1,
                         ),
                       )))),

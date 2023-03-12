@@ -55,6 +55,8 @@ dependencies:
   duration_picker: ^1.1.1
   flutter_otp_text_field: ^1.1.1
   pin_code_fields: ^7.4.0
+  fancy_shimmer_image: ^2.0.2
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_test:

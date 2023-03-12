@@ -33,7 +33,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                 SizedBox(
                   height: 20.h,
                 ),
-                Obx(() => EnsureVisibleWhenFocused(
+                EnsureVisibleWhenFocused(
                     focusNode: controller.focusNodeRegdNo,
                     child: QuizTextFormField(
                       labelColor: whiteColor,
@@ -44,12 +44,12 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                       hintColor: whiteColor,
                       isObscureText: false,
                       focusNode: controller.focusNodeRegdNo,
-                      controller: controller.regdNo.value,
-                    ))),
+                      controller: controller.regdNo,
+                    )),
                 SizedBox(
                   height: 15.h,
                 ),
-                Obx(() => EnsureVisibleWhenFocused(
+                EnsureVisibleWhenFocused(
                     focusNode: controller.focusNodePassword,
                     child: QuizTextFormField(
                       labelColor: whiteColor,
@@ -60,8 +60,8 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                       hintColor: whiteColor,
                       isObscureText: true,
                       focusNode: controller.focusNodePassword,
-                      controller: controller.password.value,
-                    ))),
+                      controller: controller.password,
+                    )),
                 SizedBox(
                   height: 20.h,
                 ),

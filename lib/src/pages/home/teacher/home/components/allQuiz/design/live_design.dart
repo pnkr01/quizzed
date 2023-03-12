@@ -7,7 +7,6 @@ import 'package:quiz/theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../utils/loading_dialog.dart';
 import '../../../../../../../../utils/quizElevatedButon.dart';
-import '../../../../../../../global/global.dart';
 
 class QuizLiveDesign extends GetView<LiveQuizController> {
   const QuizLiveDesign({super.key, required this.index});
@@ -28,21 +27,36 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
           children: [
             Row(
               children: [
-                Text(
-                  'Title : ',
-                  style: kDesignSmallTextStyle(),
-                ),
                 Expanded(
-                  child: Text(
-                    "${controller.liveList[index].title.toString().capitalizeFirst}",
-                    maxLines: 1,
-                    style: kDesignlargeTextStyle(),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Title : ',
+                        style: kDesignSmallTextStyle(),
+                      ),
+                      Expanded(
+                        child: Text(
+                          "${controller.liveList[index].title.toString().capitalizeFirst}",
+                          maxLines: 1,
+                          style: kDesignlargeTextStyle(),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+                Row(
+                  children: [
+                    const Text('QuizID : '),
+                    Text(
+                      "${controller.liveList[index].quizId.toString().capitalizeFirst}",
+                      style: kDesignlargeTextStyle(),
+                    ),
+                  ],
+                )
               ],
             ),
             const SizedBox(
-              height: 4,
+              height: 8,
             ),
             Row(
               children: [
@@ -53,14 +67,14 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
                 Expanded(
                   child: Text(
                     "${controller.liveList[index].description.toString().capitalize}",
-                    maxLines: 1,
+                    maxLines: 2,
                     style: kDesignlargeTextStyle(),
                   ),
                 ),
               ],
             ),
             const SizedBox(
-              height: 7,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

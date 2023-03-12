@@ -74,6 +74,13 @@ class _StudentHomeState extends State<StudentHome> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 10.h,
+              ),
+              userInfoCard(controller),
+              SizedBox(
+                height: 10.h,
+              ),
               StreamBuilder(
                 stream: slides,
                 builder: (context, AsyncSnapshot snap) {
@@ -172,10 +179,6 @@ class _StudentHomeState extends State<StudentHome> {
                   );
                 },
               ),
-              SizedBox(
-                height: 10.h,
-              ),
-              userInfoCard(controller),
               SizedBox(
                 height: 8.h,
               ),

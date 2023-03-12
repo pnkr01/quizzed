@@ -13,266 +13,266 @@ NO_PROXY: undefined
 Logging Categories:
     General
 
-Sat Mar 11 2023 [21:03:15 GMT+0530 (India Standard Time)] Log file started
-[9:03:15 PM] [General] [Info] Searching for SDKs...
-[9:03:15 PM] [General] [Info] Environment PATH:
-[9:03:15 PM] [General] [Info]     C:\Python311\Scripts\
-[9:03:15 PM] [General] [Info]     C:\Python311\
-[9:03:15 PM] [General] [Info]     C:\Program Files\Common Files\Oracle\Java\javapath
-[9:03:15 PM] [General] [Info]     C:\Windows\system32
-[9:03:15 PM] [General] [Info]     C:\Windows
-[9:03:15 PM] [General] [Info]     C:\Windows\System32\Wbem
-[9:03:15 PM] [General] [Info]     C:\Windows\System32\WindowsPowerShell\v1.0\
-[9:03:15 PM] [General] [Info]     C:\Windows\System32\OpenSSH\
-[9:03:15 PM] [General] [Info]     C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
-[9:03:15 PM] [General] [Info]     C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
-[9:03:15 PM] [General] [Info]     C:\WINDOWS\system32
-[9:03:15 PM] [General] [Info]     C:\WINDOWS
-[9:03:15 PM] [General] [Info]     C:\WINDOWS\System32\Wbem
-[9:03:15 PM] [General] [Info]     C:\WINDOWS\System32\WindowsPowerShell\v1.0\
-[9:03:15 PM] [General] [Info]     C:\WINDOWS\System32\OpenSSH\
-[9:03:15 PM] [General] [Info]     C:\Program Files (x86)\mingw-w64\mingw32\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\atom\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:15 PM] [General] [Info]     "C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:15 PM] [General] [Info]     "
-[9:03:15 PM] [General] [Info]     C:\Program Files\Git\cmd
-[9:03:15 PM] [General] [Info]     C:\app\flutter\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\Docker\Docker\resources\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\nodejs\
-[9:03:15 PM] [General] [Info]     C:\ProgramData\chocolatey\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\MySQL\MySQL Shell 8.0\bin\
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python37\
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\anaconda3
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\mingw-w64\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\usr\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\anaconda3\Scripts
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:15 PM] [General] [Info]     C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\Java\jdk-15.0.1\bin
-[9:03:15 PM] [General] [Info]     C:\Program Files\Docker\Docker\resources\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Roaming\npm
-[9:03:15 PM] [General] [Info]     C:\Program Files\nodejs\
-[9:03:15 PM] [General] [Info]     C:\ProgramData\chocolatey\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\.deta\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\.detaspace\bin
-[9:03:15 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
-[9:03:19 PM] [General] [Info] Took 3316ms to search for projects (5 levels)
-[9:03:19 PM] [General] [Info] Took 5ms to filter out excluded projects (0 exclusion rules)
-[9:03:19 PM] [General] [Info] Found Flutter project at C:\Users\pawan\OneDrive\Desktop\Files\quiz:
+Sun Mar 12 2023 [14:37:20 GMT+0530 (India Standard Time)] Log file started
+[2:37:20 PM] [General] [Info] Searching for SDKs...
+[2:37:20 PM] [General] [Info] Environment PATH:
+[2:37:20 PM] [General] [Info]     C:\Python311\Scripts\
+[2:37:20 PM] [General] [Info]     C:\Python311\
+[2:37:20 PM] [General] [Info]     C:\Program Files\Common Files\Oracle\Java\javapath
+[2:37:20 PM] [General] [Info]     C:\Windows\system32
+[2:37:20 PM] [General] [Info]     C:\Windows
+[2:37:20 PM] [General] [Info]     C:\Windows\System32\Wbem
+[2:37:20 PM] [General] [Info]     C:\Windows\System32\WindowsPowerShell\v1.0\
+[2:37:20 PM] [General] [Info]     C:\Windows\System32\OpenSSH\
+[2:37:20 PM] [General] [Info]     C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[2:37:20 PM] [General] [Info]     C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[2:37:20 PM] [General] [Info]     C:\WINDOWS\system32
+[2:37:20 PM] [General] [Info]     C:\WINDOWS
+[2:37:20 PM] [General] [Info]     C:\WINDOWS\System32\Wbem
+[2:37:20 PM] [General] [Info]     C:\WINDOWS\System32\WindowsPowerShell\v1.0\
+[2:37:20 PM] [General] [Info]     C:\WINDOWS\System32\OpenSSH\
+[2:37:20 PM] [General] [Info]     C:\Program Files (x86)\mingw-w64\mingw32\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\atom\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:20 PM] [General] [Info]     "C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:20 PM] [General] [Info]     "
+[2:37:20 PM] [General] [Info]     C:\Program Files\Git\cmd
+[2:37:20 PM] [General] [Info]     C:\app\flutter\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\Docker\Docker\resources\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\nodejs\
+[2:37:20 PM] [General] [Info]     C:\ProgramData\chocolatey\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python37\
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\anaconda3
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\mingw-w64\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\usr\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\anaconda3\Library\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\anaconda3\Scripts
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:20 PM] [General] [Info]     C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\Java\jdk-15.0.1\bin
+[2:37:20 PM] [General] [Info]     C:\Program Files\Docker\Docker\resources\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Roaming\npm
+[2:37:20 PM] [General] [Info]     C:\Program Files\nodejs\
+[2:37:20 PM] [General] [Info]     C:\ProgramData\chocolatey\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\.deta\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\.detaspace\bin
+[2:37:20 PM] [General] [Info]     C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
+[2:37:25 PM] [General] [Info] Took 4870ms to search for projects (5 levels)
+[2:37:25 PM] [General] [Info] Took 3ms to filter out excluded projects (0 exclusion rules)
+[2:37:25 PM] [General] [Info] Found Flutter project at C:\Users\pawan\OneDrive\Desktop\Files\quiz:
 			Mobile? true
 			Web? false
 			Create Trigger? false
 			Flutter Repo? false
-[9:03:19 PM] [General] [Info] Searching for flutter.bat
-[9:03:19 PM] [General] [Info]     Looking for flutter.bat in:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\.flutter
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\.flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\vendor\flutter
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\vendor\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\flutter-sdk
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\flutter-sdk\bin
-[9:03:19 PM] [General] [Info]         /google/flutter
-[9:03:19 PM] [General] [Info]         \google\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Python311\Scripts\
-[9:03:19 PM] [General] [Info]         C:\Python311\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Python311\
-[9:03:19 PM] [General] [Info]         C:\Python311\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
-[9:03:19 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\system32
-[9:03:19 PM] [General] [Info]         C:\Windows\system32\bin
-[9:03:19 PM] [General] [Info]         C:\Windows
-[9:03:19 PM] [General] [Info]         C:\Windows\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\Wbem
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
-[9:03:19 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\system32
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\system32\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\Wbem
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\Wbem\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\mingw-w64\mingw32\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\atom\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Git\cmd
-[9:03:19 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
-[9:03:19 PM] [General] [Info]         C:\app\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\bin
-[9:03:19 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\mingw-w64\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\usr\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Java\jdk-15.0.1\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\bin
-[9:03:19 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\.deta\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\.detaspace\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
-[9:03:19 PM] [General] [Info]     Found at:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]     Candidate paths to be post-filtered:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
-[9:03:19 PM] [General] [Info]     Found at C:\Users\pawan\Development\sdk\flutter
-[9:03:19 PM] [General] [Info]     Returning SDK path C:\Users\pawan\Development\sdk\flutter for flutter.bat
-[9:03:19 PM] [General] [Info] Searching for dart.exe
-[9:03:19 PM] [General] [Info]     Looking for dart.exe in:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
-[9:03:19 PM] [General] [Info]         C:\Python311\Scripts\
-[9:03:19 PM] [General] [Info]         C:\Python311\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Python311\
-[9:03:19 PM] [General] [Info]         C:\Python311\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
-[9:03:19 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\system32
-[9:03:19 PM] [General] [Info]         C:\Windows\system32\bin
-[9:03:19 PM] [General] [Info]         C:\Windows
-[9:03:19 PM] [General] [Info]         C:\Windows\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\Wbem
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
-[9:03:19 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
-[9:03:19 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\system32
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\system32\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\Wbem
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\Wbem\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\
-[9:03:19 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files (x86)\mingw-w64\mingw32\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\atom\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Git\cmd
-[9:03:19 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
-[9:03:19 PM] [General] [Info]         C:\app\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\bin
-[9:03:19 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\mingw-w64\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\usr\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Java\jdk-15.0.1\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm\bin
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\
-[9:03:19 PM] [General] [Info]         C:\Program Files\nodejs\bin
-[9:03:19 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\.deta\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\.detaspace\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
-[9:03:19 PM] [General] [Info]     Found at:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
-[9:03:19 PM] [General] [Info]     Candidate paths to be post-filtered:
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
-[9:03:19 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
-[9:03:19 PM] [General] [Info]     Found at C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
-[9:03:19 PM] [General] [Info]     Returning SDK path C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk for dart.exe
-[9:03:19 PM] [General] [Info] Experiment random number is 37 for experiment 'sdkDaps'. Experiment is enabled for <= 10
-[9:03:19 PM] [General] [Info] Experiment 'sdkDaps' does not apply and will not be activated
-[9:03:19 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+[2:37:25 PM] [General] [Info] Searching for flutter.bat
+[2:37:25 PM] [General] [Info]     Looking for flutter.bat in:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\.flutter
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\.flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\vendor\flutter
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\vendor\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\flutter-sdk
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\flutter-sdk\bin
+[2:37:25 PM] [General] [Info]         /google/flutter
+[2:37:25 PM] [General] [Info]         \google\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Python311\Scripts\
+[2:37:25 PM] [General] [Info]         C:\Python311\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Python311\
+[2:37:25 PM] [General] [Info]         C:\Python311\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
+[2:37:25 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\system32
+[2:37:25 PM] [General] [Info]         C:\Windows\system32\bin
+[2:37:25 PM] [General] [Info]         C:\Windows
+[2:37:25 PM] [General] [Info]         C:\Windows\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\Wbem
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[2:37:25 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\system32
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\system32\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\Wbem
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\Wbem\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\mingw-w64\mingw32\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\atom\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Git\cmd
+[2:37:25 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
+[2:37:25 PM] [General] [Info]         C:\app\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[2:37:25 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\mingw-w64\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\usr\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Java\jdk-15.0.1\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[2:37:25 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\.deta\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\.detaspace\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
+[2:37:25 PM] [General] [Info]     Found at:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]     Candidate paths to be post-filtered:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter
+[2:37:25 PM] [General] [Info]     Found at C:\Users\pawan\Development\sdk\flutter
+[2:37:25 PM] [General] [Info]     Returning SDK path C:\Users\pawan\Development\sdk\flutter for flutter.bat
+[2:37:25 PM] [General] [Info] Searching for dart.exe
+[2:37:25 PM] [General] [Info]     Looking for dart.exe in:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
+[2:37:25 PM] [General] [Info]         C:\Python311\Scripts\
+[2:37:25 PM] [General] [Info]         C:\Python311\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Python311\
+[2:37:25 PM] [General] [Info]         C:\Python311\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath
+[2:37:25 PM] [General] [Info]         C:\Program Files\Common Files\Oracle\Java\javapath\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\system32
+[2:37:25 PM] [General] [Info]         C:\Windows\system32\bin
+[2:37:25 PM] [General] [Info]         C:\Windows
+[2:37:25 PM] [General] [Info]         C:\Windows\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\Wbem
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\Wbem\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\WindowsPowerShell\v1.0\bin
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\OpenSSH\
+[2:37:25 PM] [General] [Info]         C:\Windows\System32\OpenSSH\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+[2:37:25 PM] [General] [Info]         C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\system32
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\system32\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\Wbem
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\Wbem\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\WindowsPowerShell\v1.0\bin
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\
+[2:37:25 PM] [General] [Info]         C:\WINDOWS\System32\OpenSSH\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files (x86)\mingw-w64\mingw32\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\atom\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\OneDrive\Desktop\Files\quiz\"\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Git\cmd
+[2:37:25 PM] [General] [Info]         C:\Program Files\Git\cmd\bin
+[2:37:25 PM] [General] [Info]         C:\app\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[2:37:25 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\MySQL\MySQL Shell 8.0\bin\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python37\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\mingw-w64\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\usr\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Library\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\anaconda3\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Python\Python39\Scripts\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Programs\Microsoft VS Code\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\JetBrains\PyCharm Community Edition 2021.1.3\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Microsoft\WindowsApps\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Java\jdk-15.0.1\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\Docker\Docker\resources\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Roaming\npm\bin
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\
+[2:37:25 PM] [General] [Info]         C:\Program Files\nodejs\bin
+[2:37:25 PM] [General] [Info]         C:\ProgramData\chocolatey\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\.deta\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\.detaspace\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
+[2:37:25 PM] [General] [Info]     Found at:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk\bin
+[2:37:25 PM] [General] [Info]     Candidate paths to be post-filtered:
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
+[2:37:25 PM] [General] [Info]         C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
+[2:37:25 PM] [General] [Info]     Found at C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk
+[2:37:25 PM] [General] [Info]     Returning SDK path C:\Users\pawan\Development\sdk\flutter\bin\cache\dart-sdk for dart.exe
+[2:37:25 PM] [General] [Info] Experiment random number is 37 for experiment 'sdkDaps'. Experiment is enabled for <= 10
+[2:37:25 PM] [General] [Info] Experiment 'sdkDaps' does not apply and will not be activated
+[2:37:25 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
 
 Dart Code extension: 3.60.1
 Flutter extension: 3.60.0 (not activated)
@@ -294,13 +294,13 @@ Flutter SDK:
 
 HTTP_PROXY: undefined
 NO_PROXY: undefined
-[9:03:19 PM] [General] [Info] Returning cached results for project search
-[9:03:19 PM] [General] [Info] Activating Flutter extension for Flutter project...
-[9:03:19 PM] [General] [Info] Extension:Startup timing: 3435ms
-[9:03:19 PM] [General] [Info] Version last used for Pub is 2.18.4 (2.18.0), current is 2.18.4 (2.18.0)
-[9:03:19 PM] [General] [Info] Found 0 folders requiring "pub get" or "pub upgrade":
-[9:03:19 PM] [General] [Info] Loaded 20000 from vscode-userdata:/c%3A/Users/pawan/AppData/Roaming/Code/User/globalStorage/dart-code.dart-code/package_cache.json
-[9:03:19 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
+[2:37:25 PM] [General] [Info] Returning cached results for project search
+[2:37:25 PM] [General] [Info] Activating Flutter extension for Flutter project...
+[2:37:25 PM] [General] [Info] Extension:Startup timing: 4973ms
+[2:37:25 PM] [General] [Info] Version last used for Pub is 2.18.4 (2.18.0), current is 2.18.4 (2.18.0)
+[2:37:25 PM] [General] [Info] Found 0 folders requiring "pub get" or "pub upgrade":
+[2:37:25 PM] [General] [Info] Loaded 20000 from vscode-userdata:/c%3A/Users/pawan/AppData/Roaming/Code/User/globalStorage/dart-code.dart-code/package_cache.json
+[2:37:25 PM] [General] [Info] !! PLEASE REVIEW THIS LOG FOR SENSITIVE INFORMATION BEFORE SHARING !!
 
 Dart Code extension: 3.60.1
 Flutter extension: 3.60.0 (activated)
@@ -322,28 +322,27 @@ Flutter SDK:
 
 HTTP_PROXY: undefined
 NO_PROXY: undefined
-[9:03:20 PM] [General] [Info] Analyzer:Startup timing: 1567ms
-[9:03:26 PM] [General] [Info] Returning cached results for project search
-[9:03:26 PM] [General] [Info] Checking 1 projects for supported platforms
-[9:03:26 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
-[9:03:34 PM] [General] [Info] Returning cached results for project search
-[9:03:35 PM] [General] [Info] Returning cached promise for getSupportedPlatforms()
-[9:04:22 PM] [General] [Info] Saving emulator-5554 as preferred device
-[9:04:22 PM] [General] [Info] Returning cached results for project search
-[9:04:22 PM] [General] [Info] Checking 1 projects for supported platforms
-[9:04:22 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
-[9:04:31 PM] [General] [Info] Analyzer:FirstAnalysis timing: 62661ms
-[9:04:33 PM] [General] [Info] Starting debug session...
-[9:04:33 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:04:33 PM] [General] [Info]     program  : lib/main.dart
-[9:04:33 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:04:33 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:04:33 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:04:33 PM] [General] [Info] Detected launch project as Flutter
-[9:04:33 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:04:33 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:04:33 PM] [General] [Info] Checking for errors before launching
-[9:04:33 PM] [General] [Info] Debug session starting...
+[2:37:27 PM] [General] [Info] Analyzer:Startup timing: 1658ms
+[2:37:32 PM] [General] [Info] Returning cached results for project search
+[2:37:32 PM] [General] [Info] Checking 1 projects for supported platforms
+[2:37:32 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
+[2:37:33 PM] [General] [Info] Returning cached promise for getSupportedPlatforms()
+[2:38:04 PM] [General] [Info] Saving emulator-5554 as preferred device
+[2:38:04 PM] [General] [Info] Returning cached results for project search
+[2:38:04 PM] [General] [Info] Checking 1 projects for supported platforms
+[2:38:04 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
+[2:38:11 PM] [General] [Info] Analyzer:FirstAnalysis timing: 36002ms
+[2:38:25 PM] [General] [Info] Starting debug session...
+[2:38:25 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:38:25 PM] [General] [Info]     program  : lib/main.dart
+[2:38:25 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:38:25 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[2:38:25 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:38:25 PM] [General] [Info] Detected launch project as Flutter
+[2:38:25 PM] [General] [Info] Using Flutter debug adapter for this session
+[2:38:25 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[2:38:25 PM] [General] [Info] Checking for errors before launching
+[2:38:25 PM] [General] [Info] Debug session starting...
     {
         "name": "Flutter",
         "request": "launch",
@@ -355,7 +354,7 @@ NO_PROXY: undefined
         ],
         "__configurationTarget": 6,
         "noDebug": true,
-        "dartCodeDebugSessionID": "session-ed07a",
+        "dartCodeDebugSessionID": "session-fa23f",
         "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
         "deviceId": "emulator-5554",
         "deviceName": "Pixel 4 XL API 30 (android-x86)",
@@ -374,7 +373,7 @@ NO_PROXY: undefined
             "-d",
             "emulator-5554",
             "--devtools-server-address",
-            "http://127.0.0.1:9101/"
+            "http://127.0.0.1:9100/"
         ],
         "vmServicePort": 0,
         "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
@@ -391,24 +390,48 @@ NO_PROXY: undefined
         "showMemoryUsage": false,
         "debuggerType": 2
     }
-[9:04:33 PM] [General] [Info] Using flutter debugger for Flutter
-[9:04:33 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
-[9:04:33 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
-[9:04:33 PM] [General] [Info] Did not find session 9abd14a6-9de1-4ed2-8827-83fc102b7eff to handle dart.progressStart. There were 0 sessions:
-[9:04:33 PM] [General] [Info] Event will be queued and processed when the session start event fires
-[9:04:33 PM] [General] [Info] Processing delayed event dart.progressStart for session 9abd14a6-9de1-4ed2-8827-83fc102b7eff
-[9:05:27 PM] [General] [Info] Returning cached results for project search
-[9:08:16 PM] [General] [Info] Starting debug session...
-[9:08:16 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:08:16 PM] [General] [Info]     program  : lib/main.dart
-[9:08:16 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:08:16 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:08:16 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:08:16 PM] [General] [Info] Detected launch project as Flutter
-[9:08:16 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:08:16 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:08:16 PM] [General] [Info] Checking for errors before launching
-[9:08:16 PM] [General] [Info] Debug session starting...
+[2:38:25 PM] [General] [Info] Using flutter debugger for Flutter
+[2:38:25 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[2:38:25 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[2:38:25 PM] [General] [Info] Did not find session 80db841e-ac3a-4fa8-9c15-f2ac2d64e38a to handle dart.progressStart. There were 0 sessions:
+[2:38:25 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[2:38:25 PM] [General] [Info] Processing delayed event dart.progressStart for session 80db841e-ac3a-4fa8-9c15-f2ac2d64e38a
+[2:38:58 PM] [General] [Info] Returning cached results for project search
+[2:44:22 PM] [General] [Info] Failed to send analytics, disabling for session: Error: getaddrinfo ENOTFOUND www.google-analytics.com
+[2:47:49 PM] [General] [Info] Pubspec C:\Users\pawan\OneDrive\Desktop\Files\quiz\pubspec.yaml was modified
+[2:47:51 PM] [General] [Info] Took 335ms to search for projects (5 levels)
+[2:47:51 PM] [General] [Info] Took 8ms to filter out excluded projects (0 exclusion rules)
+[2:47:51 PM] [General] [Info] Version last used for Pub is 2.18.4 (2.18.0), current is 2.18.4 (2.18.0)
+[2:47:51 PM] [General] [Info] Found 0 folders requiring "pub get" or "pub upgrade":
+[2:48:10 PM] [General] [Info] Pubspec C:\Users\pawan\OneDrive\Desktop\Files\quiz\pubspec.yaml was modified
+[2:48:12 PM] [General] [Info] Pubspec C:\Users\pawan\OneDrive\Desktop\Files\quiz\pubspec.yaml was modified
+[2:48:22 PM] [General] [Info] Returning cached results for project search
+[2:48:22 PM] [General] [Info] Version last used for Pub is 2.18.4 (2.18.0), current is 2.18.4 (2.18.0)
+[2:48:22 PM] [General] [Info] Found 1 folders requiring "pub get" or "pub upgrade":
+    C:\Users\pawan\OneDrive\Desktop\Files\quiz (get: true, upgrade: false)
+[2:48:58 PM] [General] [Info] Pubspec C:\Users\pawan\OneDrive\Desktop\Files\quiz\pubspec.yaml was modified
+[2:48:59 PM] [General] [Info] Returning cached results for project search
+[2:48:59 PM] [General] [Info] Version last used for Pub is 2.18.4 (2.18.0), current is 2.18.4 (2.18.0)
+[2:48:59 PM] [General] [Info] Found 0 folders requiring "pub get" or "pub upgrade":
+[2:50:55 PM] [FlutterRun] [Error] [Flutter] lib/src/pages/auth/components/otp/otp_screen.dart:143:52: Error: Expected an identifier, but got ','.
+[2:50:55 PM] [FlutterRun] [Error] [Flutter] Try inserting an identifier before ','.
+                    placeholder: (context, url) => ,
+                                                   ^
+[2:50:56 PM] [FlutterRun] [Error] [Flutter] lib/src/pages/auth/components/otp/otp_screen.dart:143:52: Error: Expected an identifier, but got ','.
+[2:50:56 PM] [FlutterRun] [Error] [Flutter] Try inserting an identifier before ','.
+                    placeholder: (context, url) => ,
+                                                   ^
+[2:51:25 PM] [General] [Info] Starting debug session...
+[2:51:25 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:51:25 PM] [General] [Info]     program  : lib/main.dart
+[2:51:25 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:51:25 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[2:51:25 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:51:25 PM] [General] [Info] Detected launch project as Flutter
+[2:51:25 PM] [General] [Info] Using Flutter debug adapter for this session
+[2:51:25 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[2:51:25 PM] [General] [Info] Checking for errors before launching
+[2:51:25 PM] [General] [Info] Debug session starting...
     {
         "name": "Flutter",
         "request": "launch",
@@ -420,7 +443,7 @@ NO_PROXY: undefined
         ],
         "__configurationTarget": 6,
         "noDebug": true,
-        "dartCodeDebugSessionID": "session-aad53",
+        "dartCodeDebugSessionID": "session-811c6",
         "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
         "deviceId": "emulator-5554",
         "deviceName": "Pixel 4 XL API 30 (android-x86)",
@@ -439,7 +462,7 @@ NO_PROXY: undefined
             "-d",
             "emulator-5554",
             "--devtools-server-address",
-            "http://127.0.0.1:9101/"
+            "http://127.0.0.1:9100/"
         ],
         "vmServicePort": 0,
         "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
@@ -456,19 +479,28 @@ NO_PROXY: undefined
         "showMemoryUsage": false,
         "debuggerType": 2
     }
-[9:08:22 PM] [General] [Info] Took 264ms to search for projects (5 levels)
-[9:08:22 PM] [General] [Info] Took 13ms to filter out excluded projects (0 exclusion rules)
-[9:20:41 PM] [General] [Info] Starting debug session...
-[9:20:41 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:20:41 PM] [General] [Info]     program  : lib/main.dart
-[9:20:41 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:20:41 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:20:41 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:20:41 PM] [General] [Info] Detected launch project as Flutter
-[9:20:41 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:20:41 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:20:41 PM] [General] [Info] Checking for errors before launching
-[9:20:41 PM] [General] [Info] Debug session starting...
+[2:51:26 PM] [General] [Info] Returning cached results for project search
+[2:57:29 PM] [FlutterRun] [Error] [Flutter] lib/src/pages/auth/components/login/common_auth_login_screen.dart:47:53: Error: The argument type 'TextEditingValue' can't be assigned to the parameter type 'TextEditingController'.
+ - 'TextEditingValue' is from 'package:flutter/src/services/text_input.dart' ('../../../../Development/sdk/flutter/packages/flutter/lib/src/services/text_input.dart').
+[2:57:29 PM] [FlutterRun] [Error] [Flutter]  - 'TextEditingController' is from 'package:flutter/src/widgets/editable_text.dart' ('../../../../Development/sdk/flutter/packages/flutter/lib/src/widgets/editable_text.dart').
+                      controller: controller.regdNo.value,
+                                                    ^
+lib/src/pages/auth/components/login/common_auth_login_screen.dart:63:55: Error: The argument type 'TextEditingValue' can't be assigned to the parameter type 'TextEditingController'.
+ - 'TextEditingValue' is from 'package:flutter/src/services/text_input.dart' ('../../../../Development/sdk/flutter/packages/flutter/lib/src/services/text_input.dart').
+ - 'TextEditingController' is from 'package:flutter/src/widgets/editable_text.dart' ('../../../../Development/sdk/flutter/packages/flutter/lib/src/widgets/editable_text.dart').
+                      controller: controller.password.value,
+[2:57:29 PM] [FlutterRun] [Error] [Flutter]                                                       ^
+[2:57:44 PM] [General] [Info] Starting debug session...
+[2:57:44 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:57:44 PM] [General] [Info]     program  : lib/main.dart
+[2:57:44 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:57:44 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[2:57:44 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[2:57:44 PM] [General] [Info] Detected launch project as Flutter
+[2:57:44 PM] [General] [Info] Using Flutter debug adapter for this session
+[2:57:44 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[2:57:44 PM] [General] [Info] Checking for errors before launching
+[2:57:44 PM] [General] [Info] Debug session starting...
     {
         "name": "Flutter",
         "request": "launch",
@@ -480,7 +512,7 @@ NO_PROXY: undefined
         ],
         "__configurationTarget": 6,
         "noDebug": true,
-        "dartCodeDebugSessionID": "session-72c78",
+        "dartCodeDebugSessionID": "session-428e6",
         "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
         "deviceId": "emulator-5554",
         "deviceName": "Pixel 4 XL API 30 (android-x86)",
@@ -499,7 +531,7 @@ NO_PROXY: undefined
             "-d",
             "emulator-5554",
             "--devtools-server-address",
-            "http://127.0.0.1:9101/"
+            "http://127.0.0.1:9100/"
         ],
         "vmServicePort": 0,
         "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
@@ -516,19 +548,20 @@ NO_PROXY: undefined
         "showMemoryUsage": false,
         "debuggerType": 2
     }
-[9:20:45 PM] [General] [Info] Took 190ms to search for projects (5 levels)
-[9:20:45 PM] [General] [Info] Took 6ms to filter out excluded projects (0 exclusion rules)
-[9:24:22 PM] [General] [Info] Starting debug session...
-[9:24:22 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:24:22 PM] [General] [Info]     program  : lib/main.dart
-[9:24:22 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:24:22 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:24:22 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:24:22 PM] [General] [Info] Detected launch project as Flutter
-[9:24:22 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:24:22 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:24:22 PM] [General] [Info] Checking for errors before launching
-[9:24:22 PM] [General] [Info] Debug session starting...
+[2:57:46 PM] [General] [Info] Took 161ms to search for projects (5 levels)
+[2:57:46 PM] [General] [Info] Took 4ms to filter out excluded projects (0 exclusion rules)
+[3:17:45 PM] [General] [Info] Debugger:SessionDuration timing: 2359666ms (Flutter)
+[3:17:46 PM] [General] [Info] Starting debug session...
+[3:17:46 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[3:17:46 PM] [General] [Info]     program  : lib/main.dart
+[3:17:46 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[3:17:46 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[3:17:46 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[3:17:46 PM] [General] [Info] Detected launch project as Flutter
+[3:17:46 PM] [General] [Info] Using Flutter debug adapter for this session
+[3:17:46 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[3:17:46 PM] [General] [Info] Checking for errors before launching
+[3:17:46 PM] [General] [Info] Debug session starting...
     {
         "name": "Flutter",
         "request": "launch",
@@ -540,7 +573,7 @@ NO_PROXY: undefined
         ],
         "__configurationTarget": 6,
         "noDebug": true,
-        "dartCodeDebugSessionID": "session-14c8d",
+        "dartCodeDebugSessionID": "session-740b2",
         "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
         "deviceId": "emulator-5554",
         "deviceName": "Pixel 4 XL API 30 (android-x86)",
@@ -559,7 +592,7 @@ NO_PROXY: undefined
             "-d",
             "emulator-5554",
             "--devtools-server-address",
-            "http://127.0.0.1:9101/"
+            "http://127.0.0.1:9100/"
         ],
         "vmServicePort": 0,
         "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
@@ -576,249 +609,11 @@ NO_PROXY: undefined
         "showMemoryUsage": false,
         "debuggerType": 2
     }
-[9:24:25 PM] [General] [Info] Returning cached results for project search
-[9:26:58 PM] [General] [Info] Starting debug session...
-[9:26:58 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:26:58 PM] [General] [Info]     program  : lib/main.dart
-[9:26:58 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:26:58 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:26:58 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:26:58 PM] [General] [Info] Detected launch project as Flutter
-[9:26:58 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:26:58 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:26:58 PM] [General] [Info] Checking for errors before launching
-[9:26:58 PM] [General] [Info] Debug session starting...
-    {
-        "name": "Flutter",
-        "request": "launch",
-        "type": "dart",
-        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
-        "args": [
-            "--web-hostname",
-            "any"
-        ],
-        "__configurationTarget": 6,
-        "noDebug": true,
-        "dartCodeDebugSessionID": "session-4db40",
-        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
-        "deviceId": "emulator-5554",
-        "deviceName": "Pixel 4 XL API 30 (android-x86)",
-        "toolEnv": {
-            "FLUTTER_HOST": "VSCode",
-            "PUB_ENVIRONMENT": "vscode.dart-code"
-        },
-        "sendLogsToClient": false,
-        "sendCustomProgressEvents": true,
-        "additionalProjectPaths": [
-            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
-        ],
-        "vmAdditionalArgs": [],
-        "toolArgs": [
-            "--no-sound-null-safety",
-            "-d",
-            "emulator-5554",
-            "--devtools-server-address",
-            "http://127.0.0.1:9101/"
-        ],
-        "vmServicePort": 0,
-        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
-        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
-        "maxLogLineLength": 2000,
-        "debugSdkLibraries": false,
-        "debugExternalPackageLibraries": false,
-        "showDartDeveloperLogs": true,
-        "evaluateGettersInDebugViews": true,
-        "evaluateToStringInDebugViews": true,
-        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
-        "useInspectorNotificationsForWidgetErrors": true,
-        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
-        "showMemoryUsage": false,
-        "debuggerType": 2
-    }
-[9:27:01 PM] [General] [Info] Took 151ms to search for projects (5 levels)
-[9:27:01 PM] [General] [Info] Took 5ms to filter out excluded projects (0 exclusion rules)
-[9:59:33 PM] [General] [Info] Debugger:SessionDuration timing: 3299502ms (Flutter)
-[9:59:34 PM] [General] [Info] Starting debug session...
-[9:59:34 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:59:34 PM] [General] [Info]     program  : lib/main.dart
-[9:59:34 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:59:34 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[9:59:34 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:59:34 PM] [General] [Info] Detected launch project as Flutter
-[9:59:34 PM] [General] [Info] Using Flutter debug adapter for this session
-[9:59:34 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[9:59:34 PM] [General] [Info] Checking for errors before launching
-[9:59:34 PM] [General] [Info] Debug session starting...
-    {
-        "name": "Flutter",
-        "request": "launch",
-        "type": "dart",
-        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
-        "args": [
-            "--web-hostname",
-            "any"
-        ],
-        "__configurationTarget": 6,
-        "noDebug": true,
-        "dartCodeDebugSessionID": "session-fae2d",
-        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
-        "deviceId": "emulator-5554",
-        "deviceName": "Pixel 4 XL API 30 (android-x86)",
-        "toolEnv": {
-            "FLUTTER_HOST": "VSCode",
-            "PUB_ENVIRONMENT": "vscode.dart-code"
-        },
-        "sendLogsToClient": false,
-        "sendCustomProgressEvents": true,
-        "additionalProjectPaths": [
-            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
-        ],
-        "vmAdditionalArgs": [],
-        "toolArgs": [
-            "--no-sound-null-safety",
-            "-d",
-            "emulator-5554",
-            "--devtools-server-address",
-            "http://127.0.0.1:9101/"
-        ],
-        "vmServicePort": 0,
-        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
-        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
-        "maxLogLineLength": 2000,
-        "debugSdkLibraries": false,
-        "debugExternalPackageLibraries": false,
-        "showDartDeveloperLogs": true,
-        "evaluateGettersInDebugViews": true,
-        "evaluateToStringInDebugViews": true,
-        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
-        "useInspectorNotificationsForWidgetErrors": true,
-        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
-        "showMemoryUsage": false,
-        "debuggerType": 2
-    }
-[9:59:34 PM] [General] [Info] Using flutter debugger for Flutter
-[9:59:34 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
-[9:59:34 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
-[9:59:34 PM] [General] [Info] Did not find session c9098d0b-ce41-4006-982c-1f61cfa335dd to handle dart.progressStart. There were 0 sessions:
-[9:59:34 PM] [General] [Info] Event will be queued and processed when the session start event fires
-[9:59:34 PM] [General] [Info] Processing delayed event dart.progressStart for session c9098d0b-ce41-4006-982c-1f61cfa335dd
-[10:00:03 PM] [General] [Info] Took 206ms to search for projects (5 levels)
-[10:00:03 PM] [General] [Info] Took 10ms to filter out excluded projects (0 exclusion rules)
-[10:55:54 PM] [General] [Info] Starting debug session...
-[10:55:54 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info]     program  : lib/main.dart
-[10:55:54 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[10:55:54 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info] Detected launch project as Flutter
-[10:55:54 PM] [General] [Info] Using Flutter debug adapter for this session
-[10:55:54 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[10:55:54 PM] [General] [Info] Checking for errors before launching
-[10:55:54 PM] [General] [Info] Debug session starting...
-    {
-        "name": "Flutter",
-        "request": "launch",
-        "type": "dart",
-        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
-        "args": [
-            "--web-hostname",
-            "any"
-        ],
-        "__configurationTarget": 6,
-        "noDebug": true,
-        "dartCodeDebugSessionID": "session-8be8d",
-        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
-        "deviceId": "emulator-5554",
-        "deviceName": "Pixel 4 XL API 30 (android-x86)",
-        "toolEnv": {
-            "FLUTTER_HOST": "VSCode",
-            "PUB_ENVIRONMENT": "vscode.dart-code"
-        },
-        "sendLogsToClient": false,
-        "sendCustomProgressEvents": true,
-        "additionalProjectPaths": [
-            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
-        ],
-        "vmAdditionalArgs": [],
-        "toolArgs": [
-            "--no-sound-null-safety",
-            "-d",
-            "emulator-5554",
-            "--devtools-server-address",
-            "http://127.0.0.1:9101/"
-        ],
-        "vmServicePort": 0,
-        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
-        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
-        "maxLogLineLength": 2000,
-        "debugSdkLibraries": false,
-        "debugExternalPackageLibraries": false,
-        "showDartDeveloperLogs": true,
-        "evaluateGettersInDebugViews": true,
-        "evaluateToStringInDebugViews": true,
-        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
-        "useInspectorNotificationsForWidgetErrors": true,
-        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
-        "showMemoryUsage": false,
-        "debuggerType": 2
-    }
-[10:55:54 PM] [General] [Info] Starting debug session...
-[10:55:54 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info]     program  : lib/main.dart
-[10:55:54 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
-[10:55:54 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[10:55:54 PM] [General] [Info] Detected launch project as Flutter
-[10:55:54 PM] [General] [Info] Using Flutter debug adapter for this session
-[10:55:54 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
-[10:55:54 PM] [General] [Info] Checking for errors before launching
-[10:55:54 PM] [General] [Info] Debug session starting...
-    {
-        "name": "Flutter",
-        "request": "launch",
-        "type": "dart",
-        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
-        "args": [
-            "--web-hostname",
-            "any"
-        ],
-        "__configurationTarget": 6,
-        "noDebug": true,
-        "dartCodeDebugSessionID": "session-fa180",
-        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
-        "deviceId": "emulator-5554",
-        "deviceName": "Pixel 4 XL API 30 (android-x86)",
-        "toolEnv": {
-            "FLUTTER_HOST": "VSCode",
-            "PUB_ENVIRONMENT": "vscode.dart-code"
-        },
-        "sendLogsToClient": false,
-        "sendCustomProgressEvents": true,
-        "additionalProjectPaths": [
-            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
-        ],
-        "vmAdditionalArgs": [],
-        "toolArgs": [
-            "--no-sound-null-safety",
-            "-d",
-            "emulator-5554",
-            "--devtools-server-address",
-            "http://127.0.0.1:9101/"
-        ],
-        "vmServicePort": 0,
-        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
-        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
-        "maxLogLineLength": 2000,
-        "debugSdkLibraries": false,
-        "debugExternalPackageLibraries": false,
-        "showDartDeveloperLogs": true,
-        "evaluateGettersInDebugViews": true,
-        "evaluateToStringInDebugViews": true,
-        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
-        "useInspectorNotificationsForWidgetErrors": true,
-        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
-        "showMemoryUsage": false,
-        "debuggerType": 2
-    }
-[10:55:56 PM] [General] [Info] Took 151ms to search for projects (5 levels)
-[10:55:56 PM] [General] [Info] Took 3ms to filter out excluded projects (0 exclusion rules)
+[3:17:46 PM] [General] [Info] Using flutter debugger for Flutter
+[3:17:46 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[3:17:46 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[3:17:46 PM] [General] [Info] Did not find session 661e4a08-e3e3-4b3c-a548-7e08432a4e6b to handle dart.progressStart. There were 0 sessions:
+[3:17:46 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[3:17:46 PM] [General] [Info] Processing delayed event dart.progressStart for session 661e4a08-e3e3-4b3c-a548-7e08432a4e6b
+[3:18:34 PM] [General] [Info] Took 140ms to search for projects (5 levels)
+[3:18:34 PM] [General] [Info] Took 10ms to filter out excluded projects (0 exclusion rules)
