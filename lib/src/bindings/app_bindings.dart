@@ -10,6 +10,7 @@ import '../pages/auth/controller/otp_controller.dart';
 import '../pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
 import '../pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
 import '../pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
+import '../pages/home/teacher/home/components/allQuiz/design/controller/expanded_quiz_ontap_controller.dart';
 import '../pages/home/teacher/home/components/create/controller/create_quiz_controller.dart';
 import '../pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
 import '../pages/home/teacher/profile/controller/teacher_profile_controller.dart';
@@ -32,5 +33,6 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => LiveQuizController(), fenix: true);
     Get.lazyPut(() => CompletedQuizController(), fenix: true);
     Get.lazyPut(() => TeacherProfileController(), fenix: true);
+    Get.lazyPut(() => ExpadedQuizController(), fenix: true);
   }
 }

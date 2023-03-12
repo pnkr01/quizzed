@@ -6,6 +6,7 @@ import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/contr
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../design/completed_design.dart';
+import '../design/on_tap_show_details.dart';
 
 class CompletedQuizScreen extends GetView<CompletedQuizController> {
   const CompletedQuizScreen({super.key});
@@ -19,7 +20,7 @@ class CompletedQuizScreen extends GetView<CompletedQuizController> {
           ? const Center(
               child: CircularProgressIndicator(
                 color: whiteColor,
-                backgroundColor: kTeacherPrimaryLightColor,
+                backgroundColor: greenColor,
               ),
             )
           : controller.completedQuiz.isEmpty
@@ -44,8 +45,18 @@ class CompletedQuizScreen extends GetView<CompletedQuizController> {
 
               ListView.builder(
                   itemCount: controller.completedQuiz.length,
-                  itemBuilder: ((context, index) => CompletedQuizDesign(
-                        index: index,
+                  itemBuilder: ((context, index) => GestureDetector(
+                        onTap: () => Get.to(
+                            () => const ExpandQuizDetailsOnDemandScreen(),
+                            arguments: [
+                              {
+                                'quizID':
+                                    controller.completedQuiz[index].quizId!,
+                              }
+                            ]),
+                        child: CompletedQuizDesign(
+                          index: index,
+                        ),
                       )),
                 ),
     );

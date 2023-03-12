@@ -6,6 +6,7 @@ import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/live_
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../controller/live_quiz_controller.dart';
+import '../design/on_tap_show_details.dart';
 
 class LiveQuizScreen extends GetView<LiveQuizController> {
   const LiveQuizScreen({super.key});
@@ -43,8 +44,17 @@ class LiveQuizScreen extends GetView<LiveQuizController> {
                 )
               : ListView.builder(
                   itemCount: controller.liveList.length,
-                  itemBuilder: ((context, index) => QuizLiveDesign(
-                        index: index,
+                  itemBuilder: ((context, index) => GestureDetector(
+                        onTap: () => Get.to(
+                            () => const ExpandQuizDetailsOnDemandScreen(),
+                            arguments: [
+                              {
+                                'quizID': controller.liveList[index].quizId!,
+                              }
+                            ]),
+                        child: QuizLiveDesign(
+                          index: index,
+                        ),
                       )),
                 ),
     );

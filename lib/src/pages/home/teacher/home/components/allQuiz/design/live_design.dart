@@ -48,7 +48,7 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
                   children: [
                     const Text('QuizID : '),
                     Text(
-                      "${controller.liveList[index].quizId.toString().capitalizeFirst}",
+                      controller.liveList[index].quizId.toString(),
                       style: kDesignlargeTextStyle(),
                     ),
                   ],

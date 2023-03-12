@@ -6,6 +6,8 @@ import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/draft
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
+import '../design/on_tap_show_details.dart';
+
 class DraftQuizScreen extends GetView<DraftQuizController> {
   const DraftQuizScreen({super.key});
 
@@ -42,8 +44,18 @@ class DraftQuizScreen extends GetView<DraftQuizController> {
                 )
               : ListView.builder(
                   itemCount: controller.draftList.length,
-                  itemBuilder: ((context, index) => QuizDraftViewDesign(
-                        index: index,
+                  itemBuilder: ((context, index) => GestureDetector(
+                        onTap: () => Get.to(
+                            () => const ExpandQuizDetailsOnDemandScreen(),
+                            arguments: [
+                              {
+                                'quizID':
+                                    controller.draftList[index].quizId!,
+                              }
+                            ]),
+                        child: QuizDraftViewDesign(
+                          index: index,
+                        ),
                       )),
                 ),
     );
