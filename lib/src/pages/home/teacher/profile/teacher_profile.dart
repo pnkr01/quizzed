@@ -9,6 +9,8 @@ import 'package:quiz/utils/quizAppBar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 
+import '../../../../../utils/shimmer.dart';
+
 class TeacherProfileScreen extends GetView<TeacherProfileController> {
   const TeacherProfileScreen({super.key});
 
@@ -48,6 +50,8 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
                         borderRadius:
                             const BorderRadius.all(Radius.circular(20)),
                         child: CachedNetworkImage(
+                            placeholder: (context, url) =>
+                                const NewsCardSkelton(),
                             fit: BoxFit.fill,
                             imageUrl:
                                 'https://img.freepik.com/free-vector/flat-design-bear-family-illustration_23-2149539189.jpg?w=740&t=st=1677930244~exp=1677930844~hmac=1ed6d9791d4c66b0f0ef74d0511b9a1ddf29643bff146eb88524829865455775'),
