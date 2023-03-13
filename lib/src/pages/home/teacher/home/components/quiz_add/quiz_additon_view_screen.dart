@@ -26,9 +26,6 @@ class QuizAdditionView extends GetView<AddQuizController> {
       ),
       body: Column(
         children: [
-          const SizedBox(
-            height: 20,
-          ),
           Expanded(
             child: Container(
               width: double.infinity,
@@ -46,9 +43,6 @@ class QuizAdditionView extends GetView<AddQuizController> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 10,
-                      ),
                       Text(
                         'Current Quiz Bucket',
                         style: kBodyText3Style()
@@ -136,7 +130,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                             color: kTeacherPrimaryColor,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(24))),
-                        height: 400,
+                        height: 520,
                         width: double.infinity,
                         child: PageView.builder(
                           controller: controller.pageController,
@@ -245,6 +239,9 @@ class QuizAdditionView extends GetView<AddQuizController> {
                             //controller.page.value = controller.page.value + 1;
                           },
                         ),
+                      ),
+                      const SizedBox(
+                        height: 50,
                       ),
                     ],
                   ),

@@ -400,3 +400,654 @@ NO_PROXY: undefined
 [10:41:16 PM] [General] [Info] Event will be queued and processed when the session start event fires
 [10:41:16 PM] [General] [Info] Processing delayed event dart.progressStart for session b9815067-dd97-4d3b-ab58-539daac802bb
 [10:41:58 PM] [General] [Info] Returning cached results for project search
+[10:44:36 PM] [General] [Info] Starting debug session...
+[10:44:36 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:44:36 PM] [General] [Info]     program  : lib/main.dart
+[10:44:36 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:44:36 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[10:44:36 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:44:36 PM] [General] [Info] Detected launch project as Flutter
+[10:44:36 PM] [General] [Info] Using Flutter debug adapter for this session
+[10:44:36 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[10:44:36 PM] [General] [Info] Checking for errors before launching
+[10:44:36 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-afc55",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[10:44:38 PM] [General] [Info] Returning cached results for project search
+[10:47:18 PM] [General] [Info] Debugger:SessionDuration timing: 362003ms (Flutter)
+[10:47:34 PM] [General] [Info] Starting debug session...
+[10:47:34 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:47:34 PM] [General] [Info]     program  : lib/main.dart
+[10:47:34 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:47:34 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[10:47:34 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[10:47:34 PM] [General] [Info] Detected launch project as Flutter
+[10:47:34 PM] [General] [Info] Using Flutter debug adapter for this session
+[10:47:34 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[10:47:34 PM] [General] [Info] Checking for errors before launching
+[10:47:34 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-28ca8",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[10:47:34 PM] [General] [Info] Using flutter debugger for Flutter
+[10:47:34 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[10:47:34 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[10:47:34 PM] [General] [Info] Did not find session 1f2e3f9a-fd53-40e0-b22c-1095eff8443a to handle dart.progressStart. There were 0 sessions:
+[10:47:34 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[10:47:34 PM] [General] [Info] Processing delayed event dart.progressStart for session 1f2e3f9a-fd53-40e0-b22c-1095eff8443a
+[11:01:08 PM] [General] [Info] Debugger:SessionDuration timing: 813565ms (Flutter)
+[11:01:13 PM] [General] [Info] Starting debug session...
+[11:01:13 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:01:13 PM] [General] [Info]     program  : C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:01:13 PM] [General] [Info] Setting cwd based on likely entry point: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:01:13 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:01:13 PM] [General] [Info] Detected launch project as Flutter
+[11:01:13 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:01:13 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:01:13 PM] [General] [Info] Checking for errors before launching
+[11:01:13 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Dart ",
+        "noDebug": true,
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "dartCodeDebugSessionID": "session-2d6a4",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "args": [],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:01:13 PM] [General] [Info] Using flutter debugger for Flutter
+[11:01:13 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[11:01:13 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[11:01:13 PM] [General] [Info] Did not find session bb762c32-bfb0-4e6c-8a13-ef691d283514 to handle dart.progressStart. There were 0 sessions:
+[11:01:13 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[11:01:13 PM] [General] [Info] Processing delayed event dart.progressStart for session bb762c32-bfb0-4e6c-8a13-ef691d283514
+[11:01:29 PM] [General] [Info] Took 189ms to search for projects (5 levels)
+[11:01:29 PM] [General] [Info] Took 7ms to filter out excluded projects (0 exclusion rules)
+[11:03:26 PM] [General] [Info] Debugger:SessionDuration timing: 132557ms (Flutter)
+[11:03:37 PM] [General] [Info] Returning cached results for project search
+[11:03:37 PM] [General] [Info] Checking 1 projects for supported platforms
+[11:03:37 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
+[11:03:42 PM] [General] [Info] Saving emulator-5554 as preferred device
+[11:03:44 PM] [General] [Info] Starting debug session...
+[11:03:44 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:03:44 PM] [General] [Info]     program  : lib/main.dart
+[11:03:44 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:03:44 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:03:44 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:03:44 PM] [General] [Info] Detected launch project as Flutter
+[11:03:44 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:03:44 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:03:44 PM] [General] [Info] Checking for errors before launching
+[11:03:44 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-1191b",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:03:44 PM] [General] [Info] Using flutter debugger for Flutter
+[11:03:44 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[11:03:44 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[11:03:44 PM] [General] [Info] Did not find session c2b4307a-8cd6-4a2a-b77f-ce638c3e0fc1 to handle dart.progressStart. There were 0 sessions:
+[11:03:44 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[11:03:44 PM] [General] [Info] Processing delayed event dart.progressStart for session c2b4307a-8cd6-4a2a-b77f-ce638c3e0fc1
+[11:04:05 PM] [General] [Info] Returning cached results for project search
+[11:25:27 PM] [General] [Info] Debugger:SessionDuration timing: 1303011ms (Flutter)
+[11:25:29 PM] [General] [Info] Starting debug session...
+[11:25:29 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:25:29 PM] [General] [Info]     program  : lib/main.dart
+[11:25:29 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:25:29 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:25:29 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:25:29 PM] [General] [Info] Detected launch project as Flutter
+[11:25:29 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:25:29 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:25:29 PM] [General] [Info] Checking for errors before launching
+[11:25:29 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-da51b",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:25:29 PM] [General] [Info] Using flutter debugger for Flutter
+[11:25:29 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[11:25:29 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[11:25:29 PM] [General] [Info] Did not find session df0c563c-9698-4e8e-a4c4-fa20c6d9304b to handle dart.progressStart. There were 0 sessions:
+[11:25:29 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[11:25:29 PM] [General] [Info] Processing delayed event dart.progressStart for session df0c563c-9698-4e8e-a4c4-fa20c6d9304b
+[11:25:49 PM] [General] [Info] Took 127ms to search for projects (5 levels)
+[11:25:49 PM] [General] [Info] Took 5ms to filter out excluded projects (0 exclusion rules)
+[11:28:36 PM] [General] [Info] Debugger:SessionDuration timing: 186999ms (Flutter)
+[11:28:37 PM] [General] [Info] Returning cached results for project search
+[11:28:37 PM] [General] [Info] Checking 1 projects for supported platforms
+[11:28:37 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
+[11:28:45 PM] [General] [Info] Returning cached promise for getSupportedPlatforms()
+[11:29:17 PM] [General] [Info] Saving emulator-5554 as preferred device
+[11:29:17 PM] [General] [Info] Returning cached results for project search
+[11:29:17 PM] [General] [Info] Checking 1 projects for supported platforms
+[11:29:17 PM] [General] [Info] Supported platforms for the workspace are linux, windows, ios, android, web
+[11:33:22 PM] [General] [Info] Starting debug session...
+[11:33:22 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:33:22 PM] [General] [Info]     program  : lib/main.dart
+[11:33:22 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:33:22 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:33:22 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:33:22 PM] [General] [Info] Detected launch project as Flutter
+[11:33:22 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:33:22 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:33:22 PM] [General] [Info] Checking for errors before launching
+[11:33:22 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-8ab18",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:33:22 PM] [General] [Info] Using flutter debugger for Flutter
+[11:33:22 PM] [General] [Info] SDK DAP setting is false, set by sdkDaps experiment
+[11:33:22 PM] [General] [Info] Running debugger via node with c:\Users\pawan\.vscode\extensions\dart-code.dart-code-3.60.1\out\dist\debug.js    flutter
+[11:33:22 PM] [General] [Info] Did not find session 42a9713c-faed-4001-85a1-9d8361a0903f to handle dart.progressStart. There were 0 sessions:
+[11:33:22 PM] [General] [Info] Event will be queued and processed when the session start event fires
+[11:33:22 PM] [General] [Info] Processing delayed event dart.progressStart for session 42a9713c-faed-4001-85a1-9d8361a0903f
+[11:33:38 PM] [General] [Info] Took 185ms to search for projects (5 levels)
+[11:33:38 PM] [General] [Info] Took 3ms to filter out excluded projects (0 exclusion rules)
+[11:34:16 PM] [General] [Info] Starting debug session...
+[11:34:16 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:34:16 PM] [General] [Info]     program  : lib/main.dart
+[11:34:16 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:34:16 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:34:16 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:34:16 PM] [General] [Info] Detected launch project as Flutter
+[11:34:16 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:34:16 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:34:16 PM] [General] [Info] Checking for errors before launching
+[11:34:16 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-2b91f",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:34:18 PM] [General] [Info] Returning cached results for project search
+[11:51:53 PM] [General] [Info] Starting debug session...
+[11:51:53 PM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:51:53 PM] [General] [Info]     program  : lib/main.dart
+[11:51:53 PM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:51:53 PM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[11:51:53 PM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[11:51:53 PM] [General] [Info] Detected launch project as Flutter
+[11:51:53 PM] [General] [Info] Using Flutter debug adapter for this session
+[11:51:53 PM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[11:51:53 PM] [General] [Info] Checking for errors before launching
+[11:51:53 PM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-d4d31",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[11:51:55 PM] [General] [Info] Took 152ms to search for projects (5 levels)
+[11:51:55 PM] [General] [Info] Took 4ms to filter out excluded projects (0 exclusion rules)
+[12:41:31 AM] [General] [Info] Starting debug session...
+[12:41:31 AM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:41:31 AM] [General] [Info]     program  : lib/main.dart
+[12:41:31 AM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:41:31 AM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[12:41:31 AM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:41:31 AM] [General] [Info] Detected launch project as Flutter
+[12:41:31 AM] [General] [Info] Using Flutter debug adapter for this session
+[12:41:31 AM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[12:41:31 AM] [General] [Info] Checking for errors before launching
+[12:41:31 AM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-be197",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[12:41:34 AM] [General] [Info] Took 167ms to search for projects (5 levels)
+[12:41:35 AM] [General] [Info] Took 5ms to filter out excluded projects (0 exclusion rules)
+[12:43:47 AM] [FlutterRun] [Error] [Flutter] lib/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart:36:46: Error: Required named parameter 'model' must be provided.
+[12:43:47 AM] [FlutterRun] [Error] [Flutter]     Get.to(() => const DetailedQuizViewScreen(), arguments: currentQuiz);
+                                             ^
+lib/src/pages/home/student/home/components/joinQuiz/components/detailed/detailed_quiz_view.dart:11:9: Context: Found this candidate, but the arguments don't match.
+  const DetailedQuizViewScreen({
+        ^^^^^^^^^^^^^^^^^^^^^^
+[12:43:49 AM] [FlutterRun] [Error] [Flutter] lib/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart:36:46: Error: Required named parameter 'model' must be provided.
+[12:43:49 AM] [FlutterRun] [Error] [Flutter]     Get.to(() => const DetailedQuizViewScreen(), arguments: currentQuiz);
+                                             ^
+lib/src/pages/home/student/home/components/joinQuiz/components/detailed/detailed_quiz_view.dart:11:9: Context: Found this candidate, but the arguments don't match.
+  const DetailedQuizViewScreen({
+        ^^^^^^^^^^^^^^^^^^^^^^
+[12:44:09 AM] [FlutterRun] [Error] [Flutter] Hot reload was rejected:
+[12:44:09 AM] [FlutterRun] [Error] [Flutter] Const class cannot remove fields: Library:'package:quiz/src/pages/home/student/home/components/joinQuiz/components/detailed/detailed_quiz_view.dart' Class: DetailedQuizViewScreen.
+Try performing a hot restart instead.
+[12:44:12 AM] [General] [Info] Starting debug session...
+[12:44:12 AM] [General] [Info]     workspace: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:44:12 AM] [General] [Info]     program  : lib/main.dart
+[12:44:12 AM] [General] [Info] Setting cwd based on active workspace folder: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:44:12 AM] [General] [Info] Converted program to absolute path: C:\Users\pawan\OneDrive\Desktop\Files\quiz\lib\main.dart
+[12:44:12 AM] [General] [Info] Using workspace as cwd: C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[12:44:12 AM] [General] [Info] Detected launch project as Flutter
+[12:44:12 AM] [General] [Info] Using Flutter debug adapter for this session
+[12:44:12 AM] [General] [Info] Getting DevTools server address to pass to Flutter...
+[12:44:12 AM] [General] [Info] Checking for errors before launching
+[12:44:12 AM] [General] [Info] Debug session starting...
+    {
+        "name": "Flutter",
+        "request": "launch",
+        "type": "dart",
+        "program": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\lib\\main.dart",
+        "args": [
+            "--web-hostname",
+            "any"
+        ],
+        "__configurationTarget": 6,
+        "noDebug": true,
+        "dartCodeDebugSessionID": "session-5d12a",
+        "cwd": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz",
+        "deviceId": "emulator-5554",
+        "deviceName": "Pixel 4 XL API 30 (android-x86)",
+        "toolEnv": {
+            "FLUTTER_HOST": "VSCode",
+            "PUB_ENVIRONMENT": "vscode.dart-code"
+        },
+        "sendLogsToClient": false,
+        "sendCustomProgressEvents": true,
+        "additionalProjectPaths": [
+            "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz"
+        ],
+        "vmAdditionalArgs": [],
+        "toolArgs": [
+            "--no-sound-null-safety",
+            "-d",
+            "emulator-5554",
+            "--devtools-server-address",
+            "http://127.0.0.1:9100/"
+        ],
+        "vmServicePort": 0,
+        "dartSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter\\bin\\cache\\dart-sdk",
+        "vmServiceLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\observatory.txt",
+        "maxLogLineLength": 2000,
+        "debugSdkLibraries": false,
+        "debugExternalPackageLibraries": false,
+        "showDartDeveloperLogs": true,
+        "evaluateGettersInDebugViews": true,
+        "evaluateToStringInDebugViews": true,
+        "flutterSdkPath": "C:\\Users\\pawan\\Development\\sdk\\flutter",
+        "useInspectorNotificationsForWidgetErrors": true,
+        "flutterRunLogFile": "C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz\\logs\\flutter_run.txt",
+        "showMemoryUsage": false,
+        "debuggerType": 2
+    }
+[12:44:16 AM] [General] [Info] Returning cached results for project search

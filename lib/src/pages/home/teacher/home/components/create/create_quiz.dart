@@ -56,9 +56,6 @@ class CreateQuiz extends GetView<CreateQuizController> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        height: 12.h,
-                      ),
                       EnsureVisibleWhenFocused(
                         focusNode: controller.focusNodeTitle,
                         child: QuizTextFormField(
@@ -74,7 +71,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         ),
                       ),
                       SizedBox(
-                        height: 18.h,
+                        height: 14.h,
                       ),
                       EnsureVisibleWhenFocused(
                         focusNode: controller.focusNodeDescription,
@@ -91,7 +88,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         ),
                       ),
                       SizedBox(
-                        height: 18.h,
+                        height: 14.h,
                       ),
                       Obx(
                         () => controller.isFetching == true
@@ -138,7 +135,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                               ),
                       ),
                       SizedBox(
-                        height: 18.h,
+                        height: 14.h,
                       ),
                       Row(
                         children: [
@@ -180,7 +177,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         ],
                       ),
                       SizedBox(
-                        height: 18.h,
+                        height: 14.h,
                       ),
                       Row(
                         children: [
@@ -224,7 +221,6 @@ class CreateQuiz extends GetView<CreateQuizController> {
                       const SizedBox(
                         height: 15,
                       ),
-
                       SizedBox(
                         width: double.infinity,
                         height: 50,

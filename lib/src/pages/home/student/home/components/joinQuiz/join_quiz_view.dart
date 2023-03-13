@@ -51,7 +51,10 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              Image.asset('assets/images/join.jpg'),
+              SizedBox(
+                width: 500,
+                child: Image.asset('assets/images/join.jpg'),
+              ),
               SizedBox(
                 height: 12.h,
               ),

@@ -48,6 +48,15 @@ TextStyle kBodyText4Style() {
     fontWeight: FontWeight.w700,
   );
 }
+
+TextStyle kBodyText10Style() {
+  return GoogleFonts.montserrat(
+    color: blackColor,
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+  );
+}
+
 TextStyle kBodyText6Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
@@ -55,6 +64,7 @@ TextStyle kBodyText6Style() {
     fontWeight: FontWeight.w700,
   );
 }
+
 TextStyle kBodyText8Style() {
   return GoogleFonts.montserrat(
     color: Colors.white,
@@ -62,6 +72,7 @@ TextStyle kBodyText8Style() {
     fontWeight: FontWeight.w700,
   );
 }
+
 TextStyle kBodyText7Style() {
   return GoogleFonts.montserrat(
     color: kTeacherPrimaryColor,
@@ -77,7 +88,6 @@ TextStyle kAppBarTextStyle() {
     fontWeight: FontWeight.w600,
   );
 }
-
 
 TextStyle kDesignlargeTextStyle() {
   return GoogleFonts.montserrat(
@@ -110,6 +120,7 @@ TextStyle kBodyText3Style() {
     fontSize: getProportionateScreenHeight(12.0.sp),
   );
 }
+
 TextStyle kBodyText9Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
