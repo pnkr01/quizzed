@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 
 import 'package:quiz/src/model/quiz_detailed_join_model.dart';
+import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/detailed/detailed_quiz_helper.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
@@ -19,341 +21,151 @@ class DetailedQuizViewScreen extends GetView<DetailedQuizController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const QuizAppbar(
-        appBarColor: kTeacherPrimaryColor,
-        titleText: 'Quizzed',
-        preferredSize: Size.fromHeight(56),
-      ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: kTeacherPrimaryColor,
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text(
-                        'Title',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.title}',
-                            overflow: TextOverflow.ellipsis,
-                            style: kBodyText9Style(),
+        appBar: const QuizAppbar(
+          appBarColor: kQuizPrimaryColor,
+          titleText: 'Quizzed',
+          preferredSize: Size.fromHeight(56),
+        ),
+        body: NotificationListener<UserScrollNotification>(
+          onNotification: (notification) {
+            if (notification.direction == ScrollDirection.forward ||
+                notification.direction == ScrollDirection.reverse) {
+              controller.isSrolling.value = true;
+            }
+            return true;
+          },
+          child: Column(
+            children: [
+              Expanded(
+                child: Card(
+                  margin: EdgeInsets.zero,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                  elevation: 5,
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(4.0, 0, 4, 0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(
+                            height: 4,
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Description',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            overflow: TextOverflow.ellipsis,
-                            '${model.description.toString().capitalize}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                              title: 'Title', subtitle: '${model.title}'),
+                          DetailedQuizHelper(
+                              title: 'Description',
+                              subtitle: '${model.description}'),
+                          DetailedQuizHelper(
+                              title: 'QuizID ', subtitle: '${model.quizID}'),
+                          DetailedQuizHelper(
+                              title: 'Conducted By',
+                              subtitle: '${model.conductedBy}'),
+                          DetailedQuizHelper(
+                              title: 'Subject Code',
+                              subtitle: '${model.subjectCode}'),
+                          DetailedQuizHelper(
+                              title: 'Section',
+                              subtitle: '${model.forSection}'),
+                          DetailedQuizHelper(
+                              title: 'Branch', subtitle: '${model.forBranch}'),
+                          DetailedQuizHelper(
+                            title: 'Semester',
+                            subtitle: '${model.forSemester} Semester',
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'QuizID',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            overflow: TextOverflow.ellipsis,
-                            '${model.quizID}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                              title: 'Total Question',
+                              subtitle: '${model.totalQuestion}'),
+                          DetailedQuizHelper(
+                              title: 'Title', subtitle: '${model.title}'),
+                          DetailedQuizHelper(
+                            title: 'Per Question Marks',
+                            subtitle: '${model.perQsMarks}',
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Conducted By',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.conductedBy}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                            title: 'Total Marks',
+                            subtitle: '${model.totalMarks}',
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Subject Code',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.subjectCode}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                            title: 'Quiz Duration',
+                            subtitle: '${model.quizDuration} mins',
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Section',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.forSection}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                            title: 'Joined Student',
+                            subtitle: '${model.totalAppearedStudent}+ student',
                           ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'For Branch',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.forBranch}',
-                            style: kBodyText9Style(),
+                          DetailedQuizHelper(
+                            title: 'Quiz Status',
+                            subtitle:
+                                '${model.quizStatus.toString().capitalizeFirst}',
                           ),
-                        ),
+                        ],
                       ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'For Semester',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.forSemester}nd Semester',
-                            overflow: TextOverflow.ellipsis,
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Total Question',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.totalQuestion}',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Per Question Marks',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.perQsMarks}',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Total Marks',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.totalMarks}',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Quiz Duration',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.quizDuration} mins',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Current Student Joined Quiz',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.totalAppearedStudent} Student',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 14,
-                      ),
-                      Text(
-                        'Quiz Status',
-                        style: kBodyText10Style(),
-                      ),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Card(
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          width: double.infinity,
-                          child: Text(
-                            '${model.quizStatus.toString().capitalizeFirst}',
-                            style: kBodyText9Style(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 50,
-                      )
-                    ],
+                    ),
                   ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: Obx(
+          () => Material(
+            shape: const CircleBorder(side: BorderSide.none),
+            elevation: 4,
+            child: Visibility(
+              visible: controller.isSrolling.value,
+              child: FloatingActionButton(
+                backgroundColor: kQuizLightPrimaryColor,
+                onPressed: () {
+                  controller.isLoading.value = false;
+                  controller.joinQuizInit(model.quizID!);
+                },
+                child: Center(
+                  child: controller.isLoading.value == true
+                      ? const Icon(Icons.arrow_forward_ios)
+                      : const CircularProgressIndicator(
+                          strokeWidth: 1,
+                          color: whiteColor,
+                        ),
                 ),
               ),
             ),
           ),
-        ],
-      ),
-      bottomSheet: SizedBox(
-        width: double.infinity,
-        height: 50,
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            shape: const RoundedRectangleBorder(
+        )
 
-                //borderRadius: BorderRadius.circular(12), // <-- Radius
-                ),
-            backgroundColor: kTeacherPrimaryColor,
-          ),
-          onPressed: () {},
-          child: Text(
-            'Join Quiz',
-            style: kBodyText3Style(),
-          ),
-        ),
-      ),
-    );
+        // SizedBox(
+        //   width: double.infinity,
+        //   height: 50,
+        //   child: Visibility(
+        //     visible: controller.isSrolling.value,
+        //     child:
+
+        //     ElevatedButton(
+        //         style: ElevatedButton.styleFrom(
+        //           shape: const RoundedRectangleBorder(
+
+        //               //borderRadius: BorderRadius.circular(12), // <-- Radius
+        //               ),
+        //           backgroundColor: kQuizLightPrimaryColor,
+        //         ),
+        //         onPressed: () {
+        // controller.isLoading.value = false;
+        // controller.joinQuizInit(model.quizID!);
+        //         },
+        //         child: Obx(() => controller.isLoading.value == true
+        //             ? Text(
+        //                 'Join Quiz',
+        //                 style: kBodyText3Style(),
+        //               )
+        //             : const Center(
+        //                 child: CircularProgressIndicator(
+        //                   color: whiteColor,
+        //                   strokeWidth: 1,
+        //                   backgroundColor: kTeacherPrimaryLightColor,
+        //                 ),
+        //               ))),
+        //   ),
+        // ),
+        );
   }
 }

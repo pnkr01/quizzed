@@ -24,7 +24,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: kTeacherPrimaryColor,
+        color: kQuizPrimaryColor,
         child: SafeArea(
           child: ListView(
             children: [

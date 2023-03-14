@@ -45,10 +45,10 @@ class _StudentHomeState extends State<StudentHome> {
     var controller = Get.find<StudentHomeController>();
     return Scaffold(
       drawer: const NavigationDrawerWidget(),
-      backgroundColor: kTeacherPrimaryColor,
+      backgroundColor: kQuizPrimaryColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: kTeacherPrimaryColor,
+        backgroundColor: kQuizPrimaryColor,
         centerTitle: true,
         title: Text(
           'Quizzed',
@@ -198,8 +198,8 @@ class _StudentHomeState extends State<StudentHome> {
                 height: 180,
                 width: double.infinity,
               ),
-              SizedBox(
-                height: 20.h,
+              const SizedBox(
+                height: 15,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 0.h),
@@ -219,7 +219,7 @@ class _StudentHomeState extends State<StudentHome> {
                           Text('Join Quiz', style: kBodyText1Style())
                         ],
                       ),
-                      backgroundColor: kTeacherPrimaryLightColor,
+                      backgroundColor: kQuizLightPrimaryColor,
                       function: () {
                         controller.navigateToJoinQuiz();
                       },
@@ -238,7 +238,7 @@ class _StudentHomeState extends State<StudentHome> {
                           Text('Result', style: kBodyText1Style())
                         ],
                       ),
-                      backgroundColor: kTeacherPrimaryLightColor,
+                      backgroundColor: kQuizLightPrimaryColor,
                       function: () {
                         controller.navigateToResultQuiz();
                       },
@@ -344,7 +344,7 @@ class _StudentHomeState extends State<StudentHome> {
             activeDotDecoration: DotDecoration(
               width: 32,
               height: 12,
-              color: kTeacherPrimaryColor,
+              color: kQuizPrimaryColor,
               rotationAngle: 180,
               verticalOffset: -10,
               borderRadius: BorderRadius.circular(24),

@@ -17,7 +17,11 @@ const Color dividerColor = Color(0xffAFAFAF);
 //------------------------------------Teacher----------------------------//
 
 const kTeacherPrimaryColor = Color(0xff7B2869);
-const kTeacherPrimaryLightColor = Color(0xff9D3C72);
+const kQuizPrimaryColor = Color(0XFF363A65);
+const kQuizLightPrimaryColor = Color(0xff373C6C);
+const kQuizSelectedPrimaryColor = Color(0xFFB264D5);
+const kQuizButtonLightColor = Color.fromARGB(255, 224, 119, 189);
+const Color kTeacherPrimaryLightColor = Color(0xff9D3C72);
 const kTeacherPrimaryshadeColor = Color(0xffC85C8E);
 const kTeacherPrimaryoffShadeColor = Color(0xffFFBABA);
 

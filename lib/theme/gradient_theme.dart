@@ -51,7 +51,7 @@ TextStyle kBodyText4Style() {
 
 TextStyle kBodyText10Style() {
   return GoogleFonts.montserrat(
-    color: blackColor,
+    color: whiteColor,
     fontSize: 15,
     fontWeight: FontWeight.w600,
   );
@@ -121,10 +121,26 @@ TextStyle kBodyText3Style() {
   );
 }
 
+TextStyle kBodyText11Style() {
+  return GoogleFonts.montserrat(
+    fontWeight: FontWeight.w600,
+    color: whiteColor,
+    fontSize: 17,
+  );
+}
+
 TextStyle kBodyText9Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
-    color: kTeacherPrimaryLightColor,
+    color: kQuizLightPrimaryColor,
+    fontSize: getProportionateScreenHeight(12.0.sp),
+  );
+}
+
+TextStyle kBodyText12Style() {
+  return GoogleFonts.montserrat(
+    fontWeight: FontWeight.w600,
+    color: whiteColor,
     fontSize: getProportionateScreenHeight(12.0.sp),
   );
 }

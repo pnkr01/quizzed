@@ -17,11 +17,11 @@ class ProfileScreenView extends StatelessWidget {
     var controller = Get.find<StudentHomeController>();
     var myProfileController = Get.find<StudentProfileController>();
     return Scaffold(
-      backgroundColor: kTeacherPrimaryColor,
+      backgroundColor: kQuizPrimaryColor,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
-        backgroundColor: kTeacherPrimaryColor,
+        backgroundColor: kQuizPrimaryColor,
         title: Text(
           'Profile',
           style: kBodyText1Style(),
@@ -30,7 +30,7 @@ class ProfileScreenView extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            color: kTeacherPrimaryColor,
+            color: kQuizPrimaryColor,
             child: Row(
               children: [
                 SizedBox(
@@ -42,7 +42,7 @@ class ProfileScreenView extends StatelessWidget {
                     radius: 42.h,
                     backgroundColor: whiteColor,
                     child: CircleAvatar(
-                      radius: 40.h, backgroundColor: kTeacherPrimaryColor,
+                      radius: 40.h, backgroundColor: kQuizPrimaryColor,
                       backgroundImage: const CachedNetworkImageProvider(
                           'https://img.freepik.com/free-vector/flat-design-bear-family-illustration_23-2149539189.jpg?w=740&t=st=1677930244~exp=1677930844~hmac=1ed6d9791d4c66b0f0ef74d0511b9a1ddf29643bff146eb88524829865455775'),
                       //backgroundColor: whiteColor,
@@ -103,7 +103,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -140,7 +140,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -175,7 +175,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -208,7 +208,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: Icon(
@@ -246,7 +246,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -277,7 +277,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -310,7 +310,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -343,7 +343,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -374,7 +374,7 @@ class ProfileScreenView extends StatelessWidget {
                                           height: 28.h,
                                           width: 28.h,
                                           decoration: const BoxDecoration(
-                                            color: kTeacherPrimaryLightColor,
+                                            color: kQuizLightPrimaryColor,
                                             shape: BoxShape.circle,
                                           ),
                                           child: const Icon(
@@ -392,7 +392,7 @@ class ProfileScreenView extends StatelessWidget {
                                                     .profile[0].branch ??
                                                 "Unknown",
                                             style: kBodyText3Style().copyWith(
-                                                color: kTeacherPrimaryColor),
+                                                color: kQuizLightPrimaryColor),
                                           ),
                                         ),
                                       ],
@@ -411,7 +411,7 @@ class ProfileScreenView extends StatelessWidget {
                                   width: double.infinity,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: kTeacherPrimaryColor,
+                                        backgroundColor: kQuizButtonLightColor,
                                         shape: const RoundedRectangleBorder(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(12)))),
@@ -431,7 +431,7 @@ class ProfileScreenView extends StatelessWidget {
                       )
                     : const Center(
                         child: CircularProgressIndicator(
-                          backgroundColor: kTeacherPrimaryColor,
+                          backgroundColor: kQuizPrimaryColor,
                         ),
                       ),
               ),

@@ -37,6 +37,15 @@ class JoinQuizCOntroller extends GetxController {
     isTapStartJoining.value = false;
   }
 
+  checkEmptyFilled() {
+    if (quizID.value.text.isNotEmpty) {
+      checkThisQuizID();
+    } else {
+      isTapStartJoining.value = false;
+      showSnackBar('QuizID cannot be empty', redColor, whiteColor);
+    }
+  }
+
   checkThisQuizID() async {
     try {
       var response = await https.get(

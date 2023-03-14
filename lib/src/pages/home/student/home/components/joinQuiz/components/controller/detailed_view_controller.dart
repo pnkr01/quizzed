@@ -1,17 +1,66 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:get/get.dart';
+import 'package:http/http.dart' as https;
+import 'package:quiz/src/api/points.dart';
+import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/model/joined_quiz.dart';
+import 'package:quiz/theme/app_color.dart';
+import 'package:quiz/theme/gradient_theme.dart';
+
+import '../../../../../../../../global/shared.dart';
+import '../join/join_quiz.dart';
 
 class DetailedQuizController extends GetxController {
   RxBool isLoading = true.obs;
-  dynamic arguments = Get.arguments;
+  RxBool isSrolling = false.obs;
 
-  @override
-  void onInit() {
-    makeThisCall();
-    super.onInit();
+  List<JoinedQuizModel> joinModelList = [];
+
+  joinQuizInit(String quizID) async {
+    try {
+      isLoading.value = false;
+      hitJoinApi(quizID);
+    } catch (e) {
+      log('catch');
+      isLoading.value = true;
+      showSnackBar(e.toString(), redColor, whiteColor);
+    }
   }
 
-  makeThisCall() {
-    //fetch Data
-    print(arguments[0]);
+  Map<String, String> headers = {
+    'Content-Type': 'application/json',
+    'Cookie': 'Authentication=${sharedPreferences.getString('Scookie')}',
+    // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
+  };
+
+  hitJoinApi(String quizID) async {
+    var response = await https.get(
+        Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/join/$quizID')),
+        headers: headers);
+    var decode = jsonDecode(response.body);
+    if (decode["statusCode"] >= 400) {
+      log('401');
+      isLoading.value = true;
+      showSnackBar(decode["message"], redColor, whiteColor);
+    } else if (decode["statusCode"] == 200) {
+      //  print(decode);
+      try {
+        joinModelList.add(JoinedQuizModel.fromJson(decode));
+      } on FormatException {
+        isLoading.value = true;
+        showSnackBar(decode["message"], redColor, whiteColor);
+      } catch (e) {
+        isLoading.value = true;
+        showSnackBar(decode["message"], redColor, whiteColor);
+      }
+      isLoading.value = true;
+      navigateToQuizSessionScreen();
+    }
+  }
+
+  navigateToQuizSessionScreen() {
+    Get.off(() => JoinQuizSessionScreen(model: joinModelList[0]));
   }
 }
