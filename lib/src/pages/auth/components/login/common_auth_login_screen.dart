@@ -17,6 +17,71 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   Widget build(BuildContext context) {
     Get.put(CommonAuthLogInController());
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: kTeacherPrimaryColor,
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () {
+              showModalBottomSheet<void>(
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(14),
+                        topLeft: Radius.circular(14))),
+                context: context,
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          const SizedBox(height: 10),
+                          Text(
+                            'Forgot Registration No?',
+                            style: kBodyText11Style()
+                                .copyWith(color: kTeacherPrimaryColor),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            child: QuizTextFormField(
+                              contentColor: kTeacherPrimaryColor,
+                              labelText: 'Email',
+                              hintText: 'Enter your mail ID',
+                              borderColor: kTeacherPrimaryColor,
+                              cursorColor: kTeacherPrimaryColor,
+                              hintColor: greyColor,
+                              isObscureText: false,
+                              controller: controller.forgotRegd,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            child: SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: kTeacherPrimaryColor,
+                                    shape: const StadiumBorder()),
+                                onPressed: () {
+                                  controller.forgotHelper();
+                                },
+                                child: const Text('Continue'),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+            icon: const Icon(Icons.settings),
+          )
+        ],
+      ),
       backgroundColor: kTeacherPrimaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
@@ -26,7 +91,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 50.h,
+                  height: 20.h,
                 ),
                 Image.asset(
                   kLogoPath,

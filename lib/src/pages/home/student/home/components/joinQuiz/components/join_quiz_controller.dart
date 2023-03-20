@@ -46,6 +46,16 @@ class JoinQuizCOntroller extends GetxController {
     }
   }
 
+  decodeTeacherName(String? teacherID) async {
+    log(teacherID.toString());
+    var response = await https.get(
+        Uri.parse(ApiConfig.getEndPointsUrl('auth/users/$teacherID')),
+        headers: headers);
+    var decode = jsonDecode(response.body);
+    log('----------------------$decode and ${decode["name"]}');
+    return decode["statusCode"] == 404 ? 'Unknown' : decode["name"];
+  }
+
   checkThisQuizID() async {
     try {
       var response = await https.get(
@@ -59,8 +69,14 @@ class JoinQuizCOntroller extends GetxController {
       } else if (decode["quiz_id"] != null && decode["status"] == "live") {
         //send to show deatil page about quiz.
         log(decode.toString());
+        String tname = await decodeTeacherName(decode["conducted_by"]);
+        quizDebugPrint("$tname----------------Tname");
         currentQuiz.isNotEmpty ? currentQuiz.clear() : null;
         currentQuiz.add(DetailedQuizJoinModel.fromJson(decode));
+        currentQuiz[0].conductedBy =
+            tname != 'Unknown' ? tname : currentQuiz[0].conductedBy;
+        quizDebugPrint(
+            "${currentQuiz[0].conductedBy}----------------changes name");
         navigateToDetailedPage();
       } else if (decode["status"] == "completed") {
         isTapStartJoining.value = false;
@@ -70,33 +86,5 @@ class JoinQuizCOntroller extends GetxController {
       isTapStartJoining.value = false;
       showSnackBar(e.toString(), redColor, whiteColor);
     }
-    // try {
-    //   var response = await https.get(
-    //       Uri.parse(
-    //           ApiConfig.getEndPointsNextUrl('quiz/join/${quizID.value.text}')),
-    //       headers: headers);
-    //   print(response.body);
-    //   var decode = jsonDecode(response.body);
-    //   if (decode["message"] != null &&
-    //       decode["message"]
-    //           .toString()
-    //           .contains('Please provide a valid quiz id')) {
-    //     isTapStartJoining.value = false;
-    //     showSnackBar(decode["message"], redColor, whiteColor);
-    //   } else {
-    //     //correct quizID.
-
-    //     log('correct quizID');
-    //     print(decode);
-    //     if (decode["statusCode"] == 400) {
-    //       isTapStartJoining.value = false;
-    //       showSnackBar(decode["message"], greenColor, whiteColor);
-    //     }
-    //     else if(decode["statusCode"]==200 &&){}
-    //   }
-    // } catch (e) {
-    // isTapStartJoining.value = false;
-    // showSnackBar(e.toString(), redColor, whiteColor);
-    // }
   }
 }

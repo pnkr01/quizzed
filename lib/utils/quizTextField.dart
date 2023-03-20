@@ -15,7 +15,7 @@ class QuizTextFormField extends StatefulWidget {
   final Color? labelColor;
   final Color? contentColor;
   final bool isObscureText;
-  final FocusNode focusNode;
+  final FocusNode? focusNode;
   final TextEditingController controller;
   const QuizTextFormField({
     Key? key,
@@ -27,7 +27,7 @@ class QuizTextFormField extends StatefulWidget {
     this.labelColor,
     this.contentColor,
     required this.isObscureText,
-    required this.focusNode,
+    this.focusNode,
     required this.controller,
   }) : super(key: key);
 

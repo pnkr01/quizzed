@@ -5,10 +5,12 @@ import '../theme/gradient_theme.dart';
 class ErrorDialog extends StatelessWidget {
   final String message;
   final Color? color;
+  final bool? isCopied;
   const ErrorDialog({
     Key? key,
     required this.message,
     this.color,
+    this.isCopied,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

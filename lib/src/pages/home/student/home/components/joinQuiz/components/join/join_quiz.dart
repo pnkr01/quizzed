@@ -46,6 +46,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                   function: () async {
                     Get.back();
                     Get.back();
+                    controller.timer?.cancel();
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(

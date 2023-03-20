@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,6 +12,8 @@ import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
+import 'package:quiz/theme/app_color.dart';
+import 'package:quiz/theme/gradient_theme.dart';
 
 import '../../../../utils/errordialog.dart';
 import '../components/otp/otp_screen.dart';
@@ -18,6 +21,7 @@ import '../components/otp/otp_screen.dart';
 class CommonAuthLogInController extends GetxController {
   late Rx<TextEditingController> regdNo;
   late Rx<TextEditingController> password;
+  late TextEditingController forgotRegd;
   RxBool isStartedLogginIn = false.obs;
   final FocusNode focusNodeRegdNo = FocusNode();
   final FocusNode focusNodePassword = FocusNode();
@@ -26,12 +30,84 @@ class CommonAuthLogInController extends GetxController {
   void onInit() {
     regdNo = TextEditingController().obs;
     password = TextEditingController().obs;
+    forgotRegd = TextEditingController();
     super.onInit();
   }
 
   clearLogInField() {
     regdNo.value.clear();
     password.value.clear();
+  }
+
+  forgotHelper() async {
+    quizDebugPrint('starting');
+    var response = await https.get(
+      Uri.parse(
+          ApiConfig.getEndPointsUrl('auth/request-regd-no/${forgotRegd.text}')),
+    );
+    var decode = jsonDecode(response.body);
+    quizDebugPrint(response.body);
+    if (decode["message"].toString().contains('User found.')) {
+      showDialog(
+        context: Get.context!,
+        builder: ((context) => AlertDialog(
+                  content: Text(
+                    "Your registration number is : ${decode["regdNo"]}",
+                    style: kBodyText3Style().copyWith(color: blackColor),
+                  ),
+                  actions: [
+                    ElevatedButton(
+                        onPressed: () async {
+                          await Clipboard.setData(
+                              ClipboardData(text: decode["regdNo"]));
+                          Get.back();
+                          Get.back();
+                          showSnackBar(
+                              'Copied ${decode["regdNo"]} to clipboard',
+                              greenColor,
+                              whiteColor);
+                          forgotRegd.clear();
+                        },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: kTeacherPrimaryColor),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.copy_rounded,
+                              size: 20,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Center(
+                                child: Text(
+                              "Copy",
+                              style: kBodyText3Style(),
+                            )),
+                          ],
+                        )),
+                  ],
+                )
+
+            // ErrorDialog(
+            //       color: kTeacherPrimaryColor,
+            //       message: 'Your Registration number is ${decode["regdNo"]}',
+            //     )
+
+            ),
+      );
+    } else {
+      Get.back();
+      Get.back();
+      forgotRegd.clear();
+      showDialog(
+          context: Get.context!,
+          builder: ((context) => ErrorDialog(
+                message: decode["message"],
+                color: kTeacherPrimaryColor,
+              )));
+    }
   }
 
   setCookie(response) async {

@@ -64,6 +64,8 @@ class DetailedQuizController extends GetxController {
     }
   }
 
+ 
+
   //fillQuizList(var list) {}
 
   navigateToQuizSessionScreen() {

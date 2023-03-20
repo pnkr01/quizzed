@@ -1,11 +1,8 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as https;
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/strings.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/profile/profile_view.dart';
@@ -14,8 +11,6 @@ import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import '../../../../../utils/size_configuration.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../global/shared.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
   const NavigationDrawerWidget({
@@ -27,28 +22,9 @@ class NavigationDrawerWidget extends StatefulWidget {
 }
 
 class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
-  Map<String, String> headers = {
-    'Content-Type': 'application/json',
-    'Cookie':
-        'Authentication=${sharedPreferences.getString('Scookie') ?? sharedPreferences.getString('Tcookie')}',
-    // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
-  };
   logoutUser() async {
-    try {
-      var response = await https.get(
-          Uri.parse(ApiConfig.getEndPointsUrl('auth/logout')),
-          headers: headers);
-      quizDebugPrint(response.body);
-      var decode = jsonDecode(response.body);
-      //handle logout..
-    } on FormatException catch (e) {
-      quizDebugPrint('format error');
-      showSnackBar(e, redColor, null);
-      quizDebugPrint(e);
-    } catch (e) {
-      showSnackBar(e, redColor, null);
-      quizDebugPrint(e);
-    }
+    LocalDB.removeLoacalDb();
+    Get.offAllNamed(CommmonAuthLogInRoute.routeName);
   }
 
   @override
