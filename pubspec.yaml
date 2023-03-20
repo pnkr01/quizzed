@@ -57,6 +57,7 @@ dependencies:
   pin_code_fields: ^7.4.0
   fancy_shimmer_image: ^2.0.2
   shimmer: ^2.0.0
+  never_behind_keyboard: ^1.0.2
 
 dev_dependencies:
   flutter_test:

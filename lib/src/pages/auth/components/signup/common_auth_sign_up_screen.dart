@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/auth/components/signup/components/student_components.dart';
 //import 'package:quiz/src/global/my_global.dart' as globals;
 import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
 
-import '../../../../../../../theme/app_color.dart';
+import '../../../../../theme/app_color.dart';
+import '../../../../../utils/quizAppBar.dart';
 import '../../controller/common_auth_register_controller.dart';
+import 'components/student_components.dart';
 import 'components/teacher_components.dart';
 
 class CommomAuthSignUpScreen extends StatefulWidget {
@@ -65,53 +65,52 @@ class _CommomAuthSignUpScreenState extends State<CommomAuthSignUpScreen>
       "Student",
       "Teacher",
     ];
-    return Scaffold(
-      
-      bottomSheet: SizedBox(
-        width: double.infinity,
-        height: 60,
-        child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape: const RoundedRectangleBorder(
-                  //  borderRadius: BorderRadius.circular(12), // <-- Radius
-                  ),
-              backgroundColor: kTeacherPrimaryColor,
-            ),
-            onPressed: () {
-              myController.isRegistering.value = false;
-              tabIndex.value == 0
-                  ? myController.checkForErrorAndRegisterForStudent()
-                  : myController.checkForErrorAndRegisterForTeacher();
-              tabIndex.value == 0
-                  ? myController.clearStudentField()
-                  : myController.clearTeacherField();
+    return Container(
+      child: Scaffold(
+        // bottomSheet: SizedBox(
+        //   width: double.infinity,
+        //   height: 60,
+        //   child: ElevatedButton(
+        //       style: ElevatedButton.styleFrom(
+        //         shape: const RoundedRectangleBorder(
+        //             //  borderRadius: BorderRadius.circular(12), // <-- Radius
+        //             ),
+        //         backgroundColor: kTeacherPrimaryColor,
+        //       ),
+        //       onPressed: () {
+        //         myController.isRegistering.value = false;
+        //         tabIndex.value == 0
+        //             ? myController.checkForErrorAndRegisterForStudent()
+        //             : myController.checkForErrorAndRegisterForTeacher();
+        //         tabIndex.value == 0
+        //             ? myController.clearStudentField()
+        //             : myController.clearTeacherField();
 
-              FocusScope.of(context).unfocus();
-            },
-            child: Obx(() => myController.isRegistering.value == true
-                ? Text(
-                    'Register',
-                    style: kBodyText3Style(),
-                  )
-                : const Center(
-                    child: CircularProgressIndicator(
-                      strokeWidth: 1,
-                      color: whiteColor,
-                    ),
-                  ))),
-      ),
-      appBar: const QuizAppbar(
-          appBarColor: kTeacherPrimaryColor,
-          titleText: 'Quizzed',
-          preferredSize: Size.fromHeight(57)),
-      //key: _scaffoldKey,
-      body: SafeArea(
-        child: Container(
-          color: Colors.white,
-          padding: const EdgeInsets.all(20.0),
+        //         FocusScope.of(context).unfocus();
+        //       },
+        //       child: Obx(() => myController.isRegistering.value == true
+        //           ? Text(
+        //               'Register',
+        //               style: kBodyText3Style(),
+        //             )
+        //           : const Center(
+        //               child: CircularProgressIndicator(
+        //                 strokeWidth: 1,
+        //                 color: whiteColor,
+        //               ),
+        //             ))),
+        // ),
+        appBar: const QuizAppbar(
+            appBarColor: kTeacherPrimaryColor,
+            titleText: 'Quizzed',
+            preferredSize: Size.fromHeight(57)),
+        //key: _scaffoldKey,
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: <Widget>[
               Container(
+                margin: const EdgeInsets.all(8),
                 height: 50,
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: TabBar(

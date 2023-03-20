@@ -24,9 +24,9 @@ class TeacherHome extends StatelessWidget {
       appBar: QuizAppbar(
         tariling: IconButton(
           onPressed: () {
-            log('teacher side notifi tap');
+            //log('teacher side notifi tap');
           },
-          icon: const Icon(Icons.notifications_active_outlined),
+          icon: const Icon(Icons.logout_outlined),
         ),
         appBarColor: kTeacherPrimaryLightColor,
         titleText: 'Quizzed',

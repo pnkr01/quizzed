@@ -40,6 +40,7 @@ class DetailedQuizController extends GetxController {
         Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/join/$quizID')),
         headers: headers);
     var decode = jsonDecode(response.body);
+    quizDebugPrint(response.statusCode);
     if (decode["statusCode"] >= 400) {
       log('401');
       isLoading.value = true;
@@ -47,7 +48,9 @@ class DetailedQuizController extends GetxController {
     } else if (decode["statusCode"] == 200) {
       //  print(decode);
       try {
+        joinModelList.isEmpty ? joinModelList.clear() : null;
         joinModelList.add(JoinedQuizModel.fromJson(decode));
+        quizDebugPrint(joinModelList);
       } on FormatException {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
@@ -56,11 +59,16 @@ class DetailedQuizController extends GetxController {
         showSnackBar(decode["message"], redColor, whiteColor);
       }
       isLoading.value = true;
+      quizDebugPrint('sending to quiz session');
       navigateToQuizSessionScreen();
     }
   }
 
+  //fillQuizList(var list) {}
+
   navigateToQuizSessionScreen() {
-    Get.off(() => JoinQuizSessionScreen(model: joinModelList[0]));
+    Get.off(() => JoinQuizSessionScreen(model: joinModelList[0]), arguments: [
+      {'quizID': joinModelList[0].data?.quizStats?.quizId}
+    ]);
   }
 }

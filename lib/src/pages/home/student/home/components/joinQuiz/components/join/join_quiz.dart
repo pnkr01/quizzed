@@ -44,7 +44,8 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                   label: const Text('Yes Leave :)'),
                   backgroundColor: kQuizPrimaryColor,
                   function: () async {
-                    // controller.handleEraseButton();
+                    Get.back();
+                    Get.back();
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(
@@ -100,6 +101,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                 ))),
         backgroundColor: kQuizPrimaryColor,
         appBar: const QuizAppbar(
+          leading: SizedBox(),
           appBarColor: kQuizPrimaryColor,
           titleText: 'Quizzed',
           preferredSize: Size.fromHeight(56),

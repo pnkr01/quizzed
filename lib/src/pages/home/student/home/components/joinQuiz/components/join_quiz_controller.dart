@@ -56,15 +56,15 @@ class JoinQuizCOntroller extends GetxController {
       if (decode["statusCode"] == 400) {
         isTapStartJoining.value = false;
         showSnackBar(decode["message"], redColor, whiteColor);
-      } else if (decode["quiz_id"] != null) {
+      } else if (decode["quiz_id"] != null && decode["status"] == "live") {
         //send to show deatil page about quiz.
         log(decode.toString());
         currentQuiz.isNotEmpty ? currentQuiz.clear() : null;
         currentQuiz.add(DetailedQuizJoinModel.fromJson(decode));
         navigateToDetailedPage();
-      } else {
+      } else if (decode["status"] == "completed") {
         isTapStartJoining.value = false;
-        showSnackBar(decode.toString(), redColor, whiteColor);
+        showSnackBar('Quiz is completed ', redColor, whiteColor);
       }
     } catch (e) {
       isTapStartJoining.value = false;

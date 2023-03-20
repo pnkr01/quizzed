@@ -5,15 +5,17 @@ import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/helper_widget.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/utils/quizTextField.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../utils/quizElevatedButon.dart';
 
 class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   const CommmonAuthLogInRoute({super.key});
   static const String routeName = '/commonAuthLogInRoute';
   @override
   Widget build(BuildContext context) {
+    Get.put(CommonAuthLogInController());
     return Scaffold(
       backgroundColor: kTeacherPrimaryColor,
       body: SafeArea(
@@ -33,35 +35,39 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                 SizedBox(
                   height: 20.h,
                 ),
-                EnsureVisibleWhenFocused(
-                    focusNode: controller.focusNodeRegdNo,
-                    child: QuizTextFormField(
-                      labelColor: whiteColor,
-                      labelText: 'Regd No',
-                      hintText: 'Enter Regd No.',
-                      borderColor: whiteColor,
-                      cursorColor: whiteColor,
-                      hintColor: whiteColor,
-                      isObscureText: false,
+                Obx(
+                  () => EnsureVisibleWhenFocused(
                       focusNode: controller.focusNodeRegdNo,
-                      controller: controller.regdNo,
-                    )),
+                      child: QuizTextFormField(
+                        labelColor: whiteColor,
+                        labelText: 'Regd No',
+                        hintText: 'Enter Regd No.',
+                        borderColor: whiteColor,
+                        cursorColor: whiteColor,
+                        hintColor: whiteColor,
+                        isObscureText: false,
+                        focusNode: controller.focusNodeRegdNo,
+                        controller: controller.regdNo.value,
+                      )),
+                ),
                 SizedBox(
                   height: 15.h,
                 ),
-                EnsureVisibleWhenFocused(
-                    focusNode: controller.focusNodePassword,
-                    child: QuizTextFormField(
-                      labelColor: whiteColor,
-                      labelText: 'Password',
-                      hintText: 'Enter password',
-                      borderColor: whiteColor,
-                      cursorColor: whiteColor,
-                      hintColor: whiteColor,
-                      isObscureText: true,
+                Obx(
+                  () => EnsureVisibleWhenFocused(
                       focusNode: controller.focusNodePassword,
-                      controller: controller.password,
-                    )),
+                      child: QuizTextFormField(
+                        labelColor: whiteColor,
+                        labelText: 'Password',
+                        hintText: 'Enter password',
+                        borderColor: whiteColor,
+                        cursorColor: whiteColor,
+                        hintColor: whiteColor,
+                        isObscureText: true,
+                        focusNode: controller.focusNodePassword,
+                        controller: controller.password.value,
+                      )),
+                ),
                 SizedBox(
                   height: 20.h,
                 ),
@@ -81,9 +87,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                     backgroundColor: whiteColor,
                     function: () {
                       controller.isStartedLogginIn.value = true;
-
                       controller.checkForErrorAndStartLoggingInUser();
-                      controller.clearThisField();
                       FocusScope.of(context).unfocus();
                     }),
                 SizedBox(

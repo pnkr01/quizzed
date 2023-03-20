@@ -28,7 +28,6 @@ class Data {
   Data({this.questions, this.quizStats});
 
   Data.fromJson(Map<String, dynamic> json) {
-    print('json --- $json');
     if (json['questions'] != null) {
       questions = <Questions>[];
       json['questions'].forEach((v) {

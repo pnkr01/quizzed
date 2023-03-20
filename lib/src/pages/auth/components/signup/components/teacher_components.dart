@@ -18,10 +18,10 @@ class TeacherSignUpScreen extends GetView<CommonAuthSignUpController> {
         Scrollable.ensureVisible(focusedCtx!,
             duration: const Duration(milliseconds: 200), curve: Curves.easeIn));
 
-    return SingleChildScrollView(
-      // keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: SingleChildScrollView(
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
         child: Column(
           children: [
             Container(
@@ -94,17 +94,48 @@ class TeacherSignUpScreen extends GetView<CommonAuthSignUpController> {
               controller: controller.tPassword.value,
             ),
             SizedBox(height: 14.h),
-            CustomTextFormField(
-              hintColor: kTeacherPrimaryColor,
-              contentColor: kTeacherPrimaryColor,
-              labelText: 'Confirm Password',
-              borderColor: kTeacherPrimaryColor,
-              cursorColor: kTeacherPrimaryColor,
-              labelColor: kTeacherPrimaryColor,
-              isObscureText: true,
-              controller: controller.tConfirmPassword.value,
+            Padding(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
+              child: CustomTextFormField(
+                hintColor: kTeacherPrimaryColor,
+                contentColor: kTeacherPrimaryColor,
+                labelText: 'Confirm Password',
+                borderColor: kTeacherPrimaryColor,
+                cursorColor: kTeacherPrimaryColor,
+                labelColor: kTeacherPrimaryColor,
+                isObscureText: true,
+                controller: controller.tConfirmPassword.value,
+              ),
             ),
-            SizedBox(height: 50.h),
+            const SizedBox(height: 14),
+            SizedBox(
+              height: 50,
+              width: double.infinity,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12), // <-- Radius
+                    ),
+                    backgroundColor: kTeacherPrimaryColor,
+                  ),
+                  onPressed: () {
+                    controller.isRegistering.value = false;
+                    controller.checkForErrorAndRegisterForTeacher();
+                    FocusScope.of(context).unfocus();
+                  },
+                  child: Obx(() => controller.isRegistering.value == true
+                      ? Text(
+                          'Register',
+                          style: kBodyText3Style(),
+                        )
+                      : const Center(
+                          child: CircularProgressIndicator(
+                            strokeWidth: 1,
+                            color: whiteColor,
+                          ),
+                        ))),
+            ),
           ],
         ),
       ),

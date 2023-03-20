@@ -5,6 +5,7 @@ class LocalDB {
     sharedPreferences.setString('regdNo', data["regdNo"]);
     sharedPreferences.setString('name', data["name"]);
     sharedPreferences.setString('phone', data["primaryPhone"] ?? "Unknown");
+    sharedPreferences.setString('type', "S");
   }
 
   static Future<void> saveTeacherData(Map<String, dynamic> data) async {
@@ -13,6 +14,7 @@ class LocalDB {
     sharedPreferences.setString('temail', data['email']);
     sharedPreferences.setString('tName', data['name']);
     sharedPreferences.setString('tPhone', data['primaryPhone']);
+    sharedPreferences.setString('type', "T");
     //return data;
   }
 

@@ -1,13 +1,14 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
-showSnackBar(String message, Color color, Color textColor) {
+showSnackBar(var message, Color color, Color? textColor) {
   return Get.rawSnackbar(
       title: GLobal.appName.toString(),
       messageText: Text(
-        message,
+        message.toString(),
         style: kBodyText3Style(),
       ),
       // message: message,
@@ -21,4 +22,10 @@ showSnackBar(String message, Color color, Color textColor) {
           // width: 10,
         ),
       ));
+}
+
+quizDebugPrint(var e) {
+  if (kDebugMode) {
+    print(e.toString());
+  }
 }

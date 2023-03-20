@@ -11,27 +11,27 @@ import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
-import 'package:quiz/utils/errordialog.dart';
 
+import '../../../../utils/errordialog.dart';
 import '../components/otp/otp_screen.dart';
 
 class CommonAuthLogInController extends GetxController {
-  late TextEditingController regdNo;
-  late TextEditingController password;
+  late Rx<TextEditingController> regdNo;
+  late Rx<TextEditingController> password;
   RxBool isStartedLogginIn = false.obs;
   final FocusNode focusNodeRegdNo = FocusNode();
   final FocusNode focusNodePassword = FocusNode();
 
   @override
   void onInit() {
-    regdNo = TextEditingController();
-    password = TextEditingController();
+    regdNo = TextEditingController().obs;
+    password = TextEditingController().obs;
     super.onInit();
   }
 
-  clearThisField() {
-    //regdNo.value.clear();
-    password.clear();
+  clearLogInField() {
+    regdNo.value.clear();
+    password.value.clear();
   }
 
   setCookie(response) async {
@@ -49,6 +49,7 @@ class CommonAuthLogInController extends GetxController {
   }
 
   navigateToSignUpScreen() {
+    clearLogInField();
     Get.toNamed(CommomAuthSignUpScreen.routeName);
   }
 
@@ -71,8 +72,8 @@ class CommonAuthLogInController extends GetxController {
     var response = await https.post(
       Uri.parse(ApiConfig.getEndPointsUrl('auth/login')),
       body: {
-        "regdNo": regdNo.text,
-        "password": password.text,
+        "regdNo": regdNo.value.text,
+        "password": password.value.text,
       },
     );
     log(response.statusCode.toString());
@@ -111,7 +112,7 @@ class CommonAuthLogInController extends GetxController {
       Get.toNamed(
         OTPScreen.routeName,
         arguments: [
-          {"regdNo": regdNo.text},
+          {"regdNo": regdNo.value.text},
           {"message": res["message"]},
         ],
       );
@@ -122,7 +123,9 @@ class CommonAuthLogInController extends GetxController {
   }
 
   checkForErrorAndStartLoggingInUser() {
-    if (regdNo.text.isNotEmpty && password.text.isNotEmpty) {
+    quizDebugPrint(regdNo.value.text);
+    quizDebugPrint(password.value.text);
+    if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
       log('hitting login Api');
       try {
         hitLoginApi();
