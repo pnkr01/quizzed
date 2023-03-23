@@ -58,13 +58,15 @@ class DetailedQuizController extends GetxController {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       }
-      isLoading.value = true;
+
       quizDebugPrint('sending to quiz session');
-      navigateToQuizSessionScreen();
+      Future.delayed(const Duration(seconds: 2), () {
+        quizDebugPrint('in future');
+        navigateToQuizSessionScreen();
+        isLoading.value = true;
+      });
     }
   }
-
- 
 
   //fillQuizList(var list) {}
 

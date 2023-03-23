@@ -1,22 +1,25 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 
+import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
+import '../../../../../../../../../model/joined_quiz.dart';
 import 'options.dart';
 
 class JoinQuizDesign extends GetView<JoinQuizSessionController> {
   const JoinQuizDesign({
     Key? key,
     required this.questionString,
+    required this.model,
     required this.questionLength,
     required this.options,
   }) : super(key: key);
 
   final String questionString;
+  final JoinedQuizModel model;
   final int questionLength;
   final List<String> options;
 
@@ -87,6 +90,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
           ...List.generate(
             options.length,
             (index) => Option(
+              model: model,
               index: index,
               text: options[index],
               press: () {},

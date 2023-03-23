@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/utils/size_configuration.dart';
+import 'package:get/get.dart';
+import 'package:shimmer/shimmer.dart';
+
+import '../theme/app_color.dart';
+import '../theme/gradient_theme.dart';
 
 class NewsCardSkelton extends StatelessWidget {
   const NewsCardSkelton({
@@ -8,75 +12,19 @@ class NewsCardSkelton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          height: getProportionateScreenHeight(50),
+    return Shimmer.fromColors(
+      baseColor: greyColor.withOpacity(0.8),
+      highlightColor: whiteColor.withOpacity(0.6),
+      period: const Duration(seconds: 2),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Container(
+          height: 200,
+          width: Get.width,
+          decoration: BoxDecoration(
+              color: greyColor.withOpacity(0.25),
+              borderRadius: const BorderRadius.all(Radius.circular(24))),
         ),
-        const Skeleton(height: 120, width: 120),
-        const SizedBox(width: 16.0),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              
-              SizedBox(height: getProportionateScreenHeight(50)),
-              const Skeleton(width: 80),
-              const SizedBox(height: 16.0 / 2),
-              const Skeleton(),
-              const SizedBox(height: 16.0 / 2),
-              const Skeleton(),
-              const SizedBox(height: 16.0 / 2),
-              Row(
-                children: const [
-                  Expanded(
-                    child: Skeleton(),
-                  ),
-                  SizedBox(width: 16.0),
-                  Expanded(
-                    child: Skeleton(),
-                  ),
-                ],
-              )
-            ],
-          ),
-        )
-      ],
-    );
-  }
-}
-
-class Skeleton extends StatelessWidget {
-  const Skeleton({Key? key, this.height, this.width}) : super(key: key);
-
-  final double? height, width;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width,
-      padding: const EdgeInsets.all(16.0 / 2),
-      decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.04),
-          borderRadius: const BorderRadius.all(Radius.circular(16.0))),
-    );
-  }
-}
-
-class CircleSkeleton extends StatelessWidget {
-  const CircleSkeleton({Key? key, this.size = 24}) : super(key: key);
-
-  final double? size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: size,
-      width: size,
-      decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor.withOpacity(0.04),
-        shape: BoxShape.circle,
       ),
     );
   }

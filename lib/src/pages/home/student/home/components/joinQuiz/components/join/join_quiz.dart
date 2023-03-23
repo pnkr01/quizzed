@@ -172,6 +172,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                     itemCount: model.data?.questions?.length,
                     onPageChanged: ((value) => controller.onPageChanged(value)),
                     itemBuilder: ((context, index) => JoinQuizDesign(
+                          model: model,
                           questionLength: model.data!.questions!.length,
                           options: model.data!.questions![index].options!,
                           questionString:

@@ -10,6 +10,10 @@ import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
 
+import '../../../db/local/local_db.dart';
+import '../../../global/global.dart';
+import '../../auth/components/login/common_auth_login_screen.dart';
+
 class TeacherHome extends StatelessWidget {
   const TeacherHome({super.key});
   static const String routeName = '/teacherHome';
@@ -24,6 +28,9 @@ class TeacherHome extends StatelessWidget {
       appBar: QuizAppbar(
         tariling: IconButton(
           onPressed: () {
+            quizDebugPrint('logout');
+            LocalDB.removeLoacalDb();
+            Get.offAllNamed(CommmonAuthLogInRoute.routeName);
             //log('teacher side notifi tap');
           },
           icon: const Icon(Icons.logout_outlined),

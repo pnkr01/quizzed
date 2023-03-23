@@ -5,7 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/model/quiz_detailed_join_model.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
@@ -57,12 +59,13 @@ class JoinQuizCOntroller extends GetxController {
   }
 
   checkThisQuizID() async {
+    quizDebugPrint('here');
     try {
       var response = await https.get(
           Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${quizID.value.text}')),
           headers: headers);
       var decode = jsonDecode(response.body);
-      print(decode);
+      quizDebugPrint("${decode}ddd");
       if (decode["statusCode"] == 400) {
         isTapStartJoining.value = false;
         showSnackBar(decode["message"], redColor, whiteColor);
@@ -81,6 +84,10 @@ class JoinQuizCOntroller extends GetxController {
       } else if (decode["status"] == "completed") {
         isTapStartJoining.value = false;
         showSnackBar('Quiz is completed ', redColor, whiteColor);
+      } else {
+        Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+        LocalDB.removeLoacalDb();
+        showSnackBar('Sessio Expired :)', greenColor, whiteColor);
       }
     } catch (e) {
       isTapStartJoining.value = false;

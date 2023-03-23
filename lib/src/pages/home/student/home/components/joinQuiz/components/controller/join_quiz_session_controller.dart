@@ -4,6 +4,8 @@ import 'package:http/http.dart' as https;
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -46,15 +48,20 @@ class JoinQuizSessionController extends GetxController {
         Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${getQuizID()}')),
         headers: headers);
     var decode = jsonDecode(response.body);
+    quizDebugPrint(
+        'updating in every 5 sec current quiz status is ${decode["status"]}');
     quizDebugPrint(decode["quiz_id"]);
-    quizDebugPrint(decode);
-    quizDebugPrint(getQuizID());
+    // quizDebugPrint(getQuizID());
     if (decode["quiz_id"] != null) {
       if ((decode['status']) == 'completed') {
         Get.offAll(() => const StudentHome());
         showSnackBar('Quiz is Completed', greenColor, whiteColor);
         timer?.cancel();
       }
+    } else {
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      showSnackBar('session expired', redColor, whiteColor);
+      timer?.cancel();
     }
   }
 
@@ -62,7 +69,9 @@ class JoinQuizSessionController extends GetxController {
   RxInt currentIdx = 0.obs;
 
   onPageChanged(newVal) {
-    print(newVal);
+    quizDebugPrint('chnaging page');
+    Get.find<OptionController>().correctOptionValue.value = 10;
+    //Get.find<OptionController>().;
     currentIdx.value = newVal;
   }
 }

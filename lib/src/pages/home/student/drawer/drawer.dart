@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/db/local/local_db.dart';
+import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
@@ -23,6 +24,7 @@ class NavigationDrawerWidget extends StatefulWidget {
 
 class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
   logoutUser() async {
+    quizDebugPrint('logout');
     LocalDB.removeLoacalDb();
     Get.offAllNamed(CommmonAuthLogInRoute.routeName);
   }

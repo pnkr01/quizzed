@@ -76,8 +76,8 @@ class AddQuizController extends GetxController {
       log(myjson.toString());
       log('adding this qs id into bucket------------------');
       try {
-        log('id----${myjson["_id"]}\n');
-        await hitBucketRequest(myjson["_id"]);
+        log('id----${myjson["question_id"]}\n');
+        await hitBucketRequest(myjson["question_id"]);
       } catch (e) {
         log(e.toString());
       }
@@ -119,25 +119,27 @@ class AddQuizController extends GetxController {
     }
   }
 
-  hitBucketRequest(String qsIs) async {
+  hitBucketRequest(String qsID) async {
+    quizDebugPrint(qsID);
     String putUrl =
         ApiConfig.getEndPointsNextUrl('quiz/add-question/${getQuizBucket()}');
-    log('post url-----------$putUrl');
+    //log('post url-----------$putUrl');
     Map<String, String> headers = {
       'Content-Type': 'application/json',
       'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}'
     };
     final bodyMsg = json.encode({
-      "question_db_id": qsIs,
+      "question_id": qsID,
     });
+    quizDebugPrint(bodyMsg);
     var response = await https.put(
       headers: headers,
       body: bodyMsg,
       Uri.parse(putUrl),
     );
     var decode = jsonDecode(response.body);
-    log('decoding qsID--------------');
-    log(decode.toString());
+    // log('decoding qsID--------------');
+    //log(decode.toString());
     handleThisQuizAdditon(decode);
   }
 }

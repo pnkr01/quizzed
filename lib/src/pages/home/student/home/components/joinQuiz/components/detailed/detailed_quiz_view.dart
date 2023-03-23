@@ -90,10 +90,12 @@ class DetailedQuizViewScreen extends GetView<DetailedQuizController> {
                             title: 'Quiz Duration',
                             subtitle: '${model.quizDuration} mins',
                           ),
-                          DetailedQuizHelper(
-                            title: 'Joined Student',
-                            subtitle: '${model.totalAppearedStudent}+ student',
-                          ),
+                          if (model.totalAppearedStudent! > 0)
+                            DetailedQuizHelper(
+                              title: 'Joined Student',
+                              subtitle:
+                                  '${model.totalAppearedStudent}+ student',
+                            ),
                           DetailedQuizHelper(
                             title: 'Quiz Status',
                             subtitle:
