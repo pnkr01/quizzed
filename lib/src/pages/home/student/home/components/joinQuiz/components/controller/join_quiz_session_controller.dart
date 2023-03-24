@@ -46,7 +46,7 @@ class JoinQuizSessionController extends GetxController {
         Uri.parse(ApiConfig.getEndPointsNextUrl(
             'quiz/get-remaining-time/${getQuizID()}')),
         headers: headers);
-    quizDebugPrint('resmainig time is ${response.body}');
+    //quizDebugPrint('resmainig time is ${response.body}');
     var decode = jsonDecode(response.body);
     //  quizDebugPrint(decode);
     //check for -5 time remaining then save the user and
@@ -54,17 +54,21 @@ class JoinQuizSessionController extends GetxController {
     if (decode["remainingMinutes"] - 5 <= 5) {
       quizTimer?.cancel();
       Get.offAllNamed(StudentHome.routeName);
-      showSnackBar('Your quiz is recorded', greenColor, whiteColor);
+      showSnackBar(
+          'Your quiz is submitted successfully', greenColor, whiteColor);
       //hit marks route.
     }
     getTime.value =
         '${decode["remainingMinutes"] - 5} : ${decode["remainingSeconds"]}';
+    return decode["remainingMinutes"];
   }
 
   checkingForLiveQuiz() async {
     try {
-      timer = Timer.periodic(const Duration(seconds: 5), (_) {
-        hitAndGetStatus();
+      timer = Timer.periodic(const Duration(seconds: 5), (_) async {
+        if ((await getRemainingTime()) - 5 <= 5) {
+          timer?.cancel();
+        }
         quizDebugPrint('printing');
       });
     } catch (e) {

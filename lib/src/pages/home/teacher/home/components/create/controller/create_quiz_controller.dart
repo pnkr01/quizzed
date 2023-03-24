@@ -18,15 +18,14 @@ class CreateQuizController extends GetxController {
   RxString selectedDuration = 'Select Duration'.obs;
   RxBool isSelectedDuration = false.obs;
   RxInt selectedMin = 0.obs;
-  late final Rx<TextEditingController> title = TextEditingController().obs;
-  late final Rx<TextEditingController> description =
-      TextEditingController().obs;
-  late final Rx<TextEditingController> section = TextEditingController().obs;
-  late final Rx<TextEditingController> semester = TextEditingController().obs;
-  late final Rx<TextEditingController> totalQs = TextEditingController().obs;
-  late final Rx<TextEditingController> marksPerQs = TextEditingController().obs;
-  late final Rx<TextEditingController> duration = TextEditingController().obs;
-  late final Rx<TextEditingController> search = TextEditingController().obs;
+  late final TextEditingController title = TextEditingController();
+  late final TextEditingController description = TextEditingController();
+  late final TextEditingController section = TextEditingController();
+  late final TextEditingController semester = TextEditingController();
+  late final TextEditingController totalQs = TextEditingController();
+  late final TextEditingController marksPerQs = TextEditingController();
+  late final TextEditingController duration = TextEditingController();
+  late final TextEditingController search = TextEditingController();
 
   final FocusNode focusNodeTitle = FocusNode();
   final FocusNode focusNodesection = FocusNode();
@@ -35,6 +34,19 @@ class CreateQuizController extends GetxController {
   final FocusNode focusNodeDtotalQs = FocusNode();
   final FocusNode focusNodemarksPerQs = FocusNode();
   final FocusNode focusNodeduration = FocusNode();
+
+  @override
+  void dispose() {
+    title.dispose();
+    description.dispose();
+    section.dispose();
+    semester.dispose();
+    totalQs.dispose();
+    marksPerQs.dispose();
+    duration.dispose();
+    search.dispose();
+    super.dispose();
+  }
 
   RxBool isFetching = true.obs;
   RxBool isCreating = true.obs;

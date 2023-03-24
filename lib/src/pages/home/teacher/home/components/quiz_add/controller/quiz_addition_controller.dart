@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
+import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ import 'package:quiz/src/global/shared.dart';
 
 class AddQuizController extends GetxController {
   dynamic arguments = Get.arguments;
-
+  RxString uploadText = 'Upload Image (OPTIONAL)'.obs;
   RxInt page = 0.obs;
   RxInt correctOptionValue = 0.obs;
   final Rx<Color> onTapColor1 = kTeacherPrimaryshadeColor.obs;
@@ -31,14 +32,27 @@ class AddQuizController extends GetxController {
   getSubjectCode() => arguments[3]["subjectCode"];
 
   final List<Widget> pageList = [];
+  RxBool isCreating = false.obs;
 
-  createThisQuiz() {
+  bool isAllBlanksFilled() {
+    return qsStatement.text.isNotEmpty &&
+        option1.text.isNotEmpty &&
+        option2.text.isNotEmpty &&
+        option3.text.isNotEmpty &&
+        option4.text.isNotEmpty;
+  }
+
+  Future createThisQuiz(PlatformFile? image) async {
     log('created this quiz====================>');
     //1. check for empty
     log('hit api------------->');
     log('');
     try {
-      hitQuizApi();
+      if (isAllBlanksFilled()) {
+        return hitQuizApi(image);
+      } else {
+        showSnackBar('fill all blanks', redColor, whiteColor);
+      }
     } catch (e) {
       showSnackBar(
         e.toString(),
@@ -48,9 +62,11 @@ class AddQuizController extends GetxController {
     }
   }
 
-  PlatformFile? pickedFile;
+  uploadImageAndStuff() {}
 
-  hitQuizApi() async {
+  //PlatformFile? pickedFile;
+
+  hitQuizApi(PlatformFile? image) async {
     var map = <String, dynamic>{};
 
     map['question_str'] = qsStatement.value.text.trim();
@@ -67,27 +83,57 @@ class AddQuizController extends GetxController {
       //'Content-Type': 'multipart/form-data',
       'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}'
     };
-    // final msg = json.encode({});
-    log('sending to create quiz in /create route');
-    log('start hitting create api ==============================>');
     try {
-      var response = await https.post(
-          Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/questions')),
-          headers: headers,
-          body: map);
-      var myjson = await jsonDecode(response.body);
-      log(myjson.toString());
-      log('adding this qs id into bucket------------------');
-      try {
-        log('id----${myjson["question_id"]}\n');
-        await hitBucketRequest(myjson["question_id"]);
-      } catch (e) {
-        log(e.toString());
+      https.MultipartRequest request;
+      final uri = Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/questions'));
+      if (image != null) {
+        quizDebugPrint('image ${image.toString()}');
+        // var stream = https.ByteStream(image.openRead());
+        // stream.cast();
+        // var length = await image.length();
+        //quizDebugPrint('length of image is $length');
+        request = https.MultipartRequest('POST', uri);
+        request.fields["question_str"] = qsStatement.value.text.trim();
+        request.fields["options[0]"] = option1.value.text.trim();
+        request.fields["options[1]"] = option2.value.text.trim();
+        request.fields["options[2]"] = option3.value.text.trim();
+        request.fields["options[3]"] = option4.value.text.trim();
+        request.fields["correct_option"] = correctOptionValue.value.toString();
+        request.fields["subject"] = getSubjectCode();
+
+        final File imageFile = File(image.path!);
+        final List<int> imageBytes = await imageFile.readAsBytes();
+
+        request.files.add(https.MultipartFile.fromBytes(
+          'file',
+          imageBytes,
+          filename: image.name,
+        ));
+        request.headers.addAll(headers);
+        var response = await request.send();
+        var responsed = await https.Response.fromStream(response);
+        final responseData = json.decode(responsed.body);
+        quizDebugPrint("${responseData.toString()}---------->");
+        addQuestionToQuiz(responseData);
+        //  if (response.statusCode == 200) {}
+      } else {
+        quizDebugPrint('no image');
+        var response = await https.post(uri, headers: headers, body: map);
+        var myjson = await jsonDecode(response.body);
+        addQuestionToQuiz(myjson);
+        log(myjson.toString());
       }
     } catch (e) {
       log(e.toString());
     }
-    log('after api------------------');
+  }
+
+  addQuestionToQuiz(var myjson) async {
+    try {
+      await hitBucketRequest(myjson["question_id"]);
+    } catch (e) {
+      log(e.toString());
+    }
   }
 
   clearThisController() {
@@ -114,6 +160,7 @@ class AddQuizController extends GetxController {
       } else {
         await clearThisController();
         correctOptionValue.value = 0;
+        isCreating.value = false;
         pageController.nextPage(
             duration: const Duration(seconds: 1), curve: Curves.ease);
       }

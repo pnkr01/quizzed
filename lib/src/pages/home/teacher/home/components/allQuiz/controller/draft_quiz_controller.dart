@@ -24,30 +24,29 @@ class DraftQuizController extends GetxController {
   };
 
   fetchDraftQuiz() async {
-    try {
-      print(sharedPreferences.getString('Tcookie'));
+    // try {
+    print(sharedPreferences.getString('Tcookie'));
 
-      var response = await https.get(
-        Uri.parse(ApiConfig.getEndPointsNextUrl(
-            'quiz/getall?status=draft&page=1&limit=10')),
-        headers: headers,
-      );
-      var decoded = jsonDecode(response.body);
-      // print(decoded);
-      draftList.isNotEmpty ? draftList.clear() : null;
-      log(decoded.toString().isEmpty.toString());
-      for (var obj in decoded) {
-        log(obj.toString());
-        draftList.add(QuizViewModel.fromJson(obj));
-      }
-      print('list----------');
-      // print(draftList[0]);
-      isFetching.value = false;
-    } catch (e) {
-      print('fetchDraftQuiz');
-      Get.back();
-      showSnackBar(e.toString(), redColor, whiteColor);
+    var response = await https.get(
+      Uri.parse(ApiConfig.getEndPointsNextUrl(
+          'quiz/getall?status=draft&page=1&limit=10')),
+      headers: headers,
+    );
+    var decoded = jsonDecode(response.body);
+    // print(decoded);
+    draftList.isNotEmpty ? draftList.clear() : null;
+    for (var obj in decoded) {
+      log(obj.toString());
+      draftList.add(QuizViewModel.fromJson(obj));
     }
+    print('list----------');
+    // print(draftList[0]);
+    isFetching.value = false;
+    // } catch (e) {
+    //   print('fetchDraftQuiz');
+    //   Get.back();
+    //   showSnackBar(e.toString(), redColor, whiteColor);
+    // }
   }
 
   refreshThisPage() async {

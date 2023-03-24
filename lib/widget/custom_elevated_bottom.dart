@@ -10,12 +10,14 @@ class MYElevatedButton extends StatelessWidget {
   final String label;
   final Color backgroundColor;
   final Color? textColor;
+  final Widget? labelWidget;
   final Function()? function;
   const MYElevatedButton({
     Key? key,
     required this.label,
     required this.backgroundColor,
     this.textColor,
+    this.labelWidget,
     required this.function,
   }) : super(key: key);
 
@@ -32,12 +34,13 @@ class MYElevatedButton extends StatelessWidget {
           backgroundColor: backgroundColor,
         ),
         onPressed: function,
-        child: Text(
-          label,
-          style: kElevatedButtonTextStyle().copyWith(
-            color: textColor ?? kOnElevatedButtonTextColor,
-          ),
-        ),
+        child: labelWidget ??
+            Text(
+              label,
+              style: kElevatedButtonTextStyle().copyWith(
+                color: textColor ?? kOnElevatedButtonTextColor,
+              ),
+            ),
       ),
     );
   }

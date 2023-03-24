@@ -1,17 +1,54 @@
+import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/shared.dart';
+import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
 import 'package:quiz/utils/quizTextField.dart';
 import 'package:quiz/widget/option_text_form_field.dart';
 import '../../../../../../../theme/app_color.dart';
 import '../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../utils/quizAppBar.dart';
-import '../../../../../../../widget/custom_elevated_bottom.dart';
 
-class QuizAdditionView extends GetView<AddQuizController> {
+class QuizAdditionView extends StatefulWidget {
   const QuizAdditionView({super.key});
   static const routeName = '/addQuizBucket';
+
+  @override
+  State<QuizAdditionView> createState() => _QuizAdditionViewState();
+}
+
+class _QuizAdditionViewState extends State<QuizAdditionView> {
+  var controller = Get.find<AddQuizController>();
+  PlatformFile? pickedFile;
+  bool isShowImage = false;
+  File? image;
+  var result;
+  handleFileUpload() async {
+    result = await FilePicker.platform.pickFiles();
+    if (result != null) {
+      controller.uploadText.value = 'Uploaded';
+      quizDebugPrint("$result---result");
+      quizDebugPrint("${pickedFile}ppppp");
+      setState(() {
+        pickedFile = result.files.first;
+      });
+      quizDebugPrint("${pickedFile!.path}--path");
+      setState(() {
+        isShowImage = !isShowImage;
+      });
+      image = File(pickedFile!.path ?? '');
+    } else {
+      showSnackBar('No Image selected', blackColor, whiteColor);
+    }
+  }
+
+  // Future<void> uploadImage() async {
+  //   var stream = https.ByteStream(image!.openRead());
+  //   stream.cast();
+  //   var length = await image!.length();
+  //   var uri = Uri.parse(uri)
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +75,8 @@ class QuizAdditionView extends GetView<AddQuizController> {
               ),
               height: 100,
               child: SingleChildScrollView(
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
                   child: Column(
@@ -107,14 +146,6 @@ class QuizAdditionView extends GetView<AddQuizController> {
                       const SizedBox(
                         height: 15,
                       ),
-                      Text(
-                        'Hi Prof. ${sharedPreferences.getString('tName')} you can start creating quiz',
-                        style: kBodyText3Style()
-                            .copyWith(color: kTeacherPrimaryColor),
-                      ),
-                      const SizedBox(
-                        height: 15,
-                      ),
                       Obx(
                         () => Text(
                           'This is ${controller.page.value + 1} question out of ${controller.getTotalQs()}',
@@ -130,7 +161,7 @@ class QuizAdditionView extends GetView<AddQuizController> {
                             color: kTeacherPrimaryColor,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(24))),
-                        height: 520,
+                        height: 500,
                         width: double.infinity,
                         child: PageView.builder(
                           controller: controller.pageController,
@@ -180,19 +211,39 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                                     width: 5,
                                                   ),
                                                   GestureDetector(
-                                                    onTap: () {
-                                                      //  controller.uploadImage();
-                                                    },
-                                                    child: Text(
-                                                      'Upload Image (OPTIONAL)',
-                                                      style: kBodyText3Style(),
-                                                    ),
-                                                  ),
+                                                      onTap: () {
+                                                        handleFileUpload();
+                                                        //  controller.uploadImage();
+                                                      },
+                                                      child: Obx(
+                                                        () => Text(
+                                                          controller
+                                                              .uploadText.value,
+                                                          style:
+                                                              kBodyText3Style(),
+                                                        ),
+                                                      )),
                                                 ],
                                               ),
                                               const SizedBox(
                                                 height: 2,
                                               ),
+                                              if (isShowImage)
+                                                Container(
+                                                  margin: const EdgeInsets.only(
+                                                      top: 8, bottom: 8),
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        const BorderRadius.all(
+                                                            Radius.circular(
+                                                                12)),
+                                                    child: Image.file(
+                                                      File(pickedFile!.path!),
+                                                      width: double.infinity,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
                                             ],
                                           ),
                                         ),
@@ -218,16 +269,88 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                           ),
                                           _createOption(),
                                           const SizedBox(
-                                            height: 8,
+                                            height: 15,
                                           ),
-                                          MYElevatedButton(
-                                            label: 'Create',
-                                            backgroundColor: whiteColor,
-                                            function: () {
-                                              controller.createThisQuiz();
+                                          GestureDetector(
+                                            onTap: () {
+                                              quizDebugPrint('e');
+                                              controller.isCreating.value =
+                                                  true;
+                                              controller
+                                                  .createThisQuiz(pickedFile)
+                                                  .then((value) {
+                                                pickedFile = null;
+                                                isShowImage = false;
+                                                controller.uploadText.value =
+                                                    'Upload Image (OPTIONAL)';
+                                              });
                                             },
-                                            textColor: kTeacherPrimaryColor,
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 4),
+                                              child: Container(
+                                                height: 45,
+                                                decoration: const BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                            Radius.circular(
+                                                                12)),
+                                                    color: whiteColor),
+                                                width: double.infinity,
+                                                child: Obx(() => controller
+                                                            .isCreating.value ==
+                                                        false
+                                                    ? Center(
+                                                        child: Text('Create',
+                                                            style: kBodyText10Style()
+                                                                .copyWith(
+                                                                    color:
+                                                                        kTeacherPrimaryColor)))
+                                                    : const Center(
+                                                        child: CircularProgressIndicator(
+                                                            color:
+                                                                kTeacherPrimaryColor,
+                                                            strokeWidth: 1),
+                                                      )),
+                                              ),
+                                            ),
                                           ),
+                                          // MYElevatedButton(
+                                          //   label: 'Create',
+                                          //   labelWidget: Obx(() => controller
+                                          //               .isCreating.value ==
+                                          //           true
+                                          //       ? const Center(
+                                          //           child:
+                                          //               CircularProgressIndicator(
+                                          //                   strokeWidth: 1,
+                                          //                   color: whiteColor),
+                                          //         )
+                                          //       : Center(
+                                          //           child: Text(
+                                          //             'Create',
+                                          //             style: kElevatedButtonTextStyle()
+                                          //                 .copyWith(
+                                          //                     color:
+                                          //                         kTeacherPrimaryColor),
+                                          //           ),
+                                          //         )),
+                                          //   backgroundColor: whiteColor,
+                                          //   function: () {
+                                          //     controller.isCreating.value ==
+                                          //         true;
+                                          // controller
+                                          //     .createThisQuiz(pickedFile)
+                                          //     .then((value) {
+                                          //   pickedFile = null;
+                                          //   isShowImage = false;
+                                          //   controller.uploadText.value =
+                                          //       'Upload Image (OPTIONAL)';
+                                          // });
+                                          //   },
+                                          //   textColor: kTeacherPrimaryColor,
+                                          // ),
                                           const SizedBox(
                                             height: 20,
                                           ),

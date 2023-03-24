@@ -9,18 +9,21 @@ class QuizDeatilsModel {
   String? createdBy;
   String? createdAt;
   String? updatedAt;
+  String? question_img;
 
-  QuizDeatilsModel(
-      {this.sId,
-      this.questionId,
-      this.questionStr,
-      this.questionImg,
-      this.options,
-      this.correctOption,
-      this.subject,
-      this.createdBy,
-      this.createdAt,
-      this.updatedAt});
+  QuizDeatilsModel({
+    this.sId,
+    this.questionId,
+    this.questionStr,
+    this.questionImg,
+    this.options,
+    this.correctOption,
+    this.subject,
+    this.createdBy,
+    this.createdAt,
+    this.updatedAt,
+    this.question_img,
+  });
 
   QuizDeatilsModel.fromJson(Map<String, dynamic> json) {
     sId = json['_id'];
@@ -33,6 +36,7 @@ class QuizDeatilsModel {
     createdBy = json['created_by'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
+    question_img = json['question_img'];
   }
 
   Map<String, dynamic> toJson() {

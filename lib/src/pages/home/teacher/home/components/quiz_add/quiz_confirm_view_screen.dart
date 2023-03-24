@@ -2,6 +2,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
@@ -38,7 +40,8 @@ class QuizAdditionScreen extends GetView<QuizAdditionController> {
                   label: const Text('Erase'),
                   backgroundColor: kTeacherPrimaryColor,
                   function: () async {
-                    controller.handleEraseButton();
+                    
+                    showSnackBar('delete now ', redColor, whiteColor);
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(

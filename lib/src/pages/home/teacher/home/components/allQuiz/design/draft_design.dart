@@ -222,13 +222,6 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
                                   ),
                                   backgroundColor: greenColor,
                                   function: () {
-                                    log('yes');
-                                    showDialog(
-                                        context: Get.context!,
-                                        builder: ((context) =>
-                                            const LoadingDialog(
-                                                message:
-                                                    'Deleting.. Please wait')));
                                     controller.handleDeleteButton(controller
                                         .draftList[index].quizId
                                         .toString());

@@ -60,16 +60,19 @@ class Questions {
   String? createdBy;
   String? createdAt;
   String? updatedAt;
+  String? qsImage;
 
-  Questions(
-      {this.sId,
-      this.questionId,
-      this.questionStr,
-      this.options,
-      this.subject,
-      this.createdBy,
-      this.createdAt,
-      this.updatedAt});
+  Questions({
+    this.sId,
+    this.questionId,
+    this.questionStr,
+    this.options,
+    this.subject,
+    this.createdBy,
+    this.createdAt,
+    this.updatedAt,
+    this.qsImage,
+  });
 
   Questions.fromJson(Map<String, dynamic> json) {
     sId = json['_id'];
@@ -80,6 +83,7 @@ class Questions {
     createdBy = json['created_by'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
+    qsImage = json['question_img'];
   }
 
   Map<String, dynamic> toJson() {

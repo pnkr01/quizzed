@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/theme/app_color.dart';
 import '../theme/gradient_theme.dart';
 
 class OptionTextFormField extends StatefulWidget {
@@ -35,7 +36,11 @@ class _OptionTextFormFieldState extends State<OptionTextFormField> {
       decoration: InputDecoration(
         focusColor: whiteColor,
         labelText: widget.labelText,
+        contentPadding: const EdgeInsets.symmetric(vertical: 10.0),
         labelStyle: kBodyText3Style(),
+        focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(
+                color: kTeacherPrimaryColor, style: BorderStyle.solid)),
         enabledBorder: const OutlineInputBorder(
           // borderRadius: BorderRadius.all(
           //   Radius.circular(14.r),

@@ -15,6 +15,7 @@ import '../join/join_quiz.dart';
 class DetailedQuizController extends GetxController {
   RxBool isLoading = true.obs;
   RxBool isSrolling = false.obs;
+  JoinedQuizModel? model;
 
   List<JoinedQuizModel> joinModelList = [];
 
@@ -48,9 +49,8 @@ class DetailedQuizController extends GetxController {
     } else if (decode["statusCode"] == 200) {
       //  print(decode);
       try {
-        joinModelList.isEmpty ? joinModelList.clear() : null;
-        joinModelList.add(JoinedQuizModel.fromJson(decode));
-        quizDebugPrint(joinModelList);
+        quizDebugPrint(decode);
+        model = JoinedQuizModel.fromJson(decode);
       } on FormatException {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
@@ -60,18 +60,15 @@ class DetailedQuizController extends GetxController {
       }
 
       quizDebugPrint('sending to quiz session');
-      Future.delayed(const Duration(seconds: 2), () {
-        quizDebugPrint('in future');
-        navigateToQuizSessionScreen(quizID);
-        isLoading.value = true;
-      });
+      navigateToQuizSessionScreen(quizID);
+      isLoading.value = true;
     }
   }
 
   //fillQuizList(var list) {}
 
   navigateToQuizSessionScreen(String quizID) {
-    Get.off(() => JoinQuizSessionScreen(model: joinModelList[0]), arguments: [
+    Get.off(() => JoinQuizSessionScreen(model: model!), arguments: [
       {'quizID': quizID}
     ]);
   }

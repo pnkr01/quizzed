@@ -39,36 +39,36 @@ class QuizAdditionController extends GetxController {
     ]);
   }
 
-  handleEraseButton() async {
-    try {
-      //log('er');
-      Map<String, String> headers = {
-        'Content-Type': 'application/json',
-        'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}',
-        // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
-      };
-      var response = await https.delete(
-        Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${getQuizId()}')),
-        headers: headers,
-      );
-      print(response.body);
-      var decode = jsonDecode(response.body);
-      if (decode["message"].toString().contains('Draft deleted succesfully')) {
-        Get.offAllNamed(TeacherHome.routeName);
-        Future.delayed(const Duration(seconds: 1), () {
-          showSnackBar('Deleted Sucesfully :)', greenColor, whiteColor);
-        });
-      } else {
-        Get.offAllNamed(TeacherHome.routeName);
-        Future.delayed(const Duration(seconds: 1), () {
-          showSnackBar('Network Error :)', redColor, whiteColor);
-        });
-      }
-    } catch (e) {
-      Get.offAllNamed(TeacherHome.routeName);
-      Future.delayed(const Duration(seconds: 1), () {
-        showSnackBar('Network Error :)', redColor, whiteColor);
-      });
-    }
-  }
+  // handleEraseButton() async {
+  //   try {
+  //     //log('er');
+  //     Map<String, String> headers = {
+  //       'Content-Type': 'application/json',
+  //       'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}',
+  //       // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
+  //     };
+  //     var response = await https.delete(
+  //       Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${getQuizId()}')),
+  //       headers: headers,
+  //     );
+  //     print(response.body);
+  //     var decode = jsonDecode(response.body);
+  //     if (decode["statusCode"] == 200) {
+  //       Get.offAllNamed(TeacherHome.routeName);
+  //       Future.delayed(const Duration(seconds: 1), () {
+  //         showSnackBar('Deleted Sucesfully :)', greenColor, whiteColor);
+  //       });
+  //     } else {
+  //       Get.offAllNamed(TeacherHome.routeName);
+  //       Future.delayed(const Duration(seconds: 1), () {
+  //         showSnackBar('Network Error :)', redColor, whiteColor);
+  //       });
+  //     }
+  //   } catch (e) {
+  //     Get.offAllNamed(TeacherHome.routeName);
+  //     Future.delayed(const Duration(seconds: 1), () {
+  //       showSnackBar('Network Error :)', redColor, whiteColor);
+  //     });
+  //   }
+  // }
 }

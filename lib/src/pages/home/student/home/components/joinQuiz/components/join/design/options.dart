@@ -5,7 +5,6 @@ import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
 
 import '../../../../../../../../../../theme/gradient_theme.dart';
-import '../../../../../../../../../global/shared.dart';
 import '../../../../../../../../../model/joined_quiz.dart';
 
 class Option extends StatefulWidget {

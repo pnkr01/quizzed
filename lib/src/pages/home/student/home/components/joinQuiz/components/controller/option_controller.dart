@@ -7,6 +7,7 @@ import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/model/result_model.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:http/http.dart' as https;
+import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/marks_obtained.dart';
@@ -33,8 +34,9 @@ class OptionController extends GetxController {
       quizDebugPrint('last qs submit this quiz');
       var newController = Get.find<JoinQuizSessionController>();
       newController.timer?.cancel();
-      CustomCircleLoading.showDialog();
-      hitAndGetMark(model.data!.quizStats!.quizId!);
+      //CustomCircleLoading.showDialog();
+      //hitAndGetMark(model.data!.quizStats!.quizId!);
+      Get.offAllNamed(StudentHome.routeName);
     } else {
       controller.pageController.nextPage(
           duration: const Duration(milliseconds: 500), curve: Curves.easeIn);

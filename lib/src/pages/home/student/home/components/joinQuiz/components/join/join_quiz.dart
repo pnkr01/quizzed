@@ -13,6 +13,7 @@ import '../../../../../../../../../utils/quizElevatedButon.dart';
 import 'design/join_quiz_design.dart';
 
 class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
+  static String routeName = '/joinQuiz';
   const JoinQuizSessionScreen({
     Key? key,
     required this.model,
@@ -187,6 +188,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                     itemCount: model.data?.questions?.length,
                     onPageChanged: ((value) => controller.onPageChanged(value)),
                     itemBuilder: ((context, index) => JoinQuizDesign(
+                          index: index,
                           model: model,
                           questionLength: model.data!.questions!.length,
                           options: model.data!.questions![index].options!,

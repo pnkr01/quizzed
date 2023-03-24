@@ -16,11 +16,13 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
     required this.model,
     required this.questionLength,
     required this.options,
+    required this.index,
   }) : super(key: key);
 
   final String questionString;
   final JoinedQuizModel model;
   final int questionLength;
+  final int index;
   final List<String> options;
 
   @override
@@ -40,7 +42,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
               borderRadius: const BorderRadius.all(Radius.circular(12)),
               child: CachedNetworkImage(
                 fit: BoxFit.cover,
-                imageUrl:
+                imageUrl: model.data?.questions![index].qsImage ??
                     'https://img.freepik.com/free-vector/exams-concept-illustration_114360-2754.jpg?w=740&t=st=1678810269~exp=1678810869~hmac=6c3db4b7a66ed4eccbb08b9928325dc739dbe64f41ed6176d749d6d406efad63',
               ),
             ),

@@ -1,8 +1,10 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:quiz/src/model/quiz_details.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quiz/utils/shimmer.dart';
 
 class DesignOnTapDetailsQuizComponent extends StatelessWidget {
   const DesignOnTapDetailsQuizComponent({
@@ -22,43 +24,63 @@ class DesignOnTapDetailsQuizComponent extends StatelessWidget {
       margin: const EdgeInsets.only(top: 4),
       color: kTeacherPrimaryLightColor,
       child: SizedBox(
-        height: 250,
+        //height: 250,
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Question ${index + 1}',
-                style: kBodyText3Style().copyWith(fontSize: 18),
-              ),
-              const SizedBox(
-                height: 4,
-              ),
-              Text(
-                '${model.questionStr}',
-                maxLines: 1,
-                style: kBodyText3Style().copyWith(fontSize: 12),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Options',
-                style: kBodyText1Style(),
-              ),
-              const SizedBox(
-                height: 14,
-              ),
-              ...List.generate(
-                4,
-                (index) => OptionCard(
-                  text: model.options![index],
-                  ans: model.correctOption!,
-                  index: index,
+              if (model.question_img != null)
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                    child: CachedNetworkImage(
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => const NewsCardSkelton(),
+                      imageUrl: '${model.question_img}',
+                    ),
+                  ),
                 ),
-              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8.0, 0, 8, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Question ${index + 1}',
+                      style: kBodyText3Style().copyWith(fontSize: 18),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      '${model.questionStr}',
+                      maxLines: 1,
+                      style: kBodyText3Style().copyWith(fontSize: 12),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Options',
+                      style: kBodyText1Style(),
+                    ),
+                    const SizedBox(
+                      height: 14,
+                    ),
+                    ...List.generate(
+                      4,
+                      (index) => OptionCard(
+                        text: model.options![index],
+                        ans: model.correctOption!,
+                        index: index,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         ),

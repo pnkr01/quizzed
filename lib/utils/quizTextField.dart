@@ -40,7 +40,7 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: (value) {
-        FocusScope.of(context).unfocus();
+        widget.focusNode?.unfocus();
       },
       focusNode: widget.focusNode,
       // scrollPhysics: const NeverScrollableScrollPhysics(),

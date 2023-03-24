@@ -27,7 +27,7 @@ class QuizAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: appBarColor ?? whiteColor,
       title: Text(
         titleText,
-        style: kAppBarTextStyle(),
+        style: kAppBarTextStyle().copyWith(fontSize: 18),
       ),
       centerTitle: true,
       leading: leading ??
@@ -35,7 +35,7 @@ class QuizAppbar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {
               Get.back();
             },
-            icon: const Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_ios, size: 20),
             color: whiteColor,
           ),
     );
