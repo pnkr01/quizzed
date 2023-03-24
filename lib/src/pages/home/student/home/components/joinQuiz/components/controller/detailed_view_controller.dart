@@ -62,7 +62,7 @@ class DetailedQuizController extends GetxController {
       quizDebugPrint('sending to quiz session');
       Future.delayed(const Duration(seconds: 2), () {
         quizDebugPrint('in future');
-        navigateToQuizSessionScreen();
+        navigateToQuizSessionScreen(quizID);
         isLoading.value = true;
       });
     }
@@ -70,9 +70,9 @@ class DetailedQuizController extends GetxController {
 
   //fillQuizList(var list) {}
 
-  navigateToQuizSessionScreen() {
+  navigateToQuizSessionScreen(String quizID) {
     Get.off(() => JoinQuizSessionScreen(model: joinModelList[0]), arguments: [
-      {'quizID': joinModelList[0].data?.quizStats?.quizId}
+      {'quizID': quizID}
     ]);
   }
 }

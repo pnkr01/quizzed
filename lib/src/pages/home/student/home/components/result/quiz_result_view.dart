@@ -1,15 +1,13 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/pages/home/student/home/components/result/controller/quiz_result_controller.dart';
 import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quiz/utils/quizTextField.dart';
 
 import '../../../../../../../theme/app_color.dart';
 import '../../../../../../../utils/quizAppBar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../../../utils/shimmer.dart';
-
-class QuizResultView extends StatelessWidget {
+class QuizResultView extends GetView<QuizResultScreenController> {
   const QuizResultView({super.key});
   static const String routeName = '/studentQuizResult';
 
@@ -25,13 +23,18 @@ class QuizResultView extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   backgroundColor: kTeacherPrimaryColor),
               onPressed: () {
+                controller.isLoading.value = true;
                 //  controller.isTapStartJoining.value = true;
-                Focus.of(context).unfocus();
-                Get.back();
+                controller.fetchResult();
               },
-              child: Text(
-                'Okay',
-                style: kAppBarTextStyle(),
+              child: Obx(
+                () => controller.isLoading.value == true
+                    ? const Center(
+                        child: CircularProgressIndicator(
+                        strokeWidth: 1,
+                        color: whiteColor,
+                      ))
+                    : Text('Okay', style: kBodyText2Style()),
               ),
             ),
           ),
@@ -44,20 +47,18 @@ class QuizResultView extends StatelessWidget {
         ),
         body: Column(
           children: [
-            SizedBox(
-              height: 100.h,
-            ),
-            CachedNetworkImage(
-                placeholder: (context, url) => const NewsCardSkelton(),
-                imageUrl:
-                    'https://img.freepik.com/free-vector/business-team-looking-new-people-allegory-searching-ideas-staff-woman-with-magnifier-man-with-spyglass-flat-illustration_74855-18236.jpg?w=996&t=st=1677866505~exp=1677867105~hmac=27d845f87e695a7dcf46c8fb0e6cf64b5a4e2060b5072e4e328272a7de36924d'),
-            SizedBox(
-              height: 20.h,
-            ),
-            Center(
-              child: Text(
-                'No Result found',
-                style: kBodyText3Style().copyWith(color: kTeacherPrimaryColor),
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: QuizTextFormField(
+                contentColor: kTeacherPrimaryColor,
+                labelText: 'Quiz ID',
+                hintText: 'Enter quizID',
+                borderColor: kQuizPrimaryColor,
+                cursorColor: kQuizPrimaryColor,
+                hintColor: kQuizPrimaryColor,
+                isObscureText: false,
+                controller: controller.quizID,
               ),
             ),
           ],

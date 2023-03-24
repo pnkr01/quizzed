@@ -12,15 +12,17 @@ class MarksObtained extends StatelessWidget {
   const MarksObtained({
     Key? key,
     required this.resultModal,
+    this.isComingFromResult = false,
   }) : super(key: key);
   final ResultModal resultModal;
+  final bool? isComingFromResult;
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       key: key,
       title: Text(
-        resultModal.message.toString().replaceRange(0, 5, 'Your'),
+        '${resultModal.message}',
         style: kBodyText3Style().copyWith(color: blackColor),
       ),
       content: Padding(
@@ -35,8 +37,10 @@ class MarksObtained extends StatelessWidget {
         ElevatedButton(
           onPressed: () {
             Get.offAllNamed(StudentHome.routeName);
-            var controller = Get.find<JoinQuizSessionController>();
-            controller.timer?.cancel();
+            if (isComingFromResult == false) {
+              var controller = Get.find<JoinQuizSessionController>();
+              controller.timer?.cancel();
+            }
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: kTeacherPrimaryColor,

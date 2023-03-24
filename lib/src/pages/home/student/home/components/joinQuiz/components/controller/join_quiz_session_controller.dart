@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
@@ -20,10 +20,46 @@ class JoinQuizSessionController extends GetxController {
   @override
   void onInit() {
     checkingForLiveQuiz();
+    startLocalTimer();
     super.onInit();
   }
 
+  RxString getTime = '0 : 0'.obs;
+
+  startLocalTimer() async {
+    quizTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+      try {
+        getRemainingTime();
+      } catch (e) {
+        quizTimer?.cancel();
+      }
+    });
+  }
+
+  updateNewTime() {}
+
   Timer? timer;
+  Timer? quizTimer;
+
+  Future getRemainingTime() async {
+    https.Response response = await https.get(
+        Uri.parse(ApiConfig.getEndPointsNextUrl(
+            'quiz/get-remaining-time/${getQuizID()}')),
+        headers: headers);
+    quizDebugPrint('resmainig time is ${response.body}');
+    var decode = jsonDecode(response.body);
+    //  quizDebugPrint(decode);
+    //check for -5 time remaining then save the user and
+    //cancel timer.
+    if (decode["remainingMinutes"] - 5 <= 5) {
+      quizTimer?.cancel();
+      Get.offAllNamed(StudentHome.routeName);
+      showSnackBar('Your quiz is recorded', greenColor, whiteColor);
+      //hit marks route.
+    }
+    getTime.value =
+        '${decode["remainingMinutes"] - 5} : ${decode["remainingSeconds"]}';
+  }
 
   checkingForLiveQuiz() async {
     try {

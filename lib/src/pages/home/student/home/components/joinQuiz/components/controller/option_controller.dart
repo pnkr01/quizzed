@@ -97,9 +97,9 @@ class OptionController extends GetxController {
     // sharedPreferences.setInt(controller.currentIdx.value.toString(), val);
   }
 
-  clearAnswerDb(JoinedQuizModel model) {
-    for (int i = 0; i < model.data!.questions!.length; i++) {
-      sharedPreferences.remove(i.toString());
-    }
-  }
+  // clearAnswerDb(JoinedQuizModel model) {
+  //   for (int i = 0; i < model.data!.questions!.length; i++) {
+  //     sharedPreferences.remove(i.toString());
+  //   }
+  // }
 }

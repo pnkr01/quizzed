@@ -179,9 +179,14 @@ class QuizAdditionView extends GetView<AddQuizController> {
                                                   const SizedBox(
                                                     width: 5,
                                                   ),
-                                                  Text(
-                                                    'Upload Image (OPTIONAL)',
-                                                    style: kBodyText3Style(),
+                                                  GestureDetector(
+                                                    onTap: () {
+                                                      //  controller.uploadImage();
+                                                    },
+                                                    child: Text(
+                                                      'Upload Image (OPTIONAL)',
+                                                      style: kBodyText3Style(),
+                                                    ),
                                                   ),
                                                 ],
                                               ),

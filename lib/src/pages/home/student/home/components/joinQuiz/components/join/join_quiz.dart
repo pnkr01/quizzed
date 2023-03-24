@@ -101,11 +101,26 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                       )),
                 ))),
         backgroundColor: kQuizPrimaryColor,
-        appBar: const QuizAppbar(
-          leading: SizedBox(),
+        appBar: QuizAppbar(
+          leading: const SizedBox(),
           appBarColor: kQuizPrimaryColor,
           titleText: 'Quizzed',
-          preferredSize: Size.fromHeight(56),
+          preferredSize: const Size.fromHeight(56),
+          tariling: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: const BoxDecoration(
+                  color: whiteColor,
+                  borderRadius: BorderRadius.all(Radius.circular(12))),
+              child: Obx(() => Center(
+                    child: Text(
+                      controller.getTime.value,
+                      style: kDesignSmallTextStyle(),
+                    ),
+                  )),
+            ),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

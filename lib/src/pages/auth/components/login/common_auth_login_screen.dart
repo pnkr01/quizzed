@@ -90,15 +90,12 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
             padding: EdgeInsets.all(25.w),
             child: Column(
               children: [
-                SizedBox(
-                  height: 20.h,
-                ),
                 Image.asset(
                   kLogoPath,
-                  width: 150.w,
+                  width: 120.w,
                 ),
-                SizedBox(
-                  height: 20.h,
+                const SizedBox(
+                  height: 20,
                 ),
                 Obx(
                   () => EnsureVisibleWhenFocused(
@@ -115,8 +112,8 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                         controller: controller.regdNo.value,
                       )),
                 ),
-                SizedBox(
-                  height: 15.h,
+                const SizedBox(
+                  height: 15,
                 ),
                 Obx(
                   () => EnsureVisibleWhenFocused(
@@ -133,8 +130,8 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                         controller: controller.password.value,
                       )),
                 ),
-                SizedBox(
-                  height: 20.h,
+                const SizedBox(
+                  height: 15,
                 ),
                 QuizElevatedButton(
                     label: Obx(() => controller.isStartedLogginIn == false
@@ -155,8 +152,8 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                       controller.checkForErrorAndStartLoggingInUser();
                       FocusScope.of(context).unfocus();
                     }),
-                SizedBox(
-                  height: 10.h,
+                const SizedBox(
+                  height: 10,
                 ),
                 QuizElevatedButton(
                     label: Text(
