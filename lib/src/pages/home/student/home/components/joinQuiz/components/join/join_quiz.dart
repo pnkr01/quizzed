@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import 'package:quiz/src/model/joined_quiz.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
+import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
@@ -23,6 +24,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
 
   @override
   Widget build(BuildContext context) {
+    var otpController = Get.find<OptionController>();
     return WillPopScope(
       onWillPop: () async => await showDialog(
         context: context,
@@ -62,46 +64,39 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
         ),
       ),
       child: Scaffold(
-        bottomSheet: BottomSheet(
-            backgroundColor: kQuizLightPrimaryColor,
-            onClosing: () {},
-            builder: ((context) => Container(
-                  color: kQuizLightPrimaryColor,
-                  height: 50,
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            const Color.fromARGB(255, 224, 119, 189),
-                        shape: const RoundedRectangleBorder(),
-                      ),
-                      onPressed: () {
-                        print(
-                            'current${controller.currentIdx.value} ${model.data?.questions?.length} m');
-                        if (controller.currentIdx.value ==
-                            (model.data!.questions!.length - 1)) {
-                          log('last qs');
-                          log('submit qs screen');
-                        } else {
-                          controller.pageController.nextPage(
-                              duration: const Duration(milliseconds: 500),
-                              curve: Curves.easeIn);
-                        }
-                      },
-                      child: Obx(
-                        () => controller.currentIdx.value ==
-                                model.data!.questions!.length - 1
-                            ? Text(
-                                'Submit',
-                                style: kBodyText11Style(),
-                              )
-                            : Text(
-                                'Continue',
-                                style: kBodyText11Style(),
-                              ),
-                      )),
-                ))),
-        backgroundColor: kQuizPrimaryColor,
+        // bottomSheet: Container(
+        //   margin: const EdgeInsets.symmetric(horizontal: 10),
+        //   child: BottomSheet(
+        //       backgroundColor: kQuizLightPrimaryColor,
+        //       onClosing: () {},
+        //       builder: ((context) => Container(
+        //             color: kQuizLightPrimaryColor,
+        //             height: 50,
+        //             width: double.infinity,
+        //             child: ElevatedButton(
+        //                 style: ElevatedButton.styleFrom(
+        //                   backgroundColor:
+        //                       const Color.fromARGB(255, 224, 119, 189),
+        //                   shape: const RoundedRectangleBorder(),
+        //                 ),
+        //                 onPressed: () {
+        //                   //optionController.changePage(model);
+        //                 },
+        //                 child: Obx(
+        //                   () => controller.currentIdx.value ==
+        //                           model.data!.questions!.length - 1
+        //                       ? Text(
+        //                           'Submit',
+        //                           style: kBodyText11Style(),
+        //                         )
+        //                       : Text(
+        //                           'Continue',
+        //                           style: kBodyText11Style(),
+        //                         ),
+        //                 )),
+        //           ))),
+        // ),
+        backgroundColor: whiteColor,
         appBar: QuizAppbar(
           leading: const SizedBox(),
           appBarColor: kQuizPrimaryColor,
@@ -115,11 +110,17 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                   color: whiteColor,
                   borderRadius: BorderRadius.all(Radius.circular(12))),
               child: Obx(() => Center(
-                    child: Text(
-                      controller.getTime.value,
-                      style: kDesignSmallTextStyle(),
-                    ),
-                  )),
+                      child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Icon(Icons.timer, color: kTeacherPrimaryColor),
+                      const SizedBox(width: 4),
+                      Text(
+                        controller.getTime.value,
+                        style: kDesignSmallTextStyle(),
+                      ),
+                    ],
+                  ))),
             ),
           ),
         ),
@@ -172,16 +173,12 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
               const SizedBox(
                 height: 10,
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Expanded(
+              SizedBox(
+                height: 480,
                 child: Card(
                   elevation: 50,
                   shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          topRight: Radius.circular(12))),
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
                   color: kQuizLightPrimaryColor,
                   child: PageView.builder(
                     controller: controller.pageController,
@@ -198,6 +195,14 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                   ),
                 ),
               ),
+              const SizedBox(height: 25),
+              QuizElevatedButton(
+                label: Text('Next', style: kBodyText11Style()),
+                backgroundColor: kTeacherPrimaryLightColor,
+                function: () {
+                  otpController.changePage(model);
+                },
+              )
             ],
           ),
         ),

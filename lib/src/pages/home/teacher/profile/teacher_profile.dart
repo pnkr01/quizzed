@@ -25,9 +25,6 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
       ),
       body: Column(
         children: [
-          SizedBox(
-            height: 20.h,
-          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -140,7 +137,7 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
                                                   height: 10,
                                                 ),
                                                 Text(
-                                                  '2nd CR',
+                                                  '1st CR',
                                                   style: kBodyText3Style(),
                                                 ),
                                               ],

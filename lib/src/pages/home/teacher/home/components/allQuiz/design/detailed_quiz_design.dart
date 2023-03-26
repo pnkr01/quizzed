@@ -65,7 +65,7 @@ class DesignOnTapDetailsQuizComponent extends StatelessWidget {
                     ),
                     Text(
                       'Options',
-                      style: kBodyText1Style(),
+                      style: kBodyText0Style(),
                     ),
                     const SizedBox(
                       height: 14,

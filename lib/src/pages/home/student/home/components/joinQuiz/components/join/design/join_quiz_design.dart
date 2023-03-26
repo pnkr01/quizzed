@@ -28,7 +28,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -36,7 +36,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
             height: 150,
             width: double.infinity,
             decoration: const BoxDecoration(
-                color: kQuizLightPrimaryColor,
+                color: kTeacherPrimaryColor,
                 borderRadius: BorderRadius.all(Radius.circular(12))),
             child: ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(12)),
@@ -84,11 +84,11 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
             ),
           ),
           const SizedBox(
-            height: 14,
+            height: 20,
           ),
           Text('${questionString.toString().capitalizeFirst}',
               style: kBodyText11Style()),
-          const SizedBox(height: 10),
+          //  const SizedBox(height: 10),
           ...List.generate(
             options.length,
             (index) => Option(

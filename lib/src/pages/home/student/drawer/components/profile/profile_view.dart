@@ -24,7 +24,7 @@ class ProfileScreenView extends StatelessWidget {
         backgroundColor: kQuizPrimaryColor,
         title: Text(
           'Profile',
-          style: kBodyText1Style(),
+          style: kBodyText1Style().copyWith(color: whiteColor),
         ),
       ),
       body: Column(
@@ -61,7 +61,7 @@ class ProfileScreenView extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                           controller.getStudentName(),
-                          style: kBodyText1Style()),
+                          style: kBodyText1Style().copyWith(color: whiteColor)),
                       Text(
                         "Student",
                         style: kBodyText3Style().copyWith(color: greyColor),
@@ -411,17 +411,17 @@ class ProfileScreenView extends StatelessWidget {
                                   width: double.infinity,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        backgroundColor: kQuizButtonLightColor,
+                                        backgroundColor: kTeacherPrimaryColor,
                                         shape: const RoundedRectangleBorder(
+                                            side: BorderSide(
+                                                color: kTeacherPrimaryColor),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(12)))),
                                     onPressed: () {
                                       Get.back();
                                     },
-                                    child: Text(
-                                      'Okay',
-                                      style: kBodyText2Style(),
-                                    ),
+                                    child:
+                                        Text('Okay', style: kBodyText2Style()),
                                   ),
                                 ),
                               )
@@ -432,6 +432,7 @@ class ProfileScreenView extends StatelessWidget {
                     : const Center(
                         child: CircularProgressIndicator(
                           backgroundColor: kQuizPrimaryColor,
+                          color: whiteColor,
                         ),
                       ),
               ),

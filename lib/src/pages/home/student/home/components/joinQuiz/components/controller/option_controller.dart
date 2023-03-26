@@ -10,8 +10,8 @@ import 'package:http/http.dart' as https;
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quiz/utils/completed_confirmation.dart';
 import 'package:quiz/utils/marks_obtained.dart';
-import '../../../../../../../../../utils/custom_circular.dart';
 import '../../../../../../../../api/points.dart';
 import '../../../../../../../../global/shared.dart';
 import '../../../../../../../../model/joined_quiz.dart';
@@ -33,10 +33,14 @@ class OptionController extends GetxController {
     if (controller.currentIdx.value == (model.data!.questions!.length - 1)) {
       quizDebugPrint('last qs submit this quiz');
       var newController = Get.find<JoinQuizSessionController>();
-      newController.timer?.cancel();
+      newController.stoptheTimer();
+
       //CustomCircleLoading.showDialog();
       //hitAndGetMark(model.data!.quizStats!.quizId!);
       Get.offAllNamed(StudentHome.routeName);
+      showDialog(
+          context: Get.context!,
+          builder: ((context) => const CompleteConfirmationDialog()));
     } else {
       controller.pageController.nextPage(
           duration: const Duration(milliseconds: 500), curve: Curves.easeIn);

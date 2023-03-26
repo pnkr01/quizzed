@@ -7,11 +7,12 @@ import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.da
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/profile/profile_view.dart';
-import 'package:quiz/src/pages/home/student/drawer/components/result/result_view.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import '../../../../../utils/size_configuration.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../home/components/result/quiz_result_view.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
   const NavigationDrawerWidget({
@@ -136,7 +137,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
         Get.to(() => const ProfileScreenView());
         break;
       case 1:
-        Get.to(() => const ResultScreenView());
+        Get.to(() => const QuizResultView());
         break;
       case 2:
         Get.toNamed(PrivacyAndHelp.routeName);

@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/db/firebase/firebase_helper.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
-import 'package:quiz/src/pages/home/student/drawer/components/notification/notification_view.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../../../../db/local/local_db.dart';
+import '../../../../global/global.dart';
+import '../../../auth/components/login/common_auth_login_screen.dart';
 import '../drawer/drawer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -62,9 +64,11 @@ class _StudentHomeState extends State<StudentHome> {
         actions: [
           IconButton(
               onPressed: () {
-                Get.toNamed(NotificationView.routeName);
+                quizDebugPrint('logout');
+                LocalDB.removeLoacalDb();
+                Get.offAllNamed(CommmonAuthLogInRoute.routeName);
               },
-              icon: const Icon(Icons.notifications_active_outlined))
+              icon: const Icon(Icons.logout))
         ],
       ),
       body: SingleChildScrollView(
@@ -201,50 +205,52 @@ class _StudentHomeState extends State<StudentHome> {
               const SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 0.h),
-                child: Column(
-                  children: [
-                    QuizElevatedButton(
-                      label: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.games,
-                            color: whiteColor,
-                          ),
-                          const SizedBox(
-                            width: 4,
-                          ),
-                          Text('Join Quiz', style: kBodyText1Style())
-                        ],
-                      ),
-                      backgroundColor: kQuizLightPrimaryColor,
-                      function: () {
-                        controller.navigateToJoinQuiz();
-                      },
+              Column(
+                children: [
+                  QuizElevatedButton(
+                    isBorderColorRequired: true,
+                    borderColor: kTeacherPrimaryColor,
+                    label: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.add,
+                          color: kTeacherPrimaryColor,
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text('Join Quiz', style: kBodyText1Style())
+                      ],
                     ),
-                    SizedBox(
-                      height: 10.h,
+                    backgroundColor: kQuizButtonLightColor,
+                    function: () {
+                      controller.navigateToJoinQuiz();
+                    },
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  QuizElevatedButton(
+                    label: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.task,
+                          color: kTeacherPrimaryColor,
+                        ),
+                        const SizedBox(
+                          width: 4,
+                        ),
+                        Text('Result', style: kBodyText1Style())
+                      ],
                     ),
-                    QuizElevatedButton(
-                      label: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.bolt,
-                            color: whiteColor,
-                          ),
-                          Text('Result', style: kBodyText1Style())
-                        ],
-                      ),
-                      backgroundColor: kQuizLightPrimaryColor,
-                      function: () {
-                        controller.navigateToResultQuiz();
-                      },
-                    )
-                  ],
-                ),
+                    backgroundColor: kQuizButtonLightColor,
+                    function: () {
+                      controller.navigateToResultQuiz();
+                    },
+                  )
+                ],
               )
             ],
           ),

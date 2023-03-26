@@ -27,7 +27,14 @@ TextStyle kTitleTextStyle() {
 
 TextStyle kBodyText1Style() {
   return GoogleFonts.montserrat(
-    color: Colors.white,
+    color: kTeacherPrimaryColor,
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w700,
+  );
+}
+TextStyle kBodyText0Style() {
+  return GoogleFonts.montserrat(
+    color: whiteColor,
     fontSize: 15.sp,
     fontWeight: FontWeight.w700,
   );

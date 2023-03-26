@@ -17,8 +17,17 @@ class StudentProfileController extends GetxController {
   @override
   void onInit() {
     profile = [];
-    _fetchProfile();
+    tryFetchingProfile();
     super.onInit();
+  }
+
+  tryFetchingProfile() {
+    try {
+      _fetchProfile();
+    } catch (e) {
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      showSnackBar('Session Expired :(', blackColor, whiteColor);
+    }
   }
 
   _fetchProfile() async {
@@ -27,6 +36,7 @@ class StudentProfileController extends GetxController {
           'Cookie': "Authentication=${sharedPreferences.getString('Scookie')}"
         });
     var decodeResponse = await jsonDecode(res.body);
+    quizDebugPrint(decodeResponse);
     if (decodeResponse["message"] != null) {
       log('cookie refreshing needed =====> Refreshing cookie.....');
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);

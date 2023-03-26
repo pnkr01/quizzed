@@ -59,6 +59,8 @@ dependencies:
   shimmer: ^2.0.0
   never_behind_keyboard: ^1.0.2
   file_picker: ^5.2.6
+  lottie: ^2.3.0
+  count_down_timer: ^1.0.1
 
 dev_dependencies:
   flutter_test:

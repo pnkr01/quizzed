@@ -16,7 +16,7 @@ import '../../../../../../../global/shared.dart';
 import 'detailed/detailed_quiz_view.dart';
 
 class JoinQuizCOntroller extends GetxController {
-  late Rx<TextEditingController> quizID;
+  late TextEditingController quizID;
   RxBool isTapStartJoining = false.obs;
 
   List<DetailedQuizJoinModel> currentQuiz = [];
@@ -24,7 +24,7 @@ class JoinQuizCOntroller extends GetxController {
   bool get showLoading => isTapStartJoining.value;
   @override
   void onInit() {
-    quizID = TextEditingController().obs;
+    quizID = TextEditingController();
     super.onInit();
   }
 
@@ -40,7 +40,7 @@ class JoinQuizCOntroller extends GetxController {
   }
 
   checkEmptyFilled() {
-    if (quizID.value.text.isNotEmpty) {
+    if (quizID.text.isNotEmpty) {
       checkThisQuizID();
     } else {
       isTapStartJoining.value = false;
@@ -87,7 +87,7 @@ class JoinQuizCOntroller extends GetxController {
       } else {
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         LocalDB.removeLoacalDb();
-        showSnackBar('Sessio Expired :)', greenColor, whiteColor);
+        showSnackBar('Session Expired :)', greenColor, whiteColor);
       }
     } catch (e) {
       isTapStartJoining.value = false;

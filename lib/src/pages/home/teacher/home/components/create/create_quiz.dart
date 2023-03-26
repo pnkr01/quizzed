@@ -29,7 +29,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
     return Scaffold(
       //backgroundColor: kTeacherPrimaryLightColor,
       appBar: const QuizAppbar(
-        appBarColor: kTeacherPrimaryLightColor,
+        appBarColor: kTeacherPrimaryColor,
         titleText: 'Create Quiz',
         preferredSize: Size.fromHeight(56),
       ),
@@ -285,7 +285,8 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         () => controller.isCreating == true
                             ? Text(
                                 'Create',
-                                style: kBodyText1Style(),
+                                style: kBodyText1Style()
+                                    .copyWith(color: whiteColor),
                               )
                             : const Center(
                                 child: CircularProgressIndicator(

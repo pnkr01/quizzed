@@ -35,10 +35,10 @@ class _OptionState extends State<Option> {
       onTap: widget.press,
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        decoration: const BoxDecoration(
+            //borderRadius: BorderRadius.circular(15),
+            ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

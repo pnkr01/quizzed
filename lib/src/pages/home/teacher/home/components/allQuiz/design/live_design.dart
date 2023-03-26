@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:get/get.dart';
 
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
@@ -7,6 +8,7 @@ import 'package:quiz/theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../utils/loading_dialog.dart';
 import '../../../../../../../../utils/quizElevatedButon.dart';
+import '../../../../../../../global/global.dart';
 
 class QuizLiveDesign extends GetView<LiveQuizController> {
   const QuizLiveDesign({super.key, required this.index});
@@ -125,14 +127,25 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Remaning Time : ',
-                    style: kBodyText1Style(),
+                  // Text(
+                  //   'Remaning Time : ',
+                  //   style: kBodyText0Style(),
+                  // ),
+                  // Text(
+                  //   "${controller.liveList[index].duration} mins",
+                  //   style: kBodyText0Style(),
+                  // ),
+                  CountdownTimer(
+                    endTime: DateTime.now().millisecondsSinceEpoch +
+                        1000 *
+                            controller.liveList[index].duration! *
+                            60, // 1 minute
+                    textStyle: const TextStyle(fontSize: 20, color: whiteColor),
+                    onEnd: () {
+                      quizDebugPrint('Timer ended');
+                      controller.fetchLiveQuiz();
+                    },
                   ),
-                  Text(
-                    "${controller.liveList[index].duration} mins",
-                    style: kBodyText1Style(),
-                  )
                 ],
               ),
             ),

@@ -394,7 +394,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                   backgroundColor: controller.onTapColor1.value,
                   child: Text(
                     'A',
-                    style: kBodyText1Style(),
+                    style: kBodyText0Style(),
                   ),
                 ),
               ),
@@ -440,7 +440,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                   backgroundColor: controller.onTapColor1.value,
                   child: Text(
                     'B',
-                    style: kBodyText1Style(),
+                    style: kBodyText0Style(),
                   ),
                 ),
               ),
@@ -486,7 +486,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                   backgroundColor: controller.onTapColor1.value,
                   child: Text(
                     'C',
-                    style: kBodyText1Style(),
+                    style: kBodyText0Style(),
                   ),
                 ),
               ),
@@ -532,7 +532,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                   backgroundColor: controller.onTapColor1.value,
                   child: Text(
                     'D',
-                    style: kBodyText1Style(),
+                    style: kBodyText0Style(),
                   ),
                 ),
               ),

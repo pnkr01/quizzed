@@ -106,7 +106,7 @@ class CompletedQuizDesign extends GetView<CompletedQuizController> {
                   color: greenColor,
                   borderRadius: BorderRadius.all(Radius.circular(8))),
               child: Center(
-                  child: Text("Completed", style: kBodyText1Style())),
+                  child: Text("Completed", style: kBodyText0Style())),
             )
           ],
         ),

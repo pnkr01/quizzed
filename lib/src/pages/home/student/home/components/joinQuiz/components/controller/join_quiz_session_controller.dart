@@ -10,6 +10,7 @@ import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
+import '../../../../../../../../../utils/completed_confirmation.dart';
 import '../../../../../../../../api/points.dart';
 import '../../../../../../../../global/shared.dart';
 
@@ -29,6 +30,7 @@ class JoinQuizSessionController extends GetxController {
   startLocalTimer() async {
     quizTimer = Timer.periodic(const Duration(seconds: 1), (_) {
       try {
+        quizDebugPrint('calling from 31');
         getRemainingTime();
       } catch (e) {
         quizTimer?.cancel();
@@ -36,7 +38,14 @@ class JoinQuizSessionController extends GetxController {
     });
   }
 
-  updateNewTime() {}
+  stoptheTimer() {
+    if (timer != null) {
+      timer?.cancel();
+    }
+    if (quizTimer != null) {
+      quizTimer?.cancel();
+    }
+  }
 
   Timer? timer;
   Timer? quizTimer;
@@ -48,15 +57,22 @@ class JoinQuizSessionController extends GetxController {
         headers: headers);
     //quizDebugPrint('resmainig time is ${response.body}');
     var decode = jsonDecode(response.body);
-    //  quizDebugPrint(decode);
+    //quizDebugPrint(decode);
     //check for -5 time remaining then save the user and
     //cancel timer.
+    quizDebugPrint('quiz timer');
     if (decode["remainingMinutes"] - 5 <= 5) {
-      quizTimer?.cancel();
+      stoptheTimer();
       Get.offAllNamed(StudentHome.routeName);
-      showSnackBar(
-          'Your quiz is submitted successfully', greenColor, whiteColor);
+      showDialog(
+          context: Get.context!,
+          builder: ((context) => const CompleteConfirmationDialog()));
+      stoptheTimer();
       //hit marks route.
+    } else if (decode["remainingMinutes"] == null) {
+      stoptheTimer();
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      showSnackBar('Session Expired :(', redColor, whiteColor);
     }
     getTime.value =
         '${decode["remainingMinutes"] - 5} : ${decode["remainingSeconds"]}';
@@ -66,13 +82,18 @@ class JoinQuizSessionController extends GetxController {
   checkingForLiveQuiz() async {
     try {
       timer = Timer.periodic(const Duration(seconds: 5), (_) async {
-        if ((await getRemainingTime()) - 5 <= 5) {
-          timer?.cancel();
-        }
+        quizDebugPrint('calling from 69');
+        hitAndGetStatus();
+        // if ((await getRemainingTime()) - 5 <= 5) {
+        //   if (timer != null && quizTimer != null) {
+        //     timer?.cancel();
+        //     quizTimer?.cancel();
+        //   }
+        // }
         quizDebugPrint('printing');
       });
     } catch (e) {
-      timer?.cancel();
+      stoptheTimer();
     }
   }
 
@@ -94,14 +115,17 @@ class JoinQuizSessionController extends GetxController {
     // quizDebugPrint(getQuizID());
     if (decode["quiz_id"] != null) {
       if ((decode['status']) == 'completed') {
-        Get.offAll(() => const StudentHome());
-        showSnackBar('Quiz is Completed', greenColor, whiteColor);
-        timer?.cancel();
+        stoptheTimer();
+        Get.offAllNamed(StudentHome.routeName);
+        showDialog(
+            context: Get.context!,
+            builder: ((context) => const CompleteConfirmationDialog()));
+        stoptheTimer();
       }
     } else {
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar('session expired', redColor, whiteColor);
-      timer?.cancel();
+      stoptheTimer();
     }
   }
 

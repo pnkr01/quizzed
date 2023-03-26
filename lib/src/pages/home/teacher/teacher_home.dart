@@ -24,7 +24,7 @@ class TeacherHome extends StatelessWidget {
     var controller = Get.find<TeacherHomeController>();
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: kTeacherPrimaryLightColor,
+      backgroundColor: kTeacherPrimaryColor,
       appBar: QuizAppbar(
         tariling: IconButton(
           onPressed: () {
@@ -35,7 +35,7 @@ class TeacherHome extends StatelessWidget {
           },
           icon: const Icon(Icons.logout_outlined),
         ),
-        appBarColor: kTeacherPrimaryLightColor,
+        appBarColor: kTeacherPrimaryColor,
         titleText: 'Quizzed',
         preferredSize: const Size.fromHeight(56),
         leading: IconButton(
