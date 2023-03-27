@@ -1,2332 +1,345 @@
-[2:05:00 am]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart","--web-hostname","any"]
-[2:05:00 am]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[2:05:00 am]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
-[2:05:00 am]: PID: 4404
-[2:05:02 am]: The plugin `fluttertoast` uses a deprecated version of the Android embedding.
+[9:29:25 am]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart","--web-hostname","any"]
+[9:29:26 am]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[9:29:26 am]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[9:29:26 am]: PID: 2504
+[9:29:31 am]: The plugin `fluttertoast` uses a deprecated version of the Android embedding.
 To avoid unexpected runtime failures, or future build failures, try to see if this plugin supports the Android V2 embedding. Otherwise, consider removing it since a future release of Flutter will remove these deprecated APIs.
 If you are plugin author, take a look at the docs for migrating the plugin to the V2 embedding: https://flutter.dev/go/android-plugin-migration.
-[2:05:02 am]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":9280}}]
-[2:05:02 am]: <== [{"event":"app.start","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
-[2:05:02 am]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
-[2:05:03 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
-[2:05:06 am]: <== Warning: The plugin file_picker requires Android SDK version 33.
-[2:05:06 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-[2:05:06 am]: <== Warning: The plugin flutter_plugin_android_lifecycle requires Android SDK version 33.
-[2:05:06 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-[2:05:20 am]: One or more plugins require a higher Android SDK version.
-[2:05:20 am]: Fix this issue by adding the following to C:\Users\pawan\OneDrive\Desktop\Files\quiz\android\app\build.gradle:
+[9:29:31 am]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":18280}}]
+[9:29:31 am]: <== [{"event":"app.start","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
+[9:29:31 am]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
+[9:29:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
+[9:29:58 am]: <== Warning: The plugin file_picker requires Android SDK version 33.
+[9:29:58 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
+[9:29:59 am]: <== Warning: The plugin flutter_plugin_android_lifecycle requires Android SDK version 33.
+[9:29:59 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
+[9:30:00 am]: One or more plugins require a higher Android SDK version.
+[9:30:00 am]: Fix this issue by adding the following to C:\Users\pawan\OneDrive\Desktop\Files\quiz\android\app\build.gradle:
 android {
-[2:05:20 am]: compileSdkVersion 33
+[9:30:00 am]: compileSdkVersion 33
   ...
 }
-[2:05:43 am]: Note: C:\Users\pawan\Development\sdk\flutter\.pub-cache\hosted\pub.dartlang.org\fluttertoast-4.0.1\android\src\main\java\io\github\ponnamkarthik\toast\fluttertoast\FluttertoastPlugin.java uses or overrides a deprecated API.
-[2:05:43 am]: Note: Recompile with -Xlint:deprecation for details.
-[2:05:59 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"0","progressId":null,"finished":true}}]
-[2:06:00 am]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
-[2:06:04 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app.apk...","finished":false}}]
-[2:06:06 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"1","progressId":null,"finished":true}}]
-[2:06:15 am]: <== [{"event":"app.debugPort","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","port":63996,"wsUri":"ws://127.0.0.1:63996/1dNL_K4KQqM=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizIUMZVZ/quiz/"}}]
-[2:06:15 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"2","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:06:15 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"2","progressId":null,"finished":true}}]
-[2:06:15 am]: <== [{"event":"app.started","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b"}}]
-[2:06:21 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:21 am]: <== I/flutter (12546): list----------
-[2:06:23 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:23 am]: <== I/flutter (12546): list----------
-[2:06:23 am]: <== I/flutter (12546): Timer ended
-[2:06:23 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:23 am]: <== I/flutter (12546): 1679862983464
-[2:06:23 am]: <== I/flutter (12546): list----------
-[2:06:23 am]: <== I/flutter (12546): 1679862983572
-[2:06:24 am]: <== I/flutter (12546): 1679862984537
-[2:06:24 am]: <== I/flutter (12546): 1679862984584
-[2:06:25 am]: <== I/flutter (12546): 1679862985559
-[2:06:25 am]: <== I/flutter (12546): 1679862985594
-[2:06:26 am]: <== I/flutter (12546): 1679862986570
-[2:06:26 am]: <== I/flutter (12546): 1679862986601
-[2:06:27 am]: <== I/flutter (12546): 1679862987598
-[2:06:27 am]: <== I/flutter (12546): 1679862987639
-[2:06:28 am]: <== I/flutter (12546): 1679862988632
-[2:06:28 am]: <== I/flutter (12546): 1679862988656
-[2:06:29 am]: <== I/flutter (12546): 1679862989667
-[2:06:29 am]: <== I/flutter (12546): 1679862989667
-[2:06:30 am]: <== I/flutter (12546): 1679862990724
-[2:06:30 am]: <== I/flutter (12546): 1679862990768
-[2:06:31 am]: <== I/flutter (12546): 1679862991764
-[2:06:31 am]: <== I/flutter (12546): 1679862991818
-[2:06:32 am]: <== I/flutter (12546): 1679862992772
-[2:06:32 am]: <== I/flutter (12546): 1679862992829
-[2:06:33 am]: <== I/flutter (12546): 1679862993802
-[2:06:33 am]: <== I/flutter (12546): 1679862993847
-[2:06:34 am]: <== I/flutter (12546): 1679862994809
-[2:06:34 am]: <== I/flutter (12546): 1679862994902
-[2:06:35 am]: <== I/flutter (12546): 1679862995817
-[2:06:35 am]: <== I/flutter (12546): 1679862995909
-[2:06:36 am]: <== I/flutter (12546): 1679862996826
-[2:06:36 am]: <== I/flutter (12546): 1679862996915
-[2:06:37 am]: <== I/flutter (12546): 1679862997846
-[2:06:37 am]: <== I/flutter (12546): 1679862997923
-[2:06:38 am]: <== I/flutter (12546): 1679862998854
-[2:06:38 am]: <== I/flutter (12546): 1679862998930
-[2:06:39 am]: <== I/flutter (12546): 1679862999863
-[2:06:39 am]: <== I/flutter (12546): 1679862999939
-[2:06:40 am]: <== I/flutter (12546): 1679863000873
-[2:06:40 am]: <== I/flutter (12546): 1679863000945
-[2:06:41 am]: <== I/flutter (12546): 1679863001880
-[2:06:41 am]: <== I/flutter (12546): 1679863001966
-[2:06:42 am]: <== I/flutter (12546): 1679863002888
-[2:06:43 am]: <== I/flutter (12546): 1679863002976
-[2:06:43 am]: <== I/flutter (12546): 1679863003897
-[2:06:44 am]: <== I/flutter (12546): 1679863003985
-[2:06:44 am]: <== I/flutter (12546): 1679863004906
-[2:06:45 am]: <== I/flutter (12546): 1679863004994
-[2:06:45 am]: <== I/flutter (12546): 1679863005916
-[2:06:46 am]: <== I/flutter (12546): 1679863006004
-[2:06:46 am]: <== I/flutter (12546): 1679863006934
-[2:06:47 am]: <== I/flutter (12546): 1679863007014
-[2:06:47 am]: <== I/flutter (12546): 1679863007942
-[2:06:48 am]: <== I/flutter (12546): 1679863008025
-[2:06:48 am]: <== I/flutter (12546): 1679863008962
-[2:06:49 am]: <== I/flutter (12546): 1679863009033
-[2:06:50 am]: <== I/flutter (12546): 1679863009972
-[2:06:50 am]: <== I/flutter (12546): 1679863010042
-[2:06:51 am]: <== I/flutter (12546): 1679863010982
-[2:06:51 am]: <== I/flutter (12546): 1679863011049
-[2:06:51 am]: ==> [{"id":"1","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:06:52 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"3","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:06:52 am]: <== I/flutter (12546): 1679863012002
-[2:06:52 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"4","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:06:52 am]: <== I/flutter (12546): 1679863012057
-[2:06:52 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"4","progressId":null,"finished":true}}]
-[2:06:53 am]: <== I/flutter (12546): 1679863013149
-[2:06:53 am]: <== I/flutter (12546): 1679863013149
-[2:06:53 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:53 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"3","progressId":"hot.reload","finished":true}}]
-[2:06:53 am]: <== Reloaded 44 of 2153 libraries in 1,515ms (compile: 347 ms, reload: 615 ms, reassemble: 290 ms).
-[2:06:53 am]: <== [{"id":"1","result":{"code":0,"message":"Reloaded 44 of 2153 libraries"}}]
-[2:06:53 am]: <== I/flutter (12546): list----------
-[2:06:53 am]: <== I/flutter (12546): Timer ended
-[2:06:53 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:53 am]: <== I/flutter (12546): 1679863013494
-[2:06:53 am]: <== I/flutter (12546): list----------
-[2:06:53 am]: <== I/flutter (12546): 1679863013591
-[2:06:54 am]: <== I/flutter (12546): 1679863014187
-[2:06:54 am]: <== I/flutter (12546): 1679863014187
-[2:06:54 am]: <== I/flutter (12546): 1679863014558
-[2:06:54 am]: <== I/flutter (12546): 1679863014601
-[2:06:55 am]: <== I/flutter (12546): 1679863015197
-[2:06:55 am]: <== I/flutter (12546): 1679863015197
-[2:06:55 am]: <== I/flutter (12546): 1679863015566
-[2:06:55 am]: <== I/flutter (12546): 1679863015608
-[2:06:56 am]: <== I/flutter (12546): 1679863016204
-[2:06:56 am]: <== I/flutter (12546): 1679863016204
-[2:06:56 am]: <== I/flutter (12546): 1679863016572
-[2:06:56 am]: <== I/flutter (12546): 1679863016645
-[2:06:57 am]: <== I/flutter (12546): 1679863017239
-[2:06:57 am]: <== I/flutter (12546): 1679863017239
-[2:06:57 am]: <== I/flutter (12546): 1679863017579
-[2:06:57 am]: <== I/flutter (12546): 1679863017652
-[2:06:58 am]: ==> [{"id":"2","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:06:58 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"5","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:06:58 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"6","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:06:58 am]: <== I/flutter (12546): 1679863018248
-[2:06:58 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"6","progressId":null,"finished":true}}]
-[2:06:58 am]: <== I/flutter (12546): 1679863018248
-[2:06:58 am]: <== I/flutter (12546): 1679863018665
-[2:06:58 am]: <== I/flutter (12546): 1679863018665
-[2:06:58 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:58 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"5","progressId":"hot.reload","finished":true}}]
-[2:06:58 am]: <== Reloaded 1 of 2153 libraries in 672ms (compile: 71 ms, reload: 158 ms, reassemble: 239 ms).
-[2:06:58 am]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:06:58 am]: <== I/flutter (12546): list----------
-[2:06:58 am]: <== I/flutter (12546): Timer ended
-[2:06:58 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:06:59 am]: <== I/flutter (12546): 1679863018936
-[2:06:59 am]: <== I/flutter (12546): list----------
-[2:06:59 am]: <== I/flutter (12546): 1679863019006
-[2:06:59 am]: <== I/flutter (12546): 1679863019256
-[2:06:59 am]: <== I/flutter (12546): 1679863019256
-[2:06:59 am]: <== I/flutter (12546): 1679863019683
-[2:07:00 am]: <== I/flutter (12546): 1679863019683
-[2:07:00 am]: <== I/flutter (12546): 1679863019993
-[2:07:00 am]: <== I/flutter (12546): 1679863020017
-[2:07:00 am]: <== I/flutter (12546): 1679863020263
-[2:07:00 am]: <== I/flutter (12546): 1679863020263
-[2:07:00 am]: <== I/flutter (12546): 1679863020691
-[2:07:01 am]: <== I/flutter (12546): 1679863020691
-[2:07:01 am]: <== I/flutter (12546): 1679863021006
-[2:07:01 am]: <== I/flutter (12546): 1679863021045
-[2:07:01 am]: <== I/flutter (12546): 1679863021281
-[2:07:01 am]: <== I/flutter (12546): 1679863021281
-[2:07:01 am]: <== I/flutter (12546): 1679863021700
-[2:07:02 am]: <== I/flutter (12546): 1679863021700
-[2:07:02 am]: <== I/flutter (12546): 1679863022014
-[2:07:02 am]: <== I/flutter (12546): 1679863022075
-[2:07:02 am]: <== I/flutter (12546): 1679863022313
-[2:07:02 am]: <== I/flutter (12546): 1679863022346
-[2:07:02 am]: <== I/flutter (12546): 1679863022708
-[2:07:03 am]: <== I/flutter (12546): 1679863022708
-[2:07:03 am]: <== I/flutter (12546): 1679863023020
-[2:07:03 am]: <== I/flutter (12546): 1679863023082
-[2:07:03 am]: <== I/flutter (12546): 1679863023320
-[2:07:03 am]: <== I/flutter (12546): 1679863023353
-[2:07:03 am]: <== I/flutter (12546): 1679863023726
-[2:07:04 am]: <== I/flutter (12546): 1679863023726
-[2:07:04 am]: <== I/flutter (12546): 1679863024039
-[2:07:04 am]: <== I/flutter (12546): 1679863024088
-[2:07:04 am]: <== I/flutter (12546): 1679863024330
-[2:07:04 am]: <== I/flutter (12546): 1679863024362
-[2:07:04 am]: ==> [{"id":"3","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:07:04 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"7","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:07:04 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"8","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:07:04 am]: <== I/flutter (12546): 1679863024733
-[2:07:04 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"8","progressId":null,"finished":true}}]
-[2:07:05 am]: <== I/flutter (12546): 1679863024733
-[2:07:05 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:07:05 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"7","progressId":"hot.reload","finished":true}}]
-[2:07:05 am]: <== Reloaded 1 of 2153 libraries in 524ms (compile: 49 ms, reload: 171 ms, reassemble: 235 ms).
-[2:07:05 am]: <== [{"id":"3","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:07:05 am]: <== I/flutter (12546): 1679863025159
-[2:07:05 am]: <== I/flutter (12546): 1679863025159
-[2:07:05 am]: <== I/flutter (12546): list----------
-[2:07:05 am]: <== I/flutter (12546): Timer ended
-[2:07:05 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:07:05 am]: <== I/flutter (12546): 1679863025192
-[2:07:05 am]: <== I/flutter (12546): list----------
-[2:07:05 am]: <== I/flutter (12546): 1679863025261
-[2:07:05 am]: <== I/flutter (12546): 1679863025361
-[2:07:05 am]: <== I/flutter (12546): 1679863025369
-[2:07:05 am]: <== I/flutter (12546): 1679863025742
-[2:07:06 am]: <== I/flutter (12546): 1679863025742
-[2:07:06 am]: <== I/flutter (12546): 1679863026179
-[2:07:06 am]: <== I/flutter (12546): 1679863026179
-[2:07:06 am]: <== I/flutter (12546): 1679863026250
-[2:07:06 am]: <== I/flutter (12546): 1679863026270
-[2:07:06 am]: <== I/flutter (12546): 1679863026368
-[2:07:06 am]: <== I/flutter (12546): 1679863026375
-[2:07:06 am]: <== I/flutter (12546): 1679863026750
-[2:07:07 am]: <== I/flutter (12546): 1679863026750
-[2:07:07 am]: <== I/flutter (12546): 1679863027186
-[2:07:07 am]: <== I/flutter (12546): 1679863027186
-[2:07:07 am]: <== I/flutter (12546): 1679863027257
-[2:07:07 am]: <== I/flutter (12546): 1679863027277
-[2:07:07 am]: <== I/flutter (12546): 1679863027377
-[2:07:07 am]: <== I/flutter (12546): 1679863027382
-[2:07:07 am]: <== I/flutter (12546): 1679863027757
-[2:07:08 am]: <== I/flutter (12546): 1679863027757
-[2:07:08 am]: <== I/flutter (12546): 1679863028193
-[2:07:08 am]: <== I/flutter (12546): 1679863028193
-[2:07:08 am]: <== I/flutter (12546): 1679863028264
-[2:07:08 am]: <== I/flutter (12546): 1679863028286
-[2:07:08 am]: <== I/flutter (12546): 1679863028385
-[2:07:08 am]: <== I/flutter (12546): 1679863028390
-[2:07:08 am]: <== I/flutter (12546): 1679863028764
-[2:07:09 am]: <== I/flutter (12546): 1679863028764
-[2:07:09 am]: <== I/flutter (12546): 1679863029201
-[2:07:09 am]: <== I/flutter (12546): 1679863029201
-[2:07:09 am]: <== I/flutter (12546): 1679863029270
-[2:07:09 am]: <== I/flutter (12546): 1679863029304
-[2:07:09 am]: <== I/flutter (12546): 1679863029393
-[2:07:09 am]: <== I/flutter (12546): 1679863029400
-[2:07:09 am]: <== I/flutter (12546): 1679863029772
-[2:07:10 am]: <== I/flutter (12546): 1679863029772
-[2:07:10 am]: <== I/flutter (12546): 1679863030208
-[2:07:10 am]: <== I/flutter (12546): 1679863030208
-[2:07:10 am]: <== I/flutter (12546): 1679863030279
-[2:07:10 am]: <== I/flutter (12546): 1679863030311
-[2:07:10 am]: <== I/flutter (12546): 1679863030401
-[2:07:10 am]: <== I/flutter (12546): 1679863030408
-[2:07:10 am]: <== I/flutter (12546): 1679863030780
-[2:07:11 am]: <== I/flutter (12546): 1679863030780
-[2:07:11 am]: <== I/flutter (12546): 1679863031216
-[2:07:11 am]: <== I/flutter (12546): 1679863031216
-[2:07:11 am]: <== I/flutter (12546): 1679863031287
-[2:07:11 am]: <== I/flutter (12546): 1679863031321
-[2:07:11 am]: <== I/flutter (12546): 1679863031408
-[2:07:11 am]: <== I/flutter (12546): 1679863031415
-[2:07:11 am]: <== I/flutter (12546): 1679863031787
-[2:07:12 am]: <== I/flutter (12546): 1679863031787
-[2:07:12 am]: <== I/flutter (12546): 1679863032225
-[2:07:12 am]: <== I/flutter (12546): 1679863032225
-[2:07:12 am]: <== I/flutter (12546): 1679863032296
-[2:07:12 am]: <== I/flutter (12546): 1679863032329
-[2:07:12 am]: <== I/flutter (12546): 1679863032414
-[2:07:12 am]: <== I/flutter (12546): 1679863032424
-[2:07:12 am]: <== I/flutter (12546): 1679863032794
-[2:07:13 am]: <== I/flutter (12546): 1679863032794
-[2:07:13 am]: <== I/flutter (12546): 1679863033242
-[2:07:13 am]: <== I/flutter (12546): 1679863033242
-[2:07:13 am]: <== I/flutter (12546): 1679863033302
-[2:07:13 am]: <== I/flutter (12546): 1679863033335
-[2:07:13 am]: <== I/flutter (12546): 1679863033423
-[2:07:13 am]: <== I/flutter (12546): 1679863033430
-[2:07:13 am]: <== I/flutter (12546): 1679863033802
-[2:07:14 am]: <== I/flutter (12546): 1679863033802
-[2:07:14 am]: <== I/flutter (12546): 1679863034249
-[2:07:14 am]: <== I/flutter (12546): 1679863034249
-[2:07:14 am]: <== I/flutter (12546): 1679863034309
-[2:07:14 am]: <== I/flutter (12546): 1679863034342
-[2:07:14 am]: <== I/flutter (12546): 1679863034430
-[2:07:14 am]: <== I/flutter (12546): 1679863034437
-[2:07:14 am]: <== I/flutter (12546): 1679863034807
-[2:07:15 am]: <== I/flutter (12546): 1679863034807
-[2:07:15 am]: <== I/flutter (12546): 1679863035259
-[2:07:15 am]: <== I/flutter (12546): 1679863035259
-[2:07:15 am]: <== I/flutter (12546): 1679863035317
-[2:07:15 am]: <== I/flutter (12546): 1679863035351
-[2:07:15 am]: <== I/flutter (12546): 1679863035437
-[2:07:15 am]: <== I/flutter (12546): 1679863035442
-[2:07:15 am]: <== I/flutter (12546): 1679863035815
-[2:07:16 am]: <== I/flutter (12546): 1679863035815
-[2:07:16 am]: <== I/flutter (12546): 1679863036278
-[2:07:16 am]: <== I/flutter (12546): 1679863036278
-[2:07:16 am]: <== I/flutter (12546): 1679863036324
-[2:07:16 am]: <== I/flutter (12546): 1679863036359
-[2:07:16 am]: ==> [{"id":"4","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:07:16 am]: <== I/flutter (12546): 1679863036444
-[2:07:16 am]: <== I/flutter (12546): 1679863036451
-[2:07:16 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"9","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:07:16 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"10","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:07:16 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"10","progressId":null,"finished":true}}]
-[2:07:16 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:07:17 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"9","progressId":"hot.reload","finished":true}}]
-[2:07:17 am]: <== Reloaded 1 of 2153 libraries in 545ms (compile: 52 ms, reload: 173 ms, reassemble: 241 ms).
-[2:07:17 am]: <== [{"id":"4","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:07:17 am]: <== I/flutter (12546): 1679863036822
-[2:07:17 am]: <== I/flutter (12546): 1679863036822
-[2:07:17 am]: <== I/flutter (12546): list----------
-[2:07:17 am]: <== I/flutter (12546): 1679863037041
-[2:07:17 am]: <== I/flutter (12546): 1679863037288
-[2:07:17 am]: <== I/flutter (12546): 1679863037288
-[2:07:17 am]: <== I/flutter (12546): 1679863037332
-[2:07:17 am]: <== I/flutter (12546): 1679863037366
-[2:07:17 am]: <== I/flutter (12546): 1679863037453
-[2:07:17 am]: <== I/flutter (12546): 1679863037461
-[2:07:18 am]: <== I/flutter (12546): 1679863038023
-[2:07:18 am]: <== I/flutter (12546): 1679863038023
-[2:07:18 am]: <== I/flutter (12546): 1679863038094
-[2:07:18 am]: <== I/flutter (12546): 1679863038298
-[2:07:18 am]: <== I/flutter (12546): 1679863038298
-[2:07:18 am]: <== I/flutter (12546): 1679863038343
-[2:07:18 am]: <== I/flutter (12546): 1679863038376
-[2:07:18 am]: <== I/flutter (12546): 1679863038463
-[2:07:18 am]: <== I/flutter (12546): 1679863038470
-[2:07:19 am]: <== I/flutter (12546): 1679863039035
-[2:07:19 am]: <== I/flutter (12546): 1679863039035
-[2:07:19 am]: <== I/flutter (12546): 1679863039103
-[2:07:19 am]: <== I/flutter (12546): 1679863039306
-[2:07:19 am]: <== I/flutter (12546): 1679863039306
-[2:07:19 am]: <== I/flutter (12546): 1679863039352
-[2:07:19 am]: <== I/flutter (12546): 1679863039383
-[2:07:19 am]: <== I/flutter (12546): 1679863039479
-[2:07:20 am]: <== I/flutter (12546): 1679863039479
-[2:07:20 am]: <== I/flutter (12546): 1679863040041
-[2:07:20 am]: <== I/flutter (12546): 1679863040041
-[2:07:20 am]: <== I/flutter (12546): 1679863040122
-[2:07:20 am]: <== I/flutter (12546): 1679863040313
-[2:07:20 am]: <== I/flutter (12546): 1679863040313
-[2:07:20 am]: <== I/flutter (12546): 1679863040360
-[2:07:20 am]: <== I/flutter (12546): 1679863040395
-[2:07:20 am]: <== I/flutter (12546): 1679863040488
-[2:07:21 am]: <== I/flutter (12546): 1679863040488
-[2:07:21 am]: <== I/flutter (12546): 1679863041074
-[2:07:21 am]: <== I/flutter (12546): 1679863041074
-[2:07:21 am]: <== I/flutter (12546): 1679863041133
-[2:07:21 am]: <== I/flutter (12546): 1679863041326
-[2:07:21 am]: <== I/flutter (12546): 1679863041326
-[2:07:21 am]: <== I/flutter (12546): 1679863041370
-[2:07:21 am]: <== I/flutter (12546): 1679863041406
-[2:07:21 am]: <== I/flutter (12546): 1679863041498
-[2:07:22 am]: <== I/flutter (12546): 1679863041498
-[2:07:22 am]: <== I/flutter (12546): 1679863042086
-[2:07:22 am]: <== I/flutter (12546): 1679863042086
-[2:07:22 am]: <== I/flutter (12546): 1679863042142
-[2:07:22 am]: <== I/flutter (12546): 1679863042335
-[2:07:22 am]: <== I/flutter (12546): 1679863042335
-[2:07:22 am]: <== I/flutter (12546): 1679863042378
-[2:07:22 am]: <== I/flutter (12546): 1679863042412
-[2:07:22 am]: <== I/flutter (12546): 1679863042505
-[2:07:23 am]: <== I/flutter (12546): 1679863042505
-[2:07:23 am]: <== I/flutter (12546): 1679863043096
-[2:07:23 am]: <== I/flutter (12546): 1679863043096
-[2:07:23 am]: <== I/flutter (12546): 1679863043149
-[2:07:23 am]: <== I/flutter (12546): 1679863043339
-[2:07:23 am]: <== I/flutter (12546): 1679863043344
-[2:07:23 am]: <== I/flutter (12546): 1679863043385
-[2:07:23 am]: <== I/flutter (12546): 1679863043421
-[2:07:23 am]: <== I/flutter (12546): 1679863043512
-[2:07:24 am]: <== I/flutter (12546): 1679863043512
-[2:07:24 am]: <== I/flutter (12546): 1679863044107
-[2:07:24 am]: <== I/flutter (12546): 1679863044107
-[2:07:24 am]: <== I/flutter (12546): 1679863044155
-[2:07:24 am]: <== I/flutter (12546): 1679863044350
-[2:07:24 am]: <== I/flutter (12546): 1679863044350
-[2:07:24 am]: <== I/flutter (12546): 1679863044396
-[2:07:24 am]: <== I/flutter (12546): 1679863044429
-[2:07:24 am]: <== I/flutter (12546): 1679863044521
-[2:07:25 am]: <== I/flutter (12546): 1679863044521
-[2:07:25 am]: <== I/flutter (12546): 1679863045118
-[2:07:25 am]: <== I/flutter (12546): 1679863045118
-[2:07:25 am]: <== I/flutter (12546): 1679863045164
-[2:07:25 am]: <== I/flutter (12546): 1679863045361
-[2:07:25 am]: <== I/flutter (12546): 1679863045361
-[2:07:25 am]: <== I/flutter (12546): 1679863045405
-[2:07:25 am]: <== I/flutter (12546): 1679863045436
-[2:07:25 am]: <== I/flutter (12546): 1679863045531
-[2:07:26 am]: <== I/flutter (12546): 1679863045531
-[2:07:26 am]: <== I/flutter (12546): 1679863046129
-[2:07:26 am]: <== I/flutter (12546): 1679863046129
-[2:07:26 am]: <== I/flutter (12546): 1679863046172
-[2:07:26 am]: <== I/flutter (12546): 1679863046366
-[2:07:26 am]: <== I/flutter (12546): 1679863046366
-[2:07:26 am]: <== I/flutter (12546): 1679863046412
-[2:07:26 am]: <== I/flutter (12546): 1679863046445
-[2:07:26 am]: <== I/flutter (12546): 1679863046540
-[2:07:27 am]: <== I/flutter (12546): 1679863046540
-[2:07:27 am]: <== I/flutter (12546): 1679863047132
-[2:07:27 am]: <== I/flutter (12546): 1679863047148
-[2:07:27 am]: <== I/flutter (12546): 1679863047179
-[2:07:27 am]: <== I/flutter (12546): 1679863047373
-[2:07:27 am]: <== I/flutter (12546): 1679863047377
-[2:07:27 am]: <== I/flutter (12546): 1679863047419
-[2:07:27 am]: <== I/flutter (12546): 1679863047456
-[2:07:27 am]: <== I/flutter (12546): 1679863047551
-[2:07:28 am]: <== I/flutter (12546): 1679863047551
-[2:07:28 am]: <== I/flutter (12546): 1679863048150
-[2:07:28 am]: <== I/flutter (12546): 1679863048156
-[2:07:28 am]: <== I/flutter (12546): 1679863048186
-[2:07:28 am]: <== I/flutter (12546): 1679863048384
-[2:07:28 am]: <== I/flutter (12546): 1679863048384
-[2:07:28 am]: <== I/flutter (12546): 1679863048428
-[2:07:28 am]: <== I/flutter (12546): 1679863048464
-[2:07:28 am]: <== I/flutter (12546): 1679863048560
-[2:07:28 am]: ==> [{"id":"5","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:07:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"11","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:07:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"12","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:07:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"12","progressId":null,"finished":true}}]
-[2:07:29 am]: <== I/flutter (12546): 1679863048560
-[2:07:29 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:07:29 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"11","progressId":"hot.reload","finished":true}}]
-[2:07:29 am]: <== Reloaded 1 of 2153 libraries in 545ms (compile: 42 ms, reload: 179 ms, reassemble: 259 ms).
-[2:07:29 am]: <== [{"id":"5","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:07:29 am]: <== I/flutter (12546): 1679863049168
-[2:07:29 am]: <== I/flutter (12546): 1679863049168
-[2:07:29 am]: <== I/flutter (12546): list----------
-[2:07:29 am]: <== I/flutter (12546): 1679863049204
-[2:07:29 am]: <== I/flutter (12546): 1679863049204
-[2:07:29 am]: <== I/flutter (12546): 1679863049386
-[2:07:29 am]: <== I/flutter (12546): 1679863049392
-[2:07:29 am]: <== I/flutter (12546): 1679863049435
-[2:07:29 am]: <== I/flutter (12546): 1679863049472
-[2:07:29 am]: <== I/flutter (12546): 1679863049570
-[2:07:30 am]: <== I/flutter (12546): 1679863049570
-[2:07:30 am]: <== I/flutter (12546): 1679863050184
-[2:07:30 am]: <== I/flutter (12546): 1679863050184
-[2:07:30 am]: <== I/flutter (12546): 1679863050250
-[2:07:30 am]: <== I/flutter (12546): 1679863050250
-[2:07:30 am]: <== I/flutter (12546): 1679863050394
-[2:07:30 am]: <== I/flutter (12546): 1679863050401
-[2:07:30 am]: <== I/flutter (12546): 1679863050443
-[2:07:30 am]: <== I/flutter (12546): 1679863050478
-[2:07:30 am]: <== I/flutter (12546): 1679863050577
-[2:07:31 am]: <== I/flutter (12546): 1679863050577
-[2:07:31 am]: <== I/flutter (12546): 1679863051193
-[2:07:31 am]: <== I/flutter (12546): 1679863051193
-[2:07:31 am]: <== I/flutter (12546): 1679863051258
-[2:07:31 am]: <== I/flutter (12546): 1679863051258
-[2:07:31 am]: <== I/flutter (12546): 1679863051400
-[2:07:31 am]: <== I/flutter (12546): 1679863051409
-[2:07:31 am]: <== I/flutter (12546): 1679863051450
-[2:07:31 am]: <== I/flutter (12546): 1679863051484
-[2:07:31 am]: <== I/flutter (12546): 1679863051587
-[2:07:32 am]: <== I/flutter (12546): 1679863051587
-[2:07:32 am]: <== I/flutter (12546): 1679863052200
-[2:07:32 am]: <== I/flutter (12546): 1679863052200
-[2:07:32 am]: <== I/flutter (12546): 1679863052269
-[2:07:32 am]: <== I/flutter (12546): 1679863052269
-[2:07:32 am]: <== I/flutter (12546): 1679863052406
-[2:07:32 am]: <== I/flutter (12546): 1679863052420
-[2:07:32 am]: <== I/flutter (12546): 1679863052459
-[2:07:32 am]: <== I/flutter (12546): 1679863052492
-[2:07:32 am]: <== I/flutter (12546): 1679863052596
-[2:07:33 am]: <== I/flutter (12546): 1679863052596
-[2:07:33 am]: <== I/flutter (12546): 1679863053208
-[2:07:33 am]: <== I/flutter (12546): 1679863053208
-[2:07:33 am]: <== I/flutter (12546): 1679863053278
-[2:07:33 am]: <== I/flutter (12546): 1679863053278
-[2:07:33 am]: <== I/flutter (12546): 1679863053413
-[2:07:33 am]: <== I/flutter (12546): 1679863053427
-[2:07:33 am]: <== I/flutter (12546): 1679863053477
-[2:07:33 am]: <== I/flutter (12546): 1679863053499
-[2:07:33 am]: <== I/flutter (12546): 1679863053605
-[2:07:34 am]: <== I/flutter (12546): 1679863053605
-[2:07:34 am]: <== I/flutter (12546): 1679863054217
-[2:07:34 am]: <== I/flutter (12546): 1679863054217
-[2:07:34 am]: <== I/flutter (12546): 1679863054290
-[2:07:34 am]: <== I/flutter (12546): 1679863054290
-[2:07:34 am]: <== I/flutter (12546): 1679863054422
-[2:07:34 am]: <== I/flutter (12546): 1679863054436
-[2:07:34 am]: <== I/flutter (12546): 1679863054487
-[2:07:34 am]: <== I/flutter (12546): 1679863054507
-[2:07:34 am]: <== I/flutter (12546): 1679863054613
-[2:07:35 am]: <== I/flutter (12546): 1679863054613
-[2:07:35 am]: <== I/flutter (12546): 1679863055226
-[2:07:35 am]: <== I/flutter (12546): 1679863055226
-[2:07:35 am]: <== I/flutter (12546): 1679863055296
-[2:07:35 am]: <== I/flutter (12546): 1679863055296
-[2:07:35 am]: <== I/flutter (12546): 1679863055428
-[2:07:35 am]: <== I/flutter (12546): 1679863055442
-[2:07:35 am]: <== I/flutter (12546): 1679863055517
-[2:07:35 am]: <== I/flutter (12546): 1679863055517
-[2:07:35 am]: <== I/flutter (12546): 1679863055621
-[2:07:36 am]: <== I/flutter (12546): 1679863055621
-[2:07:36 am]: <== I/flutter (12546): 1679863056234
-[2:07:36 am]: <== I/flutter (12546): 1679863056234
-[2:07:36 am]: <== I/flutter (12546): 1679863056306
-[2:07:36 am]: <== I/flutter (12546): 1679863056306
-[2:07:36 am]: <== I/flutter (12546): 1679863056434
-[2:07:36 am]: <== I/flutter (12546): 1679863056448
-[2:07:36 am]: <== I/flutter (12546): 1679863056527
-[2:07:36 am]: <== I/flutter (12546): 1679863056527
-[2:07:36 am]: <== I/flutter (12546): 1679863056625
-[2:07:36 am]: <== I/flutter (12546): 1679863056630
-[2:07:37 am]: <== I/flutter (12546): 1679863057242
-[2:07:37 am]: <== I/flutter (12546): 1679863057242
-[2:07:37 am]: <== I/flutter (12546): 1679863057312
-[2:07:37 am]: <== I/flutter (12546): 1679863057318
-[2:07:37 am]: <== I/flutter (12546): 1679863057442
-[2:07:37 am]: <== I/flutter (12546): 1679863057461
-[2:07:37 am]: <== I/flutter (12546): 1679863057536
-[2:07:37 am]: <== I/flutter (12546): 1679863057536
-[2:07:37 am]: <== I/flutter (12546): 1679863057633
-[2:07:37 am]: <== I/flutter (12546): 1679863057640
-[2:07:38 am]: <== I/flutter (12546): 1679863058250
-[2:07:38 am]: <== I/flutter (12546): 1679863058250
-[2:07:38 am]: <== I/flutter (12546): 1679863058320
-[2:07:38 am]: <== I/flutter (12546): 1679863058327
-[2:07:38 am]: <== I/flutter (12546): 1679863058451
-[2:07:38 am]: <== I/flutter (12546): 1679863058468
-[2:07:38 am]: <== I/flutter (12546): 1679863058539
-[2:07:38 am]: <== I/flutter (12546): 1679863058544
-[2:07:38 am]: <== I/flutter (12546): 1679863058641
-[2:07:38 am]: <== I/flutter (12546): 1679863058647
-[2:07:39 am]: <== I/flutter (12546): 1679863059256
-[2:07:39 am]: <== I/flutter (12546): 1679863059256
-[2:07:39 am]: <== I/flutter (12546): 1679863059327
-[2:07:39 am]: <== I/flutter (12546): 1679863059336
-[2:07:39 am]: <== I/flutter (12546): 1679863059457
-[2:07:39 am]: <== I/flutter (12546): 1679863059474
-[2:07:39 am]: <== I/flutter (12546): 1679863059547
-[2:07:39 am]: <== I/flutter (12546): 1679863059553
-[2:07:39 am]: <== I/flutter (12546): 1679863059648
-[2:07:39 am]: <== I/flutter (12546): 1679863059666
-[2:07:40 am]: <== I/flutter (12546): 1679863060274
-[2:07:40 am]: <== I/flutter (12546): 1679863060274
-[2:07:40 am]: <== I/flutter (12546): 1679863060334
-[2:07:40 am]: <== I/flutter (12546): 1679863060343
-[2:07:40 am]: <== I/flutter (12546): 1679863060463
-[2:07:40 am]: <== I/flutter (12546): 1679863060480
-[2:07:40 am]: <== I/flutter (12546): 1679863060554
-[2:07:40 am]: <== I/flutter (12546): 1679863060559
-[2:07:40 am]: <== I/flutter (12546): 1679863060655
-[2:07:40 am]: <== I/flutter (12546): 1679863060686
-[2:07:41 am]: <== I/flutter (12546): 1679863061282
-[2:07:41 am]: <== I/flutter (12546): 1679863061282
-[2:07:41 am]: <== I/flutter (12546): 1679863061342
-[2:07:41 am]: <== I/flutter (12546): 1679863061349
-[2:07:41 am]: <== I/flutter (12546): 1679863061471
-[2:07:41 am]: <== I/flutter (12546): 1679863061488
-[2:07:41 am]: <== I/flutter (12546): 1679863061567
-[2:07:41 am]: <== I/flutter (12546): 1679863061567
-[2:07:41 am]: <== I/flutter (12546): 1679863061662
-[2:07:41 am]: <== I/flutter (12546): 1679863061692
-[2:07:42 am]: <== I/flutter (12546): 1679863062290
-[2:07:42 am]: <== I/flutter (12546): 1679863062290
-[2:07:42 am]: <== I/flutter (12546): 1679863062350
-[2:07:42 am]: <== I/flutter (12546): 1679863062356
-[2:07:42 am]: <== I/flutter (12546): 1679863062478
-[2:07:42 am]: <== I/flutter (12546): 1679863062496
-[2:07:42 am]: <== I/flutter (12546): 1679863062576
-[2:07:42 am]: <== I/flutter (12546): 1679863062576
-[2:07:42 am]: <== I/flutter (12546): 1679863062671
-[2:07:42 am]: <== I/flutter (12546): 1679863062700
-[2:07:43 am]: <== I/flutter (12546): 1679863063299
-[2:07:43 am]: <== I/flutter (12546): 1679863063299
-[2:07:43 am]: <== I/flutter (12546): 1679863063364
-[2:07:43 am]: <== I/flutter (12546): 1679863063364
-[2:07:43 am]: <== I/flutter (12546): 1679863063488
-[2:07:43 am]: <== I/flutter (12546): 1679863063507
-[2:07:43 am]: <== I/flutter (12546): 1679863063595
-[2:07:43 am]: <== I/flutter (12546): 1679863063595
-[2:07:43 am]: <== I/flutter (12546): 1679863063678
-[2:07:43 am]: <== I/flutter (12546): 1679863063709
-[2:07:44 am]: <== I/flutter (12546): 1679863064307
-[2:07:44 am]: <== I/flutter (12546): 1679863064307
-[2:07:44 am]: <== I/flutter (12546): 1679863064372
-[2:07:44 am]: <== I/flutter (12546): 1679863064372
-[2:07:44 am]: <== I/flutter (12546): 1679863064494
-[2:07:44 am]: <== I/flutter (12546): 1679863064514
-[2:07:44 am]: <== I/flutter (12546): 1679863064603
-[2:07:44 am]: <== I/flutter (12546): 1679863064603
-[2:07:44 am]: <== I/flutter (12546): 1679863064687
-[2:07:44 am]: <== I/flutter (12546): 1679863064716
-[2:07:45 am]: <== I/flutter (12546): 1679863065316
-[2:07:45 am]: <== I/flutter (12546): 1679863065316
-[2:07:45 am]: <== I/flutter (12546): 1679863065380
-[2:07:45 am]: <== I/flutter (12546): 1679863065380
-[2:07:45 am]: <== I/flutter (12546): 1679863065501
-[2:07:45 am]: <== I/flutter (12546): 1679863065519
-[2:07:45 am]: <== I/flutter (12546): 1679863065613
-[2:07:45 am]: <== I/flutter (12546): 1679863065613
-[2:07:45 am]: <== I/flutter (12546): 1679863065696
-[2:07:45 am]: <== I/flutter (12546): 1679863065721
-[2:07:46 am]: <== I/flutter (12546): 1679863066323
-[2:07:46 am]: <== I/flutter (12546): 1679863066323
-[2:07:46 am]: <== I/flutter (12546): 1679863066388
-[2:07:46 am]: <== I/flutter (12546): 1679863066393
-[2:07:46 am]: <== I/flutter (12546): 1679863066509
-[2:07:46 am]: <== I/flutter (12546): 1679863066526
-[2:07:46 am]: <== I/flutter (12546): 1679863066620
-[2:07:46 am]: <== I/flutter (12546): 1679863066620
-[2:07:46 am]: <== I/flutter (12546): 1679863066705
-[2:07:46 am]: <== I/flutter (12546): 1679863066727
-[2:07:47 am]: <== I/flutter (12546): 1679863067330
-[2:07:47 am]: <== I/flutter (12546): 1679863067330
-[2:07:47 am]: <== I/flutter (12546): 1679863067394
-[2:07:47 am]: <== I/flutter (12546): 1679863067404
-[2:07:47 am]: <== I/flutter (12546): 1679863067515
-[2:07:47 am]: <== I/flutter (12546): 1679863067532
-[2:07:47 am]: <== I/flutter (12546): 1679863067629
-[2:07:47 am]: <== I/flutter (12546): 1679863067629
-[2:07:47 am]: <== I/flutter (12546): 1679863067712
-[2:07:47 am]: <== I/flutter (12546): 1679863067735
-[2:07:48 am]: <== I/flutter (12546): 1679863068338
-[2:07:48 am]: <== I/flutter (12546): 1679863068338
-[2:07:48 am]: <== I/flutter (12546): 1679863068402
-[2:07:48 am]: <== I/flutter (12546): 1679863068411
-[2:07:48 am]: <== I/flutter (12546): 1679863068522
-[2:07:48 am]: <== I/flutter (12546): 1679863068538
-[2:07:48 am]: <== I/flutter (12546): 1679863068638
-[2:07:48 am]: <== I/flutter (12546): 1679863068638
-[2:07:48 am]: <== I/flutter (12546): 1679863068722
-[2:07:48 am]: <== I/flutter (12546): 1679863068742
-[2:07:49 am]: <== I/flutter (12546): 1679863069346
-[2:07:49 am]: <== I/flutter (12546): 1679863069346
-[2:07:49 am]: <== I/flutter (12546): 1679863069409
-[2:07:49 am]: <== I/flutter (12546): 1679863069418
-[2:07:49 am]: <== I/flutter (12546): 1679863069528
-[2:07:49 am]: <== I/flutter (12546): 1679863069545
-[2:07:49 am]: <== I/flutter (12546): 1679863069645
-[2:07:49 am]: <== I/flutter (12546): 1679863069645
-[2:07:49 am]: <== I/flutter (12546): 1679863069739
-[2:07:49 am]: <== I/flutter (12546): 1679863069750
-[2:07:50 am]: <== I/flutter (12546): 1679863070356
-[2:07:50 am]: <== I/flutter (12546): 1679863070356
-[2:07:50 am]: <== I/flutter (12546): 1679863070416
-[2:07:50 am]: <== I/flutter (12546): 1679863070425
-[2:07:50 am]: <== I/flutter (12546): 1679863070535
-[2:07:50 am]: <== I/flutter (12546): 1679863070553
-[2:07:50 am]: <== I/flutter (12546): 1679863070653
-[2:07:50 am]: <== I/flutter (12546): 1679863070653
-[2:07:50 am]: <== I/flutter (12546): 1679863070745
-[2:07:50 am]: <== I/flutter (12546): 1679863070759
-[2:07:51 am]: <== I/flutter (12546): 1679863071364
-[2:07:51 am]: <== I/flutter (12546): 1679863071364
-[2:07:51 am]: <== I/flutter (12546): 1679863071424
-[2:07:51 am]: <== I/flutter (12546): 1679863071442
-[2:07:51 am]: <== I/flutter (12546): 1679863071542
-[2:07:51 am]: <== I/flutter (12546): 1679863071560
-[2:07:51 am]: <== I/flutter (12546): 1679863071660
-[2:07:51 am]: <== I/flutter (12546): 1679863071660
-[2:07:51 am]: <== I/flutter (12546): 1679863071767
-[2:07:52 am]: <== I/flutter (12546): 1679863071767
-[2:07:52 am]: <== I/flutter (12546): 1679863072372
-[2:07:52 am]: <== I/flutter (12546): 1679863072372
-[2:07:52 am]: <== I/flutter (12546): 1679863072431
-[2:07:52 am]: <== I/flutter (12546): 1679863072449
-[2:07:52 am]: <== I/flutter (12546): 1679863072549
-[2:07:52 am]: <== I/flutter (12546): 1679863072568
-[2:07:52 am]: <== I/flutter (12546): 1679863072668
-[2:07:52 am]: <== I/flutter (12546): 1679863072668
-[2:07:52 am]: <== I/flutter (12546): 1679863072773
-[2:07:53 am]: <== I/flutter (12546): 1679863072773
-[2:07:53 am]: <== I/flutter (12546): 1679863073378
-[2:07:53 am]: <== I/flutter (12546): 1679863073378
-[2:07:53 am]: <== I/flutter (12546): 1679863073437
-[2:07:53 am]: <== I/flutter (12546): 1679863073457
-[2:07:53 am]: <== I/flutter (12546): 1679863073555
-[2:07:53 am]: <== I/flutter (12546): 1679863073574
-[2:07:53 am]: <== I/flutter (12546): 1679863073676
-[2:07:53 am]: <== I/flutter (12546): 1679863073676
-[2:07:53 am]: <== I/flutter (12546): 1679863073777
-[2:07:53 am]: <== I/flutter (12546): 1679863073783
-[2:07:54 am]: <== I/flutter (12546): 1679863074387
-[2:07:54 am]: <== I/flutter (12546): 1679863074387
-[2:07:54 am]: <== I/flutter (12546): 1679863074446
-[2:07:54 am]: <== I/flutter (12546): 1679863074465
-[2:07:54 am]: <== I/flutter (12546): 1679863074565
-[2:07:54 am]: <== I/flutter (12546): 1679863074581
-[2:07:54 am]: <== I/flutter (12546): 1679863074686
-[2:07:54 am]: <== I/flutter (12546): 1679863074686
-[2:07:54 am]: <== I/flutter (12546): 1679863074784
-[2:07:54 am]: <== I/flutter (12546): 1679863074792
-[2:07:55 am]: <== I/flutter (12546): 1679863075394
-[2:07:55 am]: <== I/flutter (12546): 1679863075394
-[2:07:55 am]: <== I/flutter (12546): 1679863075452
-[2:07:55 am]: <== I/flutter (12546): 1679863075473
-[2:07:55 am]: <== I/flutter (12546): 1679863075571
-[2:07:55 am]: <== I/flutter (12546): 1679863075587
-[2:07:55 am]: <== I/flutter (12546): 1679863075693
-[2:07:55 am]: <== I/flutter (12546): 1679863075693
-[2:07:55 am]: <== I/flutter (12546): 1679863075792
-[2:07:55 am]: <== I/flutter (12546): 1679863075799
-[2:07:56 am]: <== I/flutter (12546): 1679863076402
-[2:07:56 am]: <== I/flutter (12546): 1679863076402
-[2:07:56 am]: <== I/flutter (12546): 1679863076460
-[2:07:56 am]: <== I/flutter (12546): 1679863076480
-[2:07:56 am]: <== I/flutter (12546): 1679863076577
-[2:07:56 am]: <== I/flutter (12546): 1679863076593
-[2:07:56 am]: <== I/flutter (12546): 1679863076699
-[2:07:56 am]: <== I/flutter (12546): 1679863076699
-[2:07:56 am]: <== I/flutter (12546): 1679863076801
-[2:07:56 am]: <== I/flutter (12546): 1679863076809
-[2:07:57 am]: <== I/flutter (12546): 1679863077411
-[2:07:57 am]: <== I/flutter (12546): 1679863077411
-[2:07:57 am]: <== I/flutter (12546): 1679863077469
-[2:07:57 am]: <== I/flutter (12546): 1679863077489
-[2:07:57 am]: <== I/flutter (12546): 1679863077584
-[2:07:57 am]: <== I/flutter (12546): 1679863077600
-[2:07:57 am]: <== I/flutter (12546): 1679863077708
-[2:07:57 am]: <== I/flutter (12546): 1679863077708
-[2:07:57 am]: <== I/flutter (12546): 1679863077811
-[2:07:57 am]: <== I/flutter (12546): 1679863077818
-[2:07:58 am]: <== I/flutter (12546): 1679863078420
-[2:07:58 am]: <== I/flutter (12546): 1679863078420
-[2:07:58 am]: <== I/flutter (12546): 1679863078477
-[2:07:58 am]: <== I/flutter (12546): 1679863078496
-[2:07:58 am]: <== I/flutter (12546): 1679863078593
-[2:07:58 am]: <== I/flutter (12546): 1679863078607
-[2:07:58 am]: <== I/flutter (12546): 1679863078719
-[2:07:58 am]: <== I/flutter (12546): 1679863078719
-[2:07:58 am]: <== I/flutter (12546): 1679863078820
-[2:07:58 am]: <== I/flutter (12546): 1679863078827
-[2:07:59 am]: <== I/flutter (12546): 1679863079429
-[2:07:59 am]: <== I/flutter (12546): 1679863079429
-[2:07:59 am]: <== I/flutter (12546): 1679863079485
-[2:07:59 am]: <== I/flutter (12546): 1679863079506
-[2:07:59 am]: <== I/flutter (12546): 1679863079600
-[2:07:59 am]: <== I/flutter (12546): 1679863079627
-[2:07:59 am]: <== I/flutter (12546): 1679863079727
-[2:07:59 am]: <== I/flutter (12546): 1679863079727
-[2:07:59 am]: <== I/flutter (12546): 1679863079829
-[2:07:59 am]: <== I/flutter (12546): 1679863079837
-[2:08:00 am]: <== I/flutter (12546): 1679863080446
-[2:08:00 am]: <== I/flutter (12546): 1679863080446
-[2:08:00 am]: <== I/flutter (12546): 1679863080496
-[2:08:00 am]: <== I/flutter (12546): 1679863080513
-[2:08:00 am]: <== I/flutter (12546): 1679863080610
-[2:08:00 am]: <== I/flutter (12546): 1679863080636
-[2:08:00 am]: <== I/flutter (12546): 1679863080731
-[2:08:00 am]: <== I/flutter (12546): 1679863080736
-[2:08:00 am]: <== I/flutter (12546): 1679863080836
-[2:08:00 am]: <== I/flutter (12546): 1679863080844
-[2:08:01 am]: <== I/flutter (12546): 1679863081455
-[2:08:01 am]: <== I/flutter (12546): 1679863081455
-[2:08:01 am]: <== I/flutter (12546): 1679863081505
-[2:08:01 am]: <== I/flutter (12546): 1679863081521
-[2:08:01 am]: <== I/flutter (12546): 1679863081618
-[2:08:01 am]: <== I/flutter (12546): 1679863081645
-[2:08:01 am]: <== I/flutter (12546): 1679863081738
-[2:08:01 am]: <== I/flutter (12546): 1679863081745
-[2:08:01 am]: <== I/flutter (12546): 1679863081851
-[2:08:02 am]: <== I/flutter (12546): 1679863081851
-[2:08:02 am]: <== I/flutter (12546): 1679863082464
-[2:08:02 am]: <== I/flutter (12546): 1679863082464
-[2:08:02 am]: <== I/flutter (12546): 1679863082512
-[2:08:02 am]: <== I/flutter (12546): 1679863082529
-[2:08:02 am]: <== I/flutter (12546): 1679863082627
-[2:08:02 am]: <== I/flutter (12546): 1679863082655
-[2:08:02 am]: <== I/flutter (12546): 1679863082746
-[2:08:02 am]: <== I/flutter (12546): 1679863082754
-[2:08:02 am]: <== I/flutter (12546): 1679863082855
-[2:08:02 am]: <== I/flutter (12546): 1679863082862
-[2:08:03 am]: <== I/flutter (12546): 1679863083472
-[2:08:03 am]: <== I/flutter (12546): 1679863083472
-[2:08:03 am]: <== I/flutter (12546): 1679863083520
-[2:08:03 am]: <== I/flutter (12546): 1679863083535
-[2:08:03 am]: <== I/flutter (12546): 1679863083633
-[2:08:03 am]: <== I/flutter (12546): 1679863083662
-[2:08:03 am]: <== I/flutter (12546): 1679863083761
-[2:08:03 am]: <== I/flutter (12546): 1679863083761
-[2:08:03 am]: <== I/flutter (12546): 1679863083864
-[2:08:03 am]: <== I/flutter (12546): 1679863083881
-[2:08:04 am]: <== I/flutter (12546): 1679863084482
-[2:08:04 am]: <== I/flutter (12546): 1679863084482
-[2:08:04 am]: <== I/flutter (12546): 1679863084542
-[2:08:04 am]: <== I/flutter (12546): 1679863084542
-[2:08:04 am]: <== I/flutter (12546): 1679863084640
-[2:08:04 am]: <== I/flutter (12546): 1679863084669
-[2:08:04 am]: <== I/flutter (12546): 1679863084775
-[2:08:04 am]: <== I/flutter (12546): 1679863084775
-[2:08:04 am]: <== I/flutter (12546): 1679863084872
-[2:08:04 am]: <== I/flutter (12546): 1679863084887
-[2:08:05 am]: <== I/flutter (12546): 1679863085489
-[2:08:05 am]: <== I/flutter (12546): 1679863085489
-[2:08:05 am]: <== I/flutter (12546): 1679863085545
-[2:08:05 am]: <== I/flutter (12546): 1679863085551
-[2:08:05 am]: <== I/flutter (12546): 1679863085648
-[2:08:05 am]: <== I/flutter (12546): 1679863085676
-[2:08:05 am]: <== I/flutter (12546): 1679863085779
-[2:08:05 am]: <== I/flutter (12546): 1679863085785
-[2:08:05 am]: <== I/flutter (12546): 1679863085879
-[2:08:05 am]: <== I/flutter (12546): 1679863085893
-[2:08:06 am]: <== I/flutter (12546): 1679863086496
-[2:08:06 am]: <== I/flutter (12546): 1679863086496
-[2:08:06 am]: <== I/flutter (12546): 1679863086553
-[2:08:06 am]: <== I/flutter (12546): 1679863086568
-[2:08:06 am]: <== I/flutter (12546): 1679863086655
-[2:08:06 am]: <== I/flutter (12546): 1679863086683
-[2:08:06 am]: <== I/flutter (12546): 1679863086787
-[2:08:06 am]: <== I/flutter (12546): 1679863086797
-[2:08:06 am]: <== I/flutter (12546): 1679863086888
-[2:08:06 am]: <== I/flutter (12546): 1679863086900
-[2:08:07 am]: <== I/flutter (12546): 1679863087504
-[2:08:07 am]: <== I/flutter (12546): 1679863087504
-[2:08:07 am]: <== I/flutter (12546): 1679863087560
-[2:08:07 am]: <== I/flutter (12546): 1679863087574
-[2:08:07 am]: <== I/flutter (12546): 1679863087661
-[2:08:07 am]: <== I/flutter (12546): 1679863087690
-[2:08:07 am]: <== I/flutter (12546): 1679863087794
-[2:08:07 am]: <== I/flutter (12546): 1679863087816
-[2:08:07 am]: <== I/flutter (12546): 1679863087894
-[2:08:07 am]: <== I/flutter (12546): 1679863087908
-[2:08:08 am]: <== I/flutter (12546): 1679863088513
-[2:08:08 am]: <== I/flutter (12546): 1679863088513
-[2:08:08 am]: <== I/flutter (12546): 1679863088581
-[2:08:08 am]: <== I/flutter (12546): 1679863088581
-[2:08:08 am]: <== I/flutter (12546): 1679863088667
-[2:08:08 am]: <== I/flutter (12546): 1679863088698
-[2:08:08 am]: <== I/flutter (12546): 1679863088801
-[2:08:08 am]: <== I/flutter (12546): 1679863088823
-[2:08:08 am]: <== I/flutter (12546): 1679863088902
-[2:08:08 am]: <== I/flutter (12546): 1679863088914
-[2:08:09 am]: <== I/flutter (12546): 1679863089521
-[2:08:09 am]: <== I/flutter (12546): 1679863089521
-[2:08:09 am]: <== I/flutter (12546): 1679863089590
-[2:08:09 am]: <== I/flutter (12546): 1679863089590
-[2:08:09 am]: <== I/flutter (12546): 1679863089675
-[2:08:09 am]: <== I/flutter (12546): 1679863089705
-[2:08:09 am]: <== I/flutter (12546): 1679863089807
-[2:08:09 am]: <== I/flutter (12546): 1679863089830
-[2:08:09 am]: <== I/flutter (12546): 1679863089920
-[2:08:10 am]: <== I/flutter (12546): 1679863089920
-[2:08:10 am]: <== I/flutter (12546): 1679863090529
-[2:08:10 am]: <== I/flutter (12546): 1679863090529
-[2:08:10 am]: <== I/flutter (12546): 1679863090598
-[2:08:10 am]: <== I/flutter (12546): 1679863090598
-[2:08:10 am]: <== I/flutter (12546): 1679863090682
-[2:08:10 am]: <== I/flutter (12546): 1679863090712
-[2:08:10 am]: <== I/flutter (12546): 1679863090815
-[2:08:10 am]: <== I/flutter (12546): 1679863090837
-[2:08:10 am]: <== I/flutter (12546): 1679863090933
-[2:08:11 am]: <== I/flutter (12546): 1679863090933
-[2:08:11 am]: <== I/flutter (12546): 1679863091547
-[2:08:11 am]: <== I/flutter (12546): 1679863091547
-[2:08:11 am]: <== I/flutter (12546): 1679863091605
-[2:08:11 am]: <== I/flutter (12546): 1679863091605
-[2:08:11 am]: <== I/flutter (12546): 1679863091688
-[2:08:11 am]: <== I/flutter (12546): 1679863091717
-[2:08:11 am]: <== I/flutter (12546): 1679863091823
-[2:08:11 am]: <== I/flutter (12546): 1679863091855
-[2:08:11 am]: <== I/flutter (12546): 1679863091943
-[2:08:12 am]: <== I/flutter (12546): 1679863091943
-[2:08:12 am]: <== I/flutter (12546): 1679863092555
-[2:08:12 am]: <== I/flutter (12546): 1679863092555
-[2:08:12 am]: <== I/flutter (12546): 1679863092612
-[2:08:12 am]: <== I/flutter (12546): 1679863092612
-[2:08:12 am]: <== I/flutter (12546): 1679863092707
-[2:08:12 am]: <== I/flutter (12546): 1679863092723
-[2:08:12 am]: <== I/flutter (12546): 1679863092833
-[2:08:12 am]: <== I/flutter (12546): 1679863092862
-[2:08:12 am]: <== I/flutter (12546): 1679863092952
-[2:08:13 am]: ==> [{"id":"6","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:08:13 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"13","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:08:13 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"14","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:08:13 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"14","progressId":null,"finished":true}}]
-[2:08:13 am]: <== I/flutter (12546): 1679863092952
-[2:08:13 am]: <== I/flutter (12546): 1679863093638
-[2:08:13 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:13 am]: <== I/flutter (12546): 1679863093638
-[2:08:13 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:13 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"13","progressId":"hot.reload","finished":true}}]
-[2:08:13 am]: <== Reloaded 1 of 2153 libraries in 567ms (compile: 49 ms, reload: 183 ms, reassemble: 264 ms).
-[2:08:13 am]: <== [{"id":"6","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:08:13 am]: <== I/flutter (12546): 1679863093903
-[2:08:13 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:13 am]: <== I/flutter (12546): 1679863093903
-[2:08:13 am]: <== I/flutter (12546): list----------
-[2:08:14 am]: <== I/flutter (12546): 1679863093938
-[2:08:14 am]: <== I/flutter (12546): 1679863094000
-[2:08:14 am]: <== I/flutter (12546): 1679863094000
-[2:08:14 am]: <== I/flutter (12546): 1679863094656
-[2:08:14 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:14 am]: <== I/flutter (12546): 1679863094656
-[2:08:14 am]: <== I/flutter (12546): 1679863094923
-[2:08:15 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:15 am]: <== I/flutter (12546): 1679863094923
-[2:08:15 am]: <== I/flutter (12546): 1679863095003
-[2:08:15 am]: <== I/flutter (12546): 1679863095010
-[2:08:15 am]: <== I/flutter (12546): 1679863095010
-[2:08:15 am]: <== I/flutter (12546): 1679863095664
-[2:08:15 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:15 am]: <== I/flutter (12546): 1679863095664
-[2:08:15 am]: <== I/flutter (12546): 1679863095929
-[2:08:15 am]: <== I/flutter (12546): 1679863095929
-[2:08:15 am]: <== I/flutter (12546): 1679863095935
-[2:08:16 am]: <== I/flutter (12546): 1679863095935
-[2:08:16 am]: <== I/flutter (12546): 1679863096011
-[2:08:16 am]: <== I/flutter (12546): 1679863096018
-[2:08:16 am]: <== I/flutter (12546): 1679863096018
-[2:08:16 am]: <== I/flutter (12546): 1679863096682
-[2:08:16 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:16 am]: <== I/flutter (12546): 1679863096682
-[2:08:16 am]: <== I/flutter (12546): 1679863096936
-[2:08:16 am]: <== I/flutter (12546): 1679863096936
-[2:08:16 am]: <== I/flutter (12546): 1679863096943
-[2:08:17 am]: <== I/flutter (12546): 1679863096943
-[2:08:17 am]: <== I/flutter (12546): 1679863097017
-[2:08:17 am]: <== I/flutter (12546): 1679863097036
-[2:08:17 am]: ==> [{"id":"7","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:08:17 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"15","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:08:17 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"16","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:08:17 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"16","progressId":null,"finished":true}}]
-[2:08:17 am]: <== I/flutter (12546): 1679863097036
-[2:08:17 am]: <== I/flutter (12546): 1679863097817
-[2:08:18 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:18 am]: <== I/flutter (12546): 1679863097817
-[2:08:18 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:18 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"15","progressId":"hot.reload","finished":true}}]
-[2:08:18 am]: <== Reloaded 1 of 2153 libraries in 569ms (compile: 46 ms, reload: 175 ms, reassemble: 280 ms).
-[2:08:18 am]: <== [{"id":"7","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:08:18 am]: <== I/flutter (12546): 1679863098097
-[2:08:18 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:08:18 am]: <== I/flutter (12546): 1679863098097
-[2:08:18 am]: <== I/flutter (12546): list----------
-[2:08:18 am]: <== I/flutter (12546): 1679863098128
-[2:08:18 am]: <== I/flutter (12546): Timer ended
-[2:08:18 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:18 am]: <== I/flutter (12546): list----------
-[2:08:18 am]: <== I/flutter (12546): 1679863098190
-[2:08:18 am]: <== I/flutter (12546): 1679863098838
-[2:08:19 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:19 am]: <== I/flutter (12546): 1679863098838
-[2:08:19 am]: <== I/flutter (12546): 1679863099111
-[2:08:19 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:08:19 am]: <== I/flutter (12546): 1679863099111
-[2:08:19 am]: <== I/flutter (12546): 1679863099138
-[2:08:19 am]: <== I/flutter (12546): 1679863099198
-[2:08:19 am]: <== I/flutter (12546): 1679863099847
-[2:08:20 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:20 am]: <== I/flutter (12546): 1679863099847
-[2:08:20 am]: <== I/flutter (12546): 1679863100121
-[2:08:20 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:08:20 am]: <== I/flutter (12546): 1679863100121
-[2:08:20 am]: <== I/flutter (12546): 1679863100155
-[2:08:20 am]: <== I/flutter (12546): 1679863100206
-[2:08:20 am]: <== I/flutter (12546): 1679863100857
-[2:08:21 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:21 am]: <== I/flutter (12546): 1679863100857
-[2:08:21 am]: <== I/flutter (12546): 1679863101131
-[2:08:21 am]: <== I/flutter (12546): 1679863101131
-[2:08:21 am]: <== I/flutter (12546): 1679863101134
-[2:08:21 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:21 am]: <== I/flutter (12546): 1679863101134
-[2:08:21 am]: <== I/flutter (12546): 1679863101163
-[2:08:21 am]: <== I/flutter (12546): 1679863101211
-[2:08:21 am]: <== I/flutter (12546): 1679863101862
-[2:08:21 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:21 am]: <== I/flutter (12546): 1679863101862
-[2:08:21 am]: <== I/flutter (12546): 1679863101876
-[2:08:22 am]: <== I/flutter (12546): 1679863102140
-[2:08:22 am]: <== I/flutter (12546): 1679863102140
-[2:08:22 am]: <== I/flutter (12546): 1679863102146
-[2:08:22 am]: <== I/flutter (12546): 1679863102150
-[2:08:22 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:22 am]: <== I/flutter (12546): 1679863102150
-[2:08:22 am]: <== I/flutter (12546): 1679863102169
-[2:08:22 am]: <== I/flutter (12546): 1679863102220
-[2:08:22 am]: <== I/flutter (12546): 1679863102872
-[2:08:22 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:22 am]: <== I/flutter (12546): 1679863102872
-[2:08:22 am]: <== I/flutter (12546): 1679863102882
-[2:08:23 am]: <== I/flutter (12546): 1679863103147
-[2:08:23 am]: <== I/flutter (12546): 1679863103162
-[2:08:23 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 4 lines
-[2:08:23 am]: <== I/flutter (12546): 1679863103162
-[2:08:23 am]: <== I/flutter (12546): 1679863103177
-[2:08:23 am]: <== I/flutter (12546): 1679863103229
-[2:08:23 am]: <== I/flutter (12546): 1679863103880
-[2:08:23 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:23 am]: <== I/flutter (12546): 1679863103880
-[2:08:23 am]: <== I/flutter (12546): 1679863103889
-[2:08:24 am]: <== I/flutter (12546): 1679863104151
-[2:08:24 am]: <== I/flutter (12546): 1679863104168
-[2:08:24 am]: <== I/flutter (12546): 1679863104172
-[2:08:24 am]: <== I/flutter (12546): 1679863104177
-[2:08:24 am]: <== I/flutter (12546): 1679863104184
-[2:08:24 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:24 am]: <== I/flutter (12546): 1679863104184
-[2:08:24 am]: <== I/flutter (12546): 1679863104236
-[2:08:24 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:24 am]: <== I/flutter (12546): list----------
-[2:08:24 am]: <== I/flutter (12546): Timer ended
-[2:08:24 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:24 am]: <== I/flutter (12546): 1679863104536
-[2:08:24 am]: <== I/flutter (12546): list----------
-[2:08:24 am]: <== I/flutter (12546): 1679863104582
-[2:08:24 am]: <== I/flutter (12546): 1679863104886
-[2:08:24 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:24 am]: <== I/flutter (12546): 1679863104886
-[2:08:24 am]: <== I/flutter (12546): 1679863104897
-[2:08:25 am]: <== I/flutter (12546): 1679863105159
-[2:08:25 am]: <== I/flutter (12546): 1679863105178
-[2:08:25 am]: <== I/flutter (12546): 1679863105183
-[2:08:25 am]: <== I/flutter (12546): 1679863105194
-[2:08:25 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:25 am]: <== I/flutter (12546): 1679863105194
-[2:08:25 am]: <== I/flutter (12546): 1679863105244
-[2:08:25 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:25 am]: <== I/flutter (12546): list----------
-[2:08:25 am]: <== I/flutter (12546): Timer ended
-[2:08:25 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:25 am]: <== I/flutter (12546): 1679863105462
-[2:08:25 am]: <== I/flutter (12546): list----------
-[2:08:25 am]: <== I/flutter (12546): 1679863105512
-[2:08:25 am]: <== I/flutter (12546): 1679863105560
-[2:08:25 am]: <== I/flutter (12546): 1679863105597
-[2:08:25 am]: <== I/flutter (12546): 1679863105894
-[2:08:25 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:25 am]: <== I/flutter (12546): 1679863105894
-[2:08:25 am]: <== I/flutter (12546): 1679863105904
-[2:08:26 am]: <== I/flutter (12546): 1679863106165
-[2:08:26 am]: <== I/flutter (12546): 1679863106199
-[2:08:26 am]: <== I/flutter (12546): 1679863106206
-[2:08:26 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 4 lines
-[2:08:26 am]: <== I/flutter (12546): 1679863106206
-[2:08:26 am]: <== I/flutter (12546): 1679863106251
-[2:08:26 am]: <== I/flutter (12546): 1679863106494
-[2:08:26 am]: <== I/flutter (12546): 1679863106528
-[2:08:26 am]: <== I/flutter (12546): 1679863106566
-[2:08:26 am]: <== I/flutter (12546): 1679863106606
-[2:08:26 am]: <== I/flutter (12546): 1679863106901
-[2:08:26 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:26 am]: <== I/flutter (12546): 1679863106901
-[2:08:26 am]: <== I/flutter (12546): 1679863106910
-[2:08:27 am]: <== I/flutter (12546): 1679863107173
-[2:08:27 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:27 am]: <== I/flutter (12546): 1679863107210
-[2:08:27 am]: <== I/flutter (12546): list----------
-[2:08:27 am]: <== I/flutter (12546): Timer ended
-[2:08:27 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:27 am]: <== I/flutter (12546): 1679863107220
-[2:08:27 am]: <== I/flutter (12546): 1679863107242
-[2:08:27 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 4 lines
-[2:08:27 am]: <== I/flutter (12546): 1679863107242
-[2:08:27 am]: <== I/flutter (12546): list----------
-[2:08:27 am]: <== I/flutter (12546): 1679863107274
-[2:08:27 am]: <== I/flutter (12546): 1679863107274
-[2:08:27 am]: <== I/flutter (12546): 1679863107500
-[2:08:27 am]: <== I/flutter (12546): 1679863107533
-[2:08:27 am]: <== I/flutter (12546): 1679863107571
-[2:08:27 am]: <== I/flutter (12546): 1679863107613
-[2:08:27 am]: <== I/flutter (12546): 1679863107911
-[2:08:27 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:27 am]: <== I/flutter (12546): 1679863107911
-[2:08:27 am]: <== I/flutter (12546): 1679863107917
-[2:08:28 am]: <== I/flutter (12546): 1679863108181
-[2:08:28 am]: <== I/flutter (12546): 1679863108214
-[2:08:28 am]: <== I/flutter (12546): 1679863108247
-[2:08:28 am]: <== I/flutter (12546): 1679863108247
-[2:08:28 am]: <== I/flutter (12546): 1679863108259
-[2:08:28 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:28 am]: <== I/flutter (12546): 1679863108259
-[2:08:28 am]: <== I/flutter (12546): 1679863108283
-[2:08:28 am]: <== I/flutter (12546): 1679863108283
-[2:08:28 am]: <== I/flutter (12546): 1679863108507
-[2:08:28 am]: <== I/flutter (12546): 1679863108541
-[2:08:28 am]: <== I/flutter (12546): 1679863108578
-[2:08:28 am]: <== I/flutter (12546): 1679863108619
-[2:08:28 am]: <== I/flutter (12546): 1679863108918
-[2:08:28 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:28 am]: <== I/flutter (12546): 1679863108918
-[2:08:28 am]: <== I/flutter (12546): 1679863108927
-[2:08:29 am]: <== I/flutter (12546): 1679863109189
-[2:08:29 am]: <== I/flutter (12546): 1679863109222
-[2:08:29 am]: <== I/flutter (12546): 1679863109252
-[2:08:29 am]: <== I/flutter (12546): 1679863109258
-[2:08:29 am]: <== I/flutter (12546): 1679863109267
-[2:08:29 am]: <== I/flutter (12546): 1679863109267
-[2:08:29 am]: <== I/flutter (12546): 1679863109273
-[2:08:29 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:29 am]: <== I/flutter (12546): 1679863109273
-[2:08:29 am]: <== I/flutter (12546): 1679863109286
-[2:08:29 am]: <== I/flutter (12546): 1679863109293
-[2:08:29 am]: <== I/flutter (12546): 1679863109514
-[2:08:29 am]: <== I/flutter (12546): 1679863109551
-[2:08:29 am]: <== I/flutter (12546): 1679863109585
-[2:08:29 am]: <== I/flutter (12546): 1679863109627
-[2:08:29 am]: <== I/flutter (12546): 1679863109926
-[2:08:29 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:29 am]: <== I/flutter (12546): 1679863109926
-[2:08:29 am]: <== I/flutter (12546): 1679863109933
-[2:08:30 am]: <== I/flutter (12546): 1679863110195
-[2:08:30 am]: <== I/flutter (12546): 1679863110229
-[2:08:30 am]: <== I/flutter (12546): 1679863110260
-[2:08:30 am]: <== I/flutter (12546): 1679863110266
-[2:08:30 am]: <== I/flutter (12546): 1679863110273
-[2:08:30 am]: <== I/flutter (12546): 1679863110273
-[2:08:30 am]: <== I/flutter (12546): 1679863110282
-[2:08:30 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:30 am]: <== I/flutter (12546): 1679863110282
-[2:08:30 am]: <== I/flutter (12546): 1679863110293
-[2:08:30 am]: <== I/flutter (12546): 1679863110299
-[2:08:30 am]: <== I/flutter (12546): 1679863110521
-[2:08:30 am]: <== I/flutter (12546): 1679863110562
-[2:08:30 am]: <== I/flutter (12546): 1679863110592
-[2:08:30 am]: <== I/flutter (12546): 1679863110634
-[2:08:30 am]: <== I/flutter (12546): 1679863110948
-[2:08:31 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:31 am]: <== I/flutter (12546): 1679863110948
-[2:08:31 am]: <== I/flutter (12546): 1679863111202
-[2:08:31 am]: <== I/flutter (12546): 1679863111237
-[2:08:31 am]: <== I/flutter (12546): 1679863111267
-[2:08:31 am]: <== I/flutter (12546): 1679863111273
-[2:08:31 am]: <== I/flutter (12546): 1679863111280
-[2:08:31 am]: <== I/flutter (12546): 1679863111280
-[2:08:31 am]: <== I/flutter (12546): 1679863111289
-[2:08:31 am]: <== I/flutter (12546): 1679863111294
-[2:08:31 am]: <== I/flutter (12546): 1679863111294
-[2:08:31 am]: <== I/flutter (12546): 1679863111307
-[2:08:31 am]: <== I/flutter (12546): 1679863111307
-[2:08:31 am]: <== I/flutter (12546): 1679863111528
-[2:08:31 am]: <== I/flutter (12546): 1679863111569
-[2:08:31 am]: <== I/flutter (12546): 1679863111600
-[2:08:31 am]: <== I/flutter (12546): 1679863111639
-[2:08:31 am]: <== I/flutter (12546): 1679863111957
-[2:08:32 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:32 am]: <== I/flutter (12546): 1679863111957
-[2:08:32 am]: <== I/flutter (12546): 1679863112209
-[2:08:32 am]: <== I/flutter (12546): 1679863112245
-[2:08:32 am]: <== I/flutter (12546): 1679863112274
-[2:08:32 am]: <== I/flutter (12546): 1679863112286
-[2:08:32 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:32 am]: <== I/flutter (12546): 1679863112286
-[2:08:32 am]: <== I/flutter (12546): 1679863112293
-[2:08:32 am]: <== I/flutter (12546): 1679863112300
-[2:08:32 am]: <== I/flutter (12546): 1679863112300
-[2:08:32 am]: <== I/flutter (12546): 1679863112315
-[2:08:32 am]: <== I/flutter (12546): 1679863112315
-[2:08:32 am]: <== I/flutter (12546): 1679863112534
-[2:08:32 am]: <== I/flutter (12546): 1679863112575
-[2:08:32 am]: <== I/flutter (12546): 1679863112608
-[2:08:32 am]: <== I/flutter (12546): 1679863112647
-[2:08:33 am]: <== I/flutter (12546): 1679863112963
-[2:08:33 am]: <== I/flutter (12546): 1679863112968
-[2:08:33 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:33 am]: <== I/flutter (12546): 1679863112968
-[2:08:33 am]: <== I/flutter (12546): 1679863113215
-[2:08:33 am]: <== I/flutter (12546): 1679863113254
-[2:08:33 am]: <== I/flutter (12546): 1679863113282
-[2:08:33 am]: <== I/flutter (12546): 1679863113289
-[2:08:33 am]: <== I/flutter (12546): 1679863113295
-[2:08:33 am]: <== I/flutter (12546): 1679863113295
-[2:08:33 am]: <== I/flutter (12546): 1679863113303
-[2:08:33 am]: <== I/flutter (12546): 1679863113310
-[2:08:33 am]: <== I/flutter (12546): 1679863113310
-[2:08:33 am]: <== I/flutter (12546): 1679863113331
-[2:08:33 am]: <== I/flutter (12546): 1679863113331
-[2:08:33 am]: <== I/flutter (12546): 1679863113542
-[2:08:33 am]: <== I/flutter (12546): 1679863113581
-[2:08:33 am]: <== I/flutter (12546): 1679863113627
-[2:08:33 am]: <== I/flutter (12546): 1679863113655
-[2:08:34 am]: <== I/flutter (12546): 1679863113971
-[2:08:34 am]: <== I/flutter (12546): 1679863113991
-[2:08:34 am]: <== I/flutter (12546): 1679863113995
-[2:08:34 am]: <== I/flutter (12546): 1679863113995
-[2:08:34 am]: <== I/flutter (12546): 1679863114222
-[2:08:34 am]: <== I/flutter (12546): 1679863114260
-[2:08:34 am]: <== I/flutter (12546): 1679863114289
-[2:08:34 am]: <== I/flutter (12546): 1679863114297
-[2:08:34 am]: <== I/flutter (12546): 1679863114319
-[2:08:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:34 am]: <== I/flutter (12546): 1679863114319
-[2:08:34 am]: <== I/flutter (12546): 1679863114339
-[2:08:34 am]: <== I/flutter (12546): 1679863114339
-[2:08:34 am]: <== I/flutter (12546): 1679863114550
-[2:08:34 am]: <== I/flutter (12546): 1679863114589
-[2:08:34 am]: <== I/flutter (12546): 1679863114635
-[2:08:34 am]: <== I/flutter (12546): 1679863114662
-[2:08:35 am]: <== I/flutter (12546): 1679863114980
-[2:08:35 am]: <== I/flutter (12546): 1679863114997
-[2:08:35 am]: <== I/flutter (12546): 1679863115003
-[2:08:35 am]: <== I/flutter (12546): 1679863115009
-[2:08:35 am]: <== I/flutter (12546): 1679863115233
-[2:08:35 am]: <== I/flutter (12546): 1679863115266
-[2:08:35 am]: <== I/flutter (12546): 1679863115296
-[2:08:35 am]: <== I/flutter (12546): 1679863115305
-[2:08:35 am]: <== I/flutter (12546): 1679863115323
-[2:08:35 am]: <== I/flutter (12546): 1679863115323
-[2:08:35 am]: <== I/flutter (12546): 1679863115330
-[2:08:35 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:35 am]: <== I/flutter (12546): 1679863115330
-[2:08:35 am]: <== I/flutter (12546): 1679863115342
-[2:08:35 am]: <== I/flutter (12546): 1679863115347
-[2:08:35 am]: <== I/flutter (12546): 1679863115558
-[2:08:35 am]: <== I/flutter (12546): 1679863115596
-[2:08:35 am]: <== I/flutter (12546): 1679863115640
-[2:08:35 am]: <== I/flutter (12546): 1679863115670
-[2:08:36 am]: <== I/flutter (12546): 1679863115986
-[2:08:36 am]: <== I/flutter (12546): 1679863116006
-[2:08:36 am]: <== I/flutter (12546): 1679863116010
-[2:08:36 am]: <== I/flutter (12546): 1679863116017
-[2:08:36 am]: <== I/flutter (12546): 1679863116238
-[2:08:36 am]: <== I/flutter (12546): 1679863116272
-[2:08:36 am]: <== I/flutter (12546): 1679863116302
-[2:08:36 am]: <== I/flutter (12546): 1679863116312
-[2:08:36 am]: <== I/flutter (12546): 1679863116330
-[2:08:36 am]: <== I/flutter (12546): 1679863116330
-[2:08:36 am]: <== I/flutter (12546): 1679863116350
-[2:08:36 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:36 am]: <== I/flutter (12546): 1679863116350
-[2:08:36 am]: <== I/flutter (12546): 1679863116358
-[2:08:36 am]: <== I/flutter (12546): 1679863116358
-[2:08:36 am]: <== I/flutter (12546): 1679863116569
-[2:08:36 am]: <== I/flutter (12546): 1679863116605
-[2:08:36 am]: <== I/flutter (12546): 1679863116648
-[2:08:36 am]: <== I/flutter (12546): 1679863116677
-[2:08:37 am]: <== I/flutter (12546): 1679863116992
-[2:08:37 am]: <== I/flutter (12546): 1679863117018
-[2:08:37 am]: <== I/flutter (12546): 1679863117025
-[2:08:37 am]: <== I/flutter (12546): 1679863117025
-[2:08:37 am]: <== I/flutter (12546): 1679863117246
-[2:08:37 am]: <== I/flutter (12546): 1679863117279
-[2:08:37 am]: <== I/flutter (12546): 1679863117322
-[2:08:37 am]: <== I/flutter (12546): 1679863117322
-[2:08:37 am]: <== I/flutter (12546): 1679863117339
-[2:08:37 am]: <== I/flutter (12546): 1679863117339
-[2:08:37 am]: <== I/flutter (12546): 1679863117354
-[2:08:37 am]: <== I/flutter (12546): 1679863117362
-[2:08:37 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:37 am]: <== I/flutter (12546): 1679863117362
-[2:08:37 am]: <== I/flutter (12546): 1679863117369
-[2:08:37 am]: <== I/flutter (12546): 1679863117576
-[2:08:37 am]: <== I/flutter (12546): 1679863117613
-[2:08:37 am]: <== I/flutter (12546): 1679863117656
-[2:08:37 am]: <== I/flutter (12546): 1679863117684
-[2:08:38 am]: <== I/flutter (12546): 1679863117999
-[2:08:38 am]: <== I/flutter (12546): 1679863118026
-[2:08:38 am]: <== I/flutter (12546): 1679863118031
-[2:08:38 am]: <== I/flutter (12546): 1679863118036
-[2:08:38 am]: <== I/flutter (12546): 1679863118251
-[2:08:38 am]: <== I/flutter (12546): 1679863118287
-[2:08:38 am]: <== I/flutter (12546): 1679863118341
-[2:08:38 am]: <== I/flutter (12546): 1679863118341
-[2:08:38 am]: <== I/flutter (12546): 1679863118349
-[2:08:38 am]: <== I/flutter (12546): 1679863118349
-[2:08:38 am]: <== I/flutter (12546): 1679863118359
-[2:08:38 am]: <== I/flutter (12546): 1679863118371
-[2:08:38 am]: <== I/flutter (12546): 1679863118371
-[2:08:38 am]: <== I/flutter (12546): 1679863118377
-[2:08:38 am]: <== I/flutter (12546): 1679863118377
-[2:08:38 am]: <== I/flutter (12546): 1679863118582
-[2:08:38 am]: <== I/flutter (12546): 1679863118620
-[2:08:38 am]: <== I/flutter (12546): 1679863118663
-[2:08:38 am]: <== I/flutter (12546): 1679863118692
-[2:08:39 am]: <== I/flutter (12546): 1679863119006
-[2:08:39 am]: <== I/flutter (12546): 1679863119032
-[2:08:39 am]: <== I/flutter (12546): 1679863119038
-[2:08:39 am]: <== I/flutter (12546): 1679863119043
-[2:08:39 am]: <== I/flutter (12546): 1679863119260
-[2:08:39 am]: <== I/flutter (12546): 1679863119295
-[2:08:39 am]: <== I/flutter (12546): 1679863119345
-[2:08:39 am]: <== I/flutter (12546): 1679863119351
-[2:08:39 am]: <== I/flutter (12546): 1679863119358
-[2:08:39 am]: <== I/flutter (12546): 1679863119358
-[2:08:39 am]: <== I/flutter (12546): 1679863119366
-[2:08:39 am]: <== I/flutter (12546): 1679863119374
-[2:08:39 am]: <== I/flutter (12546): 1679863119374
-[2:08:39 am]: <== I/flutter (12546): 1679863119387
-[2:08:39 am]: <== I/flutter (12546): 1679863119387
-[2:08:39 am]: <== I/flutter (12546): 1679863119590
-[2:08:39 am]: <== I/flutter (12546): 1679863119627
-[2:08:39 am]: <== I/flutter (12546): 1679863119680
-[2:08:39 am]: <== I/flutter (12546): 1679863119699
-[2:08:40 am]: <== I/flutter (12546): 1679863120012
-[2:08:40 am]: <== I/flutter (12546): 1679863120040
-[2:08:40 am]: <== I/flutter (12546): 1679863120044
-[2:08:40 am]: <== I/flutter (12546): 1679863120050
-[2:08:40 am]: <== I/flutter (12546): 1679863120266
-[2:08:40 am]: <== I/flutter (12546): 1679863120303
-[2:08:40 am]: <== I/flutter (12546): 1679863120352
-[2:08:40 am]: <== I/flutter (12546): 1679863120360
-[2:08:40 am]: <== I/flutter (12546): 1679863120381
-[2:08:40 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:40 am]: <== I/flutter (12546): 1679863120381
-[2:08:40 am]: <== I/flutter (12546): 1679863120391
-[2:08:40 am]: <== I/flutter (12546): 1679863120397
-[2:08:40 am]: <== I/flutter (12546): 1679863120598
-[2:08:40 am]: <== I/flutter (12546): 1679863120634
-[2:08:40 am]: <== I/flutter (12546): 1679863120687
-[2:08:40 am]: <== I/flutter (12546): 1679863120719
-[2:08:41 am]: <== I/flutter (12546): 1679863121019
-[2:08:41 am]: <== I/flutter (12546): 1679863121047
-[2:08:41 am]: <== I/flutter (12546): 1679863121057
-[2:08:41 am]: <== I/flutter (12546): 1679863121057
-[2:08:41 am]: <== I/flutter (12546): 1679863121274
-[2:08:41 am]: <== I/flutter (12546): 1679863121309
-[2:08:41 am]: <== I/flutter (12546): 1679863121373
-[2:08:41 am]: <== I/flutter (12546): 1679863121373
-[2:08:41 am]: <== I/flutter (12546): 1679863121386
-[2:08:41 am]: <== I/flutter (12546): 1679863121386
-[2:08:41 am]: <== I/flutter (12546): 1679863121392
-[2:08:41 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:41 am]: <== I/flutter (12546): 1679863121392
-[2:08:41 am]: <== I/flutter (12546): 1679863121399
-[2:08:41 am]: <== I/flutter (12546): 1679863121405
-[2:08:41 am]: <== I/flutter (12546): 1679863121605
-[2:08:41 am]: <== I/flutter (12546): 1679863121654
-[2:08:41 am]: <== I/flutter (12546): 1679863121695
-[2:08:41 am]: <== I/flutter (12546): 1679863121727
-[2:08:42 am]: <== I/flutter (12546): 1679863122025
-[2:08:42 am]: <== I/flutter (12546): 1679863122061
-[2:08:42 am]: <== I/flutter (12546): 1679863122065
-[2:08:42 am]: <== I/flutter (12546): 1679863122065
-[2:08:42 am]: <== I/flutter (12546): 1679863122282
-[2:08:42 am]: <== I/flutter (12546): 1679863122315
-[2:08:42 am]: <== I/flutter (12546): 1679863122381
-[2:08:42 am]: <== I/flutter (12546): 1679863122381
-[2:08:42 am]: <== I/flutter (12546): 1679863122394
-[2:08:42 am]: <== I/flutter (12546): 1679863122400
-[2:08:42 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:08:42 am]: <== I/flutter (12546): 1679863122400
-[2:08:42 am]: <== I/flutter (12546): 1679863122408
-[2:08:42 am]: <== I/flutter (12546): 1679863122413
-[2:08:42 am]: <== I/flutter (12546): 1679863122611
-[2:08:42 am]: <== I/flutter (12546): 1679863122661
-[2:08:42 am]: <== I/flutter (12546): 1679863122703
-[2:08:42 am]: <== I/flutter (12546): 1679863122734
-[2:08:43 am]: <== I/flutter (12546): 1679863123032
-[2:08:43 am]: <== I/flutter (12546): 1679863123073
-[2:08:43 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:43 am]: <== I/flutter (12546): 1679863123073
-[2:08:43 am]: <== I/flutter (12546): 1679863123289
-[2:08:43 am]: <== I/flutter (12546): 1679863123323
-[2:08:43 am]: <== I/flutter (12546): 1679863123390
-[2:08:43 am]: <== I/flutter (12546): 1679863123390
-[2:08:43 am]: <== I/flutter (12546): 1679863123404
-[2:08:43 am]: <== I/flutter (12546): 1679863123409
-[2:08:43 am]: <== I/flutter (12546): 1679863123416
-[2:08:43 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:43 am]: <== I/flutter (12546): 1679863123416
-[2:08:43 am]: <== I/flutter (12546): 1679863123422
-[2:08:43 am]: <== I/flutter (12546): 1679863123422
-[2:08:43 am]: <== I/flutter (12546): 1679863123618
-[2:08:43 am]: <== I/flutter (12546): 1679863123668
-[2:08:43 am]: <== I/flutter (12546): 1679863123710
-[2:08:43 am]: <== I/flutter (12546): 1679863123752
-[2:08:44 am]: <== I/flutter (12546): 1679863124052
-[2:08:44 am]: <== I/flutter (12546): 1679863124082
-[2:08:44 am]: <== I/flutter (12546): 1679863124082
-[2:08:44 am]: <== I/flutter (12546): 1679863124089
-[2:08:44 am]: <== I/flutter (12546): 1679863124296
-[2:08:44 am]: <== I/flutter (12546): 1679863124330
-[2:08:44 am]: <== I/flutter (12546): 1679863124398
-[2:08:44 am]: <== I/flutter (12546): 1679863124398
-[2:08:44 am]: <== I/flutter (12546): 1679863124408
-[2:08:44 am]: <== I/flutter (12546): 1679863124414
-[2:08:44 am]: <== I/flutter (12546): 1679863124424
-[2:08:44 am]: <== I/flutter (12546): 1679863124424
-[2:08:44 am]: <== D/SharedPreferencesImpl(12546): Time required to fsync /data/user/0/com.cdh.quiz/shared_prefs/FlutterSharedPreferences.xml: [<1: 0, <2: 14, <4: 795, <8: 136, <16: 60, <32: 15, <64: 4, <128: 0, <256: 0, <512: 0, <1024: 0, <2048: 0, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
-[2:08:44 am]: <== I/flutter (12546): 1679863124427
-[2:08:44 am]: <== I/flutter (12546): 1679863124427
-[2:08:44 am]: <== I/flutter (12546): 1679863124434
-[2:08:44 am]: <== I/flutter (12546): 1679863124626
-[2:08:44 am]: <== I/flutter (12546): 1679863124674
-[2:08:44 am]: <== I/flutter (12546): 1679863124719
-[2:08:44 am]: <== I/flutter (12546): 1679863124759
-[2:08:45 am]: <== I/flutter (12546): 1679863125060
-[2:08:45 am]: <== I/flutter (12546): 1679863125091
-[2:08:45 am]: <== I/flutter (12546): 1679863125097
-[2:08:45 am]: <== I/flutter (12546): 1679863125097
-[2:08:45 am]: <== I/flutter (12546): 1679863125305
-[2:08:45 am]: <== I/flutter (12546): 1679863125338
-[2:08:45 am]: <== I/flutter (12546): 1679863125402
-[2:08:45 am]: <== I/flutter (12546): 1679863125409
-[2:08:45 am]: <== I/flutter (12546): 1679863125416
-[2:08:45 am]: <== I/flutter (12546): 1679863125421
-[2:08:45 am]: <== I/flutter (12546): 1679863125427
-[2:08:45 am]: <== I/flutter (12546): 1679863125427
-[2:08:45 am]: <== I/flutter (12546): 1679863125436
-[2:08:45 am]: <== I/flutter (12546): 1679863125440
-[2:08:45 am]: <== I/flutter (12546): 1679863125440
-[2:08:45 am]: <== I/flutter (12546): 1679863125632
-[2:08:45 am]: <== I/flutter (12546): 1679863125680
-[2:08:45 am]: <== I/flutter (12546): 1679863125726
-[2:08:45 am]: <== I/flutter (12546): 1679863125766
-[2:08:46 am]: <== I/flutter (12546): 1679863126066
-[2:08:46 am]: <== I/flutter (12546): 1679863126098
-[2:08:46 am]: <== I/flutter (12546): 1679863126105
-[2:08:46 am]: <== I/flutter (12546): 1679863126111
-[2:08:46 am]: <== I/flutter (12546): 1679863126312
-[2:08:46 am]: <== I/flutter (12546): 1679863126345
-[2:08:46 am]: <== I/flutter (12546): 1679863126416
-[2:08:46 am]: <== I/flutter (12546): 1679863126423
-[2:08:46 am]: <== I/flutter (12546): 1679863126429
-[2:08:46 am]: <== I/flutter (12546): 1679863126429
-[2:08:46 am]: <== I/flutter (12546): 1679863126435
-[2:08:46 am]: <== I/flutter (12546): 1679863126435
-[2:08:46 am]: <== I/flutter (12546): 1679863126443
-[2:08:46 am]: <== I/flutter (12546): 1679863126447
-[2:08:46 am]: <== I/flutter (12546): 1679863126447
-[2:08:46 am]: <== I/flutter (12546): 1679863126640
-[2:08:46 am]: <== I/flutter (12546): 1679863126687
-[2:08:46 am]: <== I/flutter (12546): 1679863126732
-[2:08:46 am]: <== I/flutter (12546): 1679863126772
-[2:08:47 am]: <== I/flutter (12546): 1679863127072
-[2:08:47 am]: <== I/flutter (12546): 1679863127104
-[2:08:47 am]: <== I/flutter (12546): 1679863127112
-[2:08:47 am]: <== I/flutter (12546): 1679863127118
-[2:08:47 am]: <== I/flutter (12546): 1679863127318
-[2:08:47 am]: <== I/flutter (12546): 1679863127351
-[2:08:47 am]: <== I/flutter (12546): 1679863127429
-[2:08:47 am]: <== I/flutter (12546): 1679863127429
-[2:08:47 am]: <== I/flutter (12546): 1679863127436
-[2:08:47 am]: <== I/flutter (12546): 1679863127440
-[2:08:47 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:47 am]: <== I/flutter (12546): 1679863127440
-[2:08:47 am]: <== I/flutter (12546): 1679863127447
-[2:08:47 am]: <== I/flutter (12546): 1679863127455
-[2:08:47 am]: <== I/flutter (12546): 1679863127455
-[2:08:47 am]: <== I/flutter (12546): 1679863127646
-[2:08:47 am]: <== I/flutter (12546): 1679863127696
-[2:08:47 am]: <== I/flutter (12546): 1679863127740
-[2:08:47 am]: <== I/flutter (12546): 1679863127778
-[2:08:48 am]: <== I/flutter (12546): 1679863128081
-[2:08:48 am]: <== I/flutter (12546): 1679863128112
-[2:08:48 am]: <== I/flutter (12546): 1679863128119
-[2:08:48 am]: <== I/flutter (12546): 1679863128126
-[2:08:48 am]: <== I/flutter (12546): 1679863128325
-[2:08:48 am]: <== I/flutter (12546): 1679863128358
-[2:08:48 am]: <== I/flutter (12546): 1679863128435
-[2:08:48 am]: <== I/flutter (12546): 1679863128439
-[2:08:48 am]: <== I/flutter (12546): 1679863128444
-[2:08:48 am]: <== I/flutter (12546): 1679863128448
-[2:08:48 am]: <== I/flutter (12546): 1679863128453
-[2:08:48 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:48 am]: <== I/flutter (12546): 1679863128453
-[2:08:48 am]: <== I/flutter (12546): 1679863128458
-[2:08:48 am]: <== I/flutter (12546): 1679863128462
-[2:08:48 am]: <== I/flutter (12546): 1679863128655
-[2:08:48 am]: <== I/flutter (12546): 1679863128706
-[2:08:48 am]: <== I/flutter (12546): 1679863128747
-[2:08:48 am]: <== I/flutter (12546): 1679863128784
-[2:08:49 am]: <== I/flutter (12546): 1679863129088
-[2:08:49 am]: <== I/flutter (12546): 1679863129121
-[2:08:49 am]: <== I/flutter (12546): 1679863129126
-[2:08:49 am]: <== I/flutter (12546): 1679863129146
-[2:08:49 am]: <== I/flutter (12546): 1679863129332
-[2:08:49 am]: <== I/flutter (12546): 1679863129365
-[2:08:49 am]: <== I/flutter (12546): 1679863129452
-[2:08:49 am]: <== I/flutter (12546): 1679863129456
-[2:08:49 am]: <== I/flutter (12546): 1679863129460
-[2:08:49 am]: <== I/flutter (12546): 1679863129465
-[2:08:49 am]: <== I/flutter (12546): 1679863129469
-[2:08:49 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:08:49 am]: <== I/flutter (12546): 1679863129469
-[2:08:49 am]: <== I/flutter (12546): 1679863129662
-[2:08:49 am]: <== I/flutter (12546): 1679863129713
-[2:08:49 am]: <== I/flutter (12546): 1679863129753
-[2:08:49 am]: <== I/flutter (12546): 1679863129792
-[2:08:50 am]: <== I/flutter (12546): 1679863130094
-[2:08:50 am]: <== I/flutter (12546): 1679863130133
-[2:08:50 am]: <== I/flutter (12546): 1679863130133
-[2:08:50 am]: <== I/flutter (12546): 1679863130153
-[2:08:50 am]: <== I/flutter (12546): 1679863130340
-[2:08:50 am]: <== I/flutter (12546): 1679863130372
-[2:08:50 am]: <== I/flutter (12546): 1679863130460
-[2:08:50 am]: <== I/flutter (12546): 1679863130460
-[2:08:50 am]: <== I/flutter (12546): 1679863130465
-[2:08:50 am]: <== I/flutter (12546): 1679863130474
-[2:08:50 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:50 am]: <== I/flutter (12546): 1679863130474
-[2:08:50 am]: <== I/flutter (12546): 1679863130481
-[2:08:50 am]: <== I/flutter (12546): 1679863130485
-[2:08:50 am]: <== I/flutter (12546): 1679863130485
-[2:08:50 am]: <== I/flutter (12546): 1679863130671
-[2:08:50 am]: <== I/flutter (12546): 1679863130720
-[2:08:50 am]: <== I/flutter (12546): 1679863130762
-[2:08:50 am]: <== I/flutter (12546): 1679863130799
-[2:08:51 am]: <== I/flutter (12546): 1679863131101
-[2:08:51 am]: <== I/flutter (12546): 1679863131152
-[2:08:51 am]: <== I/flutter (12546): 1679863131152
-[2:08:51 am]: <== I/flutter (12546): 1679863131159
-[2:08:51 am]: <== I/flutter (12546): 1679863131345
-[2:08:51 am]: <== I/flutter (12546): 1679863131378
-[2:08:51 am]: <== I/flutter (12546): 1679863131468
-[2:08:51 am]: <== I/flutter (12546): 1679863131472
-[2:08:51 am]: <== I/flutter (12546): 1679863131477
-[2:08:51 am]: <== I/flutter (12546): 1679863131481
-[2:08:51 am]: <== I/flutter (12546): 1679863131485
-[2:08:51 am]: <== I/flutter (12546): 1679863131485
-[2:08:51 am]: <== I/flutter (12546): 1679863131489
-[2:08:51 am]: <== I/flutter (12546): 1679863131494
-[2:08:51 am]: <== I/flutter (12546): 1679863131494
-[2:08:51 am]: <== I/flutter (12546): 1679863131678
-[2:08:51 am]: <== I/flutter (12546): 1679863131727
-[2:08:51 am]: <== I/flutter (12546): 1679863131771
-[2:08:51 am]: <== I/flutter (12546): 1679863131807
-[2:08:52 am]: <== I/flutter (12546): 1679863132110
-[2:08:52 am]: <== I/flutter (12546): 1679863132160
-[2:08:52 am]: <== I/flutter (12546): 1679863132160
-[2:08:52 am]: <== I/flutter (12546): 1679863132169
-[2:08:52 am]: <== I/flutter (12546): 1679863132356
-[2:08:52 am]: <== I/flutter (12546): 1679863132386
-[2:08:52 am]: <== I/flutter (12546): 1679863132472
-[2:08:52 am]: <== I/flutter (12546): 1679863132480
-[2:08:52 am]: <== I/flutter (12546): 1679863132484
-[2:08:52 am]: <== I/flutter (12546): 1679863132488
-[2:08:52 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:52 am]: <== I/flutter (12546): 1679863132488
-[2:08:52 am]: <== I/flutter (12546): 1679863132498
-[2:08:52 am]: <== I/flutter (12546): 1679863132498
-[2:08:52 am]: <== I/flutter (12546): 1679863132503
-[2:08:52 am]: <== I/flutter (12546): 1679863132687
-[2:08:52 am]: <== I/flutter (12546): 1679863132734
-[2:08:52 am]: <== I/flutter (12546): 1679863132781
-[2:08:52 am]: <== I/flutter (12546): 1679863132813
-[2:08:53 am]: <== I/flutter (12546): 1679863133117
-[2:08:53 am]: <== I/flutter (12546): 1679863133168
-[2:08:53 am]: <== I/flutter (12546): 1679863133168
-[2:08:53 am]: <== I/flutter (12546): 1679863133177
-[2:08:53 am]: <== I/flutter (12546): 1679863133362
-[2:08:53 am]: <== I/flutter (12546): 1679863133395
-[2:08:53 am]: <== I/flutter (12546): 1679863133479
-[2:08:53 am]: <== I/flutter (12546): 1679863133491
-[2:08:53 am]: <== I/flutter (12546): 1679863133497
-[2:08:53 am]: <== I/flutter (12546): 1679863133497
-[2:08:53 am]: <== I/flutter (12546): 1679863133501
-[2:08:53 am]: <== I/flutter (12546): 1679863133501
-[2:08:53 am]: <== I/flutter (12546): 1679863133505
-[2:08:53 am]: <== I/flutter (12546): 1679863133511
-[2:08:53 am]: <== I/flutter (12546): 1679863133511
-[2:08:53 am]: <== I/flutter (12546): 1679863133696
-[2:08:53 am]: <== I/flutter (12546): 1679863133740
-[2:08:53 am]: <== I/flutter (12546): 1679863133787
-[2:08:53 am]: <== I/flutter (12546): 1679863133821
-[2:08:54 am]: <== I/flutter (12546): 1679863134124
-[2:08:54 am]: <== I/flutter (12546): 1679863134174
-[2:08:54 am]: <== I/flutter (12546): 1679863134174
-[2:08:54 am]: <== I/flutter (12546): 1679863134183
-[2:08:54 am]: <== I/flutter (12546): 1679863134368
-[2:08:54 am]: <== I/flutter (12546): 1679863134401
-[2:08:54 am]: <== I/flutter (12546): 1679863134487
-[2:08:54 am]: <== I/flutter (12546): 1679863134495
-[2:08:54 am]: <== I/flutter (12546): 1679863134505
-[2:08:54 am]: <== I/flutter (12546): 1679863134505
-[2:08:54 am]: <== I/flutter (12546): 1679863134512
-[2:08:54 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:54 am]: <== I/flutter (12546): 1679863134512
-[2:08:54 am]: <== I/flutter (12546): 1679863134527
-[2:08:54 am]: <== I/flutter (12546): 1679863134527
-[2:08:54 am]: <== I/flutter (12546): 1679863134702
-[2:08:54 am]: <== I/flutter (12546): 1679863134749
-[2:08:54 am]: <== I/flutter (12546): 1679863134794
-[2:08:54 am]: <== I/flutter (12546): 1679863134829
-[2:08:55 am]: <== I/flutter (12546): 1679863135132
-[2:08:55 am]: <== I/flutter (12546): 1679863135181
-[2:08:55 am]: <== I/flutter (12546): 1679863135181
-[2:08:55 am]: <== I/flutter (12546): 1679863135190
-[2:08:55 am]: <== I/flutter (12546): 1679863135374
-[2:08:55 am]: <== I/flutter (12546): 1679863135407
-[2:08:55 am]: <== I/flutter (12546): 1679863135495
-[2:08:55 am]: <== I/flutter (12546): 1679863135501
-[2:08:55 am]: <== I/flutter (12546): 1679863135512
-[2:08:55 am]: <== I/flutter (12546): 1679863135512
-[2:08:55 am]: <== I/flutter (12546): 1679863135517
-[2:08:55 am]: <== I/flutter (12546): 1679863135517
-[2:08:55 am]: <== I/flutter (12546): 1679863135522
-[2:08:55 am]: <== I/flutter (12546): 1679863135530
-[2:08:55 am]: <== I/flutter (12546): 1679863135534
-[2:08:55 am]: <== I/flutter (12546): 1679863135709
-[2:08:55 am]: <== I/flutter (12546): 1679863135755
-[2:08:55 am]: <== I/flutter (12546): 1679863135799
-[2:08:55 am]: <== I/flutter (12546): 1679863135834
-[2:08:56 am]: <== I/flutter (12546): 1679863136138
-[2:08:56 am]: <== I/flutter (12546): 1679863136201
-[2:08:56 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:56 am]: <== I/flutter (12546): 1679863136201
-[2:08:56 am]: <== I/flutter (12546): 1679863136382
-[2:08:56 am]: <== I/flutter (12546): 1679863136414
-[2:08:56 am]: <== I/flutter (12546): 1679863136501
-[2:08:56 am]: <== I/flutter (12546): 1679863136508
-[2:08:56 am]: <== I/flutter (12546): 1679863136518
-[2:08:56 am]: <== I/flutter (12546): 1679863136522
-[2:08:56 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:56 am]: <== I/flutter (12546): 1679863136522
-[2:08:56 am]: <== I/flutter (12546): 1679863136527
-[2:08:56 am]: <== I/flutter (12546): 1679863136535
-[2:08:56 am]: <== I/flutter (12546): 1679863136539
-[2:08:56 am]: <== I/flutter (12546): 1679863136716
-[2:08:56 am]: <== I/flutter (12546): 1679863136762
-[2:08:56 am]: <== I/flutter (12546): 1679863136806
-[2:08:56 am]: ==> [{"id":"8","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:08:56 am]: <== I/flutter (12546): 1679863136840
-[2:08:56 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"17","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:08:56 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"18","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:08:57 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"18","progressId":null,"finished":true}}]
-[2:08:57 am]: <== I/flutter (12546): 1679863137180
-[2:08:57 am]: <== I/flutter (12546): 1679863137212
-[2:08:57 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:57 am]: <== I/flutter (12546): 1679863137212
-[2:08:57 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:57 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"17","progressId":"hot.reload","finished":true}}]
-[2:08:57 am]: <== Reloaded 1 of 2153 libraries in 601ms (compile: 44 ms, reload: 172 ms, reassemble: 318 ms).
-[2:08:57 am]: <== [{"id":"8","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:08:57 am]: <== I/flutter (12546): 1679863137497
-[2:08:57 am]: <== I/flutter (12546): 1679863137497
-[2:08:57 am]: <== I/flutter (12546): 1679863137523
-[2:08:57 am]: <== I/flutter (12546): 1679863137523
-[2:08:57 am]: <== I/flutter (12546): 1679863137527
-[2:08:57 am]: <== I/flutter (12546): 1679863137533
-[2:08:57 am]: <== I/flutter (12546): 1679863137533
-[2:08:57 am]: <== I/flutter (12546): list----------
-[2:08:57 am]: <== I/flutter (12546): 1679863137548
-[2:08:57 am]: <== I/flutter (12546): 1679863137548
-[2:08:57 am]: <== I/flutter (12546): 1679863137553
-[2:08:57 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:57 am]: <== I/flutter (12546): 1679863137553
-[2:08:57 am]: <== I/flutter (12546): Timer ended
-[2:08:57 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:08:57 am]: <== I/flutter (12546): list----------
-[2:08:57 am]: <== I/flutter (12546): 1679863137635
-[2:08:57 am]: <== I/flutter (12546): 1679863137748
-[2:08:57 am]: <== I/flutter (12546): 1679863137767
-[2:08:57 am]: <== I/flutter (12546): 1679863137812
-[2:08:57 am]: <== I/flutter (12546): 1679863137846
-[2:08:58 am]: <== I/flutter (12546): 1679863138197
-[2:08:58 am]: <== I/flutter (12546): 1679863138216
-[2:08:58 am]: <== I/flutter (12546): 1679863138216
-[2:08:58 am]: <== I/flutter (12546): 1679863138247
-[2:08:58 am]: <== I/flutter (12546): 1679863138516
-[2:08:58 am]: <== I/flutter (12546): 1679863138516
-[2:08:58 am]: <== I/flutter (12546): 1679863138528
-[2:08:58 am]: <== I/flutter (12546): 1679863138528
-[2:08:58 am]: <== I/flutter (12546): 1679863138535
-[2:08:58 am]: <== I/flutter (12546): 1679863138539
-[2:08:58 am]: <== I/flutter (12546): 1679863138539
-[2:08:58 am]: <== I/flutter (12546): 1679863138555
-[2:08:58 am]: <== I/flutter (12546): 1679863138558
-[2:08:58 am]: <== I/flutter (12546): 1679863138561
-[2:08:58 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:58 am]: <== I/flutter (12546): 1679863138561
-[2:08:58 am]: <== I/flutter (12546): 1679863138646
-[2:08:58 am]: <== I/flutter (12546): 1679863138754
-[2:08:58 am]: <== I/flutter (12546): 1679863138773
-[2:08:58 am]: <== I/flutter (12546): 1679863138818
-[2:08:58 am]: <== I/flutter (12546): 1679863138853
-[2:08:59 am]: <== I/flutter (12546): 1679863139215
-[2:08:59 am]: <== I/flutter (12546): 1679863139223
-[2:08:59 am]: <== I/flutter (12546): 1679863139223
-[2:08:59 am]: <== I/flutter (12546): 1679863139255
-[2:08:59 am]: <== I/flutter (12546): 1679863139523
-[2:08:59 am]: <== I/flutter (12546): 1679863139523
-[2:08:59 am]: <== I/flutter (12546): 1679863139533
-[2:08:59 am]: <== I/flutter (12546): 1679863139533
-[2:08:59 am]: <== I/flutter (12546): 1679863139542
-[2:08:59 am]: <== I/flutter (12546): 1679863139542
-[2:08:59 am]: <== I/flutter (12546): 1679863139547
-[2:08:59 am]: <== I/flutter (12546): 1679863139561
-[2:08:59 am]: <== I/flutter (12546): 1679863139565
-[2:08:59 am]: <== I/flutter (12546): 1679863139568
-[2:08:59 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:08:59 am]: <== I/flutter (12546): 1679863139568
-[2:08:59 am]: <== I/flutter (12546): 1679863139653
-[2:08:59 am]: <== I/flutter (12546): 1679863139759
-[2:08:59 am]: <== I/flutter (12546): 1679863139778
-[2:08:59 am]: <== I/flutter (12546): 1679863139826
-[2:08:59 am]: <== I/flutter (12546): 1679863139859
-[2:09:00 am]: <== I/flutter (12546): 1679863140221
-[2:09:00 am]: <== I/flutter (12546): 1679863140231
-[2:09:00 am]: <== I/flutter (12546): 1679863140231
-[2:09:00 am]: <== I/flutter (12546): 1679863140261
-[2:09:00 am]: <== I/flutter (12546): 1679863140529
-[2:09:00 am]: <== I/flutter (12546): 1679863140529
-[2:09:00 am]: <== I/flutter (12546): 1679863140538
-[2:09:00 am]: <== I/flutter (12546): 1679863140538
-[2:09:00 am]: <== I/flutter (12546): 1679863140549
-[2:09:00 am]: <== I/flutter (12546): 1679863140553
-[2:09:00 am]: <== I/flutter (12546): 1679863140553
-[2:09:00 am]: <== I/flutter (12546): 1679863140568
-[2:09:00 am]: <== I/flutter (12546): 1679863140568
-[2:09:00 am]: <== I/flutter (12546): 1679863140573
-[2:09:00 am]: <== I/flutter (12546): 1679863140573
-[2:09:00 am]: <== I/flutter (12546): 1679863140579
-[2:09:00 am]: <== I/flutter (12546): 1679863140659
-[2:09:00 am]: <== I/flutter (12546): 1679863140766
-[2:09:00 am]: <== I/flutter (12546): 1679863140785
-[2:09:00 am]: <== I/flutter (12546): 1679863140832
-[2:09:00 am]: <== I/flutter (12546): 1679863140864
-[2:09:01 am]: <== I/flutter (12546): 1679863141237
-[2:09:01 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:01 am]: <== I/flutter (12546): 1679863141237
-[2:09:01 am]: <== I/flutter (12546): 1679863141268
-[2:09:01 am]: <== I/flutter (12546): 1679863141536
-[2:09:01 am]: <== I/flutter (12546): 1679863141536
-[2:09:01 am]: <== I/flutter (12546): 1679863141546
-[2:09:01 am]: <== I/flutter (12546): 1679863141546
-[2:09:01 am]: <== I/flutter (12546): 1679863141556
-[2:09:01 am]: <== I/flutter (12546): 1679863141572
-[2:09:01 am]: <== I/flutter (12546): 1679863141572
-[2:09:01 am]: <== I/flutter (12546): 1679863141576
-[2:09:01 am]: <== I/flutter (12546): 1679863141582
-[2:09:01 am]: <== I/flutter (12546): 1679863141585
-[2:09:01 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:01 am]: <== I/flutter (12546): 1679863141585
-[2:09:01 am]: <== I/flutter (12546): 1679863141666
-[2:09:01 am]: <== I/flutter (12546): 1679863141785
-[2:09:01 am]: <== I/flutter (12546): 1679863141791
-[2:09:01 am]: <== I/flutter (12546): 1679863141840
-[2:09:01 am]: <== I/flutter (12546): 1679863141871
-[2:09:02 am]: <== I/flutter (12546): 1679863142245
-[2:09:02 am]: <== I/flutter (12546): 1679863142256
-[2:09:02 am]: <== I/flutter (12546): 1679863142256
-[2:09:02 am]: <== I/flutter (12546): 1679863142277
-[2:09:02 am]: <== I/flutter (12546): 1679863142554
-[2:09:02 am]: <== I/flutter (12546): 1679863142554
-[2:09:02 am]: <== I/flutter (12546): 1679863142560
-[2:09:02 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:02 am]: <== I/flutter (12546): 1679863142560
-[2:09:02 am]: <== I/flutter (12546): 1679863142576
-[2:09:02 am]: <== I/flutter (12546): 1679863142576
-[2:09:02 am]: <== I/flutter (12546): 1679863142585
-[2:09:02 am]: <== I/flutter (12546): 1679863142589
-[2:09:02 am]: <== I/flutter (12546): 1679863142594
-[2:09:02 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:02 am]: <== I/flutter (12546): 1679863142594
-[2:09:02 am]: <== I/flutter (12546): 1679863142675
-[2:09:02 am]: <== I/flutter (12546): 1679863142797
-[2:09:02 am]: <== I/flutter (12546): 1679863142797
-[2:09:02 am]: <== I/flutter (12546): 1679863142847
-[2:09:02 am]: <== I/flutter (12546): 1679863142879
-[2:09:03 am]: <== I/flutter (12546): 1679863143260
-[2:09:03 am]: <== I/flutter (12546): 1679863143264
-[2:09:03 am]: <== I/flutter (12546): 1679863143264
-[2:09:03 am]: <== I/flutter (12546): 1679863143296
-[2:09:03 am]: <== I/flutter (12546): 1679863143566
-[2:09:03 am]: <== I/flutter (12546): 1679863143566
-[2:09:03 am]: <== I/flutter (12546): 1679863143581
-[2:09:03 am]: <== I/flutter (12546): 1679863143581
-[2:09:03 am]: <== I/flutter (12546): 1679863143590
-[2:09:03 am]: <== I/flutter (12546): 1679863143595
-[2:09:03 am]: <== I/flutter (12546): 1679863143595
-[2:09:03 am]: <== I/flutter (12546): 1679863143600
-[2:09:03 am]: <== I/flutter (12546): 1679863143606
-[2:09:03 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:03 am]: <== I/flutter (12546): 1679863143606
-[2:09:03 am]: <== I/flutter (12546): 1679863143683
-[2:09:03 am]: <== I/flutter (12546): 1679863143803
-[2:09:03 am]: <== I/flutter (12546): 1679863143803
-[2:09:03 am]: <== I/flutter (12546): 1679863143856
-[2:09:03 am]: <== I/flutter (12546): 1679863143887
-[2:09:04 am]: <== I/flutter (12546): 1679863144262
-[2:09:04 am]: <== I/flutter (12546): 1679863144267
-[2:09:04 am]: <== I/flutter (12546): 1679863144272
-[2:09:04 am]: <== I/flutter (12546): 1679863144302
-[2:09:04 am]: <== I/flutter (12546): 1679863144572
-[2:09:04 am]: <== I/flutter (12546): 1679863144572
-[2:09:04 am]: <== I/flutter (12546): 1679863144599
-[2:09:04 am]: <== I/flutter (12546): 1679863144606
-[2:09:04 am]: <== I/flutter (12546): 1679863144611
-[2:09:04 am]: <== I/flutter (12546): 1679863144615
-[2:09:04 am]: <== I/flutter (12546): 1679863144615
-[2:09:04 am]: <== I/flutter (12546): 1679863144619
-[2:09:04 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:09:04 am]: <== I/flutter (12546): 1679863144619
-[2:09:04 am]: <== I/flutter (12546): 1679863144690
-[2:09:04 am]: <== I/flutter (12546): 1679863144809
-[2:09:04 am]: <== I/flutter (12546): 1679863144809
-[2:09:04 am]: <== I/flutter (12546): 1679863144862
-[2:09:04 am]: <== I/flutter (12546): 1679863144892
-[2:09:05 am]: <== I/flutter (12546): 1679863145272
-[2:09:05 am]: <== I/flutter (12546): 1679863145272
-[2:09:05 am]: <== I/flutter (12546): 1679863145278
-[2:09:05 am]: <== I/flutter (12546): 1679863145311
-[2:09:05 am]: <== I/flutter (12546): 1679863145580
-[2:09:05 am]: <== I/flutter (12546): 1679863145580
-[2:09:05 am]: <== I/flutter (12546): 1679863145604
-[2:09:05 am]: <== I/flutter (12546): 1679863145610
-[2:09:05 am]: <== I/flutter (12546): 1679863145619
-[2:09:05 am]: <== I/flutter (12546): 1679863145636
-[2:09:05 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:09:05 am]: <== I/flutter (12546): 1679863145636
-[2:09:05 am]: <== I/flutter (12546): 1679863145697
-[2:09:05 am]: <== I/flutter (12546): 1679863145816
-[2:09:05 am]: <== I/flutter (12546): 1679863145816
-[2:09:05 am]: <== I/flutter (12546): 1679863145869
-[2:09:05 am]: <== I/flutter (12546): 1679863145899
-[2:09:06 am]: <== I/flutter (12546): 1679863146286
-[2:09:06 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:06 am]: <== I/flutter (12546): 1679863146286
-[2:09:06 am]: <== I/flutter (12546): 1679863146319
-[2:09:06 am]: <== I/flutter (12546): 1679863146587
-[2:09:06 am]: <== I/flutter (12546): 1679863146587
-[2:09:06 am]: <== I/flutter (12546): 1679863146610
-[2:09:06 am]: <== I/flutter (12546): 1679863146617
-[2:09:06 am]: <== I/flutter (12546): 1679863146625
-[2:09:06 am]: <== I/flutter (12546): 1679863146641
-[2:09:06 am]: <== I/flutter (12546): 1679863146645
-[2:09:06 am]: <== I/flutter (12546): 1679863146649
-[2:09:06 am]: <== I/flutter (12546): 1679863146649
-[2:09:06 am]: <== I/flutter (12546): 1679863146655
-[2:09:06 am]: <== I/flutter (12546): 1679863146655
-[2:09:06 am]: <== I/flutter (12546): 1679863146660
-[2:09:06 am]: <== I/flutter (12546): 1679863146707
-[2:09:06 am]: <== I/flutter (12546): 1679863146825
-[2:09:06 am]: <== I/flutter (12546): 1679863146825
-[2:09:06 am]: <== I/flutter (12546): 1679863146877
-[2:09:06 am]: <== I/flutter (12546): 1679863146908
-[2:09:07 am]: <== I/flutter (12546): 1679863147297
-[2:09:07 am]: <== I/flutter (12546): 1679863147307
-[2:09:07 am]: <== I/flutter (12546): 1679863147307
-[2:09:07 am]: <== I/flutter (12546): 1679863147325
-[2:09:07 am]: <== I/flutter (12546): 1679863147596
-[2:09:07 am]: <== I/flutter (12546): 1679863147596
-[2:09:07 am]: <== I/flutter (12546): 1679863147617
-[2:09:07 am]: <== I/flutter (12546): 1679863147623
-[2:09:07 am]: <== I/flutter (12546): 1679863147632
-[2:09:07 am]: <== I/flutter (12546): 1679863147648
-[2:09:07 am]: <== I/flutter (12546): 1679863147652
-[2:09:07 am]: <== I/flutter (12546): 1679863147656
-[2:09:07 am]: <== I/flutter (12546): 1679863147660
-[2:09:07 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:07 am]: <== I/flutter (12546): 1679863147660
-[2:09:07 am]: <== I/flutter (12546): 1679863147669
-[2:09:07 am]: <== I/flutter (12546): 1679863147714
-[2:09:07 am]: <== I/flutter (12546): 1679863147831
-[2:09:07 am]: <== I/flutter (12546): 1679863147831
-[2:09:07 am]: <== I/flutter (12546): 1679863147896
-[2:09:07 am]: <== I/flutter (12546): 1679863147914
-[2:09:08 am]: <== I/flutter (12546): 1679863148311
-[2:09:08 am]: <== I/flutter (12546): 1679863148311
-[2:09:08 am]: <== I/flutter (12546): 1679863148327
-[2:09:08 am]: <== I/flutter (12546): 1679863148333
-[2:09:08 am]: <== I/flutter (12546): 1679863148614
-[2:09:08 am]: <== I/flutter (12546): 1679863148614
-[2:09:08 am]: <== I/flutter (12546): 1679863148624
-[2:09:08 am]: <== I/flutter (12546): 1679863148629
-[2:09:08 am]: <== I/flutter (12546): 1679863148638
-[2:09:08 am]: <== I/flutter (12546): 1679863148656
-[2:09:08 am]: <== I/flutter (12546): 1679863148660
-[2:09:08 am]: <== I/flutter (12546): 1679863148663
-[2:09:08 am]: <== I/flutter (12546): 1679863148667
-[2:09:08 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:08 am]: <== I/flutter (12546): 1679863148667
-[2:09:08 am]: <== I/flutter (12546): 1679863148675
-[2:09:08 am]: <== I/flutter (12546): 1679863148721
-[2:09:08 am]: <== I/flutter (12546): 1679863148840
-[2:09:08 am]: <== I/flutter (12546): 1679863148840
-[2:09:08 am]: <== I/flutter (12546): 1679863148902
-[2:09:08 am]: <== I/flutter (12546): 1679863148922
-[2:09:09 am]: <== I/flutter (12546): 1679863149324
-[2:09:09 am]: <== I/flutter (12546): 1679863149332
-[2:09:09 am]: <== I/flutter (12546): 1679863149332
-[2:09:09 am]: <== I/flutter (12546): 1679863149339
-[2:09:09 am]: <== I/flutter (12546): 1679863149630
-[2:09:09 am]: <== I/flutter (12546): 1679863149630
-[2:09:09 am]: <== I/flutter (12546): 1679863149638
-[2:09:09 am]: <== I/flutter (12546): 1679863149644
-[2:09:09 am]: <== I/flutter (12546): 1679863149644
-[2:09:09 am]: <== I/flutter (12546): 1679863149659
-[2:09:09 am]: <== I/flutter (12546): 1679863149667
-[2:09:09 am]: <== I/flutter (12546): 1679863149671
-[2:09:09 am]: <== I/flutter (12546): 1679863149676
-[2:09:09 am]: <== I/flutter (12546): 1679863149681
-[2:09:09 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:09 am]: <== I/flutter (12546): 1679863149681
-[2:09:09 am]: <== I/flutter (12546): 1679863149728
-[2:09:09 am]: <== I/flutter (12546): 1679863149850
-[2:09:09 am]: <== I/flutter (12546): 1679863149850
-[2:09:09 am]: <== I/flutter (12546): 1679863149910
-[2:09:09 am]: <== I/flutter (12546): 1679863149929
-[2:09:10 am]: <== I/flutter (12546): 1679863150330
-[2:09:10 am]: <== I/flutter (12546): 1679863150340
-[2:09:10 am]: <== I/flutter (12546): 1679863150345
-[2:09:10 am]: <== I/flutter (12546): 1679863150345
-[2:09:10 am]: <== I/flutter (12546): 1679863150640
-[2:09:10 am]: <== I/flutter (12546): 1679863150640
-[2:09:10 am]: <== I/flutter (12546): 1679863150646
-[2:09:10 am]: <== I/flutter (12546): 1679863150646
-[2:09:10 am]: <== I/flutter (12546): 1679863150654
-[2:09:10 am]: <== I/flutter (12546): 1679863150665
-[2:09:10 am]: <== I/flutter (12546): 1679863150676
-[2:09:10 am]: <== I/flutter (12546): 1679863150680
-[2:09:10 am]: <== I/flutter (12546): 1679863150686
-[2:09:10 am]: <== I/flutter (12546): 1679863150690
-[2:09:10 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:10 am]: <== I/flutter (12546): 1679863150690
-[2:09:10 am]: <== I/flutter (12546): 1679863150738
-[2:09:10 am]: <== I/flutter (12546): 1679863150857
-[2:09:10 am]: <== I/flutter (12546): 1679863150857
-[2:09:10 am]: <== I/flutter (12546): 1679863150916
-[2:09:10 am]: <== I/flutter (12546): 1679863150937
-[2:09:11 am]: <== I/flutter (12546): 1679863151335
-[2:09:11 am]: <== I/flutter (12546): 1679863151360
-[2:09:11 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:11 am]: <== I/flutter (12546): 1679863151360
-[2:09:11 am]: <== I/flutter (12546): 1679863151647
-[2:09:11 am]: <== I/flutter (12546): 1679863151647
-[2:09:11 am]: <== I/flutter (12546): 1679863151655
-[2:09:11 am]: <== I/flutter (12546): 1679863151655
-[2:09:11 am]: <== I/flutter (12546): 1679863151663
-[2:09:11 am]: <== I/flutter (12546): 1679863151690
-[2:09:11 am]: <== I/flutter (12546): 1679863151695
-[2:09:11 am]: <== I/flutter (12546): 1679863151695
-[2:09:11 am]: <== I/flutter (12546): 1679863151700
-[2:09:11 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:11 am]: <== I/flutter (12546): 1679863151700
-[2:09:11 am]: <== I/flutter (12546): 1679863151743
-[2:09:11 am]: <== I/flutter (12546): 1679863151864
-[2:09:11 am]: <== I/flutter (12546): 1679863151864
-[2:09:11 am]: <== I/flutter (12546): 1679863151923
-[2:09:11 am]: <== I/flutter (12546): 1679863151945
-[2:09:12 am]: <== I/flutter (12546): 1679863152343
-[2:09:12 am]: <== I/flutter (12546): 1679863152364
-[2:09:12 am]: <== I/flutter (12546): 1679863152383
-[2:09:12 am]: <== I/flutter (12546): 1679863152383
-[2:09:12 am]: <== I/flutter (12546): 1679863152667
-[2:09:12 am]: <== I/flutter (12546): 1679863152667
-[2:09:12 am]: <== I/flutter (12546): 1679863152674
-[2:09:12 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:12 am]: <== I/flutter (12546): 1679863152674
-[2:09:12 am]: <== I/flutter (12546): 1679863152695
-[2:09:12 am]: <== I/flutter (12546): 1679863152699
-[2:09:12 am]: <== I/flutter (12546): 1679863152699
-[2:09:12 am]: <== I/flutter (12546): 1679863152710
-[2:09:12 am]: <== I/flutter (12546): 1679863152715
-[2:09:12 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:12 am]: <== I/flutter (12546): 1679863152715
-[2:09:12 am]: <== I/flutter (12546): 1679863152750
-[2:09:12 am]: <== I/flutter (12546): 1679863152871
-[2:09:12 am]: <== I/flutter (12546): 1679863152871
-[2:09:12 am]: <== I/flutter (12546): 1679863152930
-[2:09:12 am]: <== I/flutter (12546): 1679863152953
-[2:09:13 am]: <== I/flutter (12546): 1679863153349
-[2:09:13 am]: <== I/flutter (12546): 1679863153370
-[2:09:13 am]: <== I/flutter (12546): 1679863153393
-[2:09:13 am]: <== I/flutter (12546): 1679863153393
-[2:09:13 am]: <== I/flutter (12546): 1679863153674
-[2:09:13 am]: <== I/flutter (12546): 1679863153674
-[2:09:13 am]: <== I/flutter (12546): 1679863153684
-[2:09:13 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:13 am]: <== I/flutter (12546): 1679863153684
-[2:09:13 am]: <== I/flutter (12546): 1679863153702
-[2:09:13 am]: <== I/flutter (12546): 1679863153713
-[2:09:13 am]: <== I/flutter (12546): 1679863153713
-[2:09:13 am]: <== I/flutter (12546): 1679863153729
-[2:09:13 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:13 am]: <== I/flutter (12546): 1679863153729
-[2:09:13 am]: <== I/flutter (12546): 1679863153757
-[2:09:13 am]: <== I/flutter (12546): 1679863153879
-[2:09:13 am]: <== I/flutter (12546): 1679863153879
-[2:09:13 am]: <== I/flutter (12546): 1679863153937
-[2:09:13 am]: <== I/flutter (12546): 1679863153959
-[2:09:14 am]: <== I/flutter (12546): 1679863154355
-[2:09:14 am]: <== I/flutter (12546): 1679863154379
-[2:09:14 am]: <== I/flutter (12546): 1679863154410
-[2:09:14 am]: <== I/flutter (12546): 1679863154410
-[2:09:14 am]: <== I/flutter (12546): 1679863154692
-[2:09:14 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:14 am]: <== I/flutter (12546): 1679863154692
-[2:09:14 am]: <== I/flutter (12546): 1679863154708
-[2:09:14 am]: <== I/flutter (12546): 1679863154708
-[2:09:14 am]: <== I/flutter (12546): 1679863154718
-[2:09:14 am]: <== I/flutter (12546): 1679863154718
-[2:09:14 am]: <== I/flutter (12546): 1679863154737
-[2:09:14 am]: <== I/flutter (12546): 1679863154742
-[2:09:14 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:14 am]: <== I/flutter (12546): 1679863154742
-[2:09:14 am]: <== I/flutter (12546): 1679863154765
-[2:09:14 am]: <== I/flutter (12546): 1679863154887
-[2:09:14 am]: <== I/flutter (12546): 1679863154887
-[2:09:14 am]: <== I/flutter (12546): 1679863154942
-[2:09:14 am]: <== I/flutter (12546): 1679863154964
-[2:09:15 am]: <== I/flutter (12546): 1679863155362
-[2:09:15 am]: <== I/flutter (12546): 1679863155385
-[2:09:15 am]: <== I/flutter (12546): 1679863155413
-[2:09:15 am]: <== I/flutter (12546): 1679863155419
-[2:09:15 am]: <== I/flutter (12546): 1679863155701
-[2:09:15 am]: <== I/flutter (12546): 1679863155701
-[2:09:15 am]: <== I/flutter (12546): 1679863155709
-[2:09:15 am]: <== I/flutter (12546): 1679863155713
-[2:09:15 am]: <== I/flutter (12546): 1679863155719
-[2:09:15 am]: <== I/flutter (12546): 1679863155719
-[2:09:15 am]: <== I/flutter (12546): 1679863155740
-[2:09:15 am]: <== I/flutter (12546): 1679863155740
-[2:09:15 am]: <== I/flutter (12546): 1679863155745
-[2:09:15 am]: <== I/flutter (12546): 1679863155750
-[2:09:15 am]: <== I/flutter (12546): 1679863155753
-[2:09:15 am]: <== I/flutter (12546): 1679863155753
-[2:09:15 am]: <== I/flutter (12546): 1679863155773
-[2:09:15 am]: <== I/flutter (12546): 1679863155893
-[2:09:15 am]: <== I/flutter (12546): 1679863155893
-[2:09:15 am]: <== I/flutter (12546): 1679863155949
-[2:09:16 am]: <== I/flutter (12546): 1679863155974
-[2:09:16 am]: <== I/flutter (12546): 1679863156370
-[2:09:16 am]: <== I/flutter (12546): 1679863156392
-[2:09:16 am]: <== I/flutter (12546): 1679863156422
-[2:09:16 am]: <== I/flutter (12546): 1679863156427
-[2:09:16 am]: <== I/flutter (12546): 1679863156707
-[2:09:16 am]: <== I/flutter (12546): 1679863156707
-[2:09:16 am]: <== I/flutter (12546): 1679863156715
-[2:09:16 am]: <== I/flutter (12546): 1679863156724
-[2:09:16 am]: <== I/flutter (12546): 1679863156727
-[2:09:16 am]: <== I/flutter (12546): 1679863156727
-[2:09:16 am]: <== I/flutter (12546): 1679863156748
-[2:09:16 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:16 am]: <== I/flutter (12546): 1679863156748
-[2:09:16 am]: <== I/flutter (12546): 1679863156756
-[2:09:16 am]: <== I/flutter (12546): 1679863156765
-[2:09:16 am]: <== I/flutter (12546): 1679863156765
-[2:09:16 am]: <== I/flutter (12546): 1679863156780
-[2:09:16 am]: <== I/flutter (12546): 1679863156901
-[2:09:16 am]: <== I/flutter (12546): 1679863156901
-[2:09:16 am]: <== I/flutter (12546): 1679863156954
-[2:09:17 am]: <== I/flutter (12546): 1679863156982
-[2:09:17 am]: <== I/flutter (12546): 1679863157376
-[2:09:17 am]: <== I/flutter (12546): 1679863157399
-[2:09:17 am]: <== I/flutter (12546): 1679863157434
-[2:09:17 am]: <== I/flutter (12546): 1679863157434
-[2:09:17 am]: <== I/flutter (12546): 1679863157729
-[2:09:17 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:17 am]: <== I/flutter (12546): 1679863157729
-[2:09:17 am]: <== I/flutter (12546): 1679863157745
-[2:09:17 am]: <== I/flutter (12546): 1679863157745
-[2:09:17 am]: <== I/flutter (12546): 1679863157753
-[2:09:17 am]: <== I/flutter (12546): 1679863157753
-[2:09:17 am]: <== I/flutter (12546): 1679863157763
-[2:09:17 am]: <== I/flutter (12546): 1679863157763
-[2:09:17 am]: <== I/flutter (12546): 1679863157772
-[2:09:17 am]: <== I/flutter (12546): 1679863157772
-[2:09:17 am]: <== I/flutter (12546): 1679863157788
-[2:09:17 am]: <== I/flutter (12546): 1679863157908
-[2:09:17 am]: <== I/flutter (12546): 1679863157908
-[2:09:17 am]: <== I/flutter (12546): 1679863157962
-[2:09:18 am]: <== I/flutter (12546): 1679863157991
-[2:09:18 am]: <== I/flutter (12546): 1679863158384
-[2:09:18 am]: <== I/flutter (12546): 1679863158406
-[2:09:18 am]: <== I/flutter (12546): 1679863158441
-[2:09:18 am]: <== I/flutter (12546): 1679863158441
-[2:09:18 am]: <== I/flutter (12546): 1679863158734
-[2:09:18 am]: <== I/flutter (12546): 1679863158734
-[2:09:18 am]: <== I/flutter (12546): 1679863158754
-[2:09:18 am]: <== I/flutter (12546): 1679863158754
-[2:09:18 am]: <== I/flutter (12546): 1679863158760
-[2:09:18 am]: <== I/flutter (12546): 1679863158760
-[2:09:18 am]: <== I/flutter (12546): 1679863158769
-[2:09:18 am]: <== I/flutter (12546): 1679863158769
-[2:09:18 am]: <== I/flutter (12546): 1679863158776
-[2:09:18 am]: <== I/flutter (12546): 1679863158779
-[2:09:18 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:18 am]: <== I/flutter (12546): 1679863158779
-[2:09:18 am]: <== I/flutter (12546): 1679863158795
-[2:09:18 am]: <== I/flutter (12546): 1679863158913
-[2:09:18 am]: <== I/flutter (12546): 1679863158913
-[2:09:18 am]: <== I/flutter (12546): 1679863158968
-[2:09:19 am]: <== I/flutter (12546): 1679863158997
-[2:09:19 am]: <== I/flutter (12546): 1679863159390
-[2:09:19 am]: <== I/flutter (12546): 1679863159413
-[2:09:19 am]: <== I/flutter (12546): 1679863159446
-[2:09:19 am]: <== I/flutter (12546): 1679863159446
-[2:09:19 am]: <== I/flutter (12546): 1679863159742
-[2:09:19 am]: <== I/flutter (12546): 1679863159742
-[2:09:19 am]: <== I/flutter (12546): 1679863159761
-[2:09:19 am]: <== I/flutter (12546): 1679863159767
-[2:09:19 am]: <== I/flutter (12546): 1679863159772
-[2:09:19 am]: <== I/flutter (12546): 1679863159777
-[2:09:19 am]: <== I/flutter (12546): 1679863159782
-[2:09:19 am]: <== I/flutter (12546): 1679863159782
-[2:09:19 am]: <== I/flutter (12546): 1679863159787
-[2:09:19 am]: <== I/flutter (12546): 1679863159790
-[2:09:19 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:19 am]: <== I/flutter (12546): 1679863159790
-[2:09:19 am]: <== I/flutter (12546): 1679863159803
-[2:09:19 am]: <== I/flutter (12546): 1679863159921
-[2:09:20 am]: <== I/flutter (12546): 1679863159921
-[2:09:20 am]: <== I/flutter (12546): 1679863159975
-[2:09:20 am]: <== I/flutter (12546): 1679863160005
-[2:09:20 am]: <== I/flutter (12546): 1679863160398
-[2:09:20 am]: <== I/flutter (12546): 1679863160422
-[2:09:20 am]: <== I/flutter (12546): 1679863160452
-[2:09:20 am]: <== I/flutter (12546): 1679863160452
-[2:09:20 am]: <== I/flutter (12546): 1679863160750
-[2:09:20 am]: <== I/flutter (12546): 1679863160750
-[2:09:20 am]: <== I/flutter (12546): 1679863160767
-[2:09:20 am]: <== I/flutter (12546): 1679863160777
-[2:09:20 am]: <== I/flutter (12546): 1679863160781
-[2:09:20 am]: <== I/flutter (12546): 1679863160786
-[2:09:20 am]: <== I/flutter (12546): 1679863160792
-[2:09:20 am]: <== I/flutter (12546): 1679863160792
-[2:09:20 am]: <== I/flutter (12546): 1679863160809
-[2:09:20 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:09:20 am]: <== I/flutter (12546): 1679863160809
-[2:09:20 am]: <== I/flutter (12546): 1679863160928
-[2:09:21 am]: <== I/flutter (12546): 1679863160928
-[2:09:21 am]: <== I/flutter (12546): 1679863160981
-[2:09:21 am]: <== I/flutter (12546): 1679863161012
-[2:09:21 am]: <== I/flutter (12546): 1679863161404
-[2:09:21 am]: <== I/flutter (12546): 1679863161430
-[2:09:21 am]: <== I/flutter (12546): 1679863161465
-[2:09:21 am]: <== I/flutter (12546): 1679863161465
-[2:09:21 am]: <== I/flutter (12546): 1679863161757
-[2:09:21 am]: <== I/flutter (12546): 1679863161757
-[2:09:21 am]: <== I/flutter (12546): 1679863161774
-[2:09:21 am]: <== I/flutter (12546): 1679863161779
-[2:09:21 am]: <== I/flutter (12546): 1679863161786
-[2:09:21 am]: <== I/flutter (12546): 1679863161792
-[2:09:21 am]: <== I/flutter (12546): 1679863161798
-[2:09:21 am]: <== I/flutter (12546): 1679863161798
-[2:09:21 am]: <== I/flutter (12546): 1679863161813
-[2:09:21 am]: <== I/flutter (12546): 1679863161823
-[2:09:21 am]: <== I/flutter (12546): 1679863161823
-[2:09:21 am]: <== I/flutter (12546): 1679863161826
-[2:09:21 am]: <== I/flutter (12546): 1679863161826
-[2:09:21 am]: <== I/flutter (12546): 1679863161935
-[2:09:21 am]: <== I/flutter (12546): 1679863161941
-[2:09:22 am]: <== I/flutter (12546): 1679863161988
-[2:09:22 am]: <== I/flutter (12546): 1679863162018
-[2:09:22 am]: <== I/flutter (12546): 1679863162413
-[2:09:22 am]: <== I/flutter (12546): 1679863162438
-[2:09:22 am]: <== I/flutter (12546): 1679863162477
-[2:09:22 am]: <== I/flutter (12546): 1679863162477
-[2:09:22 am]: <== I/flutter (12546): 1679863162763
-[2:09:22 am]: <== I/flutter (12546): 1679863162763
-[2:09:22 am]: <== I/flutter (12546): 1679863162794
-[2:09:22 am]: <== I/flutter (12546): 1679863162798
-[2:09:22 am]: <== I/flutter (12546): 1679863162798
-[2:09:22 am]: <== I/flutter (12546): 1679863162807
-[2:09:22 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:22 am]: <== I/flutter (12546): 1679863162807
-[2:09:22 am]: <== I/flutter (12546): 1679863162822
-[2:09:22 am]: <== I/flutter (12546): 1679863162827
-[2:09:22 am]: <== I/flutter (12546): 1679863162827
-[2:09:22 am]: <== I/flutter (12546): 1679863162835
-[2:09:22 am]: <== I/flutter (12546): 1679863162835
-[2:09:22 am]: <== I/flutter (12546): 1679863162943
-[2:09:22 am]: <== I/flutter (12546): 1679863162949
-[2:09:23 am]: <== I/flutter (12546): 1679863162994
-[2:09:23 am]: <== I/flutter (12546): 1679863163026
-[2:09:23 am]: <== I/flutter (12546): 1679863163421
-[2:09:23 am]: <== I/flutter (12546): 1679863163446
-[2:09:23 am]: <== I/flutter (12546): 1679863163487
-[2:09:23 am]: <== I/flutter (12546): 1679863163487
-[2:09:23 am]: <== I/flutter (12546): 1679863163771
-[2:09:23 am]: <== I/flutter (12546): 1679863163771
-[2:09:23 am]: <== I/flutter (12546): 1679863163804
-[2:09:23 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:23 am]: <== I/flutter (12546): 1679863163804
-[2:09:23 am]: <== I/flutter (12546): 1679863163818
-[2:09:23 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:23 am]: <== I/flutter (12546): 1679863163818
-[2:09:23 am]: <== I/flutter (12546): 1679863163828
-[2:09:23 am]: <== I/flutter (12546): 1679863163833
-[2:09:23 am]: <== I/flutter (12546): 1679863163833
-[2:09:23 am]: <== I/flutter (12546): 1679863163842
-[2:09:23 am]: <== I/flutter (12546): 1679863163842
-[2:09:23 am]: <== I/flutter (12546): 1679863163950
-[2:09:23 am]: <== I/flutter (12546): 1679863163959
-[2:09:24 am]: <== I/flutter (12546): 1679863164001
-[2:09:24 am]: <== I/flutter (12546): 1679863164034
-[2:09:24 am]: <== I/flutter (12546): 1679863164430
-[2:09:24 am]: <== I/flutter (12546): 1679863164455
-[2:09:24 am]: <== I/flutter (12546): 1679863164492
-[2:09:24 am]: <== I/flutter (12546): 1679863164508
-[2:09:24 am]: <== I/flutter (12546): 1679863164780
-[2:09:24 am]: <== I/flutter (12546): 1679863164780
-[2:09:24 am]: <== I/flutter (12546): 1679863164813
-[2:09:24 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:24 am]: <== I/flutter (12546): 1679863164813
-[2:09:24 am]: <== I/flutter (12546): 1679863164834
-[2:09:24 am]: <== I/flutter (12546): 1679863164834
-[2:09:24 am]: <== I/flutter (12546): 1679863164845
-[2:09:24 am]: <== I/flutter (12546): 1679863164845
-[2:09:24 am]: <== I/flutter (12546): 1679863164850
-[2:09:24 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:24 am]: <== I/flutter (12546): 1679863164850
-[2:09:24 am]: <== I/flutter (12546): 1679863164958
-[2:09:24 am]: <== I/flutter (12546): 1679863164966
-[2:09:25 am]: <== I/flutter (12546): 1679863165007
-[2:09:25 am]: <== I/flutter (12546): 1679863165041
-[2:09:25 am]: <== I/flutter (12546): 1679863165436
-[2:09:25 am]: <== I/flutter (12546): 1679863165462
-[2:09:25 am]: <== I/flutter (12546): 1679863165499
-[2:09:25 am]: <== I/flutter (12546): 1679863165518
-[2:09:25 am]: <== I/flutter (12546): 1679863165788
-[2:09:25 am]: <== I/flutter (12546): 1679863165788
-[2:09:25 am]: <== I/flutter (12546): 1679863165821
-[2:09:25 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:25 am]: <== I/flutter (12546): 1679863165821
-[2:09:25 am]: <== I/flutter (12546): 1679863165856
-[2:09:25 am]: <== I/flutter (12546): 1679863165861
-[2:09:25 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:09:25 am]: <== I/flutter (12546): 1679863165861
-[2:09:25 am]: <== I/flutter (12546): 1679863165964
-[2:09:25 am]: <== I/flutter (12546): 1679863165972
-[2:09:26 am]: <== I/flutter (12546): 1679863166015
-[2:09:26 am]: <== I/flutter (12546): 1679863166049
-[2:09:26 am]: <== I/flutter (12546): 1679863166444
-[2:09:26 am]: <== I/flutter (12546): 1679863166468
-[2:09:26 am]: <== I/flutter (12546): 1679863166505
-[2:09:26 am]: <== I/flutter (12546): 1679863166527
-[2:09:26 am]: <== I/flutter (12546): 1679863166796
-[2:09:26 am]: <== I/flutter (12546): 1679863166796
-[2:09:26 am]: <== I/flutter (12546): 1679863166831
-[2:09:26 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:26 am]: <== I/flutter (12546): 1679863166831
-[2:09:26 am]: <== I/flutter (12546): 1679863166866
-[2:09:26 am]: <== I/flutter (12546): 1679863166870
-[2:09:26 am]: <== I/flutter (12546): 1679863166874
-[2:09:26 am]: <== I/flutter (12546): 1679863166874
-[2:09:26 am]: <== I/flutter (12546): 1679863166882
-[2:09:26 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:26 am]: <== I/flutter (12546): 1679863166882
-[2:09:26 am]: <== I/flutter (12546): 1679863166971
-[2:09:27 am]: <== I/flutter (12546): 1679863166976
-[2:09:27 am]: <== I/flutter (12546): 1679863167021
-[2:09:27 am]: <== I/flutter (12546): 1679863167056
-[2:09:27 am]: <== I/flutter (12546): 1679863167453
-[2:09:27 am]: <== I/flutter (12546): 1679863167474
-[2:09:27 am]: <== I/flutter (12546): 1679863167511
-[2:09:27 am]: <== I/flutter (12546): 1679863167533
-[2:09:27 am]: <== I/flutter (12546): 1679863167803
-[2:09:27 am]: <== I/flutter (12546): 1679863167803
-[2:09:27 am]: <== I/flutter (12546): 1679863167842
-[2:09:27 am]: <== I/flutter (12546): 1679863167846
-[2:09:27 am]: <== I/flutter (12546): 1679863167846
-[2:09:27 am]: <== I/flutter (12546): 1679863167873
-[2:09:27 am]: <== I/flutter (12546): 1679863167873
-[2:09:27 am]: <== I/flutter (12546): 1679863167877
-[2:09:27 am]: <== I/flutter (12546): 1679863167883
-[2:09:27 am]: <== I/flutter (12546): 1679863167888
-[2:09:27 am]: <== I/flutter (12546): 1679863167895
-[2:09:28 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:28 am]: <== I/flutter (12546): 1679863167895
-[2:09:28 am]: <== I/flutter (12546): 1679863167978
-[2:09:28 am]: <== I/flutter (12546): 1679863167984
-[2:09:28 am]: <== I/flutter (12546): 1679863168028
-[2:09:28 am]: <== I/flutter (12546): 1679863168062
-[2:09:28 am]: ==> [{"id":"9","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:09:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"19","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:09:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"20","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:09:28 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"20","progressId":null,"finished":true}}]
-[2:09:28 am]: <== I/flutter (12546): 1679863168460
-[2:09:28 am]: <== I/flutter (12546): 1679863168611
-[2:09:28 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:28 am]: <== I/flutter (12546): 1679863168611
-[2:09:28 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:09:29 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"19","progressId":"hot.reload","finished":true}}]
-[2:09:29 am]: <== Reloaded 1 of 2153 libraries in 711ms (compile: 48 ms, reload: 170 ms, reassemble: 425 ms).
-[2:09:29 am]: <== [{"id":"9","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:09:29 am]: <== I/flutter (12546): 1679863169039
-[2:09:29 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 14 lines
-[2:09:29 am]: <== I/flutter (12546): 1679863169039
-[2:09:29 am]: <== I/flutter (12546): list----------
-[2:09:29 am]: <== I/flutter (12546): 1679863169095
-[2:09:29 am]: <== I/flutter (12546): 1679863169095
-[2:09:29 am]: <== I/flutter (12546): Timer ended
-[2:09:29 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:09:29 am]: <== I/flutter (12546): list----------
-[2:09:29 am]: <== I/flutter (12546): 1679863169206
-[2:09:29 am]: <== I/flutter (12546): 1679863169466
-[2:09:29 am]: <== I/flutter (12546): 1679863169626
-[2:09:30 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:30 am]: <== I/flutter (12546): 1679863169626
-[2:09:30 am]: <== I/flutter (12546): 1679863170069
-[2:09:30 am]: <== I/flutter (12546): 1679863170069
-[2:09:30 am]: <== I/flutter (12546): 1679863170072
-[2:09:30 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:30 am]: <== I/flutter (12546): 1679863170072
-[2:09:30 am]: <== I/flutter (12546): 1679863170077
-[2:09:30 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 9 lines
-[2:09:30 am]: <== I/flutter (12546): 1679863170077
-[2:09:30 am]: <== I/flutter (12546): 1679863170104
-[2:09:30 am]: <== I/flutter (12546): 1679863170104
-[2:09:30 am]: <== I/flutter (12546): 1679863170214
-[2:09:30 am]: <== I/flutter (12546): 1679863170484
-[2:09:30 am]: <== I/flutter (12546): 1679863170635
-[2:09:31 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:31 am]: <== I/flutter (12546): 1679863170635
-[2:09:31 am]: <== I/flutter (12546): 1679863171079
-[2:09:31 am]: <== I/flutter (12546): 1679863171079
-[2:09:31 am]: <== I/flutter (12546): 1679863171084
-[2:09:31 am]: <== I/flutter (12546): 1679863171084
-[2:09:31 am]: <== I/flutter (12546): 1679863171091
-[2:09:31 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 10 lines
-[2:09:31 am]: <== I/flutter (12546): 1679863171091
-[2:09:31 am]: <== I/flutter (12546): 1679863171111
-[2:09:31 am]: <== I/flutter (12546): 1679863171111
-[2:09:31 am]: <== I/flutter (12546): 1679863171221
-[2:09:31 am]: <== I/flutter (12546): 1679863171494
-[2:09:31 am]: ==> [{"id":"10","method":"app.restart","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[2:09:31 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"21","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[2:09:31 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"22","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[2:09:31 am]: <== I/flutter (12546): 1679863171642
-[2:09:31 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"22","progressId":null,"finished":true}}]
-[2:09:32 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:32 am]: <== I/flutter (12546): 1679863171642
-[2:09:32 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:09:32 am]: <== [{"event":"app.progress","params":{"appId":"1637a585-4e79-4a19-b2ce-dd3933db192b","id":"21","progressId":"hot.reload","finished":true}}]
-[2:09:32 am]: <== Reloaded 1 of 2153 libraries in 508ms (compile: 47 ms, reload: 165 ms, reassemble: 238 ms).
-[2:09:32 am]: <== [{"id":"10","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[2:09:32 am]: <== I/flutter (12546): 1679863172120
-[2:09:32 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 16 lines
-[2:09:32 am]: <== I/flutter (12546): 1679863172120
-[2:09:32 am]: <== I/flutter (12546): list----------
-[2:09:32 am]: <== I/flutter (12546): 1679863172150
-[2:09:32 am]: <== I/flutter (12546): Timer ended
-[2:09:32 am]: <== I/flutter (12546): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDFkZjk3YTA2YjM4ZTM4OTM5ZGI3ZWMiLCJyZWdkTm8iOiJUQ0gxNjIyUEFXQVIiLCJpYXQiOjE2Nzk4NjAwMzgsImV4cCI6MTY3OTg2MzYzOH0.sMAfSA89zmWkWnJvU7zR1Pe2NWsTuyBbOw5O5avsGqo
-[2:09:32 am]: <== I/flutter (12546): list----------
-[2:09:32 am]: <== I/flutter (12546): 1679863172228
-[2:09:32 am]: <== I/flutter (12546): 1679863172228
-[2:09:32 am]: <== I/flutter (12546): 1679863172500
-[2:09:32 am]: <== I/flutter (12546): 1679863172646
-[2:09:32 am]: <== I/flutter (12546): 1679863172652
-[2:09:33 am]: <== I/flutter (12546): 1679863172652
-[2:09:33 am]: <== I/flutter (12546): 1679863173144
-[2:09:33 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 10 lines
-[2:09:33 am]: <== I/flutter (12546): 1679863173144
-[2:09:33 am]: <== I/flutter (12546): 1679863173162
-[2:09:33 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 5 lines
-[2:09:33 am]: <== I/flutter (12546): 1679863173162
-[2:09:33 am]: <== I/flutter (12546): 1679863173234
-[2:09:33 am]: <== I/flutter (12546): 1679863173239
-[2:09:33 am]: <== I/flutter (12546): 1679863173518
-[2:09:33 am]: <== I/flutter (12546): 1679863173660
-[2:09:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:34 am]: <== I/flutter (12546): 1679863173660
-[2:09:34 am]: <== I/flutter (12546): 1679863174152
-[2:09:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 3 lines
-[2:09:34 am]: <== I/flutter (12546): 1679863174152
-[2:09:34 am]: <== I/flutter (12546): 1679863174163
-[2:09:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 2 lines
-[2:09:34 am]: <== I/flutter (12546): 1679863174163
-[2:09:34 am]: <== I/flutter (12546): 1679863174166
-[2:09:34 am]: <== I/flutter (12546): 1679863174173
-[2:09:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 1 line
-[2:09:34 am]: <== I/flutter (12546): 1679863174173
-[2:09:34 am]: <== I/flutter (12546): 1679863174177
-[2:09:34 am]: <== I/chatty  (12546): uid=10178(com.cdh.quiz) 1.ui identical 4 lines
-[2:09:34 am]: <== I/flutter (12546): 1679863174177
-[2:09:34 am]: <== I/flutter (12546): 1679863174247
-[2:09:34 am]: <== I/flutter (12546): 1679863174247
-[2:09:34 am]: <== I/flutter (12546): 1679863174525
-[2:09:34 am]: <== I/flutter (12546): 1679863174668
+[9:30:00 am]: 
+[9:30:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"0","progressId":null,"finished":true}}]
+[9:30:33 am]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
+[9:30:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app.apk...","finished":false}}]
+[9:30:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"1","progressId":null,"finished":true}}]
+[9:30:40 am]: <== [{"event":"app.debugPort","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","port":65199,"wsUri":"ws://127.0.0.1:65199/7no23w1BxBo=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizLYQYUS/quiz/"}}]
+[9:30:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"2","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:30:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"2","progressId":null,"finished":true}}]
+[9:30:40 am]: <== [{"event":"app.started","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d"}}]
+[9:30:48 am]: ==> [{"id":"1","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
+[9:30:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"3","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[9:30:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"4","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:30:50 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"4","progressId":null,"finished":true}}]
+[9:30:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"3","progressId":"hot.restart","finished":true}}]
+[9:30:51 am]: <== Restarted application in 2,450ms.
+[9:30:51 am]: <== [{"id":"1","result":{"code":0,"message":""}}]
+[9:30:51 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[9:30:51 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[9:30:51 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[9:30:51 am]: <== I/com.cdh.quiz( 5054): The ClassLoaderContext is a special shared library.
+[9:30:51 am]: <== I/chatty  ( 5054): uid=10178(com.cdh.quiz) AsyncTask #1 identical 1 line
+[9:30:51 am]: <== I/com.cdh.quiz( 5054): The ClassLoaderContext is a special shared library.
+[9:30:51 am]: <== D/nativeloader( 5054): classloader namespace configured for unbundled product apk. library_path=/product/priv-app/PrebuiltGmsCore/lib/x86:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86:/product/lib:/system/product/lib
+[9:30:51 am]: <== I/com.cdh.quiz( 5054): Waiting for a blocking GC ClassLinker
+[9:30:51 am]: <== I/com.cdh.quiz( 5054): WaitForGcToComplete blocked ClassLinker on HeapTrim for 7.373ms
+[9:30:51 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/BaseDexClassLoader;->pathList:Ldalvik/system/DexPathList; (greylist, reflection, allowed)
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->systemNativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryPathElements:[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden method Ldalvik/system/DexPathList;->makePathElements(Ljava/util/List;)[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[9:30:51 am]: <== V/NativeCrypto( 5054): Registering com/google/android/gms/org/conscrypt/NativeCrypto's 286 native methods...
+[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (greylist, reflection, allowed)
+[9:30:51 am]: <== I/TetheringManager( 5054): registerTetheringEventCallback:com.cdh.quiz
+[9:30:51 am]: <== I/ProviderInstaller( 5054): Installed default security provider GmsCore_OpenSSL
+[9:31:21 am]: ==> [{"id":"2","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"5","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"6","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"6","progressId":null,"finished":true}}]
+[9:31:22 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"5","progressId":"hot.reload","finished":true}}]
+[9:31:22 am]: <== Reloaded 4 of 2153 libraries in 574ms (compile: 66 ms, reload: 169 ms, reassemble: 255 ms).
+[9:31:22 am]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
+[9:31:25 am]: ==> [{"id":"3","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
+[9:31:25 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"7","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[9:31:25 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"8","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"8","progressId":null,"finished":true}}]
+[9:31:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"7","progressId":"hot.restart","finished":true}}]
+[9:31:28 am]: <== Restarted application in 2,893ms.
+[9:31:28 am]: <== [{"id":"3","result":{"code":0,"message":""}}]
+[9:31:28 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[9:31:28 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[9:31:28 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[9:31:28 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[9:31:28 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
+[9:31:34 am]: ==> [{"id":"4","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"9","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"10","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"10","progressId":null,"finished":true}}]
+[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"9","progressId":"hot.reload","finished":true}}]
+[9:31:35 am]: <== Reloaded 1 of 2153 libraries in 710ms (compile: 94 ms, reload: 215 ms, reassemble: 263 ms).
+[9:31:35 am]: <== [{"id":"4","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:31:43 am]: ==> [{"id":"5","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"11","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"12","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"12","progressId":null,"finished":true}}]
+[9:31:44 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"11","progressId":"hot.reload","finished":true}}]
+[9:31:44 am]: <== Reloaded 1 of 2153 libraries in 701ms (compile: 65 ms, reload: 246 ms, reassemble: 177 ms).
+[9:31:44 am]: <== [{"id":"5","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:31:51 am]: ==> [{"id":"6","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"13","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"14","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"14","progressId":null,"finished":true}}]
+[9:31:52 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"13","progressId":"hot.reload","finished":true}}]
+[9:31:52 am]: <== Reloaded 1 of 2153 libraries in 590ms (compile: 57 ms, reload: 242 ms, reassemble: 171 ms).
+[9:31:52 am]: <== [{"id":"6","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:31:56 am]: ==> [{"id":"7","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"15","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"16","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"16","progressId":null,"finished":true}}]
+[9:31:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"15","progressId":"hot.reload","finished":true}}]
+[9:31:57 am]: <== Reloaded 1 of 2153 libraries in 698ms (compile: 67 ms, reload: 267 ms, reassemble: 179 ms).
+[9:31:57 am]: <== [{"id":"7","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:32:02 am]: ==> [{"id":"8","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"17","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"18","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"18","progressId":null,"finished":true}}]
+[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"17","progressId":"hot.reload","finished":true}}]
+[9:32:02 am]: <== Reloaded 1 of 2153 libraries in 546ms (compile: 50 ms, reload: 246 ms, reassemble: 146 ms).
+[9:32:02 am]: <== [{"id":"8","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:32:06 am]: ==> [{"id":"9","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"19","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"20","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"20","progressId":null,"finished":true}}]
+[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"19","progressId":"hot.reload","finished":true}}]
+[9:32:06 am]: <== Reloaded 1 of 2153 libraries in 588ms (compile: 76 ms, reload: 196 ms, reassemble: 154 ms).
+[9:32:06 am]: <== [{"id":"9","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:32:09 am]: ==> [{"id":"10","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"21","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"22","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"22","progressId":null,"finished":true}}]
+[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"21","progressId":"hot.reload","finished":true}}]
+[9:32:10 am]: <== Reloaded 1 of 2153 libraries in 607ms (compile: 53 ms, reload: 251 ms, reassemble: 206 ms).
+[9:32:10 am]: <== [{"id":"10","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:32:10 am]: ==> [{"id":"11","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"23","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"24","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"24","progressId":null,"finished":true}}]
+[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"23","progressId":"hot.reload","finished":true}}]
+[9:32:11 am]: <== Reloaded 0 libraries in 242ms (compile: 34 ms, reload: 0 ms, reassemble: 110 ms).
+[9:32:11 am]: <== [{"id":"11","result":{"code":0,"message":"Reloaded 0 libraries"}}]
+[9:32:19 am]: ==> [{"id":"12","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"25","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"26","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"26","progressId":null,"finished":true}}]
+[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"25","progressId":"hot.reload","finished":true}}]
+[9:32:19 am]: <== Reloaded 1 of 2153 libraries in 685ms (compile: 67 ms, reload: 268 ms, reassemble: 192 ms).
+[9:32:19 am]: <== [{"id":"12","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:32:23 am]: ==> [{"id":"13","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:32:23 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"27","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"28","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"28","progressId":null,"finished":true}}]
+[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"27","progressId":"hot.reload","finished":true}}]
+[9:32:24 am]: <== Reloaded 1 of 2153 libraries in 749ms (compile: 73 ms, reload: 315 ms, reassemble: 193 ms).
+[9:32:24 am]: <== [{"id":"13","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:33:59 am]: ==> [{"id":"14","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
+[9:33:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"29","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[9:33:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"30","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"30","progressId":null,"finished":true}}]
+[9:34:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"29","progressId":"hot.restart","finished":true}}]
+[9:34:02 am]: <== Restarted application in 3,636ms.
+[9:34:02 am]: <== [{"id":"14","result":{"code":0,"message":""}}]
+[9:34:03 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[9:34:03 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[9:34:03 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[9:34:03 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[9:34:03 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
+[9:34:10 am]: ==> [{"id":"15","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"31","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"32","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"32","progressId":null,"finished":true}}]
+[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"31","progressId":"hot.reload","finished":true}}]
+[9:34:11 am]: <== Reloaded 1 of 2153 libraries in 619ms (compile: 54 ms, reload: 242 ms, reassemble: 203 ms).
+[9:34:11 am]: <== [{"id":"15","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:34:18 am]: ==> [{"id":"16","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:18 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"33","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"34","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"34","progressId":null,"finished":true}}]
+[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"33","progressId":"hot.reload","finished":true}}]
+[9:34:19 am]: <== Reloaded 1 of 2153 libraries in 813ms (compile: 84 ms, reload: 323 ms, reassemble: 183 ms).
+[9:34:19 am]: <== [{"id":"16","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:34:23 am]: ==> [{"id":"17","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:23 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"35","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"36","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"36","progressId":null,"finished":true}}]
+[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"35","progressId":"hot.reload","finished":true}}]
+[9:34:24 am]: <== Reloaded 4 of 2153 libraries in 717ms (compile: 94 ms, reload: 248 ms, reassemble: 192 ms).
+[9:34:24 am]: <== [{"id":"17","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
+[9:34:26 am]: ==> [{"id":"18","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"37","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"38","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"38","progressId":null,"finished":true}}]
+[9:34:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"37","progressId":"hot.reload","finished":true}}]
+[9:34:27 am]: <== Reloaded 1 of 2153 libraries in 627ms (compile: 62 ms, reload: 260 ms, reassemble: 167 ms).
+[9:34:27 am]: <== [{"id":"18","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:34:28 am]: ==> [{"id":"19","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"39","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"40","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"40","progressId":null,"finished":true}}]
+[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"39","progressId":"hot.reload","finished":true}}]
+[9:34:28 am]: <== Reloaded 1 of 2153 libraries in 635ms (compile: 64 ms, reload: 288 ms, reassemble: 168 ms).
+[9:34:28 am]: <== [{"id":"19","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:34:30 am]: ==> [{"id":"20","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"41","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"42","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"42","progressId":null,"finished":true}}]
+[9:34:31 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"41","progressId":"hot.reload","finished":true}}]
+[9:34:31 am]: <== Reloaded 1 of 2153 libraries in 723ms (compile: 74 ms, reload: 382 ms, reassemble: 146 ms).
+[9:34:31 am]: <== [{"id":"20","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:34:41 am]: ==> [{"id":"21","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:34:41 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"43","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"44","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"44","progressId":null,"finished":true}}]
+[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"43","progressId":"hot.reload","finished":true}}]
+[9:34:42 am]: <== Reloaded 4 of 2153 libraries in 737ms (compile: 70 ms, reload: 316 ms, reassemble: 211 ms).
+[9:34:42 am]: <== [{"id":"21","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
+[9:34:43 am]: ==> [{"id":"22","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
+[9:34:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"45","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[9:34:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"46","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:34:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"46","progressId":null,"finished":true}}]
+[9:34:47 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"45","progressId":"hot.restart","finished":true}}]
+[9:34:47 am]: <== Restarted application in 3,424ms.
+[9:34:47 am]: <== [{"id":"22","result":{"code":0,"message":""}}]
+[9:34:47 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[9:34:47 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[9:34:47 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[9:34:47 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[9:34:47 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
+[9:34:58 am]: <== I/AssistStructure( 5054): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[9:35:04 am]: <== I/AssistStructure( 5054): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[9:35:05 am]: <== I/flutter ( 5054): 20410a
+[9:35:05 am]: <== I/flutter ( 5054): aa
+[9:36:17 am]: ==> [{"id":"23","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"47","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"48","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"48","progressId":null,"finished":true}}]
+[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"47","progressId":"hot.reload","finished":true}}]
+[9:36:17 am]: <== Reloaded 1 of 2153 libraries in 812ms (compile: 83 ms, reload: 335 ms, reassemble: 238 ms).
+[9:36:17 am]: <== [{"id":"23","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:36:46 am]: ==> [{"id":"24","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"49","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"50","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"50","progressId":null,"finished":true}}]
+[9:36:47 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"49","progressId":"hot.reload","finished":true}}]
+[9:36:47 am]: <== Reloaded 1 of 2153 libraries in 967ms (compile: 79 ms, reload: 302 ms, reassemble: 404 ms).
+[9:36:47 am]: <== [{"id":"24","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:00 am]: ==> [{"id":"25","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:00 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"51","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:00 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"52","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:01 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"52","progressId":null,"finished":true}}]
+[9:37:01 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"51","progressId":"hot.reload","finished":true}}]
+[9:37:01 am]: <== Reloaded 40 of 2153 libraries in 1,367ms (compile: 588 ms, reload: 320 ms, reassemble: 218 ms).
+[9:37:01 am]: <== [{"id":"25","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
+[9:37:07 am]: ==> [{"id":"26","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"53","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"54","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"54","progressId":null,"finished":true}}]
+[9:37:08 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"53","progressId":"hot.reload","finished":true}}]
+[9:37:08 am]: <== Reloaded 1 of 2153 libraries in 853ms (compile: 72 ms, reload: 373 ms, reassemble: 251 ms).
+[9:37:08 am]: <== [{"id":"26","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:11 am]: ==> [{"id":"27","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"55","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"56","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:12 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"56","progressId":null,"finished":true}}]
+[9:37:12 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"55","progressId":"hot.reload","finished":true}}]
+[9:37:12 am]: <== Reloaded 1 of 2153 libraries in 760ms (compile: 55 ms, reload: 325 ms, reassemble: 259 ms).
+[9:37:12 am]: <== [{"id":"27","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:16 am]: <== E/flutter ( 5054): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Connection timed out
+[9:37:16 am]: <== E/flutter ( 5054): #0      IOClient.send (package:http/src/io_client.dart:88:7)
+[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
+[9:37:16 am]: <== E/flutter ( 5054): #1      BaseClient._sendUnstreamed (package:http/src/base_client.dart:93:32)
+[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
+[9:37:16 am]: <== E/flutter ( 5054): #2      _withClient (package:http/http.dart:164:12)
+[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
+[9:37:16 am]: <== E/flutter ( 5054): #3      CommonAuthLogInController.hitLoginApi (package:quiz/src/pages/auth/controller/common_auth_login_controller.dart:148:20)
+[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
+[9:37:16 am]: <== E/flutter ( 5054):
+[9:37:26 am]: ==> [{"id":"28","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"57","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"58","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"58","progressId":null,"finished":true}}]
+[9:37:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"57","progressId":"hot.reload","finished":true}}]
+[9:37:28 am]: <== Reloaded 40 of 2153 libraries in 1,452ms (compile: 653 ms, reload: 338 ms, reassemble: 266 ms).
+[9:37:28 am]: <== [{"id":"28","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
+[9:37:39 am]: ==> [{"id":"29","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:39 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"59","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"60","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"60","progressId":null,"finished":true}}]
+[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"59","progressId":"hot.reload","finished":true}}]
+[9:37:40 am]: <== Reloaded 1 of 2153 libraries in 798ms (compile: 59 ms, reload: 326 ms, reassemble: 272 ms).
+[9:37:40 am]: <== [{"id":"29","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:48 am]: ==> [{"id":"30","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"61","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"62","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"62","progressId":null,"finished":true}}]
+[9:37:49 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"61","progressId":"hot.reload","finished":true}}]
+[9:37:49 am]: <== Reloaded 1 of 2153 libraries in 857ms (compile: 125 ms, reload: 320 ms, reassemble: 255 ms).
+[9:37:49 am]: <== [{"id":"30","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:51 am]: ==> [{"id":"31","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"63","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"64","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"64","progressId":null,"finished":true}}]
+[9:37:52 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"63","progressId":"hot.reload","finished":true}}]
+[9:37:52 am]: <== Reloaded 1 of 2153 libraries in 748ms (compile: 65 ms, reload: 345 ms, reassemble: 222 ms).
+[9:37:52 am]: <== [{"id":"31","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:37:58 am]: ==> [{"id":"32","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:37:58 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"65","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:37:58 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"66","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:37:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"66","progressId":null,"finished":true}}]
+[9:37:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"65","progressId":"hot.reload","finished":true}}]
+[9:37:59 am]: <== Reloaded 1 of 2153 libraries in 762ms (compile: 60 ms, reload: 364 ms, reassemble: 213 ms).
+[9:37:59 am]: <== [{"id":"32","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:38:06 am]: ==> [{"id":"33","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"67","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"68","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"68","progressId":null,"finished":true}}]
+[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"67","progressId":"hot.reload","finished":true}}]
+[9:38:06 am]: <== Reloaded 1 of 2153 libraries in 825ms (compile: 59 ms, reload: 397 ms, reassemble: 219 ms).
+[9:38:06 am]: <== [{"id":"33","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:38:10 am]: ==> [{"id":"34","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
+[9:38:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"69","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[9:38:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"70","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:38:13 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"70","progressId":null,"finished":true}}]
+[9:38:14 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"69","progressId":"hot.restart","finished":true}}]
+[9:38:14 am]: <== Restarted application in 3,367ms.
+[9:38:14 am]: <== [{"id":"34","result":{"code":0,"message":""}}]
+[9:38:14 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[9:38:14 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[9:38:14 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[9:38:14 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[9:38:32 am]: ==> [{"id":"35","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:38:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"71","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"72","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"72","progressId":null,"finished":true}}]
+[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"71","progressId":"hot.reload","finished":true}}]
+[9:38:33 am]: <== Reloaded 1 of 2153 libraries in 934ms (compile: 83 ms, reload: 317 ms, reassemble: 364 ms).
+[9:38:33 am]: <== [{"id":"35","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
+[9:38:34 am]: ==> [{"id":"36","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:38:34 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"73","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:38:34 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"74","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:38:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"74","progressId":null,"finished":true}}]
+[9:38:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"73","progressId":"hot.reload","finished":true}}]
+[9:38:35 am]: <== Reloaded 40 of 2153 libraries in 920ms (compile: 365 ms, reload: 190 ms, reassemble: 247 ms).
+[9:38:35 am]: <== [{"id":"36","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
+[9:38:36 am]: <== I/flutter ( 5054):
+[9:38:36 am]: <== I/flutter ( 5054):
+[9:38:56 am]: ==> [{"id":"37","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[9:38:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"75","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[9:38:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"76","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[9:38:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"76","progressId":null,"finished":true}}]
+[9:38:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"75","progressId":"hot.reload","finished":true}}]
+[9:38:57 am]: <== Reloaded 41 of 2153 libraries in 752ms (compile: 247 ms, reload: 184 ms, reassemble: 212 ms).
+[9:38:57 am]: <== [{"id":"37","result":{"code":0,"message":"Reloaded 41 of 2153 libraries"}}]
+[9:39:00 am]: <== I/flutter ( 5054):
+[9:39:00 am]: <== I/flutter ( 5054):

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz/theme/app_color.dart';
 
 import '../theme/gradient_theme.dart';
 
@@ -26,7 +27,7 @@ class ErrorDialog extends StatelessWidget {
             Navigator.pop(context);
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: color ?? const Color(0xff6655D6),
+            backgroundColor: color ?? kTeacherPrimaryColor,
           ),
           child: Center(
               child: Text(

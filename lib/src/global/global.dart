@@ -16,10 +16,10 @@ showSnackBar(var message, Color color, Color? textColor) {
       icon: Container(
         margin: const EdgeInsets.only(left: 4, right: 4),
         child: Image.asset(
-          'assets/images/logo.png',
-          // fit: BoxFit.cover,
+          kLogoPath,
+          fit: BoxFit.cover,
           // height: 60,
-          // width: 10,
+          width: 150,
         ),
       ));
 }
