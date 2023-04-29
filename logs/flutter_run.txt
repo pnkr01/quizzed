@@ -1,345 +1,560 @@
-[9:29:25 am]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart","--web-hostname","any"]
-[9:29:26 am]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
-[9:29:26 am]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
-[9:29:26 am]: PID: 2504
-[9:29:31 am]: The plugin `fluttertoast` uses a deprecated version of the Android embedding.
+[4:33:17 pm]: Spawning C:\Users\pawan\Development\sdk\flutter\bin\flutter.bat with args ["run","--machine","--start-paused","--no-sound-null-safety","-d","emulator-5554","--devtools-server-address","http://127.0.0.1:9100/","--target","lib\\main.dart","--web-hostname","any"]
+[4:33:17 pm]: ..  in C:\Users\pawan\OneDrive\Desktop\Files\quiz
+[4:33:17 pm]: ..  with {"toolEnv":{"FLUTTER_HOST":"VSCode","PUB_ENVIRONMENT":"vscode.dart-code"}}
+[4:33:17 pm]: PID: 14068
+[4:33:19 pm]: The plugin `fluttertoast` uses a deprecated version of the Android embedding.
 To avoid unexpected runtime failures, or future build failures, try to see if this plugin supports the Android V2 embedding. Otherwise, consider removing it since a future release of Flutter will remove these deprecated APIs.
 If you are plugin author, take a look at the docs for migrating the plugin to the V2 embedding: https://flutter.dev/go/android-plugin-migration.
-[9:29:31 am]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":18280}}]
-[9:29:31 am]: <== [{"event":"app.start","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
-[9:29:31 am]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
-[9:29:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
-[9:29:58 am]: <== Warning: The plugin file_picker requires Android SDK version 33.
-[9:29:58 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-[9:29:59 am]: <== Warning: The plugin flutter_plugin_android_lifecycle requires Android SDK version 33.
-[9:29:59 am]: <== For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-[9:30:00 am]: One or more plugins require a higher Android SDK version.
-[9:30:00 am]: Fix this issue by adding the following to C:\Users\pawan\OneDrive\Desktop\Files\quiz\android\app\build.gradle:
-android {
-[9:30:00 am]: compileSdkVersion 33
-  ...
-}
-[9:30:00 am]: 
-[9:30:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"0","progressId":null,"finished":true}}]
-[9:30:33 am]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
-[9:30:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"1","progressId":null,"message":"Installing build\\app\\outputs\\flutter-apk\\app.apk...","finished":false}}]
-[9:30:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"1","progressId":null,"finished":true}}]
-[9:30:40 am]: <== [{"event":"app.debugPort","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","port":65199,"wsUri":"ws://127.0.0.1:65199/7no23w1BxBo=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizLYQYUS/quiz/"}}]
-[9:30:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"2","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:30:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"2","progressId":null,"finished":true}}]
-[9:30:40 am]: <== [{"event":"app.started","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d"}}]
-[9:30:48 am]: ==> [{"id":"1","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[9:30:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"3","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[9:30:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"4","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:30:50 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"4","progressId":null,"finished":true}}]
-[9:30:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"3","progressId":"hot.restart","finished":true}}]
-[9:30:51 am]: <== Restarted application in 2,450ms.
-[9:30:51 am]: <== [{"id":"1","result":{"code":0,"message":""}}]
-[9:30:51 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[9:30:51 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[9:30:51 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[9:30:51 am]: <== I/com.cdh.quiz( 5054): The ClassLoaderContext is a special shared library.
-[9:30:51 am]: <== I/chatty  ( 5054): uid=10178(com.cdh.quiz) AsyncTask #1 identical 1 line
-[9:30:51 am]: <== I/com.cdh.quiz( 5054): The ClassLoaderContext is a special shared library.
-[9:30:51 am]: <== D/nativeloader( 5054): classloader namespace configured for unbundled product apk. library_path=/product/priv-app/PrebuiltGmsCore/lib/x86:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86:/product/lib:/system/product/lib
-[9:30:51 am]: <== I/com.cdh.quiz( 5054): Waiting for a blocking GC ClassLinker
-[9:30:51 am]: <== I/com.cdh.quiz( 5054): WaitForGcToComplete blocked ClassLinker on HeapTrim for 7.373ms
-[9:30:51 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/BaseDexClassLoader;->pathList:Ldalvik/system/DexPathList; (greylist, reflection, allowed)
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->systemNativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryPathElements:[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden method Ldalvik/system/DexPathList;->makePathElements(Ljava/util/List;)[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
-[9:30:51 am]: <== V/NativeCrypto( 5054): Registering com/google/android/gms/org/conscrypt/NativeCrypto's 286 native methods...
-[9:30:51 am]: <== W/com.cdh.quiz( 5054): Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (greylist, reflection, allowed)
-[9:30:51 am]: <== I/TetheringManager( 5054): registerTetheringEventCallback:com.cdh.quiz
-[9:30:51 am]: <== I/ProviderInstaller( 5054): Installed default security provider GmsCore_OpenSSL
-[9:31:21 am]: ==> [{"id":"2","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"5","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"6","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:21 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"6","progressId":null,"finished":true}}]
-[9:31:22 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"5","progressId":"hot.reload","finished":true}}]
-[9:31:22 am]: <== Reloaded 4 of 2153 libraries in 574ms (compile: 66 ms, reload: 169 ms, reassemble: 255 ms).
-[9:31:22 am]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
-[9:31:25 am]: ==> [{"id":"3","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[9:31:25 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"7","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[9:31:25 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"8","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"8","progressId":null,"finished":true}}]
-[9:31:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"7","progressId":"hot.restart","finished":true}}]
-[9:31:28 am]: <== Restarted application in 2,893ms.
-[9:31:28 am]: <== [{"id":"3","result":{"code":0,"message":""}}]
-[9:31:28 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[9:31:28 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[9:31:28 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[9:31:28 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[9:31:28 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
-[9:31:34 am]: ==> [{"id":"4","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"9","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"10","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"10","progressId":null,"finished":true}}]
-[9:31:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"9","progressId":"hot.reload","finished":true}}]
-[9:31:35 am]: <== Reloaded 1 of 2153 libraries in 710ms (compile: 94 ms, reload: 215 ms, reassemble: 263 ms).
-[9:31:35 am]: <== [{"id":"4","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:31:43 am]: ==> [{"id":"5","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"11","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"12","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"12","progressId":null,"finished":true}}]
-[9:31:44 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"11","progressId":"hot.reload","finished":true}}]
-[9:31:44 am]: <== Reloaded 1 of 2153 libraries in 701ms (compile: 65 ms, reload: 246 ms, reassemble: 177 ms).
-[9:31:44 am]: <== [{"id":"5","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:31:51 am]: ==> [{"id":"6","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"13","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"14","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"14","progressId":null,"finished":true}}]
-[9:31:52 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"13","progressId":"hot.reload","finished":true}}]
-[9:31:52 am]: <== Reloaded 1 of 2153 libraries in 590ms (compile: 57 ms, reload: 242 ms, reassemble: 171 ms).
-[9:31:52 am]: <== [{"id":"6","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:31:56 am]: ==> [{"id":"7","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"15","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"16","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:31:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"16","progressId":null,"finished":true}}]
-[9:31:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"15","progressId":"hot.reload","finished":true}}]
-[9:31:57 am]: <== Reloaded 1 of 2153 libraries in 698ms (compile: 67 ms, reload: 267 ms, reassemble: 179 ms).
-[9:31:57 am]: <== [{"id":"7","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:32:02 am]: ==> [{"id":"8","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"17","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"18","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"18","progressId":null,"finished":true}}]
-[9:32:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"17","progressId":"hot.reload","finished":true}}]
-[9:32:02 am]: <== Reloaded 1 of 2153 libraries in 546ms (compile: 50 ms, reload: 246 ms, reassemble: 146 ms).
-[9:32:02 am]: <== [{"id":"8","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:32:06 am]: ==> [{"id":"9","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"19","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"20","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"20","progressId":null,"finished":true}}]
-[9:32:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"19","progressId":"hot.reload","finished":true}}]
-[9:32:06 am]: <== Reloaded 1 of 2153 libraries in 588ms (compile: 76 ms, reload: 196 ms, reassemble: 154 ms).
-[9:32:06 am]: <== [{"id":"9","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:32:09 am]: ==> [{"id":"10","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"21","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"22","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"22","progressId":null,"finished":true}}]
-[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"21","progressId":"hot.reload","finished":true}}]
-[9:32:10 am]: <== Reloaded 1 of 2153 libraries in 607ms (compile: 53 ms, reload: 251 ms, reassemble: 206 ms).
-[9:32:10 am]: <== [{"id":"10","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:32:10 am]: ==> [{"id":"11","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"23","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"24","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"24","progressId":null,"finished":true}}]
-[9:32:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"23","progressId":"hot.reload","finished":true}}]
-[9:32:11 am]: <== Reloaded 0 libraries in 242ms (compile: 34 ms, reload: 0 ms, reassemble: 110 ms).
-[9:32:11 am]: <== [{"id":"11","result":{"code":0,"message":"Reloaded 0 libraries"}}]
-[9:32:19 am]: ==> [{"id":"12","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"25","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"26","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"26","progressId":null,"finished":true}}]
-[9:32:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"25","progressId":"hot.reload","finished":true}}]
-[9:32:19 am]: <== Reloaded 1 of 2153 libraries in 685ms (compile: 67 ms, reload: 268 ms, reassemble: 192 ms).
-[9:32:19 am]: <== [{"id":"12","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:32:23 am]: ==> [{"id":"13","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:32:23 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"27","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"28","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"28","progressId":null,"finished":true}}]
-[9:32:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"27","progressId":"hot.reload","finished":true}}]
-[9:32:24 am]: <== Reloaded 1 of 2153 libraries in 749ms (compile: 73 ms, reload: 315 ms, reassemble: 193 ms).
-[9:32:24 am]: <== [{"id":"13","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:33:59 am]: ==> [{"id":"14","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[9:33:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"29","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[9:33:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"30","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"30","progressId":null,"finished":true}}]
-[9:34:02 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"29","progressId":"hot.restart","finished":true}}]
-[9:34:02 am]: <== Restarted application in 3,636ms.
-[9:34:02 am]: <== [{"id":"14","result":{"code":0,"message":""}}]
-[9:34:03 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[9:34:03 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[9:34:03 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[9:34:03 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[9:34:03 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
-[9:34:10 am]: ==> [{"id":"15","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"31","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"32","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"32","progressId":null,"finished":true}}]
-[9:34:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"31","progressId":"hot.reload","finished":true}}]
-[9:34:11 am]: <== Reloaded 1 of 2153 libraries in 619ms (compile: 54 ms, reload: 242 ms, reassemble: 203 ms).
-[9:34:11 am]: <== [{"id":"15","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:34:18 am]: ==> [{"id":"16","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:18 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"33","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"34","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"34","progressId":null,"finished":true}}]
-[9:34:19 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"33","progressId":"hot.reload","finished":true}}]
-[9:34:19 am]: <== Reloaded 1 of 2153 libraries in 813ms (compile: 84 ms, reload: 323 ms, reassemble: 183 ms).
-[9:34:19 am]: <== [{"id":"16","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:34:23 am]: ==> [{"id":"17","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:23 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"35","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"36","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"36","progressId":null,"finished":true}}]
-[9:34:24 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"35","progressId":"hot.reload","finished":true}}]
-[9:34:24 am]: <== Reloaded 4 of 2153 libraries in 717ms (compile: 94 ms, reload: 248 ms, reassemble: 192 ms).
-[9:34:24 am]: <== [{"id":"17","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
-[9:34:26 am]: ==> [{"id":"18","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"37","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"38","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"38","progressId":null,"finished":true}}]
-[9:34:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"37","progressId":"hot.reload","finished":true}}]
-[9:34:27 am]: <== Reloaded 1 of 2153 libraries in 627ms (compile: 62 ms, reload: 260 ms, reassemble: 167 ms).
-[9:34:27 am]: <== [{"id":"18","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:34:28 am]: ==> [{"id":"19","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"39","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"40","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"40","progressId":null,"finished":true}}]
-[9:34:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"39","progressId":"hot.reload","finished":true}}]
-[9:34:28 am]: <== Reloaded 1 of 2153 libraries in 635ms (compile: 64 ms, reload: 288 ms, reassemble: 168 ms).
-[9:34:28 am]: <== [{"id":"19","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:34:30 am]: ==> [{"id":"20","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"41","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"42","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:30 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"42","progressId":null,"finished":true}}]
-[9:34:31 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"41","progressId":"hot.reload","finished":true}}]
-[9:34:31 am]: <== Reloaded 1 of 2153 libraries in 723ms (compile: 74 ms, reload: 382 ms, reassemble: 146 ms).
-[9:34:31 am]: <== [{"id":"20","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:34:41 am]: ==> [{"id":"21","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:34:41 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"43","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"44","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"44","progressId":null,"finished":true}}]
-[9:34:42 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"43","progressId":"hot.reload","finished":true}}]
-[9:34:42 am]: <== Reloaded 4 of 2153 libraries in 737ms (compile: 70 ms, reload: 316 ms, reassemble: 211 ms).
-[9:34:42 am]: <== [{"id":"21","result":{"code":0,"message":"Reloaded 4 of 2153 libraries"}}]
-[9:34:43 am]: ==> [{"id":"22","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[9:34:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"45","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[9:34:43 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"46","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:34:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"46","progressId":null,"finished":true}}]
-[9:34:47 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"45","progressId":"hot.restart","finished":true}}]
-[9:34:47 am]: <== Restarted application in 3,424ms.
-[9:34:47 am]: <== [{"id":"22","result":{"code":0,"message":""}}]
-[9:34:47 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[9:34:47 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[9:34:47 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[9:34:47 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[9:34:47 am]: <== W/ConnectivityManager.CallbackHandler( 5054): callback not found for CALLBACK_AVAILABLE message
-[9:34:58 am]: <== I/AssistStructure( 5054): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
-[9:35:04 am]: <== I/AssistStructure( 5054): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
-[9:35:05 am]: <== I/flutter ( 5054): 20410a
-[9:35:05 am]: <== I/flutter ( 5054): aa
-[9:36:17 am]: ==> [{"id":"23","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"47","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"48","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"48","progressId":null,"finished":true}}]
-[9:36:17 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"47","progressId":"hot.reload","finished":true}}]
-[9:36:17 am]: <== Reloaded 1 of 2153 libraries in 812ms (compile: 83 ms, reload: 335 ms, reassemble: 238 ms).
-[9:36:17 am]: <== [{"id":"23","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:36:46 am]: ==> [{"id":"24","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"49","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"50","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:36:46 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"50","progressId":null,"finished":true}}]
-[9:36:47 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"49","progressId":"hot.reload","finished":true}}]
-[9:36:47 am]: <== Reloaded 1 of 2153 libraries in 967ms (compile: 79 ms, reload: 302 ms, reassemble: 404 ms).
-[9:36:47 am]: <== [{"id":"24","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:00 am]: ==> [{"id":"25","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:00 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"51","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:00 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"52","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:01 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"52","progressId":null,"finished":true}}]
-[9:37:01 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"51","progressId":"hot.reload","finished":true}}]
-[9:37:01 am]: <== Reloaded 40 of 2153 libraries in 1,367ms (compile: 588 ms, reload: 320 ms, reassemble: 218 ms).
-[9:37:01 am]: <== [{"id":"25","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
-[9:37:07 am]: ==> [{"id":"26","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"53","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"54","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:07 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"54","progressId":null,"finished":true}}]
-[9:37:08 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"53","progressId":"hot.reload","finished":true}}]
-[9:37:08 am]: <== Reloaded 1 of 2153 libraries in 853ms (compile: 72 ms, reload: 373 ms, reassemble: 251 ms).
-[9:37:08 am]: <== [{"id":"26","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:11 am]: ==> [{"id":"27","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"55","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:11 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"56","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:12 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"56","progressId":null,"finished":true}}]
-[9:37:12 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"55","progressId":"hot.reload","finished":true}}]
-[9:37:12 am]: <== Reloaded 1 of 2153 libraries in 760ms (compile: 55 ms, reload: 325 ms, reassemble: 259 ms).
-[9:37:12 am]: <== [{"id":"27","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:16 am]: <== E/flutter ( 5054): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Connection timed out
-[9:37:16 am]: <== E/flutter ( 5054): #0      IOClient.send (package:http/src/io_client.dart:88:7)
-[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
-[9:37:16 am]: <== E/flutter ( 5054): #1      BaseClient._sendUnstreamed (package:http/src/base_client.dart:93:32)
-[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
-[9:37:16 am]: <== E/flutter ( 5054): #2      _withClient (package:http/http.dart:164:12)
-[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
-[9:37:16 am]: <== E/flutter ( 5054): #3      CommonAuthLogInController.hitLoginApi (package:quiz/src/pages/auth/controller/common_auth_login_controller.dart:148:20)
-[9:37:16 am]: <== E/flutter ( 5054): <asynchronous suspension>
-[9:37:16 am]: <== E/flutter ( 5054):
-[9:37:26 am]: ==> [{"id":"28","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"57","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:26 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"58","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:27 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"58","progressId":null,"finished":true}}]
-[9:37:28 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"57","progressId":"hot.reload","finished":true}}]
-[9:37:28 am]: <== Reloaded 40 of 2153 libraries in 1,452ms (compile: 653 ms, reload: 338 ms, reassemble: 266 ms).
-[9:37:28 am]: <== [{"id":"28","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
-[9:37:39 am]: ==> [{"id":"29","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:39 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"59","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"60","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"60","progressId":null,"finished":true}}]
-[9:37:40 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"59","progressId":"hot.reload","finished":true}}]
-[9:37:40 am]: <== Reloaded 1 of 2153 libraries in 798ms (compile: 59 ms, reload: 326 ms, reassemble: 272 ms).
-[9:37:40 am]: <== [{"id":"29","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:48 am]: ==> [{"id":"30","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"61","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"62","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:48 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"62","progressId":null,"finished":true}}]
-[9:37:49 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"61","progressId":"hot.reload","finished":true}}]
-[9:37:49 am]: <== Reloaded 1 of 2153 libraries in 857ms (compile: 125 ms, reload: 320 ms, reassemble: 255 ms).
-[9:37:49 am]: <== [{"id":"30","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:51 am]: ==> [{"id":"31","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"63","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"64","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:51 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"64","progressId":null,"finished":true}}]
-[9:37:52 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"63","progressId":"hot.reload","finished":true}}]
-[9:37:52 am]: <== Reloaded 1 of 2153 libraries in 748ms (compile: 65 ms, reload: 345 ms, reassemble: 222 ms).
-[9:37:52 am]: <== [{"id":"31","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:37:58 am]: ==> [{"id":"32","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:37:58 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"65","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:37:58 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"66","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:37:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"66","progressId":null,"finished":true}}]
-[9:37:59 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"65","progressId":"hot.reload","finished":true}}]
-[9:37:59 am]: <== Reloaded 1 of 2153 libraries in 762ms (compile: 60 ms, reload: 364 ms, reassemble: 213 ms).
-[9:37:59 am]: <== [{"id":"32","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:38:06 am]: ==> [{"id":"33","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"67","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"68","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"68","progressId":null,"finished":true}}]
-[9:38:06 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"67","progressId":"hot.reload","finished":true}}]
-[9:38:06 am]: <== Reloaded 1 of 2153 libraries in 825ms (compile: 59 ms, reload: 397 ms, reassemble: 219 ms).
-[9:38:06 am]: <== [{"id":"33","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:38:10 am]: ==> [{"id":"34","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":true,"pause":false,"reason":"manual"}}]
-[9:38:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"69","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
-[9:38:10 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"70","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:38:13 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"70","progressId":null,"finished":true}}]
-[9:38:14 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"69","progressId":"hot.restart","finished":true}}]
-[9:38:14 am]: <== Restarted application in 3,367ms.
-[9:38:14 am]: <== [{"id":"34","result":{"code":0,"message":""}}]
-[9:38:14 am]: <== W/DynamiteModule( 5054): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
-[9:38:14 am]: <== I/DynamiteModule( 5054): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
-[9:38:14 am]: <== W/ProviderInstaller( 5054): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
-[9:38:14 am]: <== W/ProviderInstaller( 5054): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
-[9:38:32 am]: ==> [{"id":"35","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:38:32 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"71","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"72","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"72","progressId":null,"finished":true}}]
-[9:38:33 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"71","progressId":"hot.reload","finished":true}}]
-[9:38:33 am]: <== Reloaded 1 of 2153 libraries in 934ms (compile: 83 ms, reload: 317 ms, reassemble: 364 ms).
-[9:38:33 am]: <== [{"id":"35","result":{"code":0,"message":"Reloaded 1 of 2153 libraries"}}]
-[9:38:34 am]: ==> [{"id":"36","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:38:34 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"73","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:38:34 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"74","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:38:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"74","progressId":null,"finished":true}}]
-[9:38:35 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"73","progressId":"hot.reload","finished":true}}]
-[9:38:35 am]: <== Reloaded 40 of 2153 libraries in 920ms (compile: 365 ms, reload: 190 ms, reassemble: 247 ms).
-[9:38:35 am]: <== [{"id":"36","result":{"code":0,"message":"Reloaded 40 of 2153 libraries"}}]
-[9:38:36 am]: <== I/flutter ( 5054):
-[9:38:36 am]: <== I/flutter ( 5054):
-[9:38:56 am]: ==> [{"id":"37","method":"app.restart","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
-[9:38:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"75","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
-[9:38:56 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"76","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
-[9:38:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"76","progressId":null,"finished":true}}]
-[9:38:57 am]: <== [{"event":"app.progress","params":{"appId":"630141fe-f3a0-44de-b0fb-3024b665851d","id":"75","progressId":"hot.reload","finished":true}}]
-[9:38:57 am]: <== Reloaded 41 of 2153 libraries in 752ms (compile: 247 ms, reload: 184 ms, reassemble: 212 ms).
-[9:38:57 am]: <== [{"id":"37","result":{"code":0,"message":"Reloaded 41 of 2153 libraries"}}]
-[9:39:00 am]: <== I/flutter ( 5054):
-[9:39:00 am]: <== I/flutter ( 5054):
+[4:33:19 pm]: <== [{"event":"daemon.connected","params":{"version":"0.6.1","pid":14768}}]
+[4:33:19 pm]: <== [{"event":"app.start","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","deviceId":"emulator-5554","directory":"C:\\Users\\pawan\\OneDrive\\Desktop\\Files\\quiz","supportsRestart":true,"launchMode":"run"}}]
+[4:33:19 pm]: <== Launching lib\main.dart on sdk gphone x86 arm in debug mode...
+[4:33:20 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"0","progressId":null,"message":"Running Gradle task 'assembleDebug'...","finished":false}}]
+[4:33:55 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"0","progressId":null,"finished":true}}]
+[4:33:56 pm]: <== √  Built build\app\outputs\flutter-apk\app-debug.apk.
+[4:34:05 pm]: <== [{"event":"app.debugPort","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","port":55750,"wsUri":"ws://127.0.0.1:55750/lOY0J6raY3k=/ws","baseUri":"file:///data/user/0/com.cdh.quiz/code_cache/quizDYORJT/quiz/"}}]
+[4:34:05 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"1","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[4:34:05 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"1","progressId":null,"finished":true}}]
+[4:34:05 pm]: <== [{"event":"app.started","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b"}}]
+[4:34:08 pm]: <== W/DynamiteModule( 5700): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[4:34:08 pm]: <== I/DynamiteModule( 5700): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[4:34:08 pm]: <== W/ProviderInstaller( 5700): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[4:34:08 pm]: <== I/TetheringManager( 5700): registerTetheringEventCallback:com.cdh.quiz
+[4:34:09 pm]: <== I/com.cdh.quiz( 5700): The ClassLoaderContext is a special shared library.
+[4:34:09 pm]: <== I/chatty  ( 5700): uid=10231(com.cdh.quiz) AsyncTask #1 identical 1 line
+[4:34:09 pm]: <== I/com.cdh.quiz( 5700): The ClassLoaderContext is a special shared library.
+[4:34:09 pm]: <== D/nativeloader( 5700): classloader namespace configured for unbundled product apk. library_path=/product/priv-app/PrebuiltGmsCore/lib/x86:/product/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk!/lib/x86:/product/lib:/system/product/lib
+[4:34:09 pm]: <== W/ProviderInstaller( 5700): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ldalvik/system/BaseDexClassLoader;->pathList:Ldalvik/system/DexPathList; (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ldalvik/system/DexPathList;->systemNativeLibraryDirectories:Ljava/util/List; (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ldalvik/system/DexPathList;->nativeLibraryPathElements:[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/DexPathList;->makePathElements(Ljava/util/List;)[Ldalvik/system/DexPathList$NativeLibraryElement; (greylist, reflection, allowed)
+[4:34:09 pm]: <== V/NativeCrypto( 5700): Registering com/google/android/gms/org/conscrypt/NativeCrypto's 286 native methods...
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ljava/security/spec/ECParameterSpec;->getCurveName()Ljava/lang/String; (greylist, reflection, allowed)
+[4:34:09 pm]: <== I/ProviderInstaller( 5700): Installed default security provider GmsCore_OpenSSL
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ljava/net/Socket;->impl:Ljava/net/SocketImpl; (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/CloseGuard;->get()Ldalvik/system/CloseGuard; (greylist,core-platform-api, linking, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/CloseGuard;->open(Ljava/lang/String;)V (greylist,core-platform-api, linking, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden field Ljava/io/FileDescriptor;->descriptor:I (greylist, JNI, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ljava/security/spec/ECParameterSpec;->setCurveName(Ljava/lang/String;)V (greylist, reflection, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/BlockGuard;->getThreadPolicy()Ldalvik/system/BlockGuard$Policy; (greylist,core-platform-api, linking, allowed)
+[4:34:09 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/BlockGuard$Policy;->onNetwork()V (greylist, linking, allowed)
+[5:34:10 pm]: <== W/com.cdh.quiz( 5700): Accessing hidden method Ldalvik/system/CloseGuard;->close()V (greylist,core-platform-api, linking, allowed)
+[5:34:10 pm]: <== W/Firestore( 5700): (24.4.3) [WatchStream]: (c0388ae) Stream closed with status: Status{code=INTERNAL, description=Internal error
+[5:34:10 pm]: <== W/Firestore( 5700): Rst Stream, cause=null}.
+[6:34:11 pm]: <== W/Firestore( 5700): (24.4.3) [WatchStream]: (c0388ae) Stream closed with status: Status{code=INTERNAL, description=Internal error
+[6:34:11 pm]: <== W/Firestore( 5700): Rst Stream, cause=null}.
+[7:07:35 pm]: <== V/NativeCrypto( 5700): Read error: ssl=0xf55f8518: I/O error during system call, Connection reset by peer
+[7:07:35 pm]: <== V/NativeCrypto( 5700): Write error: ssl=0xf55f8518: I/O error during system call, Broken pipe
+[7:07:35 pm]: <== W/Firestore( 5700): (24.4.3) [WatchStream]: (c0388ae) Stream closed with status: Status{code=UNAVAILABLE, description=End of stream or IOException, cause=null}.
+[7:07:35 pm]: <== V/NativeCrypto( 5700): SSL shutdown failed: ssl=0xf55f8518: I/O error during system call, Success
+[7:08:07 pm]: ==> [{"id":"1","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":true,"pause":false,"reason":"manual"}}]
+[7:08:07 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"2","progressId":"hot.restart","message":"Performing hot restart...","finished":false}}]
+[7:08:07 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"3","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[7:08:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"3","progressId":null,"finished":true}}]
+[7:08:15 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"2","progressId":"hot.restart","finished":true}}]
+[7:08:15 pm]: <== Restarted application in 7,607ms.
+[7:08:15 pm]: <== [{"id":"1","result":{"code":0,"message":""}}]
+[7:08:18 pm]: <== W/DynamiteModule( 5700): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+[7:08:18 pm]: <== I/DynamiteModule( 5700): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+[7:08:18 pm]: <== W/ProviderInstaller( 5700): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+[7:08:18 pm]: <== W/ProviderInstaller( 5700): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+[7:11:27 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:11:27 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:11:27 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:11:27 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:11:30 pm]: <== I/flutter ( 5700): here
+[7:11:31 pm]: <== I/flutter ( 5700): {statusCode: 401, message: Unauthorized}ddd
+[7:11:35 pm]: <== I/AssistStructure( 5700): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[7:11:50 pm]: <== I/AssistStructure( 5700): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[7:11:58 pm]: <== I/flutter ( 5700): 2041013021
+[7:11:58 pm]: <== I/flutter ( 5700): 2041013021@#1742
+[7:11:58 pm]: <== I/flutter ( 5700): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0MDIyNDA0MDhiOWM3ZTlhNDkyOTciLCJyZWdkTm8iOiIyMDQxMDEzMDIxIiwiaWF0IjoxNjgyNzc1NzE4LCJleHAiOjE2ODI3NzkzMTh9.8ngjzgl9bjXKcxaiWrcpLikbnLMXdgH9If1XSHFmfwU
+[7:12:07 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:07 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:07 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:07 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[7:12:08 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[7:12:12 pm]: <== I/flutter ( 5700): here
+[7:12:12 pm]: <== I/flutter ( 5700): {_id: 642189ac940dbeae4ffd28bd, quiz_id: SOAQZ2023_1, conducted_by: TCH9910SIKAY, title: HEAT TRANSFER, description: Quiz1, subject: CSE1002, section: CSE-C, branch: CSE, semester: 6, total_questions: 2, per_question_marks: 1, total_marks: 2, duration: 14, startTime: 2023-03-27T12:23:38.950Z, appeared_student_details: [64218b578414bdb69590fc54, 644a77fdce08e61f058e17f5], questions: [QUESCSE1002483E6DC9, QUESCSE1002AF29771E], status: completed, created_at: 2023-04-29T19:18:52.544Z, updated_at: null, metadata: null}ddd
+[7:12:38 pm]: <== I/flutter ( 5700): here
+[7:12:38 pm]: <== I/flutter ( 5700): {_id: 642189ac940dbeae4ffd28bd, quiz_id: SOAQZ2023_1, conducted_by: TCH9910SIKAY, title: HEAT TRANSFER, description: Quiz1, subject: CSE1002, section: CSE-C, branch: CSE, semester: 6, total_questions: 2, per_question_marks: 1, total_marks: 2, duration: 14, startTime: 2023-03-29T19:23:38.950Z, appeared_student_details: [64218b578414bdb69590fc54, 644a77fdce08e61f058e17f5], questions: [QUESCSE1002483E6DC9, QUESCSE1002AF29771E], status: live, created_at: 2023-04-29T19:18:52.544Z, updated_at: null, metadata: null}ddd
+[7:12:38 pm]: <== I/flutter ( 5700): sikata samantaray----------------Tname
+[7:12:38 pm]: <== I/flutter ( 5700): sikata samantaray----------------changes name
+[7:12:50 pm]: <== I/flutter ( 5700): 200
+[7:12:50 pm]: <== I/flutter ( 5700): {statusCode: 200, message: You have already joined the quiz. Please resume where you left from., errors: [], data: {questions: [{_id: 64218a53940dbeae4ffd28c2, question_id: QUESCSE1002483E6DC9, question_str: how many typs of HEAT TRANSFER, question_img: null, options: [1, 2, 3, 4], correct_option: null, subject: CSE1002, created_by: TCH9910SIKAY, created_at: 2023-03-27T11:00:21.573Z, updated_at: 2023-03-27T11:00:21.573Z}, {_id: 64218a9a940dbeae4ffd28c9, question_id: QUESCSE1002AF29771E, question_str: which movie, question_img: https://quizzed.blob.core.windows.net/quizzed-container/1679919763655-k.jpg, options: [pk, 3 idiot, 345, 567], correct_option: null, subject: CSE1002, created_by: TCH9910SIKAY, created_at: 2023-03-27T11:00:21.573Z, updated_at: 2023-03-27T11:00:21.573Z}], quizStats: {_id: 644a77fdce08e61f058e17f5, student_regdNo: 2041013021, quiz_id: SOAQZ2023_1, completed: true, start_time: 2023-04-27T12:23:21.453Z, finish_time: 2023-04-29T13:42:00.167Z, created_at: 2023-04-27T12:23:21.454Z, updated_at
+[7:12:50 pm]: <== I/flutter ( 5700): sending to quiz session
+[7:12:51 pm]: <== I/flutter ( 5700): calling from 31
+[7:12:51 pm]: <== I/flutter ( 5700): quiz timer
+[7:13:42 pm]: ==> [{"id":"2","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[7:13:42 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"4","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[7:13:42 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"5","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[7:13:43 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"5","progressId":null,"finished":true}}]
+[7:13:44 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"4","progressId":"hot.reload","finished":true}}]
+[7:13:44 pm]: <== Reloaded 1 of 2196 libraries in 1,926ms (compile: 704 ms, reload: 434 ms, reassemble: 459 ms).
+[7:13:44 pm]: <== [{"id":"2","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[7:26:56 pm]: ==> [{"id":"3","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[7:26:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"6","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[7:26:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"7","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[7:26:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"7","progressId":null,"finished":true}}]
+[7:26:57 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"6","progressId":"hot.reload","finished":true}}]
+[7:26:57 pm]: <== Reloaded 1 of 2196 libraries in 697ms (compile: 71 ms, reload: 307 ms, reassemble: 236 ms).
+[7:26:57 pm]: <== [{"id":"3","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:11:58 pm]: <== W/Firestore( 5700): (24.4.3) [WatchStream]: (ff88a70) Stream closed with status: Status{code=INTERNAL, description=Internal error
+[8:11:58 pm]: <== W/Firestore( 5700): Rst Stream, cause=null}.
+[8:19:28 pm]: ==> [{"id":"4","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:19:28 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"8","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:19:28 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"9","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:19:28 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"9","progressId":null,"finished":true}}]
+[8:19:29 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"8","progressId":"hot.reload","finished":true}}]
+[8:19:29 pm]: <== Reloaded 1 of 2196 libraries in 625ms (compile: 60 ms, reload: 241 ms, reassemble: 229 ms).
+[8:19:29 pm]: <== [{"id":"4","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:19:38 pm]: ==> [{"id":"5","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:19:38 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"10","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:19:38 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"11","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:19:38 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"11","progressId":null,"finished":true}}]
+[8:19:39 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"10","progressId":"hot.reload","finished":true}}]
+[8:19:39 pm]: <== Reloaded 1 of 2196 libraries in 630ms (compile: 95 ms, reload: 225 ms, reassemble: 218 ms).
+[8:19:39 pm]: <== [{"id":"5","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:19:44 pm]: ==> [{"id":"6","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:19:44 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"12","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:19:44 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"13","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:19:44 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"13","progressId":null,"finished":true}}]
+[8:19:45 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"12","progressId":"hot.reload","finished":true}}]
+[8:19:45 pm]: <== Reloaded 1 of 2196 libraries in 566ms (compile: 59 ms, reload: 211 ms, reassemble: 214 ms).
+[8:19:45 pm]: <== [{"id":"6","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:19:49 pm]: ==> [{"id":"7","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:19:49 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"14","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:19:49 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"15","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:19:49 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"15","progressId":null,"finished":true}}]
+[8:19:50 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"14","progressId":"hot.reload","finished":true}}]
+[8:19:50 pm]: <== Reloaded 1 of 2196 libraries in 634ms (compile: 66 ms, reload: 251 ms, reassemble: 248 ms).
+[8:19:50 pm]: <== [{"id":"7","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:19:56 pm]: ==> [{"id":"8","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:19:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"16","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:19:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"17","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:19:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"17","progressId":null,"finished":true}}]
+[8:19:57 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"16","progressId":"hot.reload","finished":true}}]
+[8:19:57 pm]: <== Reloaded 1 of 2196 libraries in 578ms (compile: 46 ms, reload: 206 ms, reassemble: 257 ms).
+[8:19:57 pm]: <== [{"id":"8","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:20:00 pm]: ==> [{"id":"9","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:20:00 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"18","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:20:01 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"19","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:20:01 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"19","progressId":null,"finished":true}}]
+[8:20:01 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"18","progressId":"hot.reload","finished":true}}]
+[8:20:01 pm]: <== Reloaded 1 of 2196 libraries in 559ms (compile: 43 ms, reload: 211 ms, reassemble: 239 ms).
+[8:20:01 pm]: <== [{"id":"9","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:32:03 pm]: ==> [{"id":"10","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:32:03 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"20","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:32:03 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"21","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:32:03 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"21","progressId":null,"finished":true}}]
+[8:32:03 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"20","progressId":"hot.reload","finished":true}}]
+[8:32:03 pm]: <== Reloaded 1 of 2196 libraries in 787ms (compile: 70 ms, reload: 286 ms, reassemble: 349 ms).
+[8:32:03 pm]: <== [{"id":"10","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:32:56 pm]: ==> [{"id":"11","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:32:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"22","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:32:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"23","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:32:56 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"23","progressId":null,"finished":true}}]
+[8:32:57 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"22","progressId":"hot.reload","finished":true}}]
+[8:32:57 pm]: <== Reloaded 1 of 2196 libraries in 583ms (compile: 54 ms, reload: 225 ms, reassemble: 235 ms).
+[8:32:57 pm]: <== [{"id":"11","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:38:03 pm]: ==> [{"id":"12","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:38:04 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"24","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:38:04 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"25","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:38:04 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"25","progressId":null,"finished":true}}]
+[8:38:04 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"24","progressId":"hot.reload","finished":true}}]
+[8:38:04 pm]: <== Reloaded 1 of 2196 libraries in 585ms (compile: 54 ms, reload: 217 ms, reassemble: 244 ms).
+[8:38:04 pm]: <== [{"id":"12","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:39:10 pm]: ==> [{"id":"13","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:39:10 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"26","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:39:10 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"27","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:39:11 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"27","progressId":null,"finished":true}}]
+[8:39:11 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"26","progressId":"hot.reload","finished":true}}]
+[8:39:11 pm]: <== Reloaded 1 of 2196 libraries in 541ms (compile: 47 ms, reload: 209 ms, reassemble: 219 ms).
+[8:39:11 pm]: <== [{"id":"13","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:39:13 pm]: ==> [{"id":"14","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:39:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"28","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:39:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"29","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:39:14 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"29","progressId":null,"finished":true}}]
+[8:39:14 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"28","progressId":"hot.reload","finished":true}}]
+[8:39:14 pm]: <== Reloaded 1 of 2196 libraries in 582ms (compile: 57 ms, reload: 230 ms, reassemble: 213 ms).
+[8:39:14 pm]: <== [{"id":"14","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:39:33 pm]: ==> [{"id":"15","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:39:33 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"30","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:39:33 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"31","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:39:33 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"31","progressId":null,"finished":true}}]
+[8:39:34 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"30","progressId":"hot.reload","finished":true}}]
+[8:39:34 pm]: <== Reloaded 1 of 2196 libraries in 544ms (compile: 45 ms, reload: 218 ms, reassemble: 205 ms).
+[8:39:34 pm]: <== [{"id":"15","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:43:13 pm]: ==> [{"id":"16","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:43:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"32","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:43:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"33","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:43:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"33","progressId":null,"finished":true}}]
+[8:43:13 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"32","progressId":"hot.reload","finished":true}}]
+[8:43:13 pm]: <== Reloaded 1 of 2196 libraries in 561ms (compile: 50 ms, reload: 203 ms, reassemble: 239 ms).
+[8:43:13 pm]: <== [{"id":"16","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:43:22 pm]: ==> [{"id":"17","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:43:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"34","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:43:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"35","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:43:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"35","progressId":null,"finished":true}}]
+[8:43:23 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"34","progressId":"hot.reload","finished":true}}]
+[8:43:23 pm]: <== Reloaded 1 of 2196 libraries in 561ms (compile: 54 ms, reload: 221 ms, reassemble: 216 ms).
+[8:43:23 pm]: <== [{"id":"17","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:43:26 pm]: ==> [{"id":"18","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:43:26 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"36","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:43:26 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"37","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:43:26 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"37","progressId":null,"finished":true}}]
+[8:43:27 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"36","progressId":"hot.reload","finished":true}}]
+[8:43:27 pm]: <== Reloaded 1 of 2196 libraries in 551ms (compile: 48 ms, reload: 210 ms, reassemble: 224 ms).
+[8:43:27 pm]: <== [{"id":"18","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:43:42 pm]: ==> [{"id":"19","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:43:43 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"38","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:43:43 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"39","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:43:43 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"39","progressId":null,"finished":true}}]
+[8:43:43 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"38","progressId":"hot.reload","finished":true}}]
+[8:43:43 pm]: <== Reloaded 1 of 2196 libraries in 599ms (compile: 62 ms, reload: 211 ms, reassemble: 229 ms).
+[8:43:43 pm]: <== [{"id":"19","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:44:18 pm]: ==> [{"id":"20","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:44:18 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"40","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:44:18 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"41","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:44:18 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"41","progressId":null,"finished":true}}]
+[8:44:19 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"40","progressId":"hot.reload","finished":true}}]
+[8:44:19 pm]: <== Reloaded 1 of 2196 libraries in 627ms (compile: 77 ms, reload: 244 ms, reassemble: 223 ms).
+[8:44:19 pm]: <== [{"id":"20","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:44:22 pm]: ==> [{"id":"21","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:44:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"42","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:44:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"43","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:44:22 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"43","progressId":null,"finished":true}}]
+[8:44:23 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"42","progressId":"hot.reload","finished":true}}]
+[8:44:23 pm]: <== Reloaded 1 of 2196 libraries in 599ms (compile: 54 ms, reload: 222 ms, reassemble: 238 ms).
+[8:44:23 pm]: <== [{"id":"21","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:44:25 pm]: ==> [{"id":"22","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:44:25 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"44","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:44:25 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"45","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:44:26 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"45","progressId":null,"finished":true}}]
+[8:44:26 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"44","progressId":"hot.reload","finished":true}}]
+[8:44:26 pm]: <== Reloaded 1 of 2196 libraries in 615ms (compile: 56 ms, reload: 244 ms, reassemble: 217 ms).
+[8:44:26 pm]: <== [{"id":"22","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]
+[8:45:59 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:45:59 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:45:59 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:45:59 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:00 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:00 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:01 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:01 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:01 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:01 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:34 pm]: <== I/flutter ( 5700): here
+[8:46:34 pm]: <== I/flutter ( 5700): {statusCode: 401, message: Unauthorized}ddd
+[8:46:39 pm]: <== I/AssistStructure( 5700): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getCursorCapsMode on inactive InputConnection
+[8:46:48 pm]: <== E/SpannableStringBuilder( 5700): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+[8:46:48 pm]: <== E/SpannableStringBuilder( 5700): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): setComposingRegion on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:48 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:46:49 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:06 pm]: <== I/AssistStructure( 5700): Flattened final assist data: 448 bytes, containing 1 windows, 3 views
+[8:47:15 pm]: <== I/flutter ( 5700): 2041013021
+[8:47:15 pm]: <== I/flutter ( 5700): 2041013021@#1742
+[8:47:15 pm]: <== I/flutter ( 5700): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE0MDIyNDA0MDhiOWM3ZTlhNDkyOTciLCJyZWdkTm8iOiIyMDQxMDEzMDIxIiwiaWF0IjoxNjgyNzgxNDM1LCJleHAiOjE2ODI3ODUwMzV9.n1JfqgLKOreviXwjWHcOu6TNUfrzFW1sHYBdYmVBbPA
+[8:47:21 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:21 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:21 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:21 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:21 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== I/TextInputPlugin( 5700): Composing region changed by the framework. Restarting the input method.
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getSelectedText on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextAfterCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): beginBatchEdit on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): getTextBeforeCursor on inactive InputConnection
+[8:47:22 pm]: <== W/IInputConnectionWrapper( 5700): endBatchEdit on inactive InputConnection
+[8:47:37 pm]: <== I/flutter ( 5700): here
+[8:47:37 pm]: <== I/flutter ( 5700): {_id: 642189ac940dbeae4ffd28bd, quiz_id: SOAQZ2023_1, conducted_by: TCH9910SIKAY, title: HEAT TRANSFER, description: Quiz1, subject: CSE1002, section: CSE-C, branch: CSE, semester: 6, total_questions: 2, per_question_marks: 1, total_marks: 2, duration: 14, startTime: 2023-03-29T05:23:38.950Z, appeared_student_details: [64218b578414bdb69590fc54, 644a77fdce08e61f058e17f5], questions: [QUESCSE1002483E6DC9, QUESCSE1002AF29771E], status: live, created_at: 2023-04-29T05:18:52.544Z, updated_at: null, metadata: null}ddd
+[8:47:38 pm]: <== I/flutter ( 5700): sikata samantaray----------------Tname
+[8:47:38 pm]: <== I/flutter ( 5700): sikata samantaray----------------changes name
+[8:47:40 pm]: <== I/flutter ( 5700): 200
+[8:47:40 pm]: <== I/flutter ( 5700): {statusCode: 200, message: You have already joined the quiz. Please resume where you left from., errors: [], data: {questions: [{_id: 64218a53940dbeae4ffd28c2, question_id: QUESCSE1002483E6DC9, question_str: how many typs of HEAT TRANSFER, question_img: null, options: [1, 2, 3, 4], correct_option: null, subject: CSE1002, created_by: TCH9910SIKAY, created_at: 2023-03-27T11:00:21.573Z, updated_at: 2023-03-27T11:00:21.573Z}, {_id: 64218a9a940dbeae4ffd28c9, question_id: QUESCSE1002AF29771E, question_str: which movie, question_img: https://quizzed.blob.core.windows.net/quizzed-container/1679919763655-k.jpg, options: [pk, 3 idiot, 345, 567], correct_option: null, subject: CSE1002, created_by: TCH9910SIKAY, created_at: 2023-03-27T11:00:21.573Z, updated_at: 2023-03-27T11:00:21.573Z}], quizStats: {_id: 644a77fdce08e61f058e17f5, student_regdNo: 2041013021, quiz_id: SOAQZ2023_1, completed: true, start_time: 2023-04-27T12:23:21.453Z, finish_time: 2023-04-29T15:17:00.092Z, created_at: 2023-04-27T12:23:21.454Z, updated_at
+[8:47:40 pm]: <== I/flutter ( 5700): sending to quiz session
+[8:47:41 pm]: <== I/flutter ( 5700): calling from 31
+[8:47:41 pm]: <== I/flutter ( 5700): quiz timer
+[8:57:20 pm]: ==> [{"id":"23","method":"app.restart","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","fullRestart":false,"pause":false,"reason":"save","debounce":true}}]
+[8:57:20 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"46","progressId":"hot.reload","message":"Performing hot reload...","finished":false}}]
+[8:57:20 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"47","progressId":null,"message":"Syncing files to device sdk gphone x86 arm...","finished":false}}]
+[8:57:20 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"47","progressId":null,"finished":true}}]
+[8:57:21 pm]: <== [{"event":"app.progress","params":{"appId":"b073f5d2-bef6-4b4e-9a15-168a672b039b","id":"46","progressId":"hot.reload","finished":true}}]
+[8:57:21 pm]: <== Reloaded 1 of 2196 libraries in 1,085ms (compile: 60 ms, reload: 580 ms, reassemble: 363 ms).
+[8:57:21 pm]: <== [{"id":"23","result":{"code":0,"message":"Reloaded 1 of 2196 libraries"}}]

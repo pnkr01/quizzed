@@ -6,7 +6,6 @@ import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/model/joined_quiz.dart';
-import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
@@ -16,7 +15,7 @@ import '../join/join_quiz.dart';
 class DetailedQuizController extends GetxController {
   RxBool isLoading = true.obs;
   RxBool isSrolling = false.obs;
-  JoinedQuizModel? model;
+  late JoinedQuizModel model;
 
   List<JoinedQuizModel> joinModelList = [];
 
@@ -51,7 +50,9 @@ class DetailedQuizController extends GetxController {
       //  print(decode);
       try {
         quizDebugPrint(decode);
-        model = JoinedQuizModel.fromJson(decode);
+        JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
+        quizDebugPrint('sending to quiz session');
+        navigateToQuizSessionScreen(quizID, model);
       } on FormatException {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
@@ -59,23 +60,19 @@ class DetailedQuizController extends GetxController {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       }
-
-      quizDebugPrint('sending to quiz session');
-      navigateToQuizSessionScreen(quizID);
-      isLoading.value = true;
     }
   }
 
   //fillQuizList(var list) {}
 
-  navigateToQuizSessionScreen(String quizID) {
+  navigateToQuizSessionScreen(String quizID, JoinedQuizModel model) {
     if (model != null) {
-      Get.off(() => JoinQuizSessionScreen(model: model!), arguments: [
+      Get.off(() => JoinQuizSessionScreen(model: model), arguments: [
         {'quizID': quizID}
       ]);
+      isLoading.value = true;
     } else {
-      Get.offAllNamed(StudentHome.routeName);
-      showSnackBar('Please try again ', redColor, whiteColor);
+      navigateToQuizSessionScreen(quizID, model);
     }
   }
 }

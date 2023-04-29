@@ -61,7 +61,7 @@ class JoinQuizSessionController extends GetxController {
     //check for -5 time remaining then save the user and
     //cancel timer.
     quizDebugPrint('quiz timer');
-    if (decode["remainingMinutes"] - 5 <= 5) {
+    if (decode["remainingMinutes"] == 0 && decode["remainingSeconds"] <= 5) {
       stoptheTimer();
       Get.offAllNamed(StudentHome.routeName);
       showDialog(
@@ -75,7 +75,7 @@ class JoinQuizSessionController extends GetxController {
       showSnackBar('Session Expired :(', redColor, whiteColor);
     }
     getTime.value =
-        '${decode["remainingMinutes"] - 5} : ${decode["remainingSeconds"]}';
+        '${decode["remainingMinutes"]} : ${decode["remainingSeconds"] - 5}';
     return decode["remainingMinutes"];
   }
 

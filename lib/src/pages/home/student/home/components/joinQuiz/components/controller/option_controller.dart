@@ -29,6 +29,8 @@ class OptionController extends GetxController {
     "questions_attempted_details": answerTrackBody,
   };
 
+
+
   changePage(JoinedQuizModel model) {
     if (controller.currentIdx.value == (model.data!.questions!.length - 1)) {
       quizDebugPrint('last qs submit this quiz');
@@ -99,7 +101,7 @@ class OptionController extends GetxController {
   }
 
   saveLocalAnswer(int val) {
-    quizDebugPrint("${controller.currentIdx.value}----");
+  //  quizDebugPrint("${controller.currentIdx.value}----");
     // sharedPreferences.setInt(controller.currentIdx.value.toString(), val);
   }
 

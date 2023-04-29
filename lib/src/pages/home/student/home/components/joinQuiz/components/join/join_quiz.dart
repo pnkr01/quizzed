@@ -24,7 +24,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
 
   @override
   Widget build(BuildContext context) {
-    var otpController = Get.find<OptionController>();
+    var optionController = Get.find<OptionController>();
     return WillPopScope(
       onWillPop: () async => await showDialog(
         context: context,
@@ -181,18 +181,26 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                       borderRadius: BorderRadius.all(Radius.circular(12))),
                   color: kQuizLightPrimaryColor,
                   child: PageView.builder(
-                    controller: controller.pageController,
-                    itemCount: model.data?.questions?.length,
-                    onPageChanged: ((value) => controller.onPageChanged(value)),
-                    itemBuilder: ((context, index) => JoinQuizDesign(
+                      controller: controller.pageController,
+                      itemCount: model.data?.questions?.length,
+                      onPageChanged: ((value) =>
+                          controller.onPageChanged(value)),
+                      itemBuilder: ((context, index) {
+                        model.data?.questions?.shuffle(); //suffled question
+                        for (int i = 0;
+                            i < model.data!.questions!.length;
+                            i++) {
+                          model.data?.questions?[i].options?.shuffle(); //suffled options
+                        }
+                        return JoinQuizDesign(
                           index: index,
                           model: model,
                           questionLength: model.data!.questions!.length,
                           options: model.data!.questions![index].options!,
                           questionString:
                               model.data!.questions![index].questionStr!,
-                        )),
-                  ),
+                        );
+                      })),
                 ),
               ),
               const SizedBox(height: 25),
@@ -200,7 +208,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                 label: Text('Next', style: kBodyText11Style()),
                 backgroundColor: kTeacherPrimaryLightColor,
                 function: () {
-                  otpController.changePage(model);
+                  optionController.changePage(model);
                 },
               )
             ],

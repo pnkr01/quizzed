@@ -33,9 +33,8 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   return SizedBox(
                     child: Center(
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 20),
                           Text(
                             'Forgot Registration No?',
                             style: kBodyText11Style()
@@ -70,7 +69,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                                 child: const Text('Continue'),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ),

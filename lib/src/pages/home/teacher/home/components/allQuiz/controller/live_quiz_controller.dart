@@ -7,7 +7,6 @@ import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../../../global/shared.dart';
 import '../../../../../../../model/quiz_view_model.dart';
@@ -30,19 +29,19 @@ class LiveQuizController extends GetxController {
   //   );
   // }
 
-  void _startTimer() async {
-    while (true) {
-      currentTime = DateTime.now().millisecondsSinceEpoch.obs;
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setInt('currentTime', currentTime.value);
-      quizDebugPrint(prefs.getInt('currentTime'));
-      await Future.delayed(const Duration(seconds: 1));
-    }
-  }
+  // void _startTimer() async {
+  //   while (true) {
+  //     currentTime = DateTime.now().millisecondsSinceEpoch.obs;
+  //     final prefs = await SharedPreferences.getInstance();
+  //     await prefs.setInt('currentTime', currentTime.value);
+  //     quizDebugPrint(prefs.getInt('currentTime'));
+  //     await Future.delayed(const Duration(seconds: 1));
+  //   }
+  // }
 
-  Future<int> getSavedTime() async {
-    return sharedPreferences.getInt('currentTime')!;
-  }
+  // Future<int> getSavedTime() async {
+  //   return sharedPreferences.getInt('currentTime')!;
+  // }
 
   List<QuizViewModel> liveList = [];
   List time = [];
@@ -106,7 +105,7 @@ class LiveQuizController extends GetxController {
       for (var obj in decoded) {
         log(obj.toString());
         liveList.add(QuizViewModel.fromJson(obj));
-        _startTimer();
+        //_startTimer();
       }
       print('list----------');
       // print(liveList);

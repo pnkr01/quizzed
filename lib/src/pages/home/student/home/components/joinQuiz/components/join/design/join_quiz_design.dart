@@ -32,21 +32,20 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 150,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-                color: kTeacherPrimaryColor,
-                borderRadius: BorderRadius.all(Radius.circular(12))),
-            child: ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(12)),
-              child: CachedNetworkImage(
-                fit: BoxFit.cover,
-                imageUrl: model.data?.questions![index].qsImage ??
-                    'https://img.freepik.com/free-vector/exams-concept-illustration_114360-2754.jpg?w=740&t=st=1678810269~exp=1678810869~hmac=6c3db4b7a66ed4eccbb08b9928325dc739dbe64f41ed6176d749d6d406efad63',
+          if (model.data?.questions![index].qsImage != null)
+            Container(
+              height: 150,
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                  color: kTeacherPrimaryColor,
+                  borderRadius: BorderRadius.all(Radius.circular(12))),
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(12)),
+                child: CachedNetworkImage(
+                    fit: BoxFit.cover,
+                    imageUrl: model.data?.questions![index].qsImage ?? ''),
               ),
             ),
-          ),
           const SizedBox(
             height: 14,
           ),

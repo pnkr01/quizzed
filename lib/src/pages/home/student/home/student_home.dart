@@ -164,7 +164,7 @@ class _StudentHomeState extends State<StudentHome> {
                           initialPage: 0,
                           enableInfiniteScroll: true,
                           reverse: false,
-                          autoPlay: true,
+                          autoPlay: false,
                           autoPlayInterval: const Duration(seconds: 3),
                           autoPlayAnimationDuration:
                               const Duration(milliseconds: 1000),

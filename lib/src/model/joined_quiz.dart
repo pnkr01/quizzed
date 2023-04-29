@@ -4,7 +4,6 @@ class JoinedQuizModel {
   Data? data;
 
   JoinedQuizModel({this.statusCode, this.message, this.data});
-
   JoinedQuizModel.fromJson(Map<String, dynamic> json) {
     statusCode = json['statusCode'];
     message = json['message'];

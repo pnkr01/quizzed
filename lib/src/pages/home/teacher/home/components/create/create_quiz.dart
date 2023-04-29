@@ -334,37 +334,37 @@ class CreateQuiz extends GetView<CreateQuizController> {
 //             ),
 //             Container(
 //               margin: const EdgeInsets.only(left: 8),
-//               child: DropdownButtonHideUnderline(
-//                 child: DropdownButton<String>(
-//                   iconEnabledColor: kTeacherPrimaryColor,
-//                   isExpanded: true,
-//                   // Step 3.
-//                   value: controller.dropdownValue.value,
-//                   // Step 4.
-//                   items: <String>['Select', 'BTECH', 'MTECH']
-//                       .map<DropdownMenuItem<String>>((String value) {
-//                     return DropdownMenuItem<String>(
-//                       value: value,
-//                       child: Text(
-//                         value,
-//                         style: kBodyText3Style()
-//                             .copyWith(color: kTeacherPrimaryColor),
-//                       ),
-//                     );
-//                   }).toList(),
-//                   // Step 5.
-//                   onChanged: (newValue) {
-//                     controller.onChangeBranchvalue(newValue);
-//                     controller.insertInBranchList(newValue!);
-//                     controller.isBranchBlocked.value = false;
-//                     //Get.reload();
-//                     // setState(() {
-//                     //   dropdownValue = newValue!;
-//                     // });
-//                     log(controller.selectedBranch.toString());
-//                   },
-//                 ),
-//               ),
+              // child: DropdownButtonHideUnderline(
+              //   child: DropdownButton<String>(
+              //     iconEnabledColor: kTeacherPrimaryColor,
+              //     isExpanded: true,
+              //     // Step 3.
+              //     value: controller.dropdownValue.value,
+              //     // Step 4.
+              //     items: <String>['Select', 'BTECH', 'MTECH']
+              //         .map<DropdownMenuItem<String>>((String value) {
+              //       return DropdownMenuItem<String>(
+              //         value: value,
+              //         child: Text(
+              //           value,
+              //           style: kBodyText3Style()
+              //               .copyWith(color: kTeacherPrimaryColor),
+              //         ),
+              //       );
+              //     }).toList(),
+              //     // Step 5.
+              //     onChanged: (newValue) {
+              //       controller.onChangeBranchvalue(newValue);
+              //       controller.insertInBranchList(newValue!);
+              //       controller.isBranchBlocked.value = false;
+              //       //Get.reload();
+              //       // setState(() {
+              //       //   dropdownValue = newValue!;
+              //       // });
+              //       log(controller.selectedBranch.toString());
+              //     },
+              //   ),
+              // ),
 //             ),
 //           ],
 //         ),
