@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
@@ -13,6 +14,27 @@ import '../../../../../../../../global/shared.dart';
 import '../join/join_quiz.dart';
 
 class DetailedQuizController extends GetxController {
+  final scrollController = ScrollController();
+
+  @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void onInit() {
+    Future.delayed(const Duration(seconds: 1), () {
+      scrollController.animateTo(
+        scrollController.position.minScrollExtent,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeIn,
+      );
+      isSrolling.value = !isSrolling.value;
+    });
+    super.onInit();
+  }
+
   RxBool isLoading = true.obs;
   RxBool isSrolling = false.obs;
   late JoinedQuizModel model;
@@ -52,7 +74,10 @@ class DetailedQuizController extends GetxController {
         quizDebugPrint(decode);
         JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
         quizDebugPrint('sending to quiz session');
-        navigateToQuizSessionScreen(quizID, model);
+        Get.off(() => JoinQuizSessionScreen(model: model), arguments: [
+          {'quizID': quizID}
+        ]);
+        isLoading.value = true;
       } on FormatException {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);

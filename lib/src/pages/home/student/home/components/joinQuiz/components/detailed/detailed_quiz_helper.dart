@@ -35,7 +35,6 @@ class DetailedQuizHelper extends StatelessWidget {
                   height: 4,
                 ),
                 Text(
-                  overflow: TextOverflow.ellipsis,
                   subtitle,
                   style: kBodyText12Style().copyWith(color: blackColor),
                 ),

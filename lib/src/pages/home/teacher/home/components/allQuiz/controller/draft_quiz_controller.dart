@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -24,29 +25,29 @@ class DraftQuizController extends GetxController {
   };
 
   fetchDraftQuiz() async {
-    // try {
-    print(sharedPreferences.getString('Tcookie'));
+    try {
+      print(sharedPreferences.getString('Tcookie'));
 
-    var response = await https.get(
-      Uri.parse(ApiConfig.getEndPointsNextUrl(
-          'quiz/getall?status=draft&page=1&limit=10')),
-      headers: headers,
-    );
-    var decoded = jsonDecode(response.body);
-    // print(decoded);
-    draftList.isNotEmpty ? draftList.clear() : null;
-    for (var obj in decoded) {
-      log(obj.toString());
-      draftList.add(QuizViewModel.fromJson(obj));
+      var response = await https.get(
+        Uri.parse(ApiConfig.getEndPointsNextUrl(
+            'quiz/getall?status=draft&page=1&limit=10')),
+        headers: headers,
+      );
+      var decoded = jsonDecode(response.body);
+      // print(decoded);
+      draftList.isNotEmpty ? draftList.clear() : null;
+      for (var obj in decoded) {
+        log(obj.toString());
+        draftList.add(QuizViewModel.fromJson(obj));
+      }
+      print('list----------');
+      // print(draftList[0]);
+      isFetching.value = false;
+    } catch (e) {
+      print('Session expired');
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      showSnackBar("Session Expired :(", redColor, whiteColor);
     }
-    print('list----------');
-    // print(draftList[0]);
-    isFetching.value = false;
-    // } catch (e) {
-    //   print('fetchDraftQuiz');
-    //   Get.back();
-    //   showSnackBar(e.toString(), redColor, whiteColor);
-    // }
   }
 
   refreshThisPage() async {

@@ -29,16 +29,15 @@ class OptionController extends GetxController {
     "questions_attempted_details": answerTrackBody,
   };
 
-
-
   changePage(JoinedQuizModel model) {
     if (controller.currentIdx.value == (model.data!.questions!.length - 1)) {
       quizDebugPrint('last qs submit this quiz');
-      var newController = Get.find<JoinQuizSessionController>();
-      newController.stoptheTimer();
+      // var newController = Get.find<JoinQuizSessionController>();
+      // newController.stoptheTimer();
 
       //CustomCircleLoading.showDialog();
       //hitAndGetMark(model.data!.quizStats!.quizId!);
+      Get.find<JoinQuizSessionController>().stoptheTimer();
       Get.offAllNamed(StudentHome.routeName);
       showDialog(
           context: Get.context!,
@@ -101,7 +100,7 @@ class OptionController extends GetxController {
   }
 
   saveLocalAnswer(int val) {
-  //  quizDebugPrint("${controller.currentIdx.value}----");
+    //  quizDebugPrint("${controller.currentIdx.value}----");
     // sharedPreferences.setInt(controller.currentIdx.value.toString(), val);
   }
 

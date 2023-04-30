@@ -1,5 +1,6 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:get/get.dart';
 
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
@@ -8,7 +9,6 @@ import 'package:quiz/theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../utils/loading_dialog.dart';
 import '../../../../../../../../utils/quizElevatedButon.dart';
-import '../../../../../../../global/global.dart';
 
 class QuizLiveDesign extends GetView<LiveQuizController> {
   const QuizLiveDesign({super.key, required this.index});
@@ -118,36 +118,78 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
             const SizedBox(
               height: 10,
             ),
+            // const Center(
+            //         child: CircularProgressIndicator(
+            //           strokeWidth: 1,
+            //           color: whiteColor,
+            //         ),
+            //       )
             Container(
               height: 40,
               width: double.infinity,
               decoration: const BoxDecoration(
                   color: kTeacherPrimaryLightColor,
                   borderRadius: BorderRadius.all(Radius.circular(8))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Text(
-                  //   'Remaning Time : ',
-                  //   style: kBodyText0Style(),
-                  // ),
-                  // Text(
-                  //   "${controller.liveList[index].duration} mins",
-                  //   style: kBodyText0Style(),
-                  // ),
-                  CountdownTimer(
-                    endTime: DateTime.now().millisecondsSinceEpoch +
-                        1000 *
-                            controller.liveList[index].duration! *
-                            60, // 1 minute
-                    textStyle: const TextStyle(fontSize: 20, color: whiteColor),
-                    onEnd: () {
-                      quizDebugPrint('Timer ended');
-                      controller.fetchLiveQuiz();
-                    },
-                  ),
-                ],
+              child: Center(
+                child: FutureBuilder(
+                  future:
+                      controller.fetchData(controller.liveList[index].quizId),
+                  builder:
+                      (BuildContext context, AsyncSnapshot<void> snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      // Show a progress indicator while waiting for the API response
+                      return const CircularProgressIndicator();
+                    } else {
+                      // Calculate the total remaining seconds
+                      RxInt totalRemainingSeconds =
+                          (controller.remainingMinutes.value * 60 +
+                                  controller.remainingSeconds.value)
+                              .obs;
+
+                      // Create a countdown timer that updates every second
+                      Timer time =
+                          Timer.periodic(const Duration(seconds: 1), (Timer t) {
+                        if (totalRemainingSeconds < 1) {
+                          // Stop the timer when the countdown is complete
+                          t.cancel();
+                        } else {
+                          totalRemainingSeconds.value--;
+                          controller.remainingMinutes.value =
+                              totalRemainingSeconds.value ~/ 60;
+                          controller.remainingSeconds.value =
+                              totalRemainingSeconds.value % 60;
+                          if (controller.isFinshedForcefully) {
+                            t.cancel();
+                          }
+                        }
+                      });
+
+                      // Return a Text widget that displays the remaining time
+                      return Obx(() => Text(
+                            '${controller.remainingMinutes.value.toString().padLeft(2, '0')} mins : ${controller.remainingSeconds.value.toString().padLeft(2, '0')} secs',
+                            style: kBodyText0Style().copyWith(fontSize: 14),
+                          ));
+                    }
+                  },
+                ),
               ),
+
+              // Row(
+              //     mainAxisAlignment: MainAxisAlignment.center,
+              //     children: [
+              //       Text(
+              //         'Remaning Time : ',
+              //         style: kBodyText0Style(),
+              //       ),
+              //       Flexible(
+              //         child: Text(
+              //           controller.remaingTime.value,
+              //           style: kBodyText0Style(),
+              //           softWrap: true,
+              //         ),
+              //       ),
+              //     ],
+              //   ),
             ),
             const SizedBox(
               height: 8,

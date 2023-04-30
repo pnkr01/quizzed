@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/model/option_model.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
 import 'package:quiz/src/pages/home/student/home/student_home.dart';
@@ -16,6 +17,7 @@ import '../../../../../../../../global/shared.dart';
 
 class JoinQuizSessionController extends GetxController {
   dynamic argument = Get.arguments;
+  final RxBool _isInForeground = true.obs;
 
   getQuizID() => argument[0]["quizID"];
   @override
@@ -25,6 +27,8 @@ class JoinQuizSessionController extends GetxController {
     super.onInit();
   }
 
+  List<OptionModel> option = [];
+
   RxString getTime = '0 : 0'.obs;
 
   startLocalTimer() async {
@@ -33,7 +37,7 @@ class JoinQuizSessionController extends GetxController {
         quizDebugPrint('calling from 31');
         getRemainingTime();
       } catch (e) {
-        quizTimer?.cancel();
+        stoptheTimer();
       }
     });
   }

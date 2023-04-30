@@ -17,7 +17,7 @@ class CompleteConfirmationDialog extends StatelessWidget {
       title: Column(
         children: [
           Text(
-            'Your Quiz is completed successfully. Result will be live after 5 minutes.',
+            'Your Quiz is completed successfully. Result will be live after quiz ends',
             style: kBodyText3Style().copyWith(color: blackColor),
           ),
           Lottie.asset(

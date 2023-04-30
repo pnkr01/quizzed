@@ -43,6 +43,7 @@ class DetailedQuizViewScreen extends GetView<DetailedQuizController> {
                       borderRadius: BorderRadius.all(Radius.circular(12))),
                   elevation: 5,
                   child: SingleChildScrollView(
+                    controller: controller.scrollController,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(4.0, 0, 4, 0),
                       child: Column(
@@ -50,6 +51,11 @@ class DetailedQuizViewScreen extends GetView<DetailedQuizController> {
                         children: [
                           const SizedBox(
                             height: 4,
+                          ),
+                          const DetailedQuizHelper(
+                            title: 'Attention',
+                            subtitle:
+                                'Please do not press home button or open any other app while using this app, otherwise your quiz will be force submitted and you will not get second chance',
                           ),
                           DetailedQuizHelper(
                               title: 'Title', subtitle: '${model.title}'),

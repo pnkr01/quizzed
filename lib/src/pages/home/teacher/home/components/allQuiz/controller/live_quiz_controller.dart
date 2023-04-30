@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
 import 'package:quiz/src/global/my_global.dart' as globals;
@@ -14,8 +15,25 @@ import '../design/controller/completed_controller.dart';
 
 class LiveQuizController extends GetxController {
   RxBool isFetching = true.obs;
+  bool isFinshedForcefully = false;
+  RxString remaingTime = '0'.obs;
 
   RxInt currentTime = 0.obs;
+
+  RxInt remainingMinutes = 0.obs;
+  RxInt remainingSeconds = 0.obs;
+
+  Future<void> fetchData(quizID) async {
+    var res = await https.get(
+        Uri.parse(
+            ApiConfig.getEndPointsNextUrl('quiz/get-remaining-time/$quizID')),
+        headers: headers);
+    var decodeTime = jsonDecode(res.body);
+    remainingMinutes.value = decodeTime['remainingMinutes'];
+    remainingSeconds.value = decodeTime['remainingSeconds'];
+    remaingTime.value =
+        '${decodeTime["remainingMinutes"]} : ${decodeTime["remainingSeconds"]}';
+  }
   //RxBool isFetchingTime = true.obs;
 
   //final int _current = 10;
@@ -51,15 +69,16 @@ class LiveQuizController extends GetxController {
     // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
   };
 
-  getRemaningTime(String quizID) async {
-    var res = await https.get(
-        Uri.parse(
-            ApiConfig.getEndPointsNextUrl('quiz/get-remaining-time/$quizID')),
-        headers: headers);
-    var decodeTime = jsonDecode(res.body);
-    time.add(
-        decodeTime["remainingMinutes"] * 60 + decodeTime["remainingSeconds"]);
-  }
+  // getRemaningTime(String quizID) async {
+  //   var res = await https.get(
+  //       Uri.parse(
+  //           ApiConfig.getEndPointsNextUrl('quiz/get-remaining-time/$quizID')),
+  //       headers: headers);
+  //   var decodeTime = jsonDecode(res.body);
+  //   isloadingRemainingTime.value = false;
+  //   remaingTime.value =
+  //       '${decodeTime["remainingMinutes"]} : ${decodeTime["remainingSeconds"]}';
+  // }
 
   handleCancelButton(String quizId) async {
     try {
@@ -83,6 +102,7 @@ class LiveQuizController extends GetxController {
       //
       refreshToCompletedPage();
       showSnackBar(res["message"].toString(), greenColor, whiteColor);
+      isFinshedForcefully = true;
     } else {
       Get.back();
       showSnackBar(res["message"], redColor, whiteColor);

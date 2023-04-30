@@ -2,10 +2,12 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/global/global.dart';
 
 import 'package:quiz/src/model/joined_quiz.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
+import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
@@ -13,7 +15,7 @@ import 'package:quiz/utils/quizAppBar.dart';
 import '../../../../../../../../../utils/quizElevatedButon.dart';
 import 'design/join_quiz_design.dart';
 
-class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
+class JoinQuizSessionScreen extends StatefulWidget {
   static String routeName = '/joinQuiz';
   const JoinQuizSessionScreen({
     Key? key,
@@ -23,13 +25,84 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
   final JoinedQuizModel model;
 
   @override
+  State<JoinQuizSessionScreen> createState() => _JoinQuizSessionScreenState();
+}
+
+class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
+    with WidgetsBindingObserver {
+  var controller = Get.find<JoinQuizSessionController>();
+  var optionController = Get.find<OptionController>();
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  bool _isInForeground = true;
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    switch (state) {
+      case AppLifecycleState.resumed:
+        setState(() {
+          _isInForeground = true;
+        });
+        break;
+      case AppLifecycleState.inactive:
+      case AppLifecycleState.paused:
+      case AppLifecycleState.detached:
+        setState(() {
+          _isInForeground = false;
+        });
+        // Wait for 5 seconds and then do something
+        Future.delayed(const Duration(seconds: 5), () {
+          if (!_isInForeground) {
+            // Do something
+
+            //func for force submit the user user.
+            //send to home page.
+            quizDebugPrint('you have spent 5 sec');
+            controller.stoptheTimer();
+            Get.offAllNamed(StudentHome.routeName);
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text(
+                      'You are not in the quiz app for more than 5 sec, your quiz is forced submitted sucessfully, Please check your result after the quiz ends',
+                    ),
+                    const SizedBox(height: 5),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.back();
+                      },
+                      child: const Text('Okay'),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          }
+        });
+        break;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var optionController = Get.find<OptionController>();
+    widget.model.data?.questions?.shuffle();
     return WillPopScope(
       onWillPop: () async => await showDialog(
         context: context,
         builder: (c) => AlertDialog(
-          key: key,
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -146,7 +219,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                             style: kBodyText11Style(),
                           ),
                           Text(
-                            '${model.data?.quizStats?.quizId}',
+                            '${widget.model.data?.quizStats?.quizId}',
                             style: kBodyText11Style(),
                           ),
                         ],
@@ -161,7 +234,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                             style: kBodyText11Style(),
                           ),
                           Text(
-                            '${model.data?.quizStats?.studentRegdNo}',
+                            '${widget.model.data?.quizStats?.studentRegdNo}',
                             style: kBodyText11Style(),
                           ),
                         ],
@@ -182,23 +255,35 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                   color: kQuizLightPrimaryColor,
                   child: PageView.builder(
                       controller: controller.pageController,
-                      itemCount: model.data?.questions?.length,
+                      itemCount: widget.model.data?.questions?.length,
                       onPageChanged: ((value) =>
                           controller.onPageChanged(value)),
                       itemBuilder: ((context, index) {
-                        model.data?.questions?.shuffle(); //suffled question
-                        for (int i = 0;
-                            i < model.data!.questions!.length;
-                            i++) {
-                          model.data?.questions?[i].options?.shuffle(); //suffled options
-                        }
+                        //suffled question
+                        // controller.option.isEmpty
+                        //     ? null
+                        //     : controller.option.clear();
+                        // for (int i = 0;
+                        //     i < model.data!.questions!.length;
+                        //     i++) {
+                        //   //model.data?.questions?[i].options?.map((k,v)=>({}))
+                        //   int j = 0;
+                        //   List<OptionModel> op = [];
+                        //   for (var element
+                        //       in model.data!.questions![i].options!) {
+                        //     op.add(OptionModel(option: element, val: j++));
+                        //   }
+                        //   controller.option.addAll(op);
+                        // }
+                        // log(controller.option.toString());
                         return JoinQuizDesign(
                           index: index,
-                          model: model,
-                          questionLength: model.data!.questions!.length,
-                          options: model.data!.questions![index].options!,
+                          model: widget.model,
+                          questionLength: widget.model.data!.questions!.length,
+                          options:
+                              widget.model.data!.questions![index].options!,
                           questionString:
-                              model.data!.questions![index].questionStr!,
+                              widget.model.data!.questions![index].questionStr!,
                         );
                       })),
                 ),
@@ -208,7 +293,7 @@ class JoinQuizSessionScreen extends GetView<JoinQuizSessionController> {
                 label: Text('Next', style: kBodyText11Style()),
                 backgroundColor: kTeacherPrimaryLightColor,
                 function: () {
-                  optionController.changePage(model);
+                  optionController.changePage(widget.model);
                 },
               )
             ],
