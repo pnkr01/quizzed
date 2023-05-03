@@ -129,7 +129,11 @@ class JoinQuizSessionController extends GetxController {
         showDialog(
             context: Get.context!,
             builder: ((context) => const CompleteConfirmationDialog()));
-        stoptheTimer();
+        //stoptheTimer();
+        //removing local variable.
+        sharedPreferences.getBool(getQuizID()) != null
+            ? sharedPreferences.remove(getQuizID())
+            : null;
       }
     } else {
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);

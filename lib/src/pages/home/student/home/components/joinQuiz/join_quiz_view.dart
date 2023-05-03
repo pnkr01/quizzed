@@ -11,7 +11,6 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(JoinQuizCOntroller());
     var controller = Get.find<JoinQuizCOntroller>();
     return Scaffold(
       resizeToAvoidBottomInset: false,

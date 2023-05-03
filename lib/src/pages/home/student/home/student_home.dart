@@ -3,14 +3,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/db/firebase/firebase_helper.dart';
+import 'package:quiz/src/db/local/local_db.dart';
+import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../../../db/local/local_db.dart';
-import '../../../../global/global.dart';
-import '../../../auth/components/login/common_auth_login_screen.dart';
 import '../drawer/drawer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -67,6 +67,7 @@ class _StudentHomeState extends State<StudentHome> {
                 quizDebugPrint('logout');
                 LocalDB.removeLoacalDb();
                 Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+                //sharedPreferences.remove('SOAQZ2023_2');
               },
               icon: const Icon(Icons.logout))
         ],

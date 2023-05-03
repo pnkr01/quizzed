@@ -73,6 +73,7 @@ class DetailedQuizController extends GetxController {
       try {
         quizDebugPrint(decode);
         JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
+        quizDebugPrint('model is $model');
         quizDebugPrint('sending to quiz session');
         Get.off(() => JoinQuizSessionScreen(model: model), arguments: [
           {'quizID': quizID}

@@ -39,6 +39,8 @@ class OptionController extends GetxController {
       //hitAndGetMark(model.data!.quizStats!.quizId!);
       Get.find<JoinQuizSessionController>().stoptheTimer();
       Get.offAllNamed(StudentHome.routeName);
+      //locally handling force stopping
+      sharedPreferences.setBool(controller.getQuizID(), true);
       showDialog(
           context: Get.context!,
           builder: ((context) => const CompleteConfirmationDialog()));

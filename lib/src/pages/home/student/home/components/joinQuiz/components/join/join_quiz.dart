@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/global/shared.dart';
 
 import 'package:quiz/src/model/joined_quiz.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
@@ -70,7 +71,12 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
             quizDebugPrint('you have spent 5 sec');
             controller.stoptheTimer();
             Get.offAllNamed(StudentHome.routeName);
+            //locally handling force stopping
+            sharedPreferences.setBool(controller.getQuizID(), true);
+            quizDebugPrint(controller.getQuizID());
+            quizDebugPrint(sharedPreferences.getBool(controller.getQuizID()));
             showDialog(
+              barrierDismissible: false,
               context: context,
               builder: (context) => AlertDialog(
                 content: Column(
@@ -83,6 +89,8 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: kTeacherPrimaryColor),
                         onPressed: () {
                           Get.back();
                         },
@@ -126,7 +134,10 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                     controller.stoptheTimer();
                     //force submit this quiz as user leave the quiz session
                     //on their own.
+
                     Get.offAllNamed(StudentHome.routeName);
+                    //locally handling force stopping
+                    sharedPreferences.setBool(controller.getQuizID(), true);
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(
@@ -218,8 +229,8 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
               const SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                height: 460,
+              Flexible(
+                flex: 2,
                 child: Card(
                   elevation: 50,
                   shape: const RoundedRectangleBorder(
@@ -244,12 +255,14 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                 ),
               ),
               const SizedBox(height: 25),
-              QuizElevatedButton(
-                label: Text('Next', style: kBodyText11Style()),
-                backgroundColor: kTeacherPrimaryLightColor,
-                function: () {
-                  optionController.changePage(widget.model);
-                },
+              Flexible(
+                child: QuizElevatedButton(
+                  label: Text('Next', style: kBodyText11Style()),
+                  backgroundColor: kTeacherPrimaryLightColor,
+                  function: () {
+                    optionController.changePage(widget.model);
+                  },
+                ),
               )
             ],
           ),

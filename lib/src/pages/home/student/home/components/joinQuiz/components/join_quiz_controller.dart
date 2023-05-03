@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
 import 'package:quiz/src/api/points.dart';
@@ -40,8 +40,37 @@ class JoinQuizCOntroller extends GetxController {
   }
 
   checkEmptyFilled() {
-    if (quizID.text.isNotEmpty) {
+    if (quizID.text.isNotEmpty &&
+        sharedPreferences.getBool(quizID.text.toUpperCase()) == null) {
       checkThisQuizID();
+    } else if (sharedPreferences.getBool(quizID.text.toUpperCase()) != null) {
+      isTapStartJoining.value = false;
+      showDialog(
+        barrierDismissible: false,
+        context: Get.context!,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Your quiz is already submitted',
+              ),
+              const SizedBox(height: 5),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: kTeacherPrimaryColor),
+                  onPressed: () {
+                    Get.back();
+                  },
+                  child: const Text('Okay'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
     } else {
       isTapStartJoining.value = false;
       showSnackBar('QuizID cannot be empty', redColor, whiteColor);

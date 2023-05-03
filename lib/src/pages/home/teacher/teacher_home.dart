@@ -31,7 +31,6 @@ class TeacherHome extends StatelessWidget {
             quizDebugPrint('logout');
             LocalDB.removeLoacalDb();
             Get.offAllNamed(CommmonAuthLogInRoute.routeName);
-            //log('teacher side notifi tap');
           },
           icon: const Icon(Icons.logout_outlined),
         ),
