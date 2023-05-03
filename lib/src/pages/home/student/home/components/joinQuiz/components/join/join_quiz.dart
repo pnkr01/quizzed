@@ -77,14 +77,17 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      'You are not in the quiz app for more than 5 sec, your quiz is forced submitted sucessfully, Please check your result after the quiz ends',
+                      'You are not in the quiz app for more than 5 sec, your quiz is forced submitted sucessfully, Please check your result after the quiz ends.',
                     ),
                     const SizedBox(height: 5),
-                    ElevatedButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      child: const Text('Okay'),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        child: const Text('Okay'),
+                      ),
                     ),
                   ],
                 ),
@@ -120,9 +123,10 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                   label: const Text('Yes Leave :)'),
                   backgroundColor: kQuizPrimaryColor,
                   function: () async {
-                    Get.back();
-                    Get.back();
-                    controller.timer?.cancel();
+                    controller.stoptheTimer();
+                    //force submit this quiz as user leave the quiz session
+                    //on their own.
+                    Get.offAllNamed(StudentHome.routeName);
                   }),
               const SizedBox(height: 8.0),
               QuizElevatedButton(
@@ -137,38 +141,6 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
         ),
       ),
       child: Scaffold(
-        // bottomSheet: Container(
-        //   margin: const EdgeInsets.symmetric(horizontal: 10),
-        //   child: BottomSheet(
-        //       backgroundColor: kQuizLightPrimaryColor,
-        //       onClosing: () {},
-        //       builder: ((context) => Container(
-        //             color: kQuizLightPrimaryColor,
-        //             height: 50,
-        //             width: double.infinity,
-        //             child: ElevatedButton(
-        //                 style: ElevatedButton.styleFrom(
-        //                   backgroundColor:
-        //                       const Color.fromARGB(255, 224, 119, 189),
-        //                   shape: const RoundedRectangleBorder(),
-        //                 ),
-        //                 onPressed: () {
-        //                   //optionController.changePage(model);
-        //                 },
-        //                 child: Obx(
-        //                   () => controller.currentIdx.value ==
-        //                           model.data!.questions!.length - 1
-        //                       ? Text(
-        //                           'Submit',
-        //                           style: kBodyText11Style(),
-        //                         )
-        //                       : Text(
-        //                           'Continue',
-        //                           style: kBodyText11Style(),
-        //                         ),
-        //                 )),
-        //           ))),
-        // ),
         backgroundColor: whiteColor,
         appBar: QuizAppbar(
           leading: const SizedBox(),
@@ -247,7 +219,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                 height: 10,
               ),
               SizedBox(
-                height: 480,
+                height: 460,
                 child: Card(
                   elevation: 50,
                   shape: const RoundedRectangleBorder(
@@ -259,23 +231,6 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                       onPageChanged: ((value) =>
                           controller.onPageChanged(value)),
                       itemBuilder: ((context, index) {
-                        //suffled question
-                        // controller.option.isEmpty
-                        //     ? null
-                        //     : controller.option.clear();
-                        // for (int i = 0;
-                        //     i < model.data!.questions!.length;
-                        //     i++) {
-                        //   //model.data?.questions?[i].options?.map((k,v)=>({}))
-                        //   int j = 0;
-                        //   List<OptionModel> op = [];
-                        //   for (var element
-                        //       in model.data!.questions![i].options!) {
-                        //     op.add(OptionModel(option: element, val: j++));
-                        //   }
-                        //   controller.option.addAll(op);
-                        // }
-                        // log(controller.option.toString());
                         return JoinQuizDesign(
                           index: index,
                           model: widget.model,

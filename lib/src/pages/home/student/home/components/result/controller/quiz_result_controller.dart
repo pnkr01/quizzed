@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/api/points.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/model/result_model.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
@@ -41,6 +42,7 @@ class QuizResultScreenController extends GetxController {
       var decode = jsonDecode(response.body);
       if (decode["statusCode"] == 401) {
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+        LocalDB.removeLoacalDb();
         showSnackBar('Session Expired :(', redColor, whiteColor);
       } else if (decode["statusCode"] >= 400) {
         showSnackBar('${decode["message"]}', kTeacherPrimaryColor, whiteColor);

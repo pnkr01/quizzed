@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/global/global.dart';
 
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
 import 'package:quiz/theme/app_color.dart';
@@ -147,12 +148,15 @@ class QuizLiveDesign extends GetView<LiveQuizController> {
                               .obs;
 
                       // Create a countdown timer that updates every second
-                      Timer time =
-                          Timer.periodic(const Duration(seconds: 1), (Timer t) {
-                        if (totalRemainingSeconds < 1) {
+                      quizDebugPrint('again');
+                      Timer.periodic(const Duration(seconds: 1), (Timer t) {
+                        if (controller.isBack.value) {
+                          t.cancel();
+                        } else if (totalRemainingSeconds < 1) {
                           // Stop the timer when the countdown is complete
                           t.cancel();
                         } else {
+                          quizDebugPrint('printing');
                           totalRemainingSeconds.value--;
                           controller.remainingMinutes.value =
                               totalRemainingSeconds.value ~/ 60;

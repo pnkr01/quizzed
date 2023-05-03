@@ -19,6 +19,8 @@ class LocalDB {
   }
 
   static Future<void> removeLoacalDb() async {
-    sharedPreferences.clear();
+    if(sharedPreferences!=null){
+      sharedPreferences.clear();
+    }
   }
 }

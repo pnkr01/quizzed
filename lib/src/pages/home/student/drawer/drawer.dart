@@ -7,6 +7,7 @@ import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.da
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
 import 'package:quiz/src/pages/home/student/drawer/components/profile/profile_view.dart';
+import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import '../../../../../utils/size_configuration.dart';
@@ -27,6 +28,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
   logoutUser() async {
     quizDebugPrint('logout');
     LocalDB.removeLoacalDb();
+    Get.find<JoinQuizSessionController>().stoptheTimer();
     Get.offAllNamed(CommmonAuthLogInRoute.routeName);
   }
 

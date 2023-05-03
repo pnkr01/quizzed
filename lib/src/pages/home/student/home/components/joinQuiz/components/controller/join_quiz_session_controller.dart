@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as https;
 import 'package:get/get.dart';
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/model/option_model.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
@@ -27,6 +28,8 @@ class JoinQuizSessionController extends GetxController {
     super.onInit();
   }
 
+  RxDouble height = 460.0.obs;
+
   List<OptionModel> option = [];
 
   RxString getTime = '0 : 0'.obs;
@@ -43,6 +46,7 @@ class JoinQuizSessionController extends GetxController {
   }
 
   stoptheTimer() {
+    quizDebugPrint('called to stop all timer');
     if (timer != null) {
       timer?.cancel();
     }
@@ -77,6 +81,7 @@ class JoinQuizSessionController extends GetxController {
       stoptheTimer();
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar('Session Expired :(', redColor, whiteColor);
+      LocalDB.removeLoacalDb();
     }
     getTime.value =
         '${decode["remainingMinutes"]} : ${decode["remainingSeconds"] - 5}';
@@ -129,6 +134,7 @@ class JoinQuizSessionController extends GetxController {
     } else {
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar('session expired', redColor, whiteColor);
+      LocalDB.removeLoacalDb();
       stoptheTimer();
     }
   }

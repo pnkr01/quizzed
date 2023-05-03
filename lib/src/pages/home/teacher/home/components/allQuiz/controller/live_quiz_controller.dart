@@ -17,6 +17,14 @@ class LiveQuizController extends GetxController {
   RxBool isFetching = true.obs;
   bool isFinshedForcefully = false;
   RxString remaingTime = '0'.obs;
+  Timer? time;
+  cancelThisTimer() {
+    if (time != null) {
+      time?.cancel();
+    }
+  }
+
+  RxBool isBack = false.obs;
 
   RxInt currentTime = 0.obs;
 
@@ -62,7 +70,6 @@ class LiveQuizController extends GetxController {
   // }
 
   List<QuizViewModel> liveList = [];
-  List time = [];
   Map<String, String> headers = {
     'Content-Type': 'application/json',
     'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}',

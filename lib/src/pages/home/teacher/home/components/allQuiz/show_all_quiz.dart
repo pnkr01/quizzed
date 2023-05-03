@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/my_global.dart' as globals;
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/components/completed_quiz.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/components/draft_quiz.dart';
@@ -10,7 +11,6 @@ import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/d
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
 import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
 
 import '../../../../../../../theme/app_color.dart';
 
@@ -49,6 +49,9 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
     tabController.addListener(() {
       setState(() {
         tabIndex.value = tabController.index;
+        if (tabIndex.value == 1) {
+          Get.find<LiveQuizController>().isBack.value = false;
+        }
       });
     });
   }
@@ -75,28 +78,42 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
             tabIndex.value == 2 ? greenColor : kTeacherPrimaryColor,
         onPressed: () {
           if (tabIndex.value == 0) {
+            var draftController = Get.find<DraftQuizController>();
             //draftcontroller.
             log('inside draft refresh');
-            Get.find<DraftQuizController>().isFetching.value = true;
-            Get.find<DraftQuizController>().fetchDraftQuiz();
+            draftController.isFetching.value = true;
+            draftController.fetchDraftQuiz();
           } else if (tabIndex.value == 1) {
             //liver controller.
-            Get.find<LiveQuizController>().isFetching.value = true;
-            Get.find<LiveQuizController>().fetchLiveQuiz();
-            log('inside live refresh');
+            var liveQuizController = Get.find<LiveQuizController>();
+            liveQuizController.isFetching.value = true;
+            liveQuizController.fetchLiveQuiz();
+
+            //
+            quizDebugPrint('inside live refresh');
           } else {
             //completed controller.
-            Get.find<CompletedQuizController>().isFetching.value = true;
-            log('inside completed refresh');
-            Get.find<CompletedQuizController>().completedQuizFetch();
+            quizDebugPrint('inside completed refresh');
+            var completeController = Get.find<CompletedQuizController>();
+            completeController.isFetching.value = true;
+            completeController.completedQuizFetch();
           }
         },
         child: const Icon(Icons.refresh),
       ),
-      appBar: const QuizAppbar(
-          appBarColor: kTeacherPrimaryColor,
-          titleText: 'Quizzed',
-          preferredSize: Size.fromHeight(57)),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: kTeacherPrimaryColor,
+        title: const Text('Quizzed'),
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+              Get.find<LiveQuizController>().isBack.value = true;
+              quizDebugPrint(Get.find<LiveQuizController>().isBack.value);
+            },
+            icon: const Icon(Icons.arrow_back_ios)),
+      ),
       //key: _scaffoldKey,
       body: SafeArea(
         child: Container(

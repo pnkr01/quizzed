@@ -26,6 +26,7 @@ class StudentProfileController extends GetxController {
       _fetchProfile();
     } catch (e) {
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      LocalDB.removeLoacalDb();
       showSnackBar('Session Expired :(', blackColor, whiteColor);
     }
   }

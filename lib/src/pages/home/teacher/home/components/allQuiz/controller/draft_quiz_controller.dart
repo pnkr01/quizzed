@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/my_global.dart' as globals;
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
@@ -45,6 +46,7 @@ class DraftQuizController extends GetxController {
       isFetching.value = false;
     } catch (e) {
       print('Session expired');
+      LocalDB.removeLoacalDb();
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar("Session Expired :(", redColor, whiteColor);
     }
