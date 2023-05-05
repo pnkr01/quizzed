@@ -63,7 +63,7 @@ class DetailedQuizController extends GetxController {
         Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/join/$quizID')),
         headers: headers);
     var decode = jsonDecode(response.body);
-    quizDebugPrint(response.statusCode);
+    quizDebugPrint(decode);
     if (decode["statusCode"] >= 400) {
       log('401');
       isLoading.value = true;

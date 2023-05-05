@@ -25,14 +25,15 @@ class DraftQuizScreen extends GetView<DraftQuizController> {
                 backgroundColor: kTeacherPrimaryLightColor,
               ),
             )
-          : controller.draftList.isEmpty
+          // ignore: prefer_is_empty
+          : controller.draftList.length == 0
               ? Column(
                   children: [
                     const SizedBox(
                       height: 30,
                     ),
                     CachedNetworkImage(
-                      placeholder: (context, url) => const NewsCardSkelton(),
+                        placeholder: (context, url) => const NewsCardSkelton(),
                         imageUrl:
                             'https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=740&t=st=1678360691~exp=1678361291~hmac=c8de1e2e64e16f9461119048a6a774fd33817aca9c5cd9246ad3ae80ee043365'),
                     Center(
@@ -51,8 +52,7 @@ class DraftQuizScreen extends GetView<DraftQuizController> {
                             () => const ExpandQuizDetailsOnDemandScreen(),
                             arguments: [
                               {
-                                'quizID':
-                                    controller.draftList[index].quizId!,
+                                'quizID': controller.draftList[index].quizId!,
                               }
                             ]),
                         child: QuizDraftViewDesign(

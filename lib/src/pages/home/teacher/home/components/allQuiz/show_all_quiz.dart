@@ -108,9 +108,9 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () {
-              Get.back();
               Get.find<LiveQuizController>().isBack.value = true;
               quizDebugPrint(Get.find<LiveQuizController>().isBack.value);
+              Get.until((route) => route.isFirst);
             },
             icon: const Icon(Icons.arrow_back_ios)),
       ),

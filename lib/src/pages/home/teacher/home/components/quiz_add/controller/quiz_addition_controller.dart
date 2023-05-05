@@ -43,10 +43,7 @@ class AddQuizController extends GetxController {
   }
 
   Future createThisQuiz(PlatformFile? image) async {
-    log('created this quiz====================>');
-    //1. check for empty
-    log('hit api------------->');
-    log('');
+    quizDebugPrint('created this quiz====================>');
     try {
       if (isAllBlanksFilled()) {
         return hitQuizApi(image);

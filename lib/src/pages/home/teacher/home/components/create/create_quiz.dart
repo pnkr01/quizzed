@@ -229,7 +229,10 @@ class CreateQuiz extends GetView<CreateQuizController> {
                             initialTime: const Duration(minutes: 30),
                           );
                           if (resultingDuration != null) {
-                            FocusNode().unfocus();
+                            if (MediaQuery.of(context).viewInsets.bottom > 0) {
+                              // Close keyboard
+                              FocusScope.of(context).unfocus();
+                            }
                             controller.selectedMin.value =
                                 resultingDuration.inMinutes;
                             controller.isSelectedDuration.value = true;
@@ -297,6 +300,10 @@ class CreateQuiz extends GetView<CreateQuizController> {
                       ),
                       backgroundColor: kTeacherPrimaryColor,
                       function: () {
+                        if (MediaQuery.of(context).viewInsets.bottom > 0) {
+                          // Close keyboard
+                          FocusScope.of(context).unfocus();
+                        }
                         controller.isCreating.value = false;
                         showDialog(
                             context: context,
@@ -307,6 +314,19 @@ class CreateQuiz extends GetView<CreateQuizController> {
                                     controller.checkThisCreateQuizTap(),
                                 title: 'Do you want to create this quiz ?')));
                       }),
+                  // const SizedBox(height: 20),
+                  // MYElevatedButton(
+                  //   label: '',
+                  //   textColor: whiteColor,
+                  //   labelWidget: Text(
+                  //     'Use Parsing',
+                  //     style: kBodyText1Style().copyWith(color: whiteColor),
+                  //   ),
+                  //   backgroundColor: kTeacherPrimaryColor,
+                  //   function: () {
+                  //     Get.to(() => const Parsing());
+                  //   },
+                  // ),
                 ],
               ),
             ],

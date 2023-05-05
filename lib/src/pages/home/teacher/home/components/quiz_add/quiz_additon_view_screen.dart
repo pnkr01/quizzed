@@ -3,6 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/parsing.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
 import 'package:quiz/utils/quizTextField.dart';
 import 'package:quiz/widget/option_text_form_field.dart';
@@ -55,11 +56,23 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
     Get.put(AddQuizController());
     return Scaffold(
       backgroundColor: kTeacherPrimaryColor,
-      appBar: const QuizAppbar(
-        leading: SizedBox(),
+      appBar: QuizAppbar(
+        leading: const SizedBox(),
         appBarColor: kTeacherPrimaryColor,
         titleText: 'Quizzed',
-        preferredSize: Size.fromHeight(56),
+        preferredSize: const Size.fromHeight(65),
+        tariling: IconButton(
+          onPressed: () {
+            Get.to(
+              () => const Parsing(),
+              arguments: [
+                {"code": controller.getSubjectCode()},
+                {"quizID": controller.getQuizBucket()},
+              ],
+            );
+          },
+          icon: const Icon(Icons.switch_access_shortcut),
+        ),
       ),
       body: Column(
         children: [

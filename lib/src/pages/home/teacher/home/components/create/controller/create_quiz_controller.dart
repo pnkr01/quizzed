@@ -18,6 +18,7 @@ class CreateQuizController extends GetxController {
   RxString selectedDuration = 'Select Duration'.obs;
   RxBool isSelectedDuration = false.obs;
   RxInt selectedMin = 0.obs;
+  String code = '';
   late final TextEditingController title = TextEditingController();
   late final TextEditingController description = TextEditingController();
   late final TextEditingController section = TextEditingController();
@@ -34,19 +35,6 @@ class CreateQuizController extends GetxController {
   final FocusNode focusNodeDtotalQs = FocusNode();
   final FocusNode focusNodemarksPerQs = FocusNode();
   final FocusNode focusNodeduration = FocusNode();
-
-  @override
-  void dispose() {
-    title.dispose();
-    description.dispose();
-    section.dispose();
-    semester.dispose();
-    totalQs.dispose();
-    marksPerQs.dispose();
-    duration.dispose();
-    search.dispose();
-    super.dispose();
-  }
 
   RxBool isFetching = true.obs;
   RxBool isCreating = true.obs;
@@ -241,7 +229,8 @@ class CreateQuizController extends GetxController {
 
   navigateToQuizAdditionPage() {}
 
-  String getEquivalentCode(String key) {
+  String? getEquivalentCode(String key) {
+    log(subject.toString());
     print(subject[key]);
     return subject[key]!;
   }
@@ -258,11 +247,14 @@ class CreateQuizController extends GetxController {
 
       try {
         if (section.value.text.contains('-')) {
+          quizDebugPrint('261');
+          quizDebugPrint('eq is ${subject[search.value.text]!}');
           if (selectedMin.value != 0) {
+            quizDebugPrint('263');
             startProcessingCreateQuiz(
               title.value.text.trimRight(),
               description.value.text.trimRight(),
-              getEquivalentCode(search.value.text.trimRight()),
+              getEquivalentCode(search.value.text)!,
               section.value.text.toUpperCase().trimRight(),
               semester.value.text.trimRight(),
               totalQs.value.text.trimRight(),

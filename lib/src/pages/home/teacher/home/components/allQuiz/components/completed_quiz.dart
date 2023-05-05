@@ -24,7 +24,8 @@ class CompletedQuizScreen extends GetView<CompletedQuizController> {
                 backgroundColor: greenColor,
               ),
             )
-          : controller.completedQuiz.isEmpty
+          // ignore: prefer_is_empty
+          : controller.completedQuiz.length == 0
               ? Column(
                   children: [
                     const SizedBox(

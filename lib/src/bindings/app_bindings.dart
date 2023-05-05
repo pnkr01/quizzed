@@ -5,6 +5,7 @@ import 'package:quiz/src/pages/home/student/controller/student_home_controller.d
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/controller/parsing_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 
@@ -41,6 +42,7 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => DetailedQuizController(), fenix: true);
     Get.lazyPut(() => JoinQuizSessionController(), fenix: true);
     Get.lazyPut(() => OptionController(), fenix: true);
+    Get.lazyPut(() => ParsingController(), fenix: true);
     Get.lazyPut(() => QuizResultScreenController(), fenix: true);
   }
 }
