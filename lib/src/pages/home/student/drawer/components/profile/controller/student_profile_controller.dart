@@ -39,7 +39,7 @@ class StudentProfileController extends GetxController {
     var decodeResponse = await jsonDecode(res.body);
     quizDebugPrint(decodeResponse);
     if (decodeResponse["message"] != null) {
-      log('cookie refreshing needed =====> Refreshing cookie.....');
+      quizDebugPrint('cookie refreshing needed =====> Refreshing cookie.....');
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar(
           'Your Session is expired. Login Again..', greenColor, whiteColor);

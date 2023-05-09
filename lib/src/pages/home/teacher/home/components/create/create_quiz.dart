@@ -112,7 +112,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                             textStyle: kBodyText3Style()
                                 .copyWith(color: kTeacherPrimaryColor),
                             // getSelectedValue: (val) {
-                            //   log(val.toString());
+                            //   quizDebugPrint(val.toString());
                             // },
                             // getSelectedValue: (val) {
                             //   print(val);

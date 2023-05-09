@@ -65,7 +65,7 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
 
   @override
   Widget build(BuildContext context) {
-    //  Get.put(ShowAllQuizCOntroller());
+    Get.put(() => DraftQuizController());
 
     final tabs = [
       "Draft",
@@ -80,7 +80,7 @@ class _ShowAllCreatedQuizState extends State<ShowAllCreatedQuiz>
           if (tabIndex.value == 0) {
             var draftController = Get.find<DraftQuizController>();
             //draftcontroller.
-            log('inside draft refresh');
+            quizDebugPrint('inside draft refresh');
             draftController.isFetching.value = true;
             draftController.fetchDraftQuiz();
           } else if (tabIndex.value == 1) {

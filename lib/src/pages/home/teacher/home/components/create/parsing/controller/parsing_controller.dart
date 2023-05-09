@@ -9,6 +9,7 @@ import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -37,20 +38,21 @@ class ParsingController extends GetxController {
       File file = File(platformFile.path!);
       parseExcelFile(file);
       showDialog(
-          barrierDismissible: false,
-          context: Get.context!,
-          builder: (context) => AlertDialog(
-                content: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const LinearProgressIndicator(
-                        color: kTeacherPrimaryColor,
-                        backgroundColor: Colors.transparent),
-                    const SizedBox(height: 15.0),
-                    Obx(() => Text(text.value))
-                  ],
-                ),
-              ));
+        barrierDismissible: false,
+        context: Get.context!,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const LinearProgressIndicator(
+                  color: kTeacherPrimaryColor,
+                  backgroundColor: Colors.transparent),
+              const SizedBox(height: 15.0),
+              Obx(() => Text(text.value))
+            ],
+          ),
+        ),
+      );
       //start parsing
     } else {
       showSnackBar('file cancelled by Teacher', redColor, whiteColor);
@@ -72,7 +74,8 @@ class ParsingController extends GetxController {
       text.value = '${i + 1} of ${totalQsLength + 1}';
       final row = sheet.rows[i];
       quizDebugPrint('hitting quiz api');
-      await hitQuizApi(
+      try {
+        await hitQuizApi(
           row[0]!.value.toString(),
           row[1]!.value.toString(),
           row[2]!.value.toString(),
@@ -81,10 +84,14 @@ class ParsingController extends GetxController {
           row[5]!.value.toString(),
           getSubCode(),
           null,
-          getQuizID());
+          getQuizID(),
+        );
+      } catch (e) {
+        Get.back();
+        showSnackBar('Error occured ', redColor, whiteColor);
+      }
     }
-    Get.offAllNamed(
-        '${TeacherHome.routeName} / ${ShowAllCreatedQuiz.routeName}');
+    Get.offAllNamed(TeacherHome.routeName);
     showSnackBar('Your quiz is ready go to all quiz for actions', greenColor,
         whiteColor);
   }
@@ -148,7 +155,9 @@ class ParsingController extends GetxController {
         hitBucketRequest(myjson["question_id"]);
       }
     } catch (e) {
-      quizDebugPrint(e.toString());
+      Get.offAllNamed(TeacherHome.routeName);
+      Get.find<QuizAdditionController>().handleEraseButton(getQuizID());
+      showSnackBar(e.toString(), greenColor, whiteColor);
     }
   }
 

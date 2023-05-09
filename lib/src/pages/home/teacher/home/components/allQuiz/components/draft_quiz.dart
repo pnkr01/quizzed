@@ -14,7 +14,7 @@ class DraftQuizScreen extends GetView<DraftQuizController> {
 
   @override
   Widget build(BuildContext context) {
-    //Get.put(() => DraftQuizController());
+    Get.put(() => DraftQuizController());
     Get.find<DraftQuizController>().isFetching.value = true;
     Get.find<DraftQuizController>().fetchDraftQuiz();
     return Obx(
@@ -35,7 +35,7 @@ class DraftQuizScreen extends GetView<DraftQuizController> {
                     CachedNetworkImage(
                         placeholder: (context, url) => const NewsCardSkelton(),
                         imageUrl:
-                            'https://img.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg?w=740&t=st=1678360691~exp=1678361291~hmac=c8de1e2e64e16f9461119048a6a774fd33817aca9c5cd9246ad3ae80ee043365'),
+                            'https://img.freepik.com/free-vector/website-faq-section-user-help-desk-customer-support-frequently-asked-questions-problem-solution-quiz-game-confused-man-cartoon-character_335657-1602.jpg?w=740&t=st=1683641654~exp=1683642254~hmac=6fb298e31fca7ba3e989ad11aa23195b89917565facf99721d7bda0a2ce20ee1'),
                     Center(
                       child: Text(
                         'No Quiz in Draft mode',

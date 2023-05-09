@@ -78,12 +78,12 @@ class JoinQuizCOntroller extends GetxController {
   }
 
   decodeTeacherName(String? teacherID) async {
-    log(teacherID.toString());
+    quizDebugPrint(teacherID.toString());
     var response = await https.get(
         Uri.parse(ApiConfig.getEndPointsUrl('auth/users/$teacherID')),
         headers: headers);
     var decode = jsonDecode(response.body);
-    log('----------------------$decode and ${decode["name"]}');
+    quizDebugPrint('----------------------$decode and ${decode["name"]}');
     return decode["statusCode"] == 404 ? 'Unknown' : decode["name"];
   }
 
@@ -100,7 +100,7 @@ class JoinQuizCOntroller extends GetxController {
         showSnackBar(decode["message"], redColor, whiteColor);
       } else if (decode["quiz_id"] != null && decode["status"] == "live") {
         //send to show deatil page about quiz.
-        log(decode.toString());
+        quizDebugPrint(decode.toString());
         String tname = await decodeTeacherName(decode["conducted_by"]);
         quizDebugPrint("$tname----------------Tname");
         currentQuiz.isNotEmpty ? currentQuiz.clear() : null;

@@ -9,6 +9,7 @@ import 'package:quiz/utils/quizElevatedButon.dart';
 
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../utils/loading_dialog.dart';
+import '../../../../../../../global/global.dart';
 
 class QuizDraftViewDesign extends GetView<DraftQuizController> {
   const QuizDraftViewDesign({super.key, required this.index});
@@ -21,7 +22,7 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
-      margin: index == 0 ? null : const EdgeInsets.only(top: 10),
+    //  margin: index == 0 ? null : const EdgeInsets.only(top: 10),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: Column(
@@ -149,7 +150,7 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
                                   ),
                                   backgroundColor: greenColor,
                                   function: () {
-                                    log('yes');
+                                    quizDebugPrint('yes');
                                     showDialog(
                                         context: Get.context!,
                                         builder: ((context) =>

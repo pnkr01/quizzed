@@ -46,7 +46,7 @@ class DetailedQuizController extends GetxController {
       isLoading.value = false;
       hitJoinApi(quizID);
     } catch (e) {
-      log('catch');
+      quizDebugPrint('catch');
       isLoading.value = true;
       showSnackBar(e.toString(), redColor, whiteColor);
     }
@@ -65,7 +65,7 @@ class DetailedQuizController extends GetxController {
     var decode = jsonDecode(response.body);
     quizDebugPrint(decode);
     if (decode["statusCode"] >= 400) {
-      log('401');
+      quizDebugPrint('401');
       isLoading.value = true;
       showSnackBar(decode["message"], redColor, whiteColor);
     } else if (decode["statusCode"] == 200) {

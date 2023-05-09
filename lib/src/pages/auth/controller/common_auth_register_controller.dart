@@ -65,17 +65,17 @@ class CommonAuthSignUpController extends GetxController {
         "regdNo": studentRegdNo.value.text,
         "password": studentPassword.value.text,
       });
-      log(response.statusCode.toString());
-      log(response.body);
+      quizDebugPrint(response.statusCode.toString());
+      quizDebugPrint(response.body);
       var res = jsonDecode(response.body);
-      log(res.toString());
+      quizDebugPrint(res.toString());
 
       if (res["statusCode"] == 422 &&
           res["message"]
               .toString()
               .contains('User with similar details already')) {
         isRegistering.value = true;
-        log('this student already registered in backend => Sending to login page');
+        quizDebugPrint('this student already registered in backend => Sending to login page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar(
@@ -84,7 +84,7 @@ class CommonAuthSignUpController extends GetxController {
           Colors.white,
         );
       } else if (res["name"] != null) {
-        log('New User found => Sended data to backend => save data locally => send to home page');
+        quizDebugPrint('New User found => Sended data to backend => save data locally => send to home page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar(
@@ -115,7 +115,7 @@ class CommonAuthSignUpController extends GetxController {
       //   throw Exception(response.body);
       // }
     } catch (e) {
-      log('inside catch block error in student body');
+      quizDebugPrint('inside catch block error in student body');
       isRegistering.value = true;
       showSnackBar(e.toString(), Colors.red, Colors.white);
     }
@@ -135,15 +135,15 @@ class CommonAuthSignUpController extends GetxController {
   }
 
   checkForErrorAndRegisterForStudent() async {
-    log("Student signup");
+    quizDebugPrint("Student signup");
     //await getResponseFromStudentApi();
     if (studentPassword.value.text.isNotEmpty &&
         studentRegdNo.value.text.isNotEmpty) {
       await getResponseFromStudentApi();
       //hit api
-      log('all ok hitting student route');
+      quizDebugPrint('all ok hitting student route');
     } else {
-      log('some field missing error');
+      quizDebugPrint('some field missing error');
       isRegistering.value = true;
       showDialog(
           context: Get.context!,
@@ -171,17 +171,17 @@ class CommonAuthSignUpController extends GetxController {
         "primaryPhone": tPhone.value.text,
         "password": tPassword.value.text,
       });
-      log(response.statusCode.toString());
+      quizDebugPrint(response.statusCode.toString());
       var jsonBody = jsonDecode(response.body);
       if (response.statusCode == 201) {
-        log('new Teacher detected => sending to OTP screen');
+        quizDebugPrint('new Teacher detected => sending to OTP screen');
         isRegistering.value = true;
         navigateToOTPScreen(
           jsonBody["regdNo"],
           jsonBody["message"],
         );
       } else if (response.statusCode == 422) {
-        log('Teacher already exist');
+        quizDebugPrint('Teacher already exist');
         //showSnackBar and send teacher to LogIn page.
         isRegistering.value = true;
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
@@ -189,7 +189,7 @@ class CommonAuthSignUpController extends GetxController {
         showSnackBar(
             jsonBody["message"] + "Please logIn", Colors.green, Colors.white);
       } else {
-        log('else part of teacher register page');
+        quizDebugPrint('else part of teacher register page');
         isRegistering.value = true;
         showSnackBar(jsonBody["message"], Colors.red, Colors.white);
       }
@@ -200,7 +200,7 @@ class CommonAuthSignUpController extends GetxController {
   }
 
   checkForErrorAndRegisterForTeacher() {
-    log("Teacher signup");
+    quizDebugPrint("Teacher signup");
     if (tName.value.text.isNotEmpty &&
         tEmail.value.text.isNotEmpty &&
         tPhone.value.text.isNotEmpty &&
@@ -216,7 +216,7 @@ class CommonAuthSignUpController extends GetxController {
         //hit api
 
         hitApiForTeacher();
-        log('hit teacher route');
+        quizDebugPrint('hit teacher route');
       }
     } else {
       isRegistering.value = true;

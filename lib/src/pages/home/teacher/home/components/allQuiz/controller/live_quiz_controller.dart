@@ -128,9 +128,9 @@ class LiveQuizController extends GetxController {
       var decoded = jsonDecode(response.body);
       // print(decoded);
       liveList.isNotEmpty ? liveList.clear() : null;
-      log(decoded.toString().isEmpty.toString());
+      quizDebugPrint(decoded.toString().isEmpty.toString());
       for (var obj in decoded) {
-        log(obj.toString());
+        quizDebugPrint(obj.toString());
         liveList.add(QuizViewModel.fromJson(obj));
         //_startTimer();
       }

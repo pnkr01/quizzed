@@ -39,7 +39,7 @@ class TeacherHome extends StatelessWidget {
         preferredSize: const Size.fromHeight(56),
         leading: IconButton(
           onPressed: () {
-            log('teacher side menu tap');
+            quizDebugPrint('teacher side menu tap');
           },
           icon: const Icon(Icons.menu),
         ),

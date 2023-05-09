@@ -74,7 +74,7 @@ class AddQuizController extends GetxController {
     map['correct_option'] = correctOptionValue.value.toString();
     map['subject'] = getSubjectCode();
 
-    log('map$map');
+    quizDebugPrint('map$map');
 
     Map<String, String> headers = {
       //'Content-Type': 'multipart/form-data',
@@ -118,10 +118,10 @@ class AddQuizController extends GetxController {
         var response = await https.post(uri, headers: headers, body: map);
         var myjson = await jsonDecode(response.body);
         addQuestionToQuiz(myjson);
-        log(myjson.toString());
+        quizDebugPrint(myjson.toString());
       }
     } catch (e) {
-      log(e.toString());
+      quizDebugPrint(e.toString());
     }
   }
 
@@ -129,7 +129,7 @@ class AddQuizController extends GetxController {
     try {
       await hitBucketRequest(myjson["question_id"]);
     } catch (e) {
-      log(e.toString());
+      quizDebugPrint(e.toString());
     }
   }
 

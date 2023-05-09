@@ -45,8 +45,8 @@ class OTPController extends GetxController {
   }
 
   getResponseFromOTPApi() async {
-    log(getRegdNo());
-    log(otp.value.text);
+    quizDebugPrint(getRegdNo());
+    quizDebugPrint(otp.value.text);
     try {
       Map<String, String> headers = {
         'Content-Type': 'application/json',
@@ -64,14 +64,14 @@ class OTPController extends GetxController {
         body: msg,
         headers: headers,
       );
-      log(response.statusCode.toString());
+      quizDebugPrint(response.statusCode.toString());
       var res = jsonDecode(response.body);
 
-      log(res.toString());
+      quizDebugPrint(res.toString());
 
       if (response.statusCode == 201) {
         if (res['name'] != null) {
-          log('user sucessfully entered right otp');
+          quizDebugPrint('user sucessfully entered right otp');
           showSnackBar("Account validated Sucessfully, Please log In",
               Colors.green, Colors.white);
           isStartingOtpVeryfication.value = false;
@@ -80,17 +80,17 @@ class OTPController extends GetxController {
           //
           showSnackBar("Account validated Sucessfully, Please log In",
               Colors.green, Colors.white);
-          log('went to login screen');
+          quizDebugPrint('went to login screen');
         } else {
           isStartingOtpVeryfication.value = false;
-          log('handle various issues using snackbar ');
+          quizDebugPrint('handle various issues using snackbar ');
           showSnackBar(res['message'], Colors.green, Colors.white);
           // Teacher.fromJson(res);
 
         }
       } else {
         isStartingOtpVeryfication.value = false;
-        log('handle various issues using snackbar ');
+        quizDebugPrint('handle various issues using snackbar ');
         showSnackBar(res['message'], Colors.red, Colors.white);
         // Teacher.fromJson(res);
 
@@ -104,12 +104,12 @@ class OTPController extends GetxController {
   startCheckingOtp() async {
     //send post req to verify route.
 
-    log("User entered otp now checking otp => otp_controller.dart");
+    quizDebugPrint("User entered otp now checking otp => otp_controller.dart");
     //await getResponseFromStudentApi();
     if (otp.value.text.isNotEmpty) {
       await getResponseFromOTPApi();
       //hit api
-      log('hitting otp verify route');
+      quizDebugPrint('hitting otp verify route');
     } else {
       isStartingOtpVeryfication.value = false;
       showDialog(

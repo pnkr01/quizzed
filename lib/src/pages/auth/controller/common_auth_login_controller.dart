@@ -121,7 +121,7 @@ class CommonAuthLogInController extends GetxController {
     }
     String cookieID = refreshToken.substring(idx + 1).trim();
     sharedPreferences.setString('Scookie', cookieID);
-    log("Cookieeeeee  $cookieID");
+    quizDebugPrint("Cookieeeeee  $cookieID");
   }
 
   navigateToSignUpScreen() {
@@ -152,27 +152,27 @@ class CommonAuthLogInController extends GetxController {
         "password": password.value.text,
       },
     );
-    log(response.statusCode.toString());
+    quizDebugPrint(response.statusCode.toString());
     var res = jsonDecode(response.body);
     if (response.statusCode == 201) {
-      log("connection created");
+      quizDebugPrint("connection created");
       if (res["name"] != null && res["type"] == "student") {
-        log('pass and regd no verified => sending to student home page');
-        log('saving user cookie');
+        quizDebugPrint('pass and regd no verified => sending to student home page');
+        quizDebugPrint('saving user cookie');
         await setCookie(response);
         isStartedLogginIn.value = false;
         Get.offAllNamed(StudentHome.routeName);
         await setLocalIndex(res);
         showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
       } else if (res["type"] == "teacher" && res["status"] == "active") {
-        log('tecaher data available=> save this and log in');
+        quizDebugPrint('tecaher data available=> save this and log in');
         await saveTeacherIndex(res);
         await setTeacherCookie(response);
         isStartedLogginIn.value = false;
         navigateToteacherHomePage();
       } else {
         isStartedLogginIn.value = false;
-        log('else part of login screen');
+        quizDebugPrint('else part of login screen');
         showSnackBar(res["message"], Colors.red, Colors.white);
       }
     } else if (response.statusCode == 404) {
@@ -182,8 +182,8 @@ class CommonAuthLogInController extends GetxController {
         res["message"]
             .toString()
             .contains('Your account is not verified yet')) {
-      log('inactive teacher.');
-      log('sending => to otp screen');
+      quizDebugPrint('inactive teacher.');
+      quizDebugPrint('sending => to otp screen');
       isStartedLogginIn.value = false;
       Get.toNamed(
         OTPScreen.routeName,
@@ -202,7 +202,7 @@ class CommonAuthLogInController extends GetxController {
     quizDebugPrint(regdNo.value.text);
     quizDebugPrint(password.value.text);
     if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
-      log('hitting login Api');
+      quizDebugPrint('hitting login Api');
       try {
         hitLoginApi();
       } catch (e) {

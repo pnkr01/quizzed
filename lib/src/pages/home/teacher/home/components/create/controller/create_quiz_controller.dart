@@ -230,8 +230,8 @@ class CreateQuizController extends GetxController {
   navigateToQuizAdditionPage() {}
 
   String? getEquivalentCode(String key) {
-    log(subject.toString());
-    print(subject[key]);
+    quizDebugPrint(subject.toString());
+    quizDebugPrint(subject[key]);
     return subject[key]!;
   }
 
@@ -243,7 +243,7 @@ class CreateQuizController extends GetxController {
         totalQs.value.text.isNotEmpty &&
         marksPerQs.value.text.isNotEmpty &&
         search.value.text.isNotEmpty) {
-      log('create quiz is in process =>>>>>>>>>>>>>>');
+      quizDebugPrint('create quiz is in process =>>>>>>>>>>>>>>');
 
       try {
         if (section.value.text.contains('-')) {
@@ -280,7 +280,7 @@ class CreateQuizController extends GetxController {
       } catch (e) {
         isCreating.value = true;
         Get.back();
-        log('ERROR');
+        quizDebugPrint('ERROR');
         showSnackBar(e.toString(), redColor, whiteColor);
       }
     } else {
@@ -318,7 +318,7 @@ class CreateQuizController extends GetxController {
       "per_question_marks": int.parse(eachQsmarks),
       "duration": int.parse(duration)
     });
-    log('start hitting create api ==============================>');
+    quizDebugPrint('start hitting create api ==============================>');
 
     try {
       var response = await https.post(
@@ -329,14 +329,14 @@ class CreateQuizController extends GetxController {
       var myjson = await jsonDecode(response.body);
       print(myjson);
       if (myjson["message"] == "Unauthorized") {
-        log('Teacher JWT Expired ====> Sending to login screen to login again');
-        log('clearning local DB========================>');
+        quizDebugPrint('Teacher JWT Expired ====> Sending to login screen to login again');
+        quizDebugPrint('clearning local DB========================>');
         LocalDB.removeLoacalDb();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar('Your session expired :)', greenColor, whiteColor);
       } else if (myjson["quiz_id"] != null) {
-        log(myjson.toString());
-        log('sending to add question page---------------------------------------->');
+        quizDebugPrint(myjson.toString());
+        quizDebugPrint('sending to add question page---------------------------------------->');
         isCreating.value = true;
         Get.offNamed(
           QuizAdditionScreen.routeName,
@@ -362,11 +362,11 @@ class CreateQuizController extends GetxController {
         showSnackBar(myjson["message"], redColor, whiteColor);
       }
     } on FormatException {
-      log('inside format exception');
+      quizDebugPrint('inside format exception');
       throw Exception("Enter integer value to Semester");
     } catch (e) {
       isCreating.value = true;
-      log('inside catch');
+      quizDebugPrint('inside catch');
       showSnackBar(e.toString(), redColor, whiteColor);
     }
   }

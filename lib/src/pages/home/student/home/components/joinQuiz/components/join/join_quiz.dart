@@ -144,7 +144,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                   label: const Text('No'),
                   backgroundColor: kQuizPrimaryColor,
                   function: () {
-                    log('Cancel');
+                    quizDebugPrint('Cancel');
                     Get.back();
                   })
             ],

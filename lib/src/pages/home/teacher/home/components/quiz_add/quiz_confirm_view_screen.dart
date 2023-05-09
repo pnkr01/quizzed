@@ -2,11 +2,13 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/parsing.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 
+import '../../../../../../global/global.dart';
 import 'controller/quiz_view_screen_controller.dart';
 
 class QuizAdditionScreen extends GetView<QuizAdditionController> {
@@ -46,7 +48,7 @@ class QuizAdditionScreen extends GetView<QuizAdditionController> {
                   label: const Text('Cancel'),
                   backgroundColor: kTeacherPrimaryColor,
                   function: () {
-                    log('Cancel');
+                    quizDebugPrint('Cancel');
                     Get.back();
                   })
             ],
@@ -412,7 +414,57 @@ class QuizAdditionScreen extends GetView<QuizAdditionController> {
                           label: const Text('Continue'),
                           backgroundColor: kTeacherPrimaryColor,
                           function: () {
-                            controller.navigateToQuizCreatePage();
+                            //controller.navigateToQuizCreatePage();
+                            showDialog(
+                              barrierDismissible: false,
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                content: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Text('How you want to add question?'),
+                                    const SizedBox(height: 10),
+                                    SizedBox(
+                                      width: double.infinity,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  kTeacherPrimaryColor),
+                                          onPressed: () {
+                                            Get.back();
+                                            controller
+                                                .navigateToQuizCreatePage();
+                                          },
+                                          child: const Text('Manually')),
+                                    ),
+                                    SizedBox(
+                                      width: double.infinity,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  kTeacherPrimaryColor),
+                                          onPressed: () {
+                                            Get.to(
+                                              () => const Parsing(),
+                                              arguments: [
+                                                {
+                                                  "code": controller
+                                                      .getSubjectCode()
+                                                },
+                                                {
+                                                  "quizID":
+                                                      controller.getQuizId()
+                                                },
+                                              ],
+                                            );
+                                          },
+                                          child: const Text('Using Excel')),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
                           },
                         ),
                         const SizedBox(

@@ -35,15 +35,20 @@ class DraftQuizController extends GetxController {
         headers: headers,
       );
       var decoded = jsonDecode(response.body);
-      // print(decoded);
+      quizDebugPrint(decoded.toString());
       draftList.isNotEmpty ? draftList.clear() : null;
-      for (var obj in decoded) {
-        log(obj.toString());
-        draftList.add(QuizViewModel.fromJson(obj));
+      int len = decoded.length;
+      quizDebugPrint('length is $len');
+      int i;
+      for (i = 0; i < len; i++) {
+        quizDebugPrint('$i');
+        draftList.add(QuizViewModel.fromJson(decoded[i]));
       }
-      print('list----------');
+      print('list----------${draftList.length}');
       // print(draftList[0]);
-      isFetching.value = false;
+      if (i == len) {
+        isFetching.value = false;
+      }
     } catch (e) {
       print('Session expired');
       LocalDB.removeLoacalDb();
@@ -65,10 +70,11 @@ class DraftQuizController extends GetxController {
       //
       Get.back();
       Get.back();
-      log('refreshing--------------');
+      quizDebugPrint('refreshing--------------');
       refreshThisPage();
     } else {
       Get.back();
+      quizDebugPrint('72');
       showSnackBar(res["message"], redColor, whiteColor);
     }
   }
@@ -83,7 +89,7 @@ class DraftQuizController extends GetxController {
       print(decode);
       handleMessage(decode);
     } catch (e) {
-      Get.back();
+      Get.until((route) => route.isFirst);
       showSnackBar(e.toString(), redColor, whiteColor);
     }
   }
