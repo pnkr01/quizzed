@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
@@ -8,13 +9,13 @@ import 'package:get/get.dart';
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
 class ParsingController extends GetxController {
+  RxBool isLoading = false.obs;
   dynamic argumentData = Get.arguments;
   Map<String, String> headers = {
     'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}'
@@ -32,32 +33,17 @@ class ParsingController extends GetxController {
       type: FileType.custom,
       allowedExtensions: ['xlsx'],
     );
-
     if (result != null) {
       PlatformFile platformFile = result.files.first;
       File file = File(platformFile.path!);
       parseExcelFile(file);
-      showDialog(
-        barrierDismissible: false,
-        context: Get.context!,
-        builder: (context) => AlertDialog(
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const LinearProgressIndicator(
-                  color: kTeacherPrimaryColor,
-                  backgroundColor: Colors.transparent),
-              const SizedBox(height: 15.0),
-              Obx(() => Text(text.value))
-            ],
-          ),
-        ),
-      );
-      //start parsing
     } else {
+      isLoading.value = false;
       showSnackBar('file cancelled by Teacher', redColor, whiteColor);
     }
   }
+
+  final completer = Completer<void>();
 
   Future parseExcelFile(File file) async {
     final bytes = await file.readAsBytes();
@@ -70,30 +56,218 @@ class ParsingController extends GetxController {
 
     totalQsLength = sheet.rows.length - 1;
     quizDebugPrint('totalQsLength is $totalQsLength');
+    isLoading.value = false;
     for (i = 0; i <= totalQsLength; i++) {
       text.value = '${i + 1} of ${totalQsLength + 1}';
       final row = sheet.rows[i];
-      quizDebugPrint('hitting quiz api');
-      try {
-        await hitQuizApi(
-          row[0]!.value.toString(),
-          row[1]!.value.toString(),
-          row[2]!.value.toString(),
-          row[3]!.value.toString(),
-          row[4]!.value.toString(),
-          row[5]!.value.toString(),
-          getSubCode(),
-          null,
-          getQuizID(),
-        );
-      } catch (e) {
-        Get.back();
-        showSnackBar('Error occured ', redColor, whiteColor);
-      }
+      await waitForUserInteraction(row);
+      // await hitQuizApi(
+      //   row[0]!.value.toString(),
+      //   row[1]!.value.toString(),
+      //   row[2]!.value.toString(),
+      //   row[3]!.value.toString(),
+      //   row[4]!.value.toString(),
+      //   row[5]!.value.toString(),
+      //   getSubCode(),
+      //   null,
+      //   getQuizID(),
+      // );
     }
     Get.offAllNamed(TeacherHome.routeName);
     showSnackBar('Your quiz is ready go to all quiz for actions', greenColor,
         whiteColor);
+  }
+
+  hitBucketRequest(String questionID) async {
+    quizDebugPrint(questionID);
+    quizDebugPrint(getQuizID());
+    quizDebugPrint('htiing bucket 133');
+    String putUrl =
+        ApiConfig.getEndPointsNextUrl('quiz/add-question/${getQuizID()}');
+    quizDebugPrint(putUrl);
+    final bodyMsg = {"question_id": questionID};
+    quizDebugPrint(bodyMsg.runtimeType);
+    quizDebugPrint(bodyMsg);
+    var response = await https.put(
+      headers: headers,
+      body: bodyMsg,
+      Uri.parse(putUrl),
+    );
+    var decode = jsonDecode(response.body);
+    // log('decoding qsID--------------');
+
+    quizDebugPrint('handling quiz addition');
+    quizDebugPrint(decode.toString());
+    handleThisQuizAdditon(decode);
+  }
+
+  handleThisQuizAdditon(var addedQuizJson) async {
+    if (addedQuizJson["message"]
+        .toString()
+        .contains('Question added to quiz')) {
+      //increase loader
+      showSnackBar('Question Added sucessfully', greenColor, whiteColor);
+      if (pickedFile != null) {
+        Get.back();
+        pickedFile = null;
+        if (image != null) {
+          image = null;
+        }
+      }
+    } else {
+      Get.offAllNamed(TeacherHome.routeName);
+      showSnackBar(addedQuizJson["message"], redColor, whiteColor);
+    }
+  }
+
+  PlatformFile? pickedFile;
+  RxBool isShowImage = false.obs;
+  File? image;
+  var result;
+  RxString uploadText = 'Upload'.obs;
+
+  handleFileUpload() async {
+    result = await FilePicker.platform.pickFiles();
+    if (result != null) {
+      uploadText.value = 'Selected';
+      pickedFile = result.files.first;
+      quizDebugPrint("${pickedFile!.path}--path");
+    } else {
+      showSnackBar('No Image selected', blackColor, whiteColor);
+    }
+  }
+
+  Future<void> waitForUserInteraction(row) async {
+    final completer = Completer<void>();
+
+    showDialog(
+      barrierDismissible: false,
+      context: Get.context!,
+      builder: (context) {
+        return WillPopScope(
+          onWillPop: () async =>
+              false, // Prevent dialog dismissal on back button press
+          child: AlertDialog(
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                      color: kTeacherPrimaryColor,
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                  child: Text(
+                    'Qs : ${row[0]!.value}',
+                    style: const TextStyle(color: whiteColor),
+                  ),
+                ),
+                Container(
+                  height: 2,
+                  width: double.infinity,
+                  color: const Color(0xffc4c4c4),
+                ),
+                Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: row[5].value == 0 ? kTeacherPrimaryColor : null,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12))),
+                    child: Text(
+                      'Op1 : ${row[1]!.value}',
+                      style: TextStyle(
+                          color: row[5].value == 0 ? whiteColor : blackColor),
+                    )),
+                Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: row[5].value == 1 ? kTeacherPrimaryColor : null,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12))),
+                    child: Text(
+                      'Op2 : ${row[2]!.value}',
+                      style: TextStyle(
+                          color: row[5].value == 1 ? whiteColor : blackColor),
+                    )),
+                Container(
+                    margin: const EdgeInsets.only(bottom: 8),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: row[5].value == 2 ? kTeacherPrimaryColor : null,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12))),
+                    child: Text(
+                      'Op3 : ${row[3]!.value}',
+                      style: TextStyle(
+                          color: row[5].value == 2 ? whiteColor : blackColor),
+                    )),
+                Container(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        color: row[5].value == 3 ? kTeacherPrimaryColor : null,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12))),
+                    child: Text(
+                      'Op4 : ${row[4]!.value}',
+                      style: TextStyle(
+                          color: row[5].value == 3 ? whiteColor : blackColor),
+                    )),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: kTeacherPrimaryColor),
+                    onPressed: () {
+                      handleFileUpload();
+                    },
+                    child: Obx(() => Text(uploadText.value)),
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: kTeacherPrimaryColor),
+                child: const Text('OK'),
+                onPressed: () async {
+                  await hitQuizApi(
+                    row[0]!.value.toString(),
+                    row[1]!.value.toString(),
+                    row[2]!.value.toString(),
+                    row[3]!.value.toString(),
+                    row[4]!.value.toString(),
+                    row[5]!.value.toString(),
+                    getSubCode(),
+                    pickedFile,
+                    getQuizID(),
+                  );
+                  Navigator.of(context).pop();
+                  uploadText.value = 'Upload';
+                  completer.complete();
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+
+    return completer.future;
   }
 
   Future hitQuizApi(String qs, String op1, String op2, String op3, String op4,
@@ -118,6 +292,22 @@ class ParsingController extends GetxController {
       https.MultipartRequest request;
       final uri = Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/questions'));
       if (image != null) {
+        showDialog(
+            barrierDismissible: false,
+            context: Get.context!,
+            builder: (context) => WillPopScope(
+                onWillPop: () async => true,
+                child: AlertDialog(
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      LinearProgressIndicator(
+                        color: kTeacherPrimaryColor,
+                      ),
+                      Text('uploading..')
+                    ],
+                  ),
+                )));
         quizDebugPrint('image ${image.toString()}');
         // var stream = https.ByteStream(image.openRead());
         // stream.cast();
@@ -158,55 +348,6 @@ class ParsingController extends GetxController {
       Get.offAllNamed(TeacherHome.routeName);
       Get.find<QuizAdditionController>().handleEraseButton(getQuizID());
       showSnackBar(e.toString(), greenColor, whiteColor);
-    }
-  }
-
-  hitBucketRequest(String questionID) async {
-    quizDebugPrint(questionID);
-    quizDebugPrint(getQuizID());
-    quizDebugPrint('htiing bucket 133');
-    String putUrl =
-        ApiConfig.getEndPointsNextUrl('quiz/add-question/${getQuizID()}');
-    //log('post url-----------$putUrl');
-
-    quizDebugPrint(putUrl);
-
-    final bodyMsg = {"question_id": questionID};
-    quizDebugPrint(bodyMsg.runtimeType);
-    quizDebugPrint(bodyMsg);
-    var response = await https.put(
-      headers: headers,
-      body: bodyMsg,
-      Uri.parse(putUrl),
-    );
-    var decode = jsonDecode(response.body);
-    // log('decoding qsID--------------');
-
-    quizDebugPrint('handling quiz addition');
-    quizDebugPrint(decode.toString());
-    //handleThisQuizAdditon(decode);
-  }
-
-  handleThisQuizAdditon(var addedQuizJson) async {
-    if (addedQuizJson["message"]
-        .toString()
-        .contains('Question added to quiz')) {
-      //increase loader
-      showSnackBar('Question Added sucessfully', greenColor, whiteColor);
-
-      if (i == totalQsLength) {
-        Get.offAllNamed(ShowAllCreatedQuiz.routeName);
-        showSnackBar('Your quiz is ready go to all quiz for actions',
-            greenColor, whiteColor);
-        // all question added
-        // send to all quiz screen and show confirm dialog
-      } else {
-        //inc loader value.
-        Future.delayed(const Duration(seconds: 2));
-      }
-    } else {
-      // Get.offAllNamed(TeacherHome.routeName);
-      showSnackBar(addedQuizJson["message"], redColor, whiteColor);
     }
   }
 }

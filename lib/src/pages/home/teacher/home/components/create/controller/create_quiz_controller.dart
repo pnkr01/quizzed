@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -329,14 +328,16 @@ class CreateQuizController extends GetxController {
       var myjson = await jsonDecode(response.body);
       print(myjson);
       if (myjson["message"] == "Unauthorized") {
-        quizDebugPrint('Teacher JWT Expired ====> Sending to login screen to login again');
+        quizDebugPrint(
+            'Teacher JWT Expired ====> Sending to login screen to login again');
         quizDebugPrint('clearning local DB========================>');
         LocalDB.removeLoacalDb();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar('Your session expired :)', greenColor, whiteColor);
       } else if (myjson["quiz_id"] != null) {
         quizDebugPrint(myjson.toString());
-        quizDebugPrint('sending to add question page---------------------------------------->');
+        quizDebugPrint(
+            'sending to add question page---------------------------------------->');
         isCreating.value = true;
         Get.offNamed(
           QuizAdditionScreen.routeName,

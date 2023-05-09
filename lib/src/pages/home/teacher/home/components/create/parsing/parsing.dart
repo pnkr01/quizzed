@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/controller/parsing_controller.dart';
 import 'package:quiz/theme/app_color.dart';
+import 'package:quiz/theme/gradient_theme.dart';
 
 class Parsing extends GetView<ParsingController> {
   const Parsing({super.key});
@@ -23,8 +24,16 @@ class Parsing extends GetView<ParsingController> {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: kTeacherPrimaryColor),
-                child: const Text('Pick File'),
+                child: Obx(() => controller.isLoading.value
+                    ? const Center(
+                        child: CircularProgressIndicator(
+                          color: whiteColor,
+                          strokeWidth: 1,
+                        ),
+                      )
+                    : const Text('Pick File')),
                 onPressed: () {
+                  controller.isLoading.value = true;
                   controller.pickFile();
                 },
               ),

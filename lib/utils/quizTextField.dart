@@ -16,6 +16,7 @@ class QuizTextFormField extends StatefulWidget {
   final Color? contentColor;
   final bool isObscureText;
   final FocusNode? focusNode;
+  final TextInputType? textInputType;
   final TextEditingController controller;
   const QuizTextFormField({
     Key? key,
@@ -28,6 +29,7 @@ class QuizTextFormField extends StatefulWidget {
     this.contentColor,
     required this.isObscureText,
     this.focusNode,
+    this.textInputType,
     required this.controller,
   }) : super(key: key);
 
@@ -39,6 +41,7 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      keyboardType: widget.textInputType,
       onSubmitted: (value) {
         widget.focusNode?.unfocus();
       },

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/my_global.dart' as globals;
@@ -41,7 +40,6 @@ class DraftQuizController extends GetxController {
       quizDebugPrint('length is $len');
       int i;
       for (i = 0; i < len; i++) {
-        quizDebugPrint('$i');
         draftList.add(QuizViewModel.fromJson(decoded[i]));
       }
       print('list----------${draftList.length}');

@@ -20,7 +20,6 @@ class AddQuizController extends GetxController {
   RxInt correctOptionValue = 0.obs;
   final Rx<Color> onTapColor1 = kTeacherPrimaryshadeColor.obs;
   final PageController pageController = PageController(initialPage: 0);
-
   TextEditingController qsStatement = TextEditingController();
   TextEditingController option1 = TextEditingController();
   TextEditingController option2 = TextEditingController();

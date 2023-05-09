@@ -147,6 +147,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         child: EnsureVisibleWhenFocused(
                           focusNode: controller.focusNodesemester,
                           child: QuizTextFormField(
+                            textInputType: TextInputType.number,
                             focusNode: controller.focusNodesemester,
                             hintText: 'Enter Semester(i.e 1-8)',
                             contentColor: kTeacherPrimaryColor,
@@ -170,6 +171,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         child: EnsureVisibleWhenFocused(
                           focusNode: controller.focusNodeDtotalQs,
                           child: QuizTextFormField(
+                            textInputType: TextInputType.number,
                             focusNode: controller.focusNodeDtotalQs,
                             hintText: 'Enter total Qustion no',
                             contentColor: kTeacherPrimaryColor,
@@ -189,6 +191,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                         child: EnsureVisibleWhenFocused(
                           focusNode: controller.focusNodemarksPerQs,
                           child: QuizTextFormField(
+                            textInputType: TextInputType.number,
                             focusNode: controller.focusNodemarksPerQs,
                             hintText: 'Each qs marks',
                             contentColor: kTeacherPrimaryColor,
