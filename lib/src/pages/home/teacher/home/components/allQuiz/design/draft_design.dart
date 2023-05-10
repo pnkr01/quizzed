@@ -1,14 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
-
 import '../../../../../../../../theme/gradient_theme.dart';
-import '../../../../../../../../utils/loading_dialog.dart';
 import '../../../../../../../global/global.dart';
 
 class QuizDraftViewDesign extends GetView<DraftQuizController> {
@@ -22,7 +17,7 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
-    //  margin: index == 0 ? null : const EdgeInsets.only(top: 10),
+      //  margin: index == 0 ? null : const EdgeInsets.only(top: 10),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: Column(
@@ -144,19 +139,19 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 10),
                               child: QuizElevatedButton(
-                                  label: Text(
-                                    'Yes',
-                                    style: kBodyText6Style(),
-                                  ),
+                                  label: Obx(() => controller.isPublishing.value
+                                      ? const Center(
+                                          child: CircularProgressIndicator(
+                                              color: kTeacherPrimaryColor),
+                                        )
+                                      : Text(
+                                          'Yes',
+                                          style: kBodyText6Style(),
+                                        )),
                                   backgroundColor: greenColor,
                                   function: () {
+                                    controller.isPublishing.value = true;
                                     quizDebugPrint('yes');
-                                    showDialog(
-                                        context: Get.context!,
-                                        builder: ((context) =>
-                                            const LoadingDialog(
-                                                message:
-                                                    'Publishing.. Please wait')));
                                     controller.handlePublishButton(controller
                                         .draftList[index].quizId
                                         .toString());

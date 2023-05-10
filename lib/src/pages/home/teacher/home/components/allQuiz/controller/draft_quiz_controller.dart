@@ -16,6 +16,7 @@ import '../../../../../../../model/quiz_view_model.dart';
 
 class DraftQuizController extends GetxController {
   RxBool isFetching = true.obs;
+  RxBool isPublishing = false.obs;
 
   List<QuizViewModel> draftList = [];
   Map<String, String> headers = {
@@ -56,6 +57,7 @@ class DraftQuizController extends GetxController {
   }
 
   refreshThisPage() async {
+    isPublishing.value = false;
     await Get.find<LiveQuizController>().fetchLiveQuiz();
     globals.tabController.animateTo(1);
     draftList.clear();
@@ -66,7 +68,6 @@ class DraftQuizController extends GetxController {
         res["data"]["status"] == "live") {
       //refresh draft page
       //
-      Get.back();
       Get.back();
       quizDebugPrint('refreshing--------------');
       refreshThisPage();
@@ -87,6 +88,7 @@ class DraftQuizController extends GetxController {
       print(decode);
       handleMessage(decode);
     } catch (e) {
+      isPublishing.value = false;
       Get.until((route) => route.isFirst);
       showSnackBar(e.toString(), redColor, whiteColor);
     }

@@ -60,6 +60,7 @@ class CommonAuthSignUpController extends GetxController {
     //http://10.0.2.2:8001/auth/users
 
     try {
+      quizDebugPrint(ApiConfig.getEndPointsUrl('auth/users'));
       var response = await https
           .post(Uri.parse(ApiConfig.getEndPointsUrl('auth/users')), body: {
         "regdNo": studentRegdNo.value.text,
@@ -75,7 +76,8 @@ class CommonAuthSignUpController extends GetxController {
               .toString()
               .contains('User with similar details already')) {
         isRegistering.value = true;
-        quizDebugPrint('this student already registered in backend => Sending to login page');
+        quizDebugPrint(
+            'this student already registered in backend => Sending to login page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar(
@@ -84,7 +86,8 @@ class CommonAuthSignUpController extends GetxController {
           Colors.white,
         );
       } else if (res["name"] != null) {
-        quizDebugPrint('New User found => Sended data to backend => save data locally => send to home page');
+        quizDebugPrint(
+            'New User found => Sended data to backend => save data locally => send to home page');
         clearStudentField();
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         showSnackBar(
