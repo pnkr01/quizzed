@@ -16,13 +16,13 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
     required this.model,
     required this.questionLength,
     required this.options,
-    required this.index,
+    required this.rindex,
   }) : super(key: key);
 
   final String questionString;
   final JoinedQuizModel model;
   final int questionLength;
-  final int index;
+  final int rindex;
   final List<String> options;
 
   @override
@@ -33,7 +33,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (model.data?.questions![index].qsImage != null)
+            if (model.data?.questions![rindex].qsImage != null)
               Container(
                 height: 150,
                 width: double.infinity,
@@ -44,7 +44,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
                   borderRadius: const BorderRadius.all(Radius.circular(12)),
                   child: CachedNetworkImage(
                       fit: BoxFit.cover,
-                      imageUrl: model.data?.questions![index].qsImage ??
+                      imageUrl: model.data?.questions![rindex].qsImage ??
                           'https://img.freepik.com/free-photo/portrait-young-woman-playing-with-vr-headset-glasses-virtual-reality-isolated-studio-vr-headset-glasses-device-technology-concept_58466-12923.jpg?size=626&ext=jpg&ga=GA1.2.1112508682.1676184457&semt=robertav1_2_sidr'),
                 ),
               ),
@@ -93,6 +93,7 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
             ...List.generate(
               options.length,
               (index) => Option(
+                cindex: rindex,
                 model: model,
                 index: index,
                 text: options[index],

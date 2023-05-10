@@ -8,6 +8,7 @@ import 'src/global/shared.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   sharedPreferences = await SharedPreferences.getInstance();
+  prefs = await SharedPreferences.getInstance();
   //await dotenv.load(fileName: "assets/env/.env");
   //InitialBindings().dependencies();
   await Firebase.initializeApp();

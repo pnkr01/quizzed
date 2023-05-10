@@ -5,6 +5,7 @@ import 'package:quiz/src/global/global.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences sharedPreferences;
+late SharedPreferences prefs;
 //-------------------------------Teacher Cookie---------------------//
 setTeacherCookie(response) async {
   String rawCookie = response.headers['set-cookie']!;

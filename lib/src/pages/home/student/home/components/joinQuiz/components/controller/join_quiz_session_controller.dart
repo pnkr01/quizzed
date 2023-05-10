@@ -71,6 +71,7 @@ class JoinQuizSessionController extends GetxController {
     quizDebugPrint('quiz timer');
     if (decode["remainingMinutes"] == 0 && decode["remainingSeconds"] <= 5) {
       stoptheTimer();
+      sharedPreferences.setBool(getQuizID(), true);
       Get.offAllNamed(StudentHome.routeName);
       showDialog(
           context: Get.context!,
@@ -84,7 +85,7 @@ class JoinQuizSessionController extends GetxController {
       LocalDB.removeLoacalDb();
     }
     getTime.value =
-        '${decode["remainingMinutes"]} : ${decode["remainingSeconds"] - 5}';
+        '${decode["remainingMinutes"]} : ${decode["remainingSeconds"] > 5 ? decode["remainingSeconds"] - 5 : updateDisplayText(decode["remainingSeconds"])}';
     return decode["remainingMinutes"];
   }
 
@@ -112,6 +113,23 @@ class JoinQuizSessionController extends GetxController {
         'Authentication=${sharedPreferences.getString('Scookie') ?? sharedPreferences.getString('Tcookie')}',
     // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
   };
+
+  String updateDisplayText(int sec) {
+    quizDebugPrint(sec);
+    return sec == 5
+        ? '59'
+        : sec == 4
+            ? '58'
+            : sec == 3
+                ? '57'
+                : sec == 2
+                    ? '56'
+                    : sec == 1
+                        ? '55'
+                        : sec == 0
+                            ? '0'
+                            : '54';
+  }
 
   hitAndGetStatus() async {
     var response = await https.get(

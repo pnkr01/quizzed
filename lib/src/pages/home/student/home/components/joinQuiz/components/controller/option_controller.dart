@@ -29,21 +29,69 @@ class OptionController extends GetxController {
     "questions_attempted_details": answerTrackBody,
   };
 
+  getValue(questionId) {
+    if (sharedPreferences.getInt(questionId) != null) {
+      return prefs.getInt(questionId);
+    } else {
+      return 10;
+    }
+  }
+
   changePage(JoinedQuizModel model) {
     if (controller.currentIdx.value == (model.data!.questions!.length - 1)) {
-      quizDebugPrint('last qs submit this quiz');
-      // var newController = Get.find<JoinQuizSessionController>();
-      // newController.stoptheTimer();
-
-      //CustomCircleLoading.showDialog();
-      //hitAndGetMark(model.data!.quizStats!.quizId!);
-      Get.find<JoinQuizSessionController>().stoptheTimer();
-      Get.offAllNamed(StudentHome.routeName);
-      //locally handling force stopping
-      sharedPreferences.setBool(controller.getQuizID(), true);
       showDialog(
-          context: Get.context!,
-          builder: ((context) => const CompleteConfirmationDialog()));
+        context: Get.context!,
+        builder: (context) => WillPopScope(
+          onWillPop: () async => false,
+          child: AlertDialog(
+            actions: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: kTeacherPrimaryColor),
+                onPressed: () {
+                  quizDebugPrint('yes 50');
+                  Get.find<JoinQuizSessionController>().stoptheTimer();
+                  Get.offAllNamed(StudentHome.routeName);
+                  //locally handling force stopping
+                  sharedPreferences.setBool(controller.getQuizID(), true);
+                  showDialog(
+                      context: Get.context!,
+                      builder: ((context) =>
+                          const CompleteConfirmationDialog()));
+                },
+                child: const Text('Yes'),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: kTeacherPrimaryColor),
+                onPressed: () {
+                  Get.back();
+                },
+                child: const Text('No'),
+              ),
+            ],
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: double.infinity,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  decoration: const BoxDecoration(
+                      color: kTeacherPrimaryColor,
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                  child: const Center(
+                    child: Text(
+                      'Are you sure to submit?',
+                      style: TextStyle(color: whiteColor),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
     } else {
       controller.pageController.nextPage(
           duration: const Duration(milliseconds: 500), curve: Curves.easeIn);

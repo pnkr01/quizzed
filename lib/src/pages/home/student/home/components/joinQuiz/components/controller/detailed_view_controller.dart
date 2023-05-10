@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -75,14 +74,17 @@ class DetailedQuizController extends GetxController {
         JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
         quizDebugPrint('model is $model');
         quizDebugPrint('sending to quiz session');
-        Get.off(() => JoinQuizSessionScreen(model: model), arguments: [
+        quizDebugPrint('sending to quiz screen');
+        Get.offAll(() => JoinQuizSessionScreen(model: model), arguments: [
           {'quizID': quizID}
         ]);
         isLoading.value = true;
       } on FormatException {
+        quizDebugPrint('inside fe 82 ${decode["message"]}');
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       } catch (e) {
+        quizDebugPrint('inside catch 86 ${decode["message"]}');
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       }

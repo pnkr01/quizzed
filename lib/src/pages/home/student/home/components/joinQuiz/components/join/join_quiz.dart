@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
@@ -111,46 +109,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
   Widget build(BuildContext context) {
     widget.model.data?.questions?.shuffle();
     return WillPopScope(
-      onWillPop: () async => await showDialog(
-        context: context,
-        builder: (c) => AlertDialog(
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Warning',
-                style: kBodyText2Style().copyWith(color: kQuizPrimaryColor),
-              ),
-              const SizedBox(height: 8.0),
-              Text(
-                'Do you want to leave this quiz? Its not completed yet :)',
-                style: kBodyText3Style().copyWith(color: kQuizPrimaryColor),
-              ),
-              const SizedBox(height: 15.0),
-              QuizElevatedButton(
-                  label: const Text('Yes Leave :)'),
-                  backgroundColor: kQuizPrimaryColor,
-                  function: () async {
-                    controller.stoptheTimer();
-                    //force submit this quiz as user leave the quiz session
-                    //on their own.
-
-                    Get.offAllNamed(StudentHome.routeName);
-                    //locally handling force stopping
-                    sharedPreferences.setBool(controller.getQuizID(), true);
-                  }),
-              const SizedBox(height: 8.0),
-              QuizElevatedButton(
-                  label: const Text('No'),
-                  backgroundColor: kQuizPrimaryColor,
-                  function: () {
-                    quizDebugPrint('Cancel');
-                    Get.back();
-                  })
-            ],
-          ),
-        ),
-      ),
+      onWillPop: () async => false,
       child: Scaffold(
         backgroundColor: whiteColor,
         appBar: QuizAppbar(
@@ -243,7 +202,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                           controller.onPageChanged(value)),
                       itemBuilder: ((context, index) {
                         return JoinQuizDesign(
-                          index: index,
+                          rindex: index,
                           model: widget.model,
                           questionLength: widget.model.data!.questions!.length,
                           options:
