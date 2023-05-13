@@ -112,11 +112,12 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                                   color: kTeacherPrimaryColor,
                                 ),
                                 child: TextButton(
-                                    onPressed: () {
-                                      controller.isTapStartJoining.value = true;
-                                      controller.checkEmptyFilled();
-                                    },
-                                    child: Obx(() => !controller.showLoading
+                                  onPressed: () {
+                                    controller.isTapStartJoining.value = true;
+                                    controller.checkEmptyFilled();
+                                  },
+                                  child: Obx(
+                                    () => !controller.showLoading
                                         ? Text(
                                             'Join',
                                             style: kElevatedButtonTextStyle()
@@ -129,13 +130,9 @@ class JoinQuizView extends GetView<JoinQuizCOntroller> {
                                               color: whiteColor,
                                               strokeWidth: 1,
                                             ),
-                                          ))
-                                    // const Text(
-                                    //   'Enter',
-                                    //   style: TextStyle(color: whiteColor),
-                                    // )
-
-                                    ),
+                                          ),
+                                  ),
+                                ),
                               ),
                             ],
                           ),

@@ -226,7 +226,10 @@ class _StudentHomeState extends State<StudentHome> {
                     ),
                     backgroundColor: kQuizButtonLightColor,
                     function: () {
-                      controller.navigateToJoinQuiz();
+                      //check for DND Services.
+                      //if not enabled then ask to enabled.
+                      controller.checkDND();
+                      //controller.navigateToJoinQuiz();
                     },
                   ),
                   SizedBox(

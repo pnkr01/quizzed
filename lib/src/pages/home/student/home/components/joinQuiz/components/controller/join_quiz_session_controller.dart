@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:http/http.dart' as https;
 import 'package:get/get.dart';
 import 'package:quiz/src/db/local/local_db.dart';
@@ -70,6 +71,8 @@ class JoinQuizSessionController extends GetxController {
     //cancel timer.
     quizDebugPrint('quiz timer');
     if (decode["remainingMinutes"] == 0 && decode["remainingSeconds"] <= 5) {
+      await FlutterDnd.setInterruptionFilter(
+          FlutterDnd.INTERRUPTION_FILTER_ALL);
       stoptheTimer();
       sharedPreferences.setBool(getQuizID(), true);
       Get.offAllNamed(StudentHome.routeName);
@@ -79,6 +82,8 @@ class JoinQuizSessionController extends GetxController {
       stoptheTimer();
       //hit marks route.
     } else if (decode["remainingMinutes"] == null) {
+      await FlutterDnd.setInterruptionFilter(
+          FlutterDnd.INTERRUPTION_FILTER_ALL);
       stoptheTimer();
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar('Session Expired :(', redColor, whiteColor);
@@ -142,6 +147,8 @@ class JoinQuizSessionController extends GetxController {
     // quizDebugPrint(getQuizID());
     if (decode["quiz_id"] != null) {
       if ((decode['status']) == 'completed') {
+        await FlutterDnd.setInterruptionFilter(
+            FlutterDnd.INTERRUPTION_FILTER_ALL);
         stoptheTimer();
         Get.offAllNamed(StudentHome.routeName);
         showDialog(
@@ -154,6 +161,8 @@ class JoinQuizSessionController extends GetxController {
             : null;
       }
     } else {
+      await FlutterDnd.setInterruptionFilter(
+          FlutterDnd.INTERRUPTION_FILTER_ALL);
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar('session expired', redColor, whiteColor);
       LocalDB.removeLoacalDb();

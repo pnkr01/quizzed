@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
@@ -60,19 +61,22 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
           _isInForeground = false;
         });
         // Wait for 5 seconds and then do something
-        Future.delayed(const Duration(seconds: 5), () {
+        Future.delayed(const Duration(seconds: 15), () async {
           if (!_isInForeground) {
             // Do something
 
             //func for force submit the user user.
             //send to home page.
-            quizDebugPrint('you have spent 5 sec');
+            quizDebugPrint('you have spent 15 sec');
             controller.stoptheTimer();
+            await FlutterDnd.setInterruptionFilter(
+                FlutterDnd.INTERRUPTION_FILTER_ALL);
             Get.offAllNamed(StudentHome.routeName);
             //locally handling force stopping
             sharedPreferences.setBool(controller.getQuizID(), true);
             quizDebugPrint(controller.getQuizID());
             quizDebugPrint(sharedPreferences.getBool(controller.getQuizID()));
+            // ignore: use_build_context_synchronously
             showDialog(
               barrierDismissible: false,
               context: context,

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/model/result_model.dart';
@@ -48,7 +49,9 @@ class OptionController extends GetxController {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: kTeacherPrimaryColor),
-                onPressed: () {
+                onPressed: () async {
+                  await FlutterDnd.setInterruptionFilter(
+                      FlutterDnd.INTERRUPTION_FILTER_ALL);
                   quizDebugPrint('yes 50');
                   Get.find<JoinQuizSessionController>().stoptheTimer();
                   Get.offAllNamed(StudentHome.routeName);

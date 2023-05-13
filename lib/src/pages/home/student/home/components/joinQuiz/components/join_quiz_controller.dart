@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
@@ -8,13 +6,11 @@ import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/model/quiz_detailed_join_model.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
-
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../global/global.dart';
 import '../../../../../../../global/shared.dart';
 import 'detailed/detailed_quiz_view.dart';
-
 class JoinQuizCOntroller extends GetxController {
   late TextEditingController quizID;
   RxBool isTapStartJoining = false.obs;
@@ -99,7 +95,7 @@ class JoinQuizCOntroller extends GetxController {
         isTapStartJoining.value = false;
         showSnackBar(decode["message"], redColor, whiteColor);
       } else if (decode["quiz_id"] != null && decode["status"] == "live") {
-        //send to show deatil page about quiz.
+        //send to show deatil page about quiz....
         quizDebugPrint(decode.toString());
         String tname = await decodeTeacherName(decode["conducted_by"]);
         quizDebugPrint("$tname----------------Tname");
