@@ -75,6 +75,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    quizDebugPrint(state.toString());
     switch (state) {
       case AppLifecycleState.resumed:
         setState(() {
@@ -87,7 +88,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
         setState(() {
           _isInForeground = false;
         });
-        // Wait for 5 seconds and then do something
+        // Wait for 15 seconds and then do something
         Future.delayed(const Duration(seconds: 15), () async {
           if (!_isInForeground) {
             // Do something
