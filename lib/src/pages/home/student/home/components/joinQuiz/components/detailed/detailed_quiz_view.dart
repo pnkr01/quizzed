@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/model/quiz_detailed_join_model.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/detailed/detailed_quiz_helper.dart';
@@ -124,21 +123,8 @@ class DetailedQuizViewScreen extends GetView<DetailedQuizController> {
               child: FloatingActionButton(
                 backgroundColor: kQuizLightPrimaryColor,
                 onPressed: () async {
-                  //make student mobile on dnd
-                  //if dnd then allow  to give exam otherwise dont allow
-                  if (await FlutterDnd.isNotificationPolicyAccessGranted ==
-                      true) {
-                    //test dnd
-                    bool? isEnabled = await FlutterDnd.setInterruptionFilter(
-                        FlutterDnd
-                            .INTERRUPTION_FILTER_NONE); // Turn on DND - All notifications are suppressed.
-                    if (isEnabled == true && isEnabled != null) {
-                      controller.isLoading.value = false;
-                      controller.joinQuizInit(model.quizID!);
-                    }
-                  } else {
-                    FlutterDnd.gotoPolicySettings();
-                  }
+                  controller.isLoading.value = false;
+                  controller.joinQuizInit(model.quizID!);
                 },
                 child: Center(
                   child: controller.isLoading.value == true

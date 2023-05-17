@@ -2,7 +2,7 @@
     package="com.example.quiz">
    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
    <application
-        android:label="quiz"
+        android:label="quizzed"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

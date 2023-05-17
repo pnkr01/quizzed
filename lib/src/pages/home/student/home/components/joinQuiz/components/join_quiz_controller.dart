@@ -11,6 +11,7 @@ import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../global/global.dart';
 import '../../../../../../../global/shared.dart';
 import 'detailed/detailed_quiz_view.dart';
+
 class JoinQuizCOntroller extends GetxController {
   late TextEditingController quizID;
   RxBool isTapStartJoining = false.obs;
@@ -31,7 +32,7 @@ class JoinQuizCOntroller extends GetxController {
   };
 
   navigateToDetailedPage() {
-    Get.to(() => DetailedQuizViewScreen(model: currentQuiz[0]));
+    Get.to(() => DetailedQuizViewScreen(model: currentQuiz.first));
     isTapStartJoining.value = false;
   }
 
@@ -84,32 +85,38 @@ class JoinQuizCOntroller extends GetxController {
   }
 
   checkThisQuizID() async {
-    quizDebugPrint('here');
+    quizDebugPrint('here line 87 join_quiz_controller.dart');
     try {
       var response = await https.get(
           Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/${quizID.value.text}')),
           headers: headers);
       var decode = jsonDecode(response.body);
-      quizDebugPrint("${decode}ddd");
+      quizDebugPrint("$decode is the value of quiz");
       if (decode["statusCode"] == 400) {
+        quizDebugPrint(
+            'the status code is 400 and message is ${decode["message"]}');
         isTapStartJoining.value = false;
         showSnackBar(decode["message"], redColor, whiteColor);
       } else if (decode["quiz_id"] != null && decode["status"] == "live") {
         //send to show deatil page about quiz....
-        quizDebugPrint(decode.toString());
+        quizDebugPrint(
+            'the status is $decode and message coming from 103 join_quiz_controller.dart');
         String tname = await decodeTeacherName(decode["conducted_by"]);
-        quizDebugPrint("$tname----------------Tname");
         currentQuiz.isNotEmpty ? currentQuiz.clear() : null;
         currentQuiz.add(DetailedQuizJoinModel.fromJson(decode));
         currentQuiz[0].conductedBy =
             tname != 'Unknown' ? tname : currentQuiz[0].conductedBy;
         quizDebugPrint(
-            "${currentQuiz[0].conductedBy}----------------changes name");
+            'teacher name updated sucessfully 109 sending to -------- detailedpage');
         navigateToDetailedPage();
       } else if (decode["status"] == "completed") {
+        quizDebugPrint(
+            'the status is completed and message coming from 114 join_quiz_controller.dart');
         isTapStartJoining.value = false;
         showSnackBar('Quiz is completed ', redColor, whiteColor);
       } else {
+        quizDebugPrint(
+            'the status session expired from 119 in join_quiz_controller.dart');
         Get.offAllNamed(CommmonAuthLogInRoute.routeName);
         LocalDB.removeLoacalDb();
         showSnackBar('Session Expired :)', greenColor, whiteColor);

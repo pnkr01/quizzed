@@ -1,7 +1,7 @@
 class ResultModal {
   int? statusCode;
   String? message;
-  List<Null>? errors;
+  List<void>? errors;
   Data? data;
 
   ResultModal({this.statusCode, this.message, this.errors, this.data});
@@ -15,13 +15,13 @@ class ResultModal {
     //     errors!.add(new Null.fromJson(v));
     //   });
     // }
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['statusCode'] = this.statusCode;
-    data['message'] = this.message;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['statusCode'] = statusCode;
+    data['message'] = message;
     // if (this.errors != null) {
     //   data['errors'] = this.errors!.map((v) => v.toJson()).toList();
     // }
@@ -44,9 +44,9 @@ class Data {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['marksObtained'] = this.marksObtained;
-    data['totalMarks'] = this.totalMarks;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['marksObtained'] = marksObtained;
+    data['totalMarks'] = totalMarks;
     return data;
   }
 }

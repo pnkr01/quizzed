@@ -148,8 +148,9 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                     backgroundColor: whiteColor,
                     function: () {
                       controller.isStartedLogginIn.value = true;
-                      controller.checkForErrorAndStartLoggingInUser();
+                      controller.checkIMEIPermission();
                       FocusScope.of(context).unfocus();
+                      //ask for IMEI
                     }),
                 const SizedBox(
                   height: 10,

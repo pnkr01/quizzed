@@ -1,11 +1,13 @@
 import 'dart:convert';
-import 'dart:developer';
+import 'package:device_imei/device_imei.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:quiz/src/api/points.dart';
+import 'package:quiz/src/db/firebase/firebase_helper.dart';
 import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
@@ -144,7 +146,7 @@ class CommonAuthLogInController extends GetxController {
     showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
   }
 
-  hitLoginApi() async {
+  hitLoginApi(String imei) async {
     var response = await https.post(
       Uri.parse(ApiConfig.getEndPointsUrl('auth/login')),
       body: {
@@ -157,13 +159,85 @@ class CommonAuthLogInController extends GetxController {
     if (response.statusCode == 201) {
       quizDebugPrint("connection created");
       if (res["name"] != null && res["type"] == "student") {
-        quizDebugPrint('pass and regd no verified => sending to student home page');
+        quizDebugPrint(
+            'pass and regd no verified => sending to student home page');
         quizDebugPrint('saving user cookie');
         await setCookie(response);
         isStartedLogginIn.value = false;
-        Get.offAllNamed(StudentHome.routeName);
-        await setLocalIndex(res);
-        showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
+
+        //save this user regdNo-imei
+        //manitain a imei bucket imei-regdNo
+
+        if (await MyFirebase().isUserAlreadyExist(regdNo.value.text)) {
+          if (await MyFirebase().checkRegdNoWithImei(regdNo.value.text) ==
+              imei)
+               {
+                quizDebugPrint("all check passed 172");
+                Get.offAllNamed(StudentHome.routeName);
+                await setLocalIndex(res);
+                showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
+                } else {
+                isStartedLogginIn.value = false;
+               showDialog(
+               barrierDismissible: false,
+               context: Get.context!,
+               builder: (context) => AlertDialog(
+                content: Column(
+                  children: [
+                    const Text(
+                      'Your IMEI number mismatch, contact CDC Admin for resolution',
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.until((route) => route.isFirst);
+                      },
+                      child: const Text('Close'),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          }
+        } else {
+          //studet absent in firebase.
+          //save user data in firebase and send user data to firebase.
+
+          //check if same imei is there in imei collection?
+
+          if (await MyFirebase().isThisImeiAlreadyExist(imei)) {
+            isStartedLogginIn.value = false;
+            showDialog(
+              barrierDismissible: false,
+              context: Get.context!,
+              builder: (context) => AlertDialog(
+                content: Column(
+                  children: [
+                    const Text(
+                      'This Device is not available for your registartion No. Contact CDC if this is error',
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.until((route) => route.isFirst);
+                      },
+                      child: const Text('Close'),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          } else {
+            await MyFirebase()
+                .saveRegdNoWithImei(regdNo.value.text, imei)
+                .then((value) async {
+              quizDebugPrint("all check passed 172");
+              Get.offAllNamed(StudentHome.routeName);
+              await setLocalIndex(res);
+              showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
+            });
+          }
+        }
       } else if (res["type"] == "teacher" && res["status"] == "active") {
         quizDebugPrint('tecaher data available=> save this and log in');
         await saveTeacherIndex(res);
@@ -198,13 +272,31 @@ class CommonAuthLogInController extends GetxController {
     }
   }
 
-  checkForErrorAndStartLoggingInUser() {
+  checkIMEIPermission() async {
+    PermissionStatus phone = await Permission.phone.status;
+    if (phone.isDenied) {
+      await Permission.phone.request();
+      if (await Permission.phone.status.isGranted) {
+        String? imei = await DeviceImei().getDeviceImei();
+        if (imei != null) {
+          checkForErrorAndStartLoggingInUser(imei);
+        }
+      }
+    } else {
+      String? imei = await DeviceImei().getDeviceImei();
+      if (imei != null) {
+        checkForErrorAndStartLoggingInUser(imei);
+      }
+    }
+  }
+
+  checkForErrorAndStartLoggingInUser(String imei) {
     quizDebugPrint(regdNo.value.text);
     quizDebugPrint(password.value.text);
     if (regdNo.value.text.isNotEmpty && password.value.text.isNotEmpty) {
       quizDebugPrint('hitting login Api');
       try {
-        hitLoginApi();
+        hitLoginApi(imei);
       } catch (e) {
         isStartedLogginIn.value = false;
         showSnackBar(e.toString(), Colors.red, Colors.white);

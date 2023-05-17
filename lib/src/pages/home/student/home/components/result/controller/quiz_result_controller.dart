@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -49,13 +51,18 @@ class QuizResultScreenController extends GetxController {
         isLoading.value = false;
       } else {
         ResultModal myresult = ResultModal.fromJson(jsonDecode(response.body));
-        showDialog(
-            barrierDismissible: false,
-            context: Get.context!,
-            builder: ((context) => MarksObtained(
-                  isComingFromResult: true,
-                  resultModal: myresult,
-                )));
+        if (myresult != null) {
+          showDialog(
+              barrierDismissible: false,
+              context: Get.context!,
+              builder: ((context) => MarksObtained(
+                    isComingFromResult: true,
+                    resultModal: myresult,
+                  )));
+        } else {
+          isLoading.value = false;
+          showSnackBar('Please try again :(', redColor, whiteColor);
+        }
         isLoading.value = false;
       }
     } catch (e) {

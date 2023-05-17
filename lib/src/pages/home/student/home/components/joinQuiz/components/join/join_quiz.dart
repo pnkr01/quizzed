@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
@@ -30,19 +32,44 @@ class JoinQuizSessionScreen extends StatefulWidget {
 
 class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
     with WidgetsBindingObserver {
-  var controller = Get.find<JoinQuizSessionController>();
-  var optionController = Get.find<OptionController>();
+  bool isInSplitScreenMode = false;
+  Timer? _splitScreenCheckTimer;
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    checkSplitScreenMode();
+    _splitScreenCheckTimer = Timer.periodic(const Duration(seconds: 2), (_) {
+      checkSplitScreenMode();
+    });
   }
 
   @override
   void dispose() {
+    _splitScreenCheckTimer?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
+  @override
+  void didChangeMetrics() {
+    super.didChangeMetrics();
+    checkSplitScreenMode();
+  }
+
+  void checkSplitScreenMode() {
+    final aspectRatio = MediaQuery.of(context).size.aspectRatio;
+    final orientation = MediaQuery.of(context).orientation;
+
+    setState(() {
+      isInSplitScreenMode =
+          aspectRatio < 1.0 && orientation == Orientation.landscape;
+    });
+  }
+
+  var controller = Get.find<JoinQuizSessionController>();
+  var optionController = Get.find<OptionController>();
 
   bool _isInForeground = true;
 

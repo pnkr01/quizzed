@@ -42,14 +42,17 @@ class _MarksObtainedState extends State<MarksObtained> {
           ),
         ],
       ),
-      content: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 110),
-        child: Text(
-          maxLines: 1,
-          '${widget.resultModal.data?.marksObtained} / ${widget.resultModal.data?.totalMarks}',
-          style: kBodyText8Style().copyWith(color: blackColor),
-        ),
-      ),
+      content: widget.resultModal.data?.marksObtained != null &&
+              widget.resultModal.data?.totalMarks != null
+          ? Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 110),
+              child: Text(
+                maxLines: 1,
+                '${widget.resultModal.data?.marksObtained} / ${widget.resultModal.data?.totalMarks}',
+                style: kBodyText8Style().copyWith(color: blackColor),
+              ),
+            )
+          : const Text('Error try again'),
       actions: [
         ElevatedButton(
           onPressed: () {

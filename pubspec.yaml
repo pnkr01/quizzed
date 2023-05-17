@@ -63,6 +63,8 @@ dependencies:
   count_down_timer: ^1.0.1
   excel: ^2.1.0
   flutter_dnd: ^0.1.4+1
+  permission_handler: ^10.2.0
+  device_imei: ^0.0.4+1
 
 dev_dependencies:
   flutter_test:

@@ -42,10 +42,11 @@ class DetailedQuizController extends GetxController {
 
   joinQuizInit(String quizID) async {
     try {
+      quizDebugPrint('inside joinQuizInit 45 detailed_view_controller.dart');
       isLoading.value = false;
       hitJoinApi(quizID);
     } catch (e) {
-      quizDebugPrint('catch');
+      quizDebugPrint('inside catch 48 detailed_view_controller.dart');
       isLoading.value = true;
       showSnackBar(e.toString(), redColor, whiteColor);
     }
@@ -62,45 +63,34 @@ class DetailedQuizController extends GetxController {
         Uri.parse(ApiConfig.getEndPointsNextUrl('quiz/join/$quizID')),
         headers: headers);
     var decode = jsonDecode(response.body);
-    quizDebugPrint(decode);
+    quizDebugPrint('$decode 66 detailed_view_controller.dart');
     if (decode["statusCode"] >= 400) {
-      quizDebugPrint('401');
+      quizDebugPrint(
+          'the status code is ${decode["statusCode"]} and message is ${decode["message"]} 69 detailed_view_controller.dart');
       isLoading.value = true;
       showSnackBar(decode["message"], redColor, whiteColor);
     } else if (decode["statusCode"] == 200) {
+      quizDebugPrint(
+          'the status code is ${decode["statusCode"]} and message is $decode 74 detailed_view_controller.dart');
       //  print(decode);
       try {
-        quizDebugPrint(decode);
+        quizDebugPrint('inside trying 77 $decode trying 78');
         JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
-        quizDebugPrint('model is $model');
-        quizDebugPrint('sending to quiz session');
-        quizDebugPrint('sending to quiz screen');
+        quizDebugPrint('get model is $model');
+        quizDebugPrint('sending to quiz screen 80');
         Get.offAll(() => JoinQuizSessionScreen(model: model), arguments: [
           {'quizID': quizID}
         ]);
         isLoading.value = true;
       } on FormatException {
-        quizDebugPrint('inside fe 82 ${decode["message"]}');
+        quizDebugPrint('inside fe 86 and message is ${decode["message"]}');
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       } catch (e) {
-        quizDebugPrint('inside catch 86 ${decode["message"]}');
+        quizDebugPrint('inside catch 90 and message is ${decode["message"]}');
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       }
-    }
-  }
-
-  //fillQuizList(var list) {}
-
-  navigateToQuizSessionScreen(String quizID, JoinedQuizModel model) {
-    if (model != null) {
-      Get.off(() => JoinQuizSessionScreen(model: model), arguments: [
-        {'quizID': quizID}
-      ]);
-      isLoading.value = true;
-    } else {
-      navigateToQuizSessionScreen(quizID, model);
     }
   }
 }
