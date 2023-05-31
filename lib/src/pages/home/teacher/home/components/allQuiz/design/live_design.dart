@@ -332,6 +332,7 @@ class _TimerWidgetState extends State<TimerWidget> {
     if (response.statusCode == 200) {
       var decodeTime = jsonDecode(response.body);
       setState(() {
+        quizDebugPrint('min is ----${decodeTime['remainingMinutes']}');
         remainingTime = decodeTime['remainingMinutes'] * 60 +
             decodeTime['remainingSeconds'];
         isloading = !isloading;
@@ -347,6 +348,9 @@ class _TimerWidgetState extends State<TimerWidget> {
           remainingTime--;
           quizDebugPrint(remainingTime);
         } else {
+          var liveQuizController = Get.find<LiveQuizController>();
+          liveQuizController.isFetching.value = true;
+          liveQuizController.fetchLiveQuiz();
           timer?.cancel();
         }
       });
@@ -354,7 +358,7 @@ class _TimerWidgetState extends State<TimerWidget> {
   }
 
   String formatTime(int time) {
-    int minutes = (time ~/ 60) % 60;
+    int minutes = (time ~/ 60);
     int seconds = time % 60;
     return '${minutes.toString().padLeft(2, '0')} min : ${seconds.toString().padLeft(2, '0')} sec';
   }

@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:developer';
 import 'package:quiz/src/global/my_global.dart' as globals;
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
@@ -39,6 +38,8 @@ class LiveQuizController extends GetxController {
     var decodeTime = jsonDecode(res.body);
     remainingMinutes.value = decodeTime['remainingMinutes'];
     remainingSeconds.value = decodeTime['remainingSeconds'];
+    quizDebugPrint('min is ${remainingMinutes.value}');
+    quizDebugPrint(remainingSeconds.value);
     remaingTime.value =
         '${decodeTime["remainingMinutes"]} : ${decodeTime["remainingSeconds"]}';
   }
@@ -77,7 +78,7 @@ class LiveQuizController extends GetxController {
   };
 
   // getRemaningTime(String quizID) async {
-  //   var res = await https.get(
+  //   var res = await https.get(l
   //       Uri.parse(
   //           ApiConfig.getEndPointsNextUrl('quiz/get-remaining-time/$quizID')),
   //       headers: headers);

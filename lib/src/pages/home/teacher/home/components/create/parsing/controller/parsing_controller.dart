@@ -256,6 +256,7 @@ class ParsingController extends GetxController {
                     pickedFile,
                     getQuizID(),
                   );
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pop();
                   uploadText.value = 'Upload';
                   completer.complete();
@@ -273,6 +274,7 @@ class ParsingController extends GetxController {
   Future hitQuizApi(String qs, String op1, String op2, String op3, String op4,
       String co, subjCode, PlatformFile? image, String quizID) async {
     var map = <String, dynamic>{};
+    quizDebugPrint('correct op is $co');
 
     map['question_str'] = qs;
     map['options[0]'] = op1;
@@ -339,10 +341,15 @@ class ParsingController extends GetxController {
         //  if (response.statusCode == 200) {}
       } else {
         quizDebugPrint('no image');
-        var response = await https.post(uri, headers: headers, body: map);
-        var myjson = await jsonDecode(response.body);
-        quizDebugPrint(myjson.toString());
-        hitBucketRequest(myjson["question_id"]);
+        try {
+          var response = await https.post(uri, headers: headers, body: map);
+          var myjson = await jsonDecode(response.body);
+          quizDebugPrint('my json is ${myjson.toString()}');
+          quizDebugPrint('questionId is ${myjson["question_id"]}');
+          hitBucketRequest(myjson["question_id"]);
+        } catch (e) {
+          showSnackBar("$e contact developer code 351", greenColor, whiteColor);
+        }
       }
     } catch (e) {
       Get.offAllNamed(TeacherHome.routeName);

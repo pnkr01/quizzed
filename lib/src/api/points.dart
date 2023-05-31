@@ -1,4 +1,4 @@
-bool isProd = true;
+bool isProd = false;
 
 class ApiConfig {
   String kAuthPort = '8001';

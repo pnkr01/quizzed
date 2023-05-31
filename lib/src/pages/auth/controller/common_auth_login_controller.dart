@@ -181,16 +181,22 @@ class CommonAuthLogInController extends GetxController {
               context: Get.context!,
               builder: (context) => AlertDialog(
                 content: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      'Your IMEI number mismatch, contact CDC Admin for resolution',
+                      'Multi Login not allowed..contact Quizzed admin for resolution',
                     ),
                     const SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: () {
-                        Get.until((route) => route.isFirst);
-                      },
-                      child: const Text('Close'),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: kTeacherPrimaryColor),
+                        onPressed: () {
+                          Get.until((route) => route.isFirst);
+                        },
+                        child: const Text('Close'),
+                      ),
                     ),
                   ],
                 ),
