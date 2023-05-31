@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quiz">
    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+   <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
    <application
         android:label="quizzed"
         android:name="${applicationName}"

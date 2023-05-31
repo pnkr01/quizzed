@@ -66,6 +66,7 @@ dependencies:
   permission_handler: ^10.2.0
   device_imei: ^0.0.4+1
   flutter_windowmanager: ^0.2.0
+  device_information: ^0.0.4
 
 dev_dependencies:
   flutter_test:

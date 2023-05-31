@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:device_imei/device_imei.dart';
+import 'package:device_information/device_information.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as https;
@@ -163,25 +163,23 @@ class CommonAuthLogInController extends GetxController {
             'pass and regd no verified => sending to student home page');
         quizDebugPrint('saving user cookie');
         await setCookie(response);
-        isStartedLogginIn.value = false;
 
         //save this user regdNo-imei
         //manitain a imei bucket imei-regdNo
 
         if (await MyFirebase().isUserAlreadyExist(regdNo.value.text)) {
           if (await MyFirebase().checkRegdNoWithImei(regdNo.value.text) ==
-              imei)
-               {
-                quizDebugPrint("all check passed 172");
-                Get.offAllNamed(StudentHome.routeName);
-                await setLocalIndex(res);
-                showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
-                } else {
-                isStartedLogginIn.value = false;
-               showDialog(
-               barrierDismissible: false,
-               context: Get.context!,
-               builder: (context) => AlertDialog(
+              imei) {
+            quizDebugPrint("all check passed 172");
+            Get.offAllNamed(StudentHome.routeName);
+            await setLocalIndex(res);
+            showSnackBar("Sucessfully logged In", Colors.green, Colors.white);
+          } else {
+            isStartedLogginIn.value = false;
+            showDialog(
+              barrierDismissible: false,
+              context: Get.context!,
+              builder: (context) => AlertDialog(
                 content: Column(
                   children: [
                     const Text(
@@ -277,13 +275,22 @@ class CommonAuthLogInController extends GetxController {
     if (phone.isDenied) {
       await Permission.phone.request();
       if (await Permission.phone.status.isGranted) {
-        String? imei = await DeviceImei().getDeviceImei();
+        String? imei = await DeviceInformation.deviceIMEINumber;
+        // ignore: unnecessary_null_comparison
         if (imei != null) {
           checkForErrorAndStartLoggingInUser(imei);
         }
+      } else {
+        isStartedLogginIn.value = !isStartedLogginIn.value;
+        showSnackBar(
+          "You cannot login without this permission",
+          blackColor,
+          whiteColor,
+        );
       }
     } else {
-      String? imei = await DeviceImei().getDeviceImei();
+      String? imei = await DeviceInformation.deviceIMEINumber;
+      // ignore: unnecessary_null_comparison
       if (imei != null) {
         checkForErrorAndStartLoggingInUser(imei);
       }

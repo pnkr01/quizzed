@@ -194,7 +194,7 @@ class CommonAuthSignUpController extends GetxController {
       } else {
         quizDebugPrint('else part of teacher register page');
         isRegistering.value = true;
-        showSnackBar(jsonBody["message"], Colors.red, Colors.white);
+        showSnackBar(jsonBody["message"][0], Colors.red, Colors.white);
       }
     } catch (e) {
       isRegistering.value = true;

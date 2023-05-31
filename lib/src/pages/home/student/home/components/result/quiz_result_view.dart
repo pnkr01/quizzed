@@ -67,6 +67,7 @@
 // }
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 
@@ -90,8 +91,12 @@ class QuizResultView extends GetView<QuizResultScreenController> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: kTeacherPrimaryColor,
                 ),
-                onPressed: () {
-                  Get.back();
+                onPressed: () async {
+                  bool? isOff = await FlutterDnd.setInterruptionFilter(
+                      FlutterDnd.INTERRUPTION_FILTER_ALL);
+                  if (isOff == true && isOff != null) {
+                    Get.back();
+                  }
                 },
                 child: Text(
                   'Back',

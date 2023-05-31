@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/strings.dart';
 import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart';
 import 'package:quiz/theme/app_color.dart';
@@ -133,7 +134,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                   height: 15,
                 ),
                 QuizElevatedButton(
-                    label: Obx(() => controller.isStartedLogginIn == false
+                    label: Obx(() => controller.isStartedLogginIn.value == false
                         ? Text(
                             'Continue',
                             style: kBodyText3Style()
@@ -147,9 +148,14 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                           )),
                     backgroundColor: whiteColor,
                     function: () {
-                      controller.isStartedLogginIn.value = true;
-                      controller.checkIMEIPermission();
-                      FocusScope.of(context).unfocus();
+                      if (controller.regdNo.value.text.isNotEmpty &&
+                          controller.password.value.text.isNotEmpty) {
+                        controller.isStartedLogginIn.value = true;
+                        controller.checkIMEIPermission();
+                        FocusScope.of(context).unfocus();
+                      } else {
+                        showSnackBar("fill all blanks", blackColor, whiteColor);
+                      }
                       //ask for IMEI
                     }),
                 const SizedBox(
