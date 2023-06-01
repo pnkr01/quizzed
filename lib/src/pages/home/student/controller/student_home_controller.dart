@@ -30,7 +30,7 @@ class StudentHomeController extends GetxController {
           FlutterDnd.INTERRUPTION_FILTER_NONE);
       quizDebugPrint(isAllowed);
       if (isAllowed == true && isAllowed != null) {
-        navigateToResultQuiz();
+        navigateToJoinQuiz();
       }
     } else {
       FlutterDnd.gotoPolicySettings();

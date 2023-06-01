@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
 import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
@@ -22,6 +22,20 @@ class ParsingController extends GetxController {
   };
   getSubCode() => argumentData[0]['code'] ?? "";
   getQuizID() => argumentData[1]['quizID'];
+  getTotalQs() => argumentData[2]['totlaQs'];
+
+  late RxInt tot = 0.obs;
+
+  @override
+  void onInit() {
+    quizDebugPrint(getSubCode());
+    quizDebugPrint(getTotalQs());
+    tot.value = getTotalQs();
+    quizDebugPrint('tot value is ${tot.value}');
+    super.onInit();
+  }
+
+  RxInt totalQsAdded = 0.obs;
 
   RxString text = "Parsing..".obs;
 
@@ -55,27 +69,28 @@ class ParsingController extends GetxController {
     final row = sheet!.rows[0];
 
     totalQsLength = sheet.rows.length - 1;
-    quizDebugPrint('totalQsLength is $totalQsLength');
+    quizDebugPrint(
+        'totalQsLength is $totalQsLength and total length you enter is ${getTotalQs()}');
     isLoading.value = false;
-    for (i = 0; i <= totalQsLength; i++) {
-      text.value = '${i + 1} of ${totalQsLength + 1}';
-      final row = sheet.rows[i];
-      await waitForUserInteraction(row);
-      // await hitQuizApi(
-      //   row[0]!.value.toString(),
-      //   row[1]!.value.toString(),
-      //   row[2]!.value.toString(),
-      //   row[3]!.value.toString(),
-      //   row[4]!.value.toString(),
-      //   row[5]!.value.toString(),
-      //   getSubCode(),
-      //   null,
-      //   getQuizID(),
-      // );
+    quizDebugPrint(totalQsLength);
+    if (totalQsLength >= tot.value - 1) {
+      for (i = 0; i <= totalQsLength; i++) {
+        text.value = '${i + 1} of ${totalQsLength + 1}';
+        final row = sheet.rows[i];
+        await waitForUserInteraction(row);
+      }
+      quizDebugPrint('i value is $i and totalQsAdded is ${totalQsAdded.value}');
+      if (totalQsAdded.value - 1 == i) {
+        Get.offAllNamed(TeacherHome.routeName);
+        showSnackBar('Your quiz is ready go to all quiz for actions',
+            greenColor, whiteColor);
+      } else {
+        showSnackBar("pick other file to add remainig question",
+            kTeacherPrimaryColor, whiteColor);
+      }
+    } else {
+      showSnackBar('Quiz is less in excel..', greenColor, whiteColor);
     }
-    Get.offAllNamed(TeacherHome.routeName);
-    showSnackBar('Your quiz is ready go to all quiz for actions', greenColor,
-        whiteColor);
   }
 
   hitBucketRequest(String questionID) async {
@@ -102,6 +117,8 @@ class ParsingController extends GetxController {
   }
 
   handleThisQuizAdditon(var addedQuizJson) async {
+    quizDebugPrint('updateing---------------->');
+    totalQsAdded.value = totalQsAdded.value + 1;
     if (addedQuizJson["message"]
         .toString()
         .contains('Question added to quiz')) {
@@ -159,11 +176,11 @@ class ParsingController extends GetxController {
                       const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                      color: kTeacherPrimaryColor,
+                      // color: kTeacherPrimaryColor,
                       borderRadius: BorderRadius.all(Radius.circular(12))),
                   child: Text(
                     'Qs : ${row[0]!.value}',
-                    style: const TextStyle(color: whiteColor),
+                    style: const TextStyle(color: blackColor),
                   ),
                 ),
                 Container(
@@ -177,7 +194,7 @@ class ParsingController extends GetxController {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: row[5].value == 0 ? kTeacherPrimaryColor : null,
+                        color: row[5].value == 0 ? greenColor : null,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(12))),
                     child: Text(
@@ -191,7 +208,7 @@ class ParsingController extends GetxController {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: row[5].value == 1 ? kTeacherPrimaryColor : null,
+                        color: row[5].value == 1 ? greenColor : null,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(12))),
                     child: Text(
@@ -205,7 +222,7 @@ class ParsingController extends GetxController {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: row[5].value == 2 ? kTeacherPrimaryColor : null,
+                        color: row[5].value == 2 ? greenColor : null,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(12))),
                     child: Text(
@@ -218,7 +235,7 @@ class ParsingController extends GetxController {
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: row[5].value == 3 ? kTeacherPrimaryColor : null,
+                        color: row[5].value == 3 ? greenColor : null,
                         borderRadius:
                             const BorderRadius.all(Radius.circular(12))),
                     child: Text(
@@ -240,10 +257,57 @@ class ParsingController extends GetxController {
               ],
             ),
             actions: [
+              InkWell(
+                onTap: () {},
+                child: Container(
+                    height: 35,
+                    width: 35,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: kTeacherPrimaryColor,
+                    ),
+                    child: Obx(() => Center(
+                          child: Text(
+                            '${totalQsAdded.value}',
+                            style: const TextStyle(color: whiteColor),
+                          ),
+                        ))),
+              ),
+              const SizedBox(width: 4),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  height: 35,
+                  width: 35,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xFFE1E4FF),
+                  ),
+                  child: const Icon(
+                    Icons.edit_outlined,
+                    size: 18,
+                    color: Color(0xFF6779FE),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 4),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: kTeacherPrimaryColor),
-                child: const Text('OK'),
+                child: const Text('Skip'),
+                onPressed: () async {
+                  showSnackBar("Skipped ", kTeacherPrimaryColor, whiteColor);
+                  // ignore: use_build_context_synchronously
+                  Navigator.of(context).pop();
+                  uploadText.value = 'Upload';
+                  completer.complete();
+                },
+              ),
+              const SizedBox(width: 4),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: kTeacherPrimaryColor),
+                child: const Text('Add'),
                 onPressed: () async {
                   await hitQuizApi(
                     row[0]!.value.toString(),
@@ -353,7 +417,7 @@ class ParsingController extends GetxController {
       }
     } catch (e) {
       Get.offAllNamed(TeacherHome.routeName);
-      Get.find<QuizAdditionController>().handleEraseButton(getQuizID());
+      Get.find<DraftQuizController>().handleDeleteButton(getQuizID());
       showSnackBar(e.toString(), greenColor, whiteColor);
     }
   }

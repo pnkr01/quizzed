@@ -142,7 +142,9 @@ class QuizDraftViewDesign extends GetView<DraftQuizController> {
                                   label: Obx(() => controller.isPublishing.value
                                       ? const Center(
                                           child: CircularProgressIndicator(
-                                              color: kTeacherPrimaryColor),
+                                            color: whiteColor,
+                                            strokeWidth: 1,
+                                          ),
                                         )
                                       : Text(
                                           'Yes',

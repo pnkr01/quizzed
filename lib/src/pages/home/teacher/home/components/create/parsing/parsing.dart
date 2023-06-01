@@ -9,6 +9,7 @@ class Parsing extends GetView<ParsingController> {
 
   @override
   Widget build(BuildContext context) {
+    var controller = Get.find<ParsingController>();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kTeacherPrimaryColor,

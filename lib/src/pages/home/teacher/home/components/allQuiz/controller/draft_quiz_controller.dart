@@ -86,8 +86,18 @@ class DraftQuizController extends GetxController {
           body: jsonEncode({"quiz_id": quizId}));
       var decode = jsonDecode(response.body);
       print(decode);
-      handleMessage(decode);
+      quizDebugPrint('try');
+      if (decode["message"].toString().contains('You need to add')) {
+        Get.back();
+        isPublishing.value = false;
+        showSnackBar(
+            "Error detected deleting...", kTeacherPrimaryColor, whiteColor);
+        handleDeleteButton(quizId);
+      } else {
+        handleMessage(decode);
+      }
     } catch (e) {
+      quizDebugPrint('catch inside 91');
       isPublishing.value = false;
       Get.until((route) => route.isFirst);
       showSnackBar(e.toString(), redColor, whiteColor);

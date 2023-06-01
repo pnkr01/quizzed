@@ -79,7 +79,8 @@ class DetailedQuizController extends GetxController {
         quizDebugPrint('get model is $model');
         quizDebugPrint('sending to quiz screen 80');
         Get.offAll(() => JoinQuizSessionScreen(model: model), arguments: [
-          {'quizID': quizID}
+          {'quizID': quizID},
+          {'test': 'test'},
         ]);
         isLoading.value = true;
       } on FormatException {
@@ -87,7 +88,7 @@ class DetailedQuizController extends GetxController {
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       } catch (e) {
-        quizDebugPrint('inside catch 90 and message is ${decode["message"]}');
+        quizDebugPrint('inside catch 90 and message is $e}');
         isLoading.value = true;
         showSnackBar(decode["message"], redColor, whiteColor);
       }

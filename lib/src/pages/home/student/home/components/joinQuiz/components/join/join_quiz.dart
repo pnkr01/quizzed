@@ -30,43 +30,11 @@ class JoinQuizSessionScreen extends StatefulWidget {
   State<JoinQuizSessionScreen> createState() => _JoinQuizSessionScreenState();
 }
 
-class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
-    with WidgetsBindingObserver {
-  bool isInSplitScreenMode = false;
-  Timer? _splitScreenCheckTimer;
+class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen> {
+  
 
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addObserver(this);
-    checkSplitScreenMode();
-    _splitScreenCheckTimer = Timer.periodic(const Duration(seconds: 2), (_) {
-      checkSplitScreenMode();
-    });
-  }
+  
 
-  @override
-  void dispose() {
-    _splitScreenCheckTimer?.cancel();
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  void didChangeMetrics() {
-    super.didChangeMetrics();
-    checkSplitScreenMode();
-  }
-
-  void checkSplitScreenMode() {
-    final aspectRatio = MediaQuery.of(context).size.aspectRatio;
-    final orientation = MediaQuery.of(context).orientation;
-
-    setState(() {
-      isInSplitScreenMode =
-          aspectRatio < 1.0 && orientation == Orientation.landscape;
-    });
-  }
 
   var controller = Get.find<JoinQuizSessionController>();
   var optionController = Get.find<OptionController>();
@@ -113,7 +81,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      'You are not in the quiz app for more than 5 sec, your quiz is forced submitted sucessfully, Please check your result after the quiz ends.',
+                      'You are not in the quiz app for more than 15 sec, your quiz is forced submitted sucessfully, Please check your result after the quiz ends.',
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
