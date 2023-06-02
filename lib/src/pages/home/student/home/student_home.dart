@@ -1,17 +1,24 @@
+import 'dart:convert';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:quiz/src/api/points.dart';
 import 'package:quiz/src/db/firebase/firebase_helper.dart';
 import 'package:quiz/src/db/local/local_db.dart';
 import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
 import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import '../../../../../utils/quizElevatedButon.dart';
+import '../../../../global/shared.dart';
+import '../../../../model/past_quiz_model.dart';
 import '../drawer/drawer.dart';
+import 'package:http/http.dart' as https;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StudentHome extends StatefulWidget {
@@ -35,10 +42,48 @@ class _StudentHomeState extends State<StudentHome> {
         );
   }
 
+  List<PastQuizModel> pastQuiz = [];
+  bool isPastQuizLoading = true;
+
+  fetchPastQuiz() async {
+    Map<String, String> headers = {
+      'Content-Type': 'application/json',
+      'Cookie': 'Authentication=${sharedPreferences.getString('Scookie')}',
+      // 'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='
+    };
+    final url = ApiConfig.getEndPointsNextUrl('quiz/getall');
+    final uri = Uri.parse(url);
+    final response = await https.get(uri, headers: headers);
+    if (response.statusCode == 200) {
+      final json = jsonDecode(response.body);
+      for (var obj in json) {
+        quizDebugPrint(obj.toString());
+        pastQuiz.add(PastQuizModel.fromJson(obj));
+        //_startTimer();
+      }
+      quizDebugPrint(pastQuiz);
+      setState(() {
+        isPastQuizLoading = !isPastQuizLoading;
+      });
+    } else {
+      //unexoected result
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      LocalDB.removeLoacalDb();
+      showSnackBar('Session Expired :(', kTeacherPrimaryColor, whiteColor);
+    }
+  }
+
   @override
   void initState() {
     super.initState();
     _querydb();
+    try {
+      fetchPastQuiz();
+    } catch (e) {
+      Get.offAllNamed(CommmonAuthLogInRoute.routeName);
+      LocalDB.removeLoacalDb();
+      showSnackBar('Session Expired :(', blackColor, whiteColor);
+    }
   }
 
   @override
@@ -194,15 +239,89 @@ class _StudentHomeState extends State<StudentHome> {
                   style: kBodyText3Style(),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(left: 2, top: 8.h),
-                decoration: BoxDecoration(
-                  color: whiteColor,
-                  borderRadius: BorderRadius.circular(cornerRadius),
-                ),
-                height: 180,
-                width: double.infinity,
-              ),
+              const SizedBox(height: 8),
+              isPastQuizLoading
+                  ? Container(
+                      margin: EdgeInsets.only(left: 2, top: 8.h),
+                      decoration: const BoxDecoration(
+                        color: whiteColor,
+                        //borderRadius: BorderRadius.circular(cornerRadius),
+                      ),
+                      height: 180,
+                      width: double.infinity,
+                      child: const Center(
+                          child: CircularProgressIndicator(
+                        color: kTeacherPrimaryColor,
+                      )),
+                    )
+                  : pastQuiz.isNotEmpty
+                      ? Container(
+                          height: 180,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: ListView.builder(
+                              itemCount: pastQuiz.length,
+                              itemBuilder: (context, index) => Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Card(
+                                          child: Container(
+                                        width: double.infinity,
+                                        decoration: const BoxDecoration(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12))),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Quiz ID : ${pastQuiz[index].quizId!}',
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Text(
+                                              'Completed : ${pastQuiz[index].completed!}',
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Text(
+                                              'Started At : ${DateFormat('dd-MM-yyyy ').add_jm().format(DateTime.tryParse(pastQuiz[index].startTime!)!)}',
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Text(
+                                              'Ended At : ${DateFormat('dd-MM-yyyy ').add_jm().format(DateTime.tryParse(pastQuiz[index].finishTime!)!)}',
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Text(
+                                              'Attempted Qs : ${pastQuiz[index].questionsAttemptedDetails!}',
+                                            ),
+                                            const SizedBox(height: 8),
+                                          ],
+                                        ),
+                                      )),
+                                    ],
+                                  )),
+                        )
+                      : Container(
+                          margin: EdgeInsets.only(left: 2, top: 8.h),
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.circular(cornerRadius),
+                          ),
+                          height: 180,
+                          width: double.infinity,
+                          child: const Center(
+                            child: Text(
+                              'No Past Quiz',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
               const SizedBox(
                 height: 15,
               ),

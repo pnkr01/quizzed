@@ -290,7 +290,7 @@ class CommonAuthLogInController extends GetxController {
         isStartedLogginIn.value = !isStartedLogginIn.value;
         showSnackBar(
           "You cannot login without this permission",
-          blackColor,
+          kTeacherPrimaryColor,
           whiteColor,
         );
       }

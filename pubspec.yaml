@@ -64,9 +64,11 @@ dependencies:
   excel: ^2.1.0
   flutter_dnd: ^0.1.4+1
   permission_handler: ^10.2.0
-  device_imei: ^0.0.4+1
   flutter_windowmanager: ^0.2.0
   device_information: ^0.0.4
+  csv: ^5.0.2
+  path_provider: ^2.0.15
+  share_plus: ^7.0.2
 
 dev_dependencies:
   flutter_test:

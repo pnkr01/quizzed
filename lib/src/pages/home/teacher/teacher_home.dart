@@ -1,9 +1,9 @@
-import 'dart:developer';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/show_all_quiz.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/report/generate_report.dart';
 import 'package:quiz/src/pages/home/teacher/profile/teacher_profile.dart';
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 import 'package:quiz/theme/app_color.dart';
@@ -323,17 +323,21 @@ class TeacherHome extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 8),
-                      height: 100,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                          color: kTeacherPrimaryColor,
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Center(
-                        child: Text(
-                          'Welcome to ITER QUIZ PORTAL',
-                          style: kBodyText3Style(),
+                    GestureDetector(
+                      onTap: () => Get.to(() => const GenerateReportScreen()),
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 8),
+                        height: 50,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                            color: kTeacherPrimaryColor,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
+                        child: Center(
+                          child: Text(
+                            'Report',
+                            style: kBodyText3Style(),
+                          ),
                         ),
                       ),
                     )

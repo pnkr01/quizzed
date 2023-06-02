@@ -7,6 +7,7 @@ import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/controller/parsing_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
+import 'package:quiz/src/pages/home/teacher/home/components/report/controller/generate_report_controller.dart';
 import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 
 import '../pages/auth/controller/otp_controller.dart';
@@ -44,5 +45,6 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => OptionController(), fenix: true);
     Get.lazyPut(() => ParsingController(), fenix: true);
     Get.lazyPut(() => QuizResultScreenController(), fenix: true);
+    Get.lazyPut(() => GenerateReportController(), fenix: true);
   }
 }
