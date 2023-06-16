@@ -12,6 +12,7 @@ import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/completed_confirmation.dart';
+import 'package:quiz/utils/custom_circular.dart';
 import 'package:quiz/utils/marks_obtained.dart';
 import '../../../../../../../../api/points.dart';
 import '../../../../../../../../global/shared.dart';
@@ -38,8 +39,8 @@ class OptionController extends GetxController {
     }
   }
 
-  changePage(JoinedQuizModel model) {
-    if (controller.currentIdx.value == (model.data!.questions!.length - 1)) {
+  changePage(num length) {
+    if (controller.currentIdx.value == length) {
       showDialog(
         context: Get.context!,
         builder: (context) => WillPopScope(
@@ -133,8 +134,16 @@ class OptionController extends GetxController {
           'key is---$key \n current page is---${controller.currentIdx.value} \n value is--$val');
       answerTrackBody[key] = val;
       quizDebugPrint('current trackmap is\n $answerTrackBody');
-      hitAnswerApi(model, val);
+      try {
+        hitAnswerApi(model, val);
+      } catch (e) {
+        CustomCircleLoading.cancelDialog();
+        quizDebugPrint('inside error');
+        //Get.offAll(StudentHome.routeName);
+        showSnackBar(e, redColor, whiteColor);
+      }
     } catch (e) {
+      CustomCircleLoading.cancelDialog();
       quizDebugPrint('inside error');
       //Get.offAll(StudentHome.routeName);
       showSnackBar(e, redColor, whiteColor);
@@ -149,7 +158,12 @@ class OptionController extends GetxController {
       body: jsonEncode(body),
     );
     var decode = jsonDecode(response.body);
-    showSnackBar(decode["message"], greenColor, whiteColor);
+    quizDebugPrint('you submit a quiz and answer tray is $decode');
+    if (decode["statusCode"] == 200) {
+      CustomCircleLoading.cancelDialog();
+      showSnackBar(decode["message"], greenColor, whiteColor);
+      changePage(model.data!.questions!.length - 1);
+    }
   }
 
   saveLocalAnswer(int val) {

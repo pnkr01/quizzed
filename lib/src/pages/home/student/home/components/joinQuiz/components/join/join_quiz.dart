@@ -13,6 +13,7 @@ import 'package:quiz/src/pages/home/student/home/student_home.dart';
 import 'package:quiz/theme/app_color.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 import 'package:quiz/utils/quizAppBar.dart';
+import 'package:quiz/utils/time_helper.dart';
 
 import '../../../../../../../../../utils/quizElevatedButon.dart';
 import 'design/join_quiz_design.dart';
@@ -30,14 +31,21 @@ class JoinQuizSessionScreen extends StatefulWidget {
   State<JoinQuizSessionScreen> createState() => _JoinQuizSessionScreenState();
 }
 
-class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen> {
-  
-
-  
-
-
+class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
+    with WidgetsBindingObserver {
   var controller = Get.find<JoinQuizSessionController>();
   var optionController = Get.find<OptionController>();
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
 
   bool _isInForeground = true;
 
@@ -64,9 +72,11 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen> {
             //func for force submit the user user.
             //send to home page.
             quizDebugPrint('you have spent 15 sec');
-            controller.stoptheTimer();
+            if (mounted) {
+              controller.stoptheTimer();
+            }
             await FlutterDnd.setInterruptionFilter(
-                FlutterDnd.INTERRUPTION_FILTER_ALL);
+                FlutterDnd.INTERRUPTION_FILTER_NONE);
             Get.offAllNamed(StudentHome.routeName);
             //locally handling force stopping
             sharedPreferences.setBool(controller.getQuizID(), true);
@@ -124,18 +134,20 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen> {
               decoration: const BoxDecoration(
                   color: whiteColor,
                   borderRadius: BorderRadius.all(Radius.circular(12))),
-              child: Obx(() => Center(
-                      child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Icon(Icons.timer, color: kTeacherPrimaryColor),
-                      const SizedBox(width: 4),
-                      Text(
-                        controller.getTime.value,
-                        style: kDesignSmallTextStyle(),
-                      ),
-                    ],
-                  ))),
+              child: Center(
+                  child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Icon(Icons.timer, color: kTeacherPrimaryColor),
+                  const SizedBox(width: 4),
+                  // Text(
+                  //   controller.getTime.value,
+                  //   style: kDesignSmallTextStyle(),
+                  // ),
+                  TimerWidgetHelper(
+                      quizID: widget.model.data!.quizStats!.quizId!),
+                ],
+              )),
             ),
           ),
         ),
@@ -219,7 +231,8 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen> {
                   label: Text('Next', style: kBodyText11Style()),
                   backgroundColor: kTeacherPrimaryLightColor,
                   function: () {
-                    optionController.changePage(widget.model);
+                    optionController
+                        .changePage(widget.model.data!.questions!.length - 1);
                   },
                 ),
               )

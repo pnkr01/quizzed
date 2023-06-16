@@ -62,9 +62,11 @@ class _StudentHomeState extends State<StudentHome> {
         //_startTimer();
       }
       quizDebugPrint(pastQuiz);
-      setState(() {
-        isPastQuizLoading = !isPastQuizLoading;
-      });
+      if (mounted) {
+        setState(() {
+          isPastQuizLoading = !isPastQuizLoading;
+        });
+      }
     } else {
       //unexoected result
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
+import 'package:quiz/src/global/shared.dart';
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart';
 import 'package:quiz/theme/gradient_theme.dart';
 

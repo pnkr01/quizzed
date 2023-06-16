@@ -326,7 +326,7 @@ class CreateQuizController extends GetxController {
         body: msg,
       );
       var myjson = await jsonDecode(response.body);
-      print(myjson);
+      quizDebugPrint(myjson);
       if (myjson["message"] == "Unauthorized") {
         quizDebugPrint(
             'Teacher JWT Expired ====> Sending to login screen to login again');

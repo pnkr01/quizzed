@@ -4,6 +4,7 @@ import 'package:quiz/src/global/global.dart';
 import 'package:quiz/src/global/shared.dart';
 
 import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
+import 'package:quiz/utils/custom_circular.dart';
 
 import '../../../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../../model/joined_quiz.dart';
@@ -60,6 +61,7 @@ class _OptionState extends State<Option> {
               groupValue: controller.getValue(
                   widget.model.data!.questions![widget.cindex].questionId),
               onChanged: (val) {
+                CustomCircleLoading.showDialog();
                 quizDebugPrint(widget.index);
                 controller.correctOptionValue.value = val as int;
                 prefs.setInt(
@@ -69,9 +71,7 @@ class _OptionState extends State<Option> {
 
                 // controller.saveLocalAnswer(val);
 
-                controller.maintainAnswerApi(widget.model, val).then((value) {
-                  controller.changePage(widget.model);
-                });
+                controller.maintainAnswerApi(widget.model, val);
               },
             ),
           ],

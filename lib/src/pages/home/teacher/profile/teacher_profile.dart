@@ -10,6 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:quiz/utils/quizElevatedButon.dart';
 
 import '../../../../../utils/shimmer.dart';
+import '../../../../global/global.dart';
 
 class TeacherProfileScreen extends GetView<TeacherProfileController> {
   const TeacherProfileScreen({super.key});
@@ -318,7 +319,7 @@ class TeacherProfileScreen extends GetView<TeacherProfileController> {
                                                 const EdgeInsets.only(right: 8),
                                             child: Chip(
                                               onDeleted: () {
-                                                print('deleted');
+                                                quizDebugPrint('deleted');
                                               },
                                               deleteIconColor: whiteColor,
                                               backgroundColor:

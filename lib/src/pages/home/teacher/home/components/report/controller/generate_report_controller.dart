@@ -35,7 +35,7 @@ class GenerateReportController extends GetxController {
     quizDebugPrint(response.body);
     final decoded = jsonDecode(response.body);
     if (response.statusCode == 200) {
-      quizDebugPrint(decoded);
+      quizDebugPrint('REPORT GENERATED JSON IS $decoded');
       GenerateReport report = GenerateReport.fromJson(decoded);
       for (int i = 0; i < report.data!.length; i++) {
         //create a excel file
@@ -43,13 +43,17 @@ class GenerateReportController extends GetxController {
         //save it
         //share it
         itemList.add(<String>[
+          report.data![i].studentName!,
           report.data![i].studentRegdNo!,
           report.data![i].attemptedQuestionIds!.toString(),
           report.data![i].unattemptedQuestionIds!.toString(),
           report.data![i].correctQuestionIds!.toString(),
           report.data![i].incorrectQuestionIds!.toString(),
+          report.data![i].marksObtained!.toString(),
         ]);
       }
+      showSnackBar("Quiz report generated successfully.", kTeacherPrimaryColor,
+          whiteColor);
       createExcel();
     } else {
       isLoading.value = !isLoading.value;
@@ -81,7 +85,15 @@ class GenerateReportController extends GetxController {
       }
       if (await directory.exists()) {
         itemList = [
-          <String>['RegdNo', 'Attempted', 'Unattempted', 'Correct', 'Incorrect']
+          <String>[
+            'Name',
+            'RegdNo',
+            'Attempted',
+            'Unattempted',
+            'Correct',
+            'Incorrect',
+            'MarksObatined'
+          ]
         ];
         await file.writeAsString(csvData);
         // dio.download(urlPath, savePath);

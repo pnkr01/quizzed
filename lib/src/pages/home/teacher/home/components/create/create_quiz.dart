@@ -239,7 +239,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                             controller.selectedMin.value =
                                 resultingDuration.inMinutes;
                             controller.isSelectedDuration.value = true;
-                            print(resultingDuration.inMinutes);
+                            quizDebugPrint(resultingDuration.inMinutes);
                           } else {
                             if (controller.selectedMin == 0) {
                               showSnackBar('Please select duration', redColor,

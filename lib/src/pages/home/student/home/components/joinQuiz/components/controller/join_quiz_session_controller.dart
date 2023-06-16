@@ -25,7 +25,7 @@ class JoinQuizSessionController extends GetxController {
   @override
   void onInit() {
     checkingForLiveQuiz();
-    startLocalTimer();
+    //startLocalTimer();
     super.onInit();
   }
 
@@ -35,16 +35,16 @@ class JoinQuizSessionController extends GetxController {
 
   RxString getTime = '0 : 0'.obs;
 
-  startLocalTimer() async {
-    quizTimer = Timer.periodic(const Duration(seconds: 1), (_) {
-      try {
-        quizDebugPrint('calling from 31');
-        getRemainingTime();
-      } catch (e) {
-        stoptheTimer();
-      }
-    });
-  }
+  // startLocalTimer() async {
+  //   quizTimer = Timer.periodic(const Duration(seconds: 1), (_) {
+  //     try {
+  //       quizDebugPrint('calling from 31');
+  //       getRemainingTime();
+  //     } catch (e) {
+  //       stoptheTimer();
+  //     }
+  //   });
+  // }
 
   stoptheTimer() {
     quizDebugPrint('called to stop all timer');

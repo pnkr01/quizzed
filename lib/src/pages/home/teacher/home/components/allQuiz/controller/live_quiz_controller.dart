@@ -135,7 +135,7 @@ class LiveQuizController extends GetxController {
         liveList.add(QuizViewModel.fromJson(obj));
         //_startTimer();
       }
-      print('list----------');
+      quizDebugPrint('list----------');
       // print(liveList);
       isFetching.value = false;
     } catch (e) {

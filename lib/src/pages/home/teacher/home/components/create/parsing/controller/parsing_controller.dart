@@ -31,13 +31,12 @@ class ParsingController extends GetxController {
     quizDebugPrint(getSubCode());
     quizDebugPrint(getTotalQs());
     tot.value = getTotalQs();
-    quizDebugPrint('tot value is ${tot.value}');
     super.onInit();
   }
 
   RxInt totalQsAdded = 0.obs;
 
-  RxString text = "Parsing..".obs;
+  // RxString text = "Parsing..".obs;
 
   num totalQsLength = 0;
   int i = 0;
@@ -75,21 +74,13 @@ class ParsingController extends GetxController {
     quizDebugPrint(totalQsLength);
     if (totalQsLength >= tot.value - 1) {
       for (i = 0; i <= totalQsLength; i++) {
-        text.value = '${i + 1} of ${totalQsLength + 1}';
+        //text.value = '${i + 1} of ${totalQsLength + 1}';
         final row = sheet.rows[i];
         await waitForUserInteraction(row);
       }
-      quizDebugPrint('i value is $i and totalQsAdded is ${totalQsAdded.value}');
-      if (totalQsAdded.value - 1 == i) {
-        Get.offAllNamed(TeacherHome.routeName);
-        showSnackBar('Your quiz is ready go to all quiz for actions',
-            greenColor, whiteColor);
-      } else {
-        showSnackBar("pick other file to add remainig question",
-            kTeacherPrimaryColor, whiteColor);
-      }
     } else {
-      showSnackBar('Quiz is less in excel..', greenColor, whiteColor);
+      showSnackBar('question is less in excel file. check question length..',
+          greenColor, whiteColor);
     }
   }
 
@@ -119,6 +110,12 @@ class ParsingController extends GetxController {
   handleThisQuizAdditon(var addedQuizJson) async {
     quizDebugPrint('updateing---------------->');
     totalQsAdded.value = totalQsAdded.value + 1;
+    quizDebugPrint('i value is $i and totalQslENGTH is $totalQsLength');
+    if (totalQsLength < i) {
+      Get.offAllNamed(TeacherHome.routeName);
+      showSnackBar('Your quiz is ready go to all quiz for actions', greenColor,
+          whiteColor);
+    }
     if (addedQuizJson["message"]
         .toString()
         .contains('Question added to quiz')) {
@@ -315,7 +312,7 @@ class ParsingController extends GetxController {
                     row[2]!.value.toString(),
                     row[3]!.value.toString(),
                     row[4]!.value.toString(),
-                    row[5]!.value.toString(),
+                    row[5]!.value.toString().substring(0, 1),
                     getSubCode(),
                     pickedFile,
                     getQuizID(),
@@ -347,6 +344,8 @@ class ParsingController extends GetxController {
     map['options[3]'] = op4;
     map['correct_option'] = co;
     map['subject'] = subjCode;
+
+    quizDebugPrint('cccc ${map['correct_option']}');
 
     quizDebugPrint('map----------> $map');
 

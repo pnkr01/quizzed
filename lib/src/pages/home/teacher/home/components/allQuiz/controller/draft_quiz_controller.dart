@@ -27,7 +27,7 @@ class DraftQuizController extends GetxController {
 
   fetchDraftQuiz() async {
     try {
-      print(sharedPreferences.getString('Tcookie'));
+      quizDebugPrint(sharedPreferences.getString('Tcookie'));
 
       var response = await https.get(
         Uri.parse(ApiConfig.getEndPointsNextUrl(
@@ -43,13 +43,13 @@ class DraftQuizController extends GetxController {
       for (i = 0; i < len; i++) {
         draftList.add(QuizViewModel.fromJson(decoded[i]));
       }
-      print('list----------${draftList.length}');
+      quizDebugPrint('list----------${draftList.length}');
       // print(draftList[0]);
       if (i == len) {
         isFetching.value = false;
       }
     } catch (e) {
-      print('Session expired');
+      quizDebugPrint('Session expired');
       LocalDB.removeLoacalDb();
       Get.offAllNamed(CommmonAuthLogInRoute.routeName);
       showSnackBar("Session Expired :(", redColor, whiteColor);
@@ -85,7 +85,7 @@ class DraftQuizController extends GetxController {
           headers: headers,
           body: jsonEncode({"quiz_id": quizId}));
       var decode = jsonDecode(response.body);
-      print(decode);
+      quizDebugPrint(decode);
       quizDebugPrint('try');
       if (decode["message"].toString().contains('You need to add')) {
         Get.back();
@@ -111,7 +111,7 @@ class DraftQuizController extends GetxController {
         headers: headers,
       );
       var decode = jsonDecode(response.body);
-      print(decode);
+      quizDebugPrint(decode);
       Get.back();
       Get.back();
       showSnackBar('Deleted :)', redColor, whiteColor);

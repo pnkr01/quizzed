@@ -375,7 +375,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                               )),
                           physics: const BouncingScrollPhysics(),
                           onPageChanged: (value) {
-                            print(value);
+                            quizDebugPrint(value);
                             //controller.pageController.
                             //controller.page.value = controller.page.value + 1;
                           },
@@ -437,7 +437,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                     value: 0,
                     groupValue: controller.correctOptionValue.value,
                     onChanged: (val) {
-                      print(val);
+                      quizDebugPrint(val);
                       controller.correctOptionValue.value = val!;
                     },
                   ))
@@ -483,7 +483,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                     value: 1,
                     groupValue: controller.correctOptionValue.value,
                     onChanged: (val) {
-                      print(val);
+                      quizDebugPrint(val);
                       controller.correctOptionValue.value = val!;
                     },
                   ))
@@ -576,7 +576,7 @@ class _QuizAdditionViewState extends State<QuizAdditionView> {
                     value: 3,
                     groupValue: controller.correctOptionValue.value,
                     onChanged: (val) {
-                      print(val);
+                      quizDebugPrint(val);
                       controller.correctOptionValue.value = val!;
                     },
                   ))

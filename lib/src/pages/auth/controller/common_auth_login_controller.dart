@@ -216,16 +216,20 @@ class CommonAuthLogInController extends GetxController {
               context: Get.context!,
               builder: (context) => AlertDialog(
                 content: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     const Text(
-                      'This Device is not available for your registartion No. Contact CDC if this is error',
+                      'This Device is not available for your registartion No. Contact Quiz Admin if this is error',
                     ),
                     const SizedBox(height: 10),
-                    ElevatedButton(
-                      onPressed: () {
-                        Get.until((route) => route.isFirst);
-                      },
-                      child: const Text('Close'),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Get.until((route) => route.isFirst);
+                        },
+                        child: const Text('Close'),
+                      ),
                     ),
                   ],
                 ),

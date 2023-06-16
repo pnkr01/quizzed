@@ -29,20 +29,20 @@ class ExpadedQuizController extends GetxController {
   };
 
   fetchLiveQuizDetails() async {
-    print(getQuizID());
+    quizDebugPrint(getQuizID());
     var response = await https.get(
       Uri.parse(ApiConfig.getEndPointsNextUrl(
           'quiz/${getQuizID()}/get-all-questions')),
       headers: headers,
     );
     var decoded = jsonDecode(response.body);
-    print(decoded);
+    quizDebugPrint(decoded);
     try {
       quizDetails.isNotEmpty ? quizDetails.clear() : null;
       for (var obj in decoded) {
         quizDetails.add(QuizDeatilsModel.fromJson(obj));
       }
-      print('done');
+      quizDebugPrint('done');
       isFetching.value = false;
     } catch (e) {
       isFetching.value = false;

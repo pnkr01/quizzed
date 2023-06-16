@@ -23,7 +23,7 @@ class CompletedQuizController extends GetxController {
 
   completedQuizFetch() async {
     try {
-      print(sharedPreferences.getString('Tcookie'));
+      quizDebugPrint(sharedPreferences.getString('Tcookie'));
 
       var response = await https.get(
         Uri.parse(ApiConfig.getEndPointsNextUrl(
@@ -31,14 +31,14 @@ class CompletedQuizController extends GetxController {
         headers: headers,
       );
       var decoded = jsonDecode(response.body);
-      print(decoded);
+      quizDebugPrint(decoded);
       completedQuiz.isNotEmpty ? completedQuiz.clear() : null;
       quizDebugPrint(decoded.toString().isEmpty.toString());
       for (var obj in decoded) {
         quizDebugPrint(obj.toString());
         completedQuiz.add(QuizViewModel.fromJson(obj));
       }
-      print('list----------');
+      quizDebugPrint('list----------');
       //print(completedQuiz);
       isFetching.value = false;
     } catch (e) {

@@ -75,22 +75,18 @@ class DetailedQuizController extends GetxController {
       //  print(decode);
       try {
         quizDebugPrint('inside trying 77 $decode trying 78');
+        quizDebugPrint(
+            'below is error causing line Unhandled Exception: type List<dynamic> is not a subtype of type Map<String, dynamic>');
         JoinedQuizModel model = JoinedQuizModel.fromJson(decode);
-        quizDebugPrint('get model is $model');
         quizDebugPrint('sending to quiz screen 80');
         Get.offAll(() => JoinQuizSessionScreen(model: model), arguments: [
-          {'quizID': quizID},
-          {'test': 'test'},
+          {'quizID': quizID}
         ]);
         isLoading.value = true;
-      } on FormatException {
-        quizDebugPrint('inside fe 86 and message is ${decode["message"]}');
-        isLoading.value = true;
-        showSnackBar(decode["message"], redColor, whiteColor);
       } catch (e) {
         quizDebugPrint('inside catch 90 and message is $e}');
         isLoading.value = true;
-        showSnackBar(decode["message"], redColor, whiteColor);
+        showSnackBar("tap again..", redColor, whiteColor);
       }
     }
   }

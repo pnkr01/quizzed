@@ -21,13 +21,13 @@ class ApiConfig {
 
   static getEndPointsUrl(String endPoint) {
     return isProd
-        ? "http://ec2-65-1-93-76.ap-south-1.compute.amazonaws.com:8081/$endPoint"
+        ? "http://ec2-3-109-2-206.ap-south-1.compute.amazonaws.com:8081/$endPoint"
         : "http://10.0.2.2:8001/$endPoint";
   }
 
   static getEndPointsNextUrl(String endPoint) {
     return isProd
-        ? "http://ec2-65-1-93-76.ap-south-1.compute.amazonaws.com:8080/$endPoint"
+        ? "http://ec2-3-109-2-206.ap-south-1.compute.amazonaws.com:8080/$endPoint"
         : "http://10.0.2.2:8000/$endPoint";
   }
 }

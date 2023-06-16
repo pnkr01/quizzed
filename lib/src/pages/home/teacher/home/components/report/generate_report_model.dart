@@ -20,20 +20,27 @@ class GenerateReport {
 
 class Data {
   String? studentRegdNo;
+  String? studentName;
+  String? marksObtained;
   int? attemptedQuestionIds;
   int? correctQuestionIds;
   int? incorrectQuestionIds;
   int? unattemptedQuestionIds;
 
-  Data(
-      {this.studentRegdNo,
-      this.attemptedQuestionIds,
-      this.correctQuestionIds,
-      this.incorrectQuestionIds,
-      this.unattemptedQuestionIds});
+  Data({
+    this.studentRegdNo,
+    this.studentName,
+    this.marksObtained,
+    this.attemptedQuestionIds,
+    this.correctQuestionIds,
+    this.incorrectQuestionIds,
+    this.unattemptedQuestionIds,
+  });
 
   Data.fromJson(Map<String, dynamic> json) {
     studentRegdNo = json['student_regdNo'];
+    studentName = json['studentName'] ?? "error";
+    marksObtained = json['marksObtained'] ?? "0/0";
     attemptedQuestionIds = json['attemptedQuestionIds'] != null
         ? json['attemptedQuestionIds'].length
         : 0;
