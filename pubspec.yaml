@@ -60,7 +60,6 @@ dependencies:
   never_behind_keyboard: ^1.0.2
   file_picker: ^5.2.11
   lottie: ^2.3.0
-  count_down_timer: ^1.0.1
   excel: ^2.1.0
   flutter_dnd: ^0.1.4+1
   permission_handler: ^10.2.0

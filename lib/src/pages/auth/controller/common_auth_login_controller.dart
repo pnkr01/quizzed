@@ -25,8 +25,13 @@ class CommonAuthLogInController extends GetxController {
   late Rx<TextEditingController> password;
   late TextEditingController forgotRegd;
   RxBool isStartedLogginIn = false.obs;
+  RxBool isObscure = false.obs;
   final FocusNode focusNodeRegdNo = FocusNode();
   final FocusNode focusNodePassword = FocusNode();
+
+  switchObscure() {
+    isObscure.value = !isObscure.value;
+  }
 
   @override
   void onInit() {

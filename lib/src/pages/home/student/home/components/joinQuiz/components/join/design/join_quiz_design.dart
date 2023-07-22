@@ -87,8 +87,11 @@ class JoinQuizDesign extends GetView<JoinQuizSessionController> {
             const SizedBox(
               height: 20,
             ),
-            Text('${questionString.toString().capitalizeFirst}',
-                style: kBodyText11Style()),
+            Text(
+              '${questionString.toString().capitalizeFirst}',
+              style: kBodyText11Style(),
+              softWrap: true,
+            ),
             //  const SizedBox(height: 10),
             ...List.generate(
               options.length,

@@ -65,9 +65,8 @@ class ParsingController extends GetxController {
     // final questions = <Question>[];
 
     //handle checks
-    final row = sheet!.rows[0];
 
-    totalQsLength = sheet.rows.length - 1;
+    totalQsLength = sheet!.rows.length - 1;
     quizDebugPrint(
         'totalQsLength is $totalQsLength and total length you enter is ${getTotalQs()}');
     isLoading.value = false;

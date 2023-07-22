@@ -21,6 +21,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
   @override
   Widget build(BuildContext context) {
     Get.put(CreateQuizController());
+    // ignore: unused_local_variable
     var myController = Get.find<CreateQuizController>();
     final focusedCtx = FocusManager.instance.primaryFocus!.context;
     Future.delayed(const Duration(milliseconds: 200)).then((_) =>

@@ -10,6 +10,7 @@ import 'package:quiz/utils/quizTextField.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../utils/quizElevatedButon.dart';
+import '../../../../../utils/size_configuration.dart';
 
 class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   const CommmonAuthLogInRoute({super.key});
@@ -113,22 +114,54 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                       )),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 4,
                 ),
                 Obx(
-                  () => EnsureVisibleWhenFocused(
-                      focusNode: controller.focusNodePassword,
-                      child: QuizTextFormField(
-                        labelColor: whiteColor,
+                  () => Container(
+                    margin: const EdgeInsets.only(
+                      left: 4,
+                      top: 14,
+                      right: 4,
+                    ),
+                    child: TextFormField(
+                      style: const TextStyle(color: whiteColor),
+                      obscureText: !controller.isObscure.value,
+                      controller: controller.password.value,
+                      keyboardType: TextInputType.text,
+                      decoration: InputDecoration(
                         labelText: 'Password',
-                        hintText: 'Enter password',
-                        borderColor: whiteColor,
-                        cursorColor: whiteColor,
-                        hintColor: whiteColor,
-                        isObscureText: true,
-                        focusNode: controller.focusNodePassword,
-                        controller: controller.password.value,
-                      )),
+                        hintText: 'Enter your password',
+                        hintStyle: kBodyText3Style()
+                            .copyWith(color: whiteColor, fontSize: 12),
+                        labelStyle: kElevatedButtonTextStyle()
+                            .copyWith(color: whiteColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(14.r),
+                          ),
+                          borderSide: const BorderSide(color: whiteColor),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                                getProportionateScreenHeight(14.sp)),
+                          ),
+                          borderSide: const BorderSide(
+                            color: whiteColor,
+                          ),
+                        ),
+                        suffixIcon: IconButton(
+                          onPressed: () {
+                            controller.switchObscure();
+                          },
+                          icon: controller.isObscure.value
+                              ? const Icon(Icons.visibility, color: whiteColor)
+                              : const Icon(Icons.visibility_off,
+                                  color: whiteColor),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 15,
