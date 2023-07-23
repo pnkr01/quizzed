@@ -2,12 +2,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:quiz/src/pages/home/teacher/profile/controller/teacher_profile_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
+import 'package:quizzed/src/pages/home/teacher/profile/controller/teacher_profile_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/quizAppBar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
+import 'package:quizzed/utils/quizElevatedButon.dart';
 
 import '../../../../../utils/shimmer.dart';
 import '../../../../global/global.dart';

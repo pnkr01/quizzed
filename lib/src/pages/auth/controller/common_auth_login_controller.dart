@@ -6,17 +6,16 @@ import 'package:http/http.dart' as https;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/db/firebase/firebase_helper.dart';
-import 'package:quiz/src/db/local/local_db.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
-import 'package:quiz/src/pages/home/student/home/student_home.dart';
-import 'package:quiz/src/pages/home/teacher/teacher_home.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/db/firebase/firebase_helper.dart';
+import 'package:quizzed/src/db/local/local_db.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/pages/auth/components/signup/common_auth_sign_up_screen.dart';
+import 'package:quizzed/src/pages/home/student/home/student_home.dart';
+import 'package:quizzed/src/pages/home/teacher/teacher_home.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import '../../../../theme/app_color.dart';
 import '../../../../utils/errordialog.dart';
 import '../components/otp/otp_screen.dart';
 

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/utils/size_configuration.dart';
+import 'package:quizzed/theme/app_color.dart';
 
 import '../theme/gradient_theme.dart';
 
@@ -67,7 +65,7 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(getProportionateScreenHeight(14.sp)),
+            Radius.circular(14.sp),
           ),
           borderSide: BorderSide(
             color: widget.borderColor,

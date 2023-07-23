@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:quiz/utils/size_configuration.dart';
-
 import '../theme/gradient_theme.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -45,13 +43,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             kBodyText3Style().copyWith(color: widget.hintColor ?? whiteColor),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(getProportionateScreenHeight(14.sp)),
+            Radius.circular(14.sp),
           ),
           borderSide: BorderSide(color: widget.borderColor),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(getProportionateScreenHeight(14.sp)),
+            Radius.circular(14.sp),
           ),
           borderSide: BorderSide(
             color: widget.borderColor,

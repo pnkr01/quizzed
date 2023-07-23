@@ -1,15 +1,14 @@
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart';
-import 'package:quiz/src/pages/auth/controller/common_auth_register_controller.dart';
-import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/controller/parsing_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/report/controller/generate_report_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
-
+import 'package:quizzed/src/pages/auth/controller/common_auth_login_controller.dart';
+import 'package:quizzed/src/pages/auth/controller/common_auth_register_controller.dart';
+import 'package:quizzed/src/pages/home/student/controller/student_home_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/join_quiz_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/create/parsing/controller/parsing_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/report/controller/generate_report_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
 import '../pages/auth/controller/otp_controller.dart';
 import '../pages/home/student/home/components/joinQuiz/components/controller/detailed_view_controller.dart';
 import '../pages/home/student/home/components/result/controller/quiz_result_controller.dart';

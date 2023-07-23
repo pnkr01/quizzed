@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/theme/app_color.dart';
+import 'package:quizzed/theme/app_color.dart';
 
 import '../theme/gradient_theme.dart';
 

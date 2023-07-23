@@ -3,18 +3,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/shared.dart';
-
-import 'package:quiz/src/model/joined_quiz.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
-import 'package:quiz/src/pages/home/student/home/student_home.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
-import 'package:quiz/utils/time_helper.dart';
-
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/model/joined_quiz.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/student_home.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/quizAppBar.dart';
+import 'package:quizzed/utils/time_helper.dart';
 import '../../../../../../../../../utils/quizElevatedButon.dart';
 import 'design/join_quiz_design.dart';
 

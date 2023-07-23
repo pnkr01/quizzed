@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/create/create_quiz.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/create/create_quiz.dart';
 
 class TeacherHomeController extends GetxController {
   String get teacherName => sharedPreferences.getString('tName') ?? 'Unknown';

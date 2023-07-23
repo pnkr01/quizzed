@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/utils/size_configuration.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizzed/theme/app_color.dart';
 
 const Color first = Color(0xff2FA4D4);
 //const Color second = Color(0xff345DDB);
@@ -21,8 +20,7 @@ class GradientClass {
 }
 
 TextStyle kTitleTextStyle() {
-  return GoogleFonts.montserrat(
-      color: Colors.white, fontSize: getProportionateScreenHeight(12.0.sp));
+  return GoogleFonts.montserrat(color: Colors.white, fontSize: 12.sp);
 }
 
 TextStyle kBodyText1Style() {
@@ -32,6 +30,7 @@ TextStyle kBodyText1Style() {
     fontWeight: FontWeight.w700,
   );
 }
+
 TextStyle kBodyText0Style() {
   return GoogleFonts.montserrat(
     color: whiteColor,
@@ -114,7 +113,7 @@ TextStyle kDesignSmallTextStyle() {
 
 TextStyle kBodyText2Style() {
   return GoogleFonts.montserrat(
-    fontSize: getProportionateScreenHeight(16.0.sp),
+    fontSize: 16.0.sp,
     fontWeight: FontWeight.w500,
     // color: Colors.white,
   );
@@ -124,7 +123,7 @@ TextStyle kBodyText3Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
     color: Colors.white,
-    fontSize: getProportionateScreenHeight(12.0.sp),
+    fontSize: 12.0.sp,
   );
 }
 
@@ -140,7 +139,7 @@ TextStyle kBodyText9Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
     color: kQuizLightPrimaryColor,
-    fontSize: getProportionateScreenHeight(12.0.sp),
+    fontSize: 12.0.sp,
   );
 }
 
@@ -148,7 +147,7 @@ TextStyle kBodyText12Style() {
   return GoogleFonts.montserrat(
     fontWeight: FontWeight.w600,
     color: whiteColor,
-    fontSize: getProportionateScreenHeight(12.0.sp),
+    fontSize: 12.0.sp,
   );
 }
 

@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:quiz/src/global/my_global.dart' as globals;
+import 'package:quizzed/src/global/my_global.dart' as globals;
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 import '../../../../../../../global/shared.dart';
 import '../../../../../../../model/quiz_view_model.dart';

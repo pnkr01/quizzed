@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 import '../../../../../../theme/app_color.dart';
 import '../../../../../../widget/custom_text_for_file.dart';
 import '../../../../../global/strings.dart';

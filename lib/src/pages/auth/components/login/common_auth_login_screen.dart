@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/src/pages/auth/controller/common_auth_login_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/helper_widget.dart';
-import 'package:quiz/utils/quizTextField.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/strings.dart';
+import 'package:quizzed/src/pages/auth/controller/common_auth_login_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/helper_widget.dart';
+import 'package:quizzed/utils/quizTextField.dart';
 import '../../../../../utils/quizElevatedButon.dart';
-import '../../../../../utils/size_configuration.dart';
 
 class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
   const CommmonAuthLogInRoute({super.key});
@@ -143,8 +141,7 @@ class CommmonAuthLogInRoute extends GetView<CommonAuthLogInController> {
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.all(
-                            Radius.circular(
-                                getProportionateScreenHeight(14.sp)),
+                            Radius.circular(14.sp),
                           ),
                           borderSide: const BorderSide(
                             color: whiteColor,

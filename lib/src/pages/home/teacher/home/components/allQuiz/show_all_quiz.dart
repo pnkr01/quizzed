@@ -1,16 +1,14 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/my_global.dart' as globals;
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/components/completed_quiz.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/components/draft_quiz.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/components/live_quiz.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/my_global.dart' as globals;
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/components/completed_quiz.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/components/draft_quiz.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/components/live_quiz.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 import '../../../../../../../theme/app_color.dart';
 

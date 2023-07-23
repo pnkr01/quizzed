@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:quiz/src/pages/auth/controller/otp_controller.dart';
-import 'package:quiz/utils/shimmer.dart';
+import 'package:quizzed/src/pages/auth/controller/otp_controller.dart';
 import '../../../../../theme/app_color.dart';
 import '../../../../../theme/gradient_theme.dart';
+import '../../../../../utils/shimmer.dart';
 
 class OTPScreen extends GetView<OTPController> {
   const OTPScreen({super.key});

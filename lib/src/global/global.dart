@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/global/strings.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 showSnackBar(var message, Color color, Color? textColor) {
   return Get.rawSnackbar(

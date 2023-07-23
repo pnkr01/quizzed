@@ -68,8 +68,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-
+import 'package:quizzed/theme/gradient_theme.dart';
 import '../../../../../../../theme/app_color.dart';
 import 'controller/quiz_result_controller.dart';
 

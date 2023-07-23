@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/draft_design.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/design/draft_design.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 import '../../../../../../../../utils/shimmer.dart';
 import '../design/on_tap_show_details.dart';

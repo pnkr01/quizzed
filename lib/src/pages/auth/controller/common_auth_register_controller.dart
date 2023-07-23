@@ -1,12 +1,11 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/pages/auth/components/otp/otp_screen.dart';
-import 'package:quiz/utils/errordialog.dart';
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/pages/auth/components/otp/otp_screen.dart';
+import 'package:quizzed/utils/errordialog.dart';
 
 import '../components/login/common_auth_login_screen.dart';
 

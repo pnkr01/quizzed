@@ -1,9 +1,9 @@
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/join_quiz_view.dart';
-import 'package:quiz/src/pages/home/student/home/components/result/quiz_result_view.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/join_quiz_view.dart';
+import 'package:quizzed/src/pages/home/student/home/components/result/quiz_result_view.dart';
 
 class StudentHomeController extends GetxController {
   //--------------------Student Details------------------------------------------------------//

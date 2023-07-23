@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 const kOnElevatedButtonTextColor = Color(0xFF6A5BE2);
 const kSecondaryColor = Color(0xffFFE5F1);

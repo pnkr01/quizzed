@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:quiz/src/global/global.dart';
+import 'package:quizzed/src/global/global.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences sharedPreferences;

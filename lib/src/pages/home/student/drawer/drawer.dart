@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/db/local/local_db.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
-import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
-import 'package:quiz/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
-import 'package:quiz/src/pages/home/student/drawer/components/profile/profile_view.dart';
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import '../../../../../utils/size_configuration.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:quizzed/src/db/local/local_db.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/strings.dart';
+import 'package:quizzed/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quizzed/src/pages/home/student/controller/student_home_controller.dart';
+import 'package:quizzed/src/pages/home/student/drawer/components/p&h/privacy_help.dart';
+import 'package:quizzed/src/pages/home/student/drawer/components/profile/profile_view.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 import '../home/components/result/quiz_result_view.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
@@ -60,29 +58,29 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                         ),
                       ],
                     ),
-                    SizedBox(height: getProportionateScreenHeight(20)),
+                    const SizedBox(height: 20),
                     const Divider(color: whiteColor),
-                    SizedBox(height: getProportionateScreenHeight(20)),
+                    const SizedBox(height: 20),
                     buildMenuItem(
                       text: 'Profile',
                       icon: Icons.person,
                       onClicked: () => selectedItem(context, 0),
                     ),
-                    SizedBox(height: getProportionateScreenHeight(16)),
+                    const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Result',
                       icon: Icons.file_download,
                       onClicked: () => selectedItem(context, 1),
                     ),
-                    SizedBox(height: getProportionateScreenHeight(16)),
+                    const SizedBox(height: 16),
                     const Divider(color: whiteColor, thickness: 0.6),
-                    SizedBox(height: getProportionateScreenHeight(16)),
+                    const SizedBox(height: 16),
                     buildMenuItem(
                       text: 'Privacy & Help',
                       icon: Icons.help,
                       onClicked: () => selectedItem(context, 2),
                     ),
-                    SizedBox(height: getProportionateScreenHeight(16)),
+                    const SizedBox(height: 16),
                     buildMenuItem(
                       text: "Version : 1.0.0",
                       icon: Icons.verified_user_outlined,

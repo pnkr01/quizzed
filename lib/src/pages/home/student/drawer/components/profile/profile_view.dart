@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/home/student/controller/student_home_controller.dart';
-import 'package:quiz/src/pages/home/student/drawer/components/profile/controller/student_profile_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:quizzed/src/pages/home/student/controller/student_home_controller.dart';
+import 'package:quizzed/src/pages/home/student/drawer/components/profile/controller/student_profile_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 class ProfileScreenView extends StatelessWidget {
   const ProfileScreenView({super.key});

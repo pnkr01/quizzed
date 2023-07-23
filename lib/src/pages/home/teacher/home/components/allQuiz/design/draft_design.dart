@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/utils/quizElevatedButon.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../global/global.dart';
 

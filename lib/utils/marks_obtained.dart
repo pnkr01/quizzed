@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-
-import 'package:quiz/src/model/result_model.dart';
-import 'package:quiz/src/pages/home/student/home/components/result/controller/quiz_result_controller.dart';
-import 'package:quiz/src/pages/home/student/home/student_home.dart';
-import 'package:quiz/theme/app_color.dart';
+import 'package:quizzed/src/model/result_model.dart';
+import 'package:quizzed/src/pages/home/student/home/components/result/controller/quiz_result_controller.dart';
+import 'package:quizzed/src/pages/home/student/home/student_home.dart';
+import 'package:quizzed/theme/app_color.dart';
 
 import '../src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import '../theme/gradient_theme.dart';

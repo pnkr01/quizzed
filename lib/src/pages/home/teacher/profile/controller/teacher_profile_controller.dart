@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as https;
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/model/teacher_profile_model.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/model/teacher_profile_model.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 import '../../../../../db/local/local_db.dart';
 import '../../../../../global/shared.dart';

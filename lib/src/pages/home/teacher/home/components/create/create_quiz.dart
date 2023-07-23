@@ -1,16 +1,15 @@
 import 'package:duration_picker/duration_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/confirm_dialog.dart';
-import 'package:quiz/utils/quizAppBar.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/confirm_dialog.dart';
+import 'package:quizzed/utils/quizAppBar.dart';
+import 'package:quizzed/utils/quizElevatedButon.dart';
 import 'package:textfield_search/textfield_search.dart';
 import '../../../../../../../theme/app_color.dart';
 import '../../../../../../../utils/helper_widget.dart';
 import '../../../../../../../utils/quizTextField.dart';
-import '../../../../../../../utils/size_configuration.dart';
 import 'controller/create_quiz_controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -91,16 +90,14 @@ class CreateQuiz extends GetView<CreateQuizController> {
                                   color: kTeacherPrimaryColor, fontSize: 14.sp),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                      getProportionateScreenHeight(14.sp)),
+                                  Radius.circular(14.sp),
                                 ),
                                 borderSide: const BorderSide(
                                     color: kTeacherPrimaryColor),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(
-                                      getProportionateScreenHeight(14.sp)),
+                                  Radius.circular(14.sp),
                                 ),
                                 borderSide: const BorderSide(
                                   color: kTeacherPrimaryColor,

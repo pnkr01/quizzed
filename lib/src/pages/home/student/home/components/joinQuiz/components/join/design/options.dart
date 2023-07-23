@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/shared.dart';
-
-import 'package:quiz/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
-import 'package:quiz/utils/custom_circular.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/option_controller.dart';
+import 'package:quizzed/utils/custom_circular.dart';
 
 import '../../../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../../model/joined_quiz.dart';

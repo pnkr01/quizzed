@@ -1,4 +1,4 @@
-import 'package:quiz/src/global/shared.dart';
+import 'package:quizzed/src/global/shared.dart';
 
 class LocalDB {
   static Future<void> saveStudentModel(Map<String, dynamic> data) async {

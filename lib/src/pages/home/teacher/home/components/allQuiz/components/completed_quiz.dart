@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/design/controller/completed_controller.dart';
 
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../theme/gradient_theme.dart';

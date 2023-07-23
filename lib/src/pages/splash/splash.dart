@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/src/global/strings.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/size_configuration.dart';
+import 'package:quizzed/src/global/strings.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 import '../../../theme/app_color.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -10,7 +9,6 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: kTeacherPrimaryColor,
       body: Center(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 class QuizAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String titleText;

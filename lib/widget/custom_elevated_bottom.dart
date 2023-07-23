@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:quiz/theme/app_color.dart';
-
+import 'package:quizzed/theme/app_color.dart';
 import '../theme/gradient_theme.dart';
-import '../utils/size_configuration.dart';
 
 class MYElevatedButton extends StatelessWidget {
   final String label;
@@ -25,7 +22,7 @@ class MYElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: getProportionateScreenHeight(45.sp),
+      height: 45.sp,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(

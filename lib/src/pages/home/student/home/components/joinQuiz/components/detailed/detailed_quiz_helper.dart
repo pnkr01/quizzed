@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 class DetailedQuizHelper extends StatelessWidget {
   const DetailedQuizHelper({

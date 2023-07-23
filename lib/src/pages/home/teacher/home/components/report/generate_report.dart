@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 
 import '../../../../../../../theme/app_color.dart';
 import 'controller/generate_report_controller.dart';

@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/global/global.dart';
-import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
-import 'package:quiz/theme/app_color.dart';
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/global/global.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/live_quiz_controller.dart';
+import 'package:quizzed/theme/app_color.dart';
 
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../../utils/loading_dialog.dart';

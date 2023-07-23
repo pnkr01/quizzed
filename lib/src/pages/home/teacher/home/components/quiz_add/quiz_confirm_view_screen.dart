@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
-import 'package:quiz/src/pages/home/teacher/home/components/create/parsing/parsing.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/quizAppBar.dart';
-import 'package:quiz/utils/quizElevatedButon.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/controller/draft_quiz_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/home/components/create/parsing/parsing.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/quizAppBar.dart';
+import 'package:quizzed/utils/quizElevatedButon.dart';
 
 import '../../../../../../global/global.dart';
 import 'controller/quiz_view_screen_controller.dart';

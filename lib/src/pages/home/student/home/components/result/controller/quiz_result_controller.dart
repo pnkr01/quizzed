@@ -4,15 +4,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/src/api/points.dart';
-import 'package:quiz/src/db/local/local_db.dart';
-import 'package:quiz/src/global/shared.dart';
-import 'package:quiz/src/model/result_model.dart';
-import 'package:quiz/src/pages/auth/components/login/common_auth_login_screen.dart';
-import 'package:quiz/theme/app_color.dart';
+import 'package:quizzed/src/api/points.dart';
+import 'package:quizzed/src/db/local/local_db.dart';
+import 'package:quizzed/src/global/shared.dart';
+import 'package:quizzed/src/model/result_model.dart';
+import 'package:quizzed/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quizzed/theme/app_color.dart';
 import 'package:http/http.dart' as https;
-import 'package:quiz/utils/marks_obtained.dart';
-
+import 'package:quizzed/utils/marks_obtained.dart';
 import '../../../../../../../../theme/gradient_theme.dart';
 import '../../../../../../../global/global.dart';
 

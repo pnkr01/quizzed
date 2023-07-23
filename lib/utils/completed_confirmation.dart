@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-
-import 'package:quiz/theme/app_color.dart';
-
+import 'package:quizzed/theme/app_color.dart';
 import '../theme/gradient_theme.dart';
 
 class CompleteConfirmationDialog extends StatelessWidget {

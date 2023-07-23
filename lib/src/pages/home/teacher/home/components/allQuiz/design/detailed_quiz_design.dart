@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import 'package:quiz/src/model/quiz_details.dart';
-import 'package:quiz/theme/app_color.dart';
-import 'package:quiz/theme/gradient_theme.dart';
-import 'package:quiz/utils/shimmer.dart';
+import 'package:quizzed/src/model/quiz_details.dart';
+import 'package:quizzed/theme/app_color.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
+import 'package:quizzed/utils/shimmer.dart';
 
 class DesignOnTapDetailsQuizComponent extends StatelessWidget {
   const DesignOnTapDetailsQuizComponent({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quiz/theme/gradient_theme.dart';
+import 'package:quizzed/theme/gradient_theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../../../theme/app_color.dart';
 import '../../../../../../../../utils/quizAppBar.dart';
