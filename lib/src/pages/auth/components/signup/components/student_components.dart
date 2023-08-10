@@ -55,15 +55,53 @@ class StudentSignUpScreen extends GetView<CommonAuthSignUpController> {
               controller: controller.studentRegdNo.value,
             ),
             SizedBox(height: 14.h),
-            CustomTextFormField(
-              hintColor: kTeacherPrimaryColor,
-              contentColor: kTeacherPrimaryColor,
-              labelText: 'Password',
-              borderColor: kTeacherPrimaryColor,
-              cursorColor: kTeacherPrimaryColor,
-              labelColor: kTeacherPrimaryColor,
-              isObscureText: true,
-              controller: controller.studentPassword.value,
+            Obx(
+              () => Container(
+                margin: const EdgeInsets.only(
+                  left: 4,
+                  top: 14,
+                  right: 4,
+                ),
+                child: TextFormField(
+                  style: const TextStyle(color: kTeacherPrimaryColor),
+                  obscureText: !controller.isObscure.value,
+                  controller: controller.studentPassword.value,
+                  keyboardType: TextInputType.text,
+                  cursorColor: kTeacherPrimaryColor,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    hintText: 'Enter your password',
+                    hintStyle: kBodyText3Style()
+                        .copyWith(color: whiteColor, fontSize: 12),
+                    labelStyle: kElevatedButtonTextStyle()
+                        .copyWith(color: kTeacherPrimaryColor),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(14.r),
+                      ),
+                      borderSide: const BorderSide(color: kTeacherPrimaryColor),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(14.sp),
+                      ),
+                      borderSide: const BorderSide(
+                        color: kTeacherPrimaryColor,
+                      ),
+                    ),
+                    suffixIcon: IconButton(
+                      onPressed: () {
+                        controller.switchObscure();
+                      },
+                      icon: controller.isObscure.value
+                          ? const Icon(Icons.visibility,
+                              color: kTeacherPrimaryColor)
+                          : const Icon(Icons.visibility_off,
+                              color: kTeacherPrimaryColor),
+                    ),
+                  ),
+                ),
+              ),
             ),
             const SizedBox(height: 14),
             SizedBox(

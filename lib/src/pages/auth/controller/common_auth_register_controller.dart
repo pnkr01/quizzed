@@ -11,6 +11,7 @@ import '../components/login/common_auth_login_screen.dart';
 
 class CommonAuthSignUpController extends GetxController {
   RxBool isRegistering = true.obs;
+  RxBool isObscure = false.obs;
   late Rx<TextEditingController> studentRegdNo;
   late Rx<TextEditingController> studentPassword;
   late Rx<TextEditingController> tName;
@@ -29,6 +30,10 @@ class CommonAuthSignUpController extends GetxController {
     tConfirmPassword = TextEditingController().obs;
     tPassword = TextEditingController().obs;
     super.onInit();
+  }
+
+  switchObscure(){
+    isObscure.value = !isObscure.value;
   }
 
   clearTextField() {

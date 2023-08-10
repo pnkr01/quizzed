@@ -214,6 +214,7 @@ class CommonAuthLogInController extends GetxController {
           //check if same imei is there in imei collection?
 
           if (await MyFirebase().isThisImeiAlreadyExist(imei)) {
+            quizDebugPrint("this imei already exist $imei");
             isStartedLogginIn.value = false;
             showDialog(
               barrierDismissible: false,
@@ -229,6 +230,8 @@ class CommonAuthLogInController extends GetxController {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: kTeacherPrimaryColor),
                         onPressed: () {
                           Get.until((route) => route.isFirst);
                         },

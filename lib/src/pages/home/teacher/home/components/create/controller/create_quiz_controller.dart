@@ -16,7 +16,10 @@ class CreateQuizController extends GetxController {
   RxString selectedDuration = 'Select Duration'.obs;
   RxBool isSelectedDuration = false.obs;
   RxInt selectedMin = 0.obs;
+  RxString selectedSection = 'general'.obs;
+  RxString selectedSemester = '1 Sem'.obs;
   String code = '';
+
   late final TextEditingController title = TextEditingController();
   late final TextEditingController description = TextEditingController();
   late final TextEditingController section = TextEditingController();
@@ -225,12 +228,20 @@ class CreateQuizController extends GetxController {
     isFetching.value = false;
   }
 
+  handleSemesterChanged(String value) {
+    selectedSemester.value = value;
+  }
+
   navigateToQuizAdditionPage() {}
 
   String? getEquivalentCode(String key) {
     quizDebugPrint(subject.toString());
     quizDebugPrint(subject[key]);
     return subject[key]!;
+  }
+
+  handleSectionChanged(String value) {
+    selectedSection.value = value;
   }
 
   checkThisCreateQuizTap() {
@@ -253,7 +264,9 @@ class CreateQuizController extends GetxController {
               title.value.text.trimRight(),
               description.value.text.trimRight(),
               getEquivalentCode(search.value.text)!,
-              section.value.text.toUpperCase().trimRight(),
+              selectedSection.value == 'general'
+                  ? "general"
+                  : section.value.text.toUpperCase().trimRight(),
               semester.value.text.trimRight(),
               totalQs.value.text.trimRight(),
               marksPerQs.value.text.trimRight(),
@@ -303,7 +316,6 @@ class CreateQuizController extends GetxController {
       String duration) async {
     Map<String, String> headers = {
       'Content-Type': 'application/json',
-      'authorization': 'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw==',
       'Cookie': 'Authentication=${sharedPreferences.getString('Tcookie')}'
     };
     final msg = json.encode({

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:quizzed/theme/app_color.dart';
 
 import '../theme/gradient_theme.dart';
@@ -13,6 +14,7 @@ class QuizTextFormField extends StatefulWidget {
   final Color? labelColor;
   final Color? contentColor;
   final bool isObscureText;
+  final bool? isEnabled;
   final FocusNode? focusNode;
   final TextInputType? textInputType;
   final TextEditingController controller;
@@ -26,6 +28,7 @@ class QuizTextFormField extends StatefulWidget {
     this.labelColor,
     this.contentColor,
     required this.isObscureText,
+    this.isEnabled,
     this.focusNode,
     this.textInputType,
     required this.controller,
@@ -39,6 +42,7 @@ class _QuizTextFormFieldState extends State<QuizTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      enabled: widget.isEnabled ?? true,
       keyboardType: widget.textInputType,
       onSubmitted: (value) {
         widget.focusNode?.unfocus();

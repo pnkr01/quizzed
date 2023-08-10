@@ -120,45 +120,48 @@ class CreateQuiz extends GetView<CreateQuizController> {
                   SizedBox(
                     height: 14.h,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: EnsureVisibleWhenFocused(
-                          focusNode: controller.focusNodesection,
-                          child: QuizTextFormField(
-                            focusNode: controller.focusNodesection,
-                            hintText: 'Enter Section(e.g CSE-K)',
-                            contentColor: kTeacherPrimaryColor,
-                            labelText: 'Section',
-                            borderColor: kTeacherPrimaryColor,
-                            cursorColor: kTeacherPrimaryColor,
-                            hintColor: kTeacherPrimaryColor,
-                            isObscureText: false,
-                            controller: controller.section,
+                  Obx(
+                    () => Row(
+                      children: [
+                        Expanded(
+                          child: RadioListTile<String>(
+                            contentPadding: EdgeInsets.zero,
+                            title: Text('General'),
+                            value: 'general',
+                            groupValue: controller.selectedSection.value,
+                            onChanged: (value) {
+                              controller.handleSectionChanged(value!);
+                            },
                           ),
                         ),
-                      ),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Expanded(
-                        child: EnsureVisibleWhenFocused(
-                          focusNode: controller.focusNodesemester,
-                          child: QuizTextFormField(
-                            textInputType: TextInputType.number,
-                            focusNode: controller.focusNodesemester,
-                            hintText: 'Enter Semester(i.e 1-8)',
-                            contentColor: kTeacherPrimaryColor,
-                            labelText: 'Semester',
-                            borderColor: kTeacherPrimaryColor,
-                            cursorColor: kTeacherPrimaryColor,
-                            hintColor: kTeacherPrimaryColor,
-                            isObscureText: false,
-                            controller: controller.semester,
+                        Expanded(
+                          flex: 2,
+                          child: RadioListTile<String>(
+                            title: EnsureVisibleWhenFocused(
+                              focusNode: controller.focusNodesection,
+                              child: QuizTextFormField(
+                                isEnabled: controller.selectedSection.value !=
+                                    'general',
+                                focusNode: controller.focusNodesection,
+                                hintText: 'Enter Section(e.g CSE-K)',
+                                contentColor: kTeacherPrimaryColor,
+                                labelText: 'Section',
+                                borderColor: kTeacherPrimaryColor,
+                                cursorColor: kTeacherPrimaryColor,
+                                hintColor: kTeacherPrimaryColor,
+                                isObscureText: false,
+                                controller: controller.section,
+                              ),
+                            ),
+                            value: 'text',
+                            groupValue: controller.selectedSection.value,
+                            onChanged: (value) {
+                              controller.handleSectionChanged(value!);
+                            },
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 14.h,
@@ -173,7 +176,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                             focusNode: controller.focusNodeDtotalQs,
                             hintText: 'Enter total Qustion no',
                             contentColor: kTeacherPrimaryColor,
-                            labelText: 'Total Question',
+                            labelText: 'TQ',
                             borderColor: kTeacherPrimaryColor,
                             cursorColor: kTeacherPrimaryColor,
                             hintColor: kTeacherPrimaryColor,
@@ -193,7 +196,7 @@ class CreateQuiz extends GetView<CreateQuizController> {
                             focusNode: controller.focusNodemarksPerQs,
                             hintText: 'Each qs marks',
                             contentColor: kTeacherPrimaryColor,
-                            labelText: 'Per Qs Marks',
+                            labelText: 'PQM',
                             borderColor: kTeacherPrimaryColor,
                             cursorColor: kTeacherPrimaryColor,
                             hintColor: kTeacherPrimaryColor,
@@ -202,6 +205,52 @@ class CreateQuiz extends GetView<CreateQuizController> {
                           ),
                         ),
                       ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Expanded(
+                          child: Obx(
+                        () => Container(
+                          alignment: Alignment.center,
+                          decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(
+                                  width: 1.0,
+                                  style: BorderStyle.solid,
+                                  color: kTeacherPrimaryLightColor),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0)),
+                            ),
+                          ),
+                          width: double.infinity,
+                          child: DropdownButton<String>(
+                            elevation: 0,
+                            value: controller.selectedSemester.value.toString(),
+                            onChanged: (String? newValue) {
+                              controller.handleSemesterChanged(newValue!);
+                            },
+                            items: <String>[
+                              '1 Sem',
+                              '2 Sem',
+                              '3 Sem',
+                              '4 Sem',
+                              '5 Sem',
+                              '6 Sem',
+                              '7 Sem',
+                              '8 Sem',
+                            ].map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(
+                                  value,
+                                  style: kElevatedButtonTextStyle()
+                                      .copyWith(color: kTeacherPrimaryColor),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        ),
+                      )),
                     ],
                   ),
                   const SizedBox(
