@@ -9,6 +9,7 @@ import 'package:quizzed/src/pages/home/teacher/home/components/create/parsing/co
 import 'package:quizzed/src/pages/home/teacher/home/components/quiz_add/controller/quiz_addition_controller.dart';
 import 'package:quizzed/src/pages/home/teacher/home/components/report/controller/generate_report_controller.dart';
 import 'package:quizzed/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/support/controller/support_controller.dart';
 import '../pages/auth/controller/otp_controller.dart';
 import '../pages/home/student/home/components/joinQuiz/components/controller/detailed_view_controller.dart';
 import '../pages/home/student/home/components/result/controller/quiz_result_controller.dart';
@@ -19,6 +20,7 @@ import '../pages/home/teacher/home/components/allQuiz/design/controller/expanded
 import '../pages/home/teacher/home/components/create/controller/create_quiz_controller.dart';
 import '../pages/home/teacher/home/components/quiz_add/controller/quiz_view_screen_controller.dart';
 import '../pages/home/teacher/profile/controller/teacher_profile_controller.dart';
+import '../update/controller/update_app_controller.dart';
 import 'controller/starting_point_controller.dart';
 
 class InitialBindings extends Bindings {
@@ -45,5 +47,7 @@ class InitialBindings extends Bindings {
     Get.lazyPut(() => ParsingController(), fenix: true);
     Get.lazyPut(() => QuizResultScreenController(), fenix: true);
     Get.lazyPut(() => GenerateReportController(), fenix: true);
+    Get.lazyPut(() => SupportController(), fenix: true);
+    Get.lazyPut(() => UpdateAppController(), fenix: true);
   }
 }

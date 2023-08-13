@@ -29,3 +29,5 @@ quizDebugPrint(var e) {
     print(e.toString());
   }
 }
+
+const version = '1.0.1';

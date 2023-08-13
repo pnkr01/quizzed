@@ -2,6 +2,18 @@
     package="com.example.quiz">
    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <queries>
+    <package android:name="com.instagram" />
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:scheme="https" />
+    </intent>
+        <intent>
+        <action android:name="android.intent.action.SEND" />
+        <data android:mimeType="*/*" />
+    </intent>
+   </queries>
    <application
         android:label="Quizzed"
         android:name="${applicationName}"
@@ -15,6 +27,13 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize"
             android:resizeableActivity="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues

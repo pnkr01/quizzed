@@ -6,6 +6,7 @@ import 'package:quizzed/src/pages/home/teacher/home/components/allQuiz/show_all_
 import 'package:quizzed/src/pages/home/teacher/home/components/report/generate_report.dart';
 import 'package:quizzed/src/pages/home/teacher/profile/teacher_profile.dart';
 import 'package:quizzed/src/pages/home/teacher/home/controller/teacher_home_controller.dart';
+import 'package:quizzed/src/pages/home/teacher/support/support.dart';
 import 'package:quizzed/theme/app_color.dart';
 import 'package:quizzed/theme/gradient_theme.dart';
 import 'package:quizzed/utils/quizAppBar.dart';
@@ -296,6 +297,7 @@ class TeacherHome extends StatelessWidget {
                           onTap: () => Get.to(() => const ShowAllCreatedQuiz()),
                         ),
                         InkWell(
+                          onTap: () => Get.to(() => const SupportPage()),
                           child: Container(
                             decoration: const BoxDecoration(
                                 color: kTeacherPrimaryColor,
@@ -310,7 +312,7 @@ class TeacherHome extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 5),
                                 Text(
-                                  'Support',
+                                  'Team',
                                   style: kBodyText3Style(),
                                 ),
                               ],
@@ -340,7 +342,7 @@ class TeacherHome extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

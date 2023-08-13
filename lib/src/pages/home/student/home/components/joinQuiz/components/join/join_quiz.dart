@@ -115,6 +115,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
 
   @override
   Widget build(BuildContext context) {
+    quizDebugPrint(widget.model.data!.quizStats!.quizId!);
     widget.model.data?.questions?.shuffle();
     return WillPopScope(
       onWillPop: () async => false,
@@ -229,8 +230,7 @@ class _JoinQuizSessionScreenState extends State<JoinQuizSessionScreen>
                   label: Text('Next', style: kBodyText11Style()),
                   backgroundColor: kTeacherPrimaryLightColor,
                   function: () {
-                    optionController
-                        .changePage(widget.model.data!.questions!.length - 1);
+                    optionController.changePage(widget.model);
                   },
                 ),
               )

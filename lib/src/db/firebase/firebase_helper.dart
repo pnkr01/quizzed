@@ -3,6 +3,22 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class MyFirebase {
   static var ref = FirebaseFirestore.instance;
   static var storeCollection = FirebaseFirestore.instance.collection('store');
+  static var versionCollection =
+      FirebaseFirestore.instance.collection('version');
+
+ Future<String> checkForNewVersion() async {
+    return await versionCollection
+        .doc('version')
+        .get()
+        .then((value) => value["version"]);
+  }
+
+  getNewVersionLink() async {
+    return await versionCollection
+        .doc('version')
+        .get()
+        .then((value) => value["link"]);
+  }
 
   //checking if this use already exist in the backend.
   Future<bool> isUserAlreadyExist(String regdNo) async {

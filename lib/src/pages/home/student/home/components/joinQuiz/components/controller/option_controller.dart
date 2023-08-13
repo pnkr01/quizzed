@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_dnd/flutter_dnd.dart';
 import 'package:get/get.dart';
@@ -8,15 +7,15 @@ import 'package:quizzed/src/global/global.dart';
 import 'package:quizzed/src/model/result_model.dart';
 import 'package:quizzed/src/pages/home/student/home/components/joinQuiz/components/controller/join_quiz_session_controller.dart';
 import 'package:http/http.dart' as https;
-import 'package:quizzed/src/pages/home/student/home/student_home.dart';
 import 'package:quizzed/theme/app_color.dart';
 import 'package:quizzed/theme/gradient_theme.dart';
-import 'package:quizzed/utils/completed_confirmation.dart';
 import 'package:quizzed/utils/custom_circular.dart';
 import 'package:quizzed/utils/marks_obtained.dart';
+import '../../../../../../../../../utils/completed_confirmation.dart';
 import '../../../../../../../../api/points.dart';
 import '../../../../../../../../global/shared.dart';
 import '../../../../../../../../model/joined_quiz.dart';
+import '../../../../student_home.dart';
 
 class OptionController extends GetxController {
   RxInt correctOptionValue = 10.obs;
@@ -39,8 +38,9 @@ class OptionController extends GetxController {
     }
   }
 
-  changePage(num length) {
-    if (controller.currentIdx.value == length) {
+  changePage(JoinedQuizModel model) {
+    if (controller.currentIdx.value == model.data!.questions!.length - 1) {
+      //send to next screen
       showDialog(
         context: Get.context!,
         builder: (context) => WillPopScope(
@@ -51,17 +51,26 @@ class OptionController extends GetxController {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: kTeacherPrimaryColor),
                 onPressed: () async {
-                  await FlutterDnd.setInterruptionFilter(
-                      FlutterDnd.INTERRUPTION_FILTER_ALL);
-                  quizDebugPrint('yes 50');
-                  Get.find<JoinQuizSessionController>().stoptheTimer();
-                  Get.offAllNamed(StudentHome.routeName);
-                  //locally handling force stopping
-                  sharedPreferences.setBool(controller.getQuizID(), true);
-                  showDialog(
-                      context: Get.context!,
-                      builder: ((context) =>
-                          const CompleteConfirmationDialog()));
+                  CustomCircleLoading.showDialog();
+                  //hit api for submitting the quiz
+                  //read data from DB
+                  hitAnswerApi(model).then((value) async {
+                    if (value) {
+                      await FlutterDnd.setInterruptionFilter(
+                          FlutterDnd.INTERRUPTION_FILTER_ALL);
+                      Get.find<JoinQuizSessionController>().stoptheTimer();
+                      Get.offAllNamed(StudentHome.routeName);
+                      sharedPreferences.setBool(controller.getQuizID(), true);
+                      showDialog(
+                          context: Get.context!,
+                          builder: ((context) =>
+                              const CompleteConfirmationDialog()));
+                    } else {
+                      CustomCircleLoading.cancelDialog();
+                      showSnackBar(
+                          "error try submitting again", redColor, whiteColor);
+                    }
+                  });
                 },
                 child: const Text('Yes'),
               ),
@@ -97,6 +106,7 @@ class OptionController extends GetxController {
         ),
       );
     } else {
+      CustomCircleLoading.cancelDialog();
       controller.pageController.nextPage(
           duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
     }
@@ -135,7 +145,7 @@ class OptionController extends GetxController {
       answerTrackBody[key] = val;
       quizDebugPrint('current trackmap is\n $answerTrackBody');
       try {
-        hitAnswerApi(model, val);
+        changePage(model);
       } catch (e) {
         CustomCircleLoading.cancelDialog();
         quizDebugPrint('inside error');
@@ -150,7 +160,8 @@ class OptionController extends GetxController {
     }
   }
 
-  hitAnswerApi(JoinedQuizModel model, int val) async {
+  Future<bool> hitAnswerApi(JoinedQuizModel model) async {
+    quizDebugPrint("last question and answertrack is $answerTrackBody");
     https.Response response = await https.put(
       Uri.parse(ApiConfig.getEndPointsNextUrl(
           'quiz/update-progress/${model.data?.quizStats?.quizId}')),
@@ -162,18 +173,8 @@ class OptionController extends GetxController {
     if (decode["statusCode"] == 200) {
       CustomCircleLoading.cancelDialog();
       showSnackBar(decode["message"], greenColor, whiteColor);
-      changePage(model.data!.questions!.length - 1);
+      // changePage(model.data!.questions!.length - 1);
     }
+    return decode["statusCode"] == 200;
   }
-
-  saveLocalAnswer(int val) {
-    //  quizDebugPrint("${controller.currentIdx.value}----");
-    // sharedPreferences.setInt(controller.currentIdx.value.toString(), val);
-  }
-
-  // clearAnswerDb(JoinedQuizModel model) {
-  //   for (int i = 0; i < model.data!.questions!.length; i++) {
-  //     sharedPreferences.remove(i.toString());
-  //   }
-  // }
 }

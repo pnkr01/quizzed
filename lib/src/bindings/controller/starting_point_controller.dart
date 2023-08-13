@@ -1,9 +1,12 @@
 import 'dart:async';
 import 'package:get/get.dart';
-import 'package:quizzed/src/pages/auth/components/login/common_auth_login_screen.dart';
+import 'package:quizzed/src/db/firebase/firebase_helper.dart';
+import 'package:quizzed/src/global/global.dart';
 import 'package:quizzed/src/pages/home/student/home/student_home.dart';
 import '../../global/shared.dart';
+import '../../pages/auth/components/login/common_auth_login_screen.dart';
 import '../../pages/home/teacher/teacher_home.dart';
+import '../../update/update_page.dart';
 
 class StartingPointController extends GetxController {
   @override
@@ -18,15 +21,44 @@ class StartingPointController extends GetxController {
     });
   }
 
-  takeDecision() {
-    if (sharedPreferences.getBool('studentLogged') != null) {
-      //send to student home
-      navigateToStudentHome();
-    } else if (sharedPreferences.getBool('teacherLoggedIN') != null) {
-      navigateToTeacherHome();
+  void startUpdatehandler() async {
+    //take link and pass it to download and install function
+    String updateUrl = await getUpdateLink();
+    quizDebugPrint("update url is $updateUrl");
+    Get.offAll(() => UpdateScreenPage(
+          apkUrl: updateUrl,
+        ));
+  }
+
+  Future<String> getUpdateLink() {
+    return MyFirebase.versionCollection
+        .doc('version')
+        .get()
+        .then((value) => value["link"]);
+  }
+
+  takeDecision() async {
+    bool isUpdateAvailable = await checkVersion();
+    if (isUpdateAvailable) {
+      startUpdatehandler();
     } else {
-      navigateToCommonAuthScreen();
+      if (sharedPreferences.getBool('studentLogged') != null) {
+        navigateToStudentHome();
+      } else if (sharedPreferences.getBool('teacherLoggedIN') != null) {
+        navigateToTeacherHome();
+      } else {
+        navigateToCommonAuthScreen();
+      }
     }
+  }
+
+  checkVersion() async {
+    String firebaseVersion = await MyFirebase().checkForNewVersion();
+    quizDebugPrint("firebase version is $firebaseVersion");
+    bool isUpdateAvailable = firebaseVersion == version ? false : true;
+    quizDebugPrint("current version is $version");
+    quizDebugPrint("is update required? $isUpdateAvailable");
+    return isUpdateAvailable;
   }
 
   navigateToStudentHome() {
